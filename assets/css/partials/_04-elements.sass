@@ -1,0 +1,152 @@
+/*  *************** REBOOT ********************* */
+
+html, body
+  font-family: $ess-base-fontfamily
+  font-size: $ess-base-fontsize
+  font-weight: $ess-base-fontweight
+  line-height: $ess-base-lineheight
+  text-rendering: optimizeLegibility
+  color: get('palettes.white', $ess-parameters)
+  .material-icons
+    font-display: swap
+    line-height: 1.2
+
+// abréviation
+abbr
+
+// citation longue
+blockquote
+
+
+// citation courte
+q 
+
+
+
+// citation du titre d’une œuvre ou d’un événement
+cite 
+
+
+
+// mise en indice
+sub 
+
+
+
+// mise en exposant
+sup 
+
+
+
+// image grâce aux attributs src (adresse de l’image) et alt (texte de remplacement)
+img 
+
+
+
+// mise en valeur visuelle (le texte est surligné)
+mark 
+
+
+
+// mise en valeur forte (le texte est en gras)
+strong 
+
+
+
+// mise en valeur faible (le texte est en italique)
+em 
+
+
+
+// figure (image, code…)
+figure 
+
+
+
+//  description de la figure
+figcaption 
+
+
+
+// son
+audio 
+
+
+
+// vidéo
+video 
+
+
+
+// indique un format possible pour les balises audio et video
+source 
+
+
+
+// lien hypertexte grâce à l’attribut href.
+a
+  text-decoration: none
+  color: get('palettes.primaire.500',$ess-parameters)
+
+
+// retour à la ligne
+br 
+
+
+
+// paragraphe
+p
+
+
+
+// ligne de séparation horizontale
+hr 
+
+
+
+// adresse de contact
+address 
+
+
+
+// texte supprimé
+del 
+
+
+
+// texte inséré
+ins 
+
+
+
+// définition
+dfn 
+
+
+
+// indiquer un code que doit taper le visiteur
+kbd 
+
+
+
+// barre de progression
+progress 
+
+
+
+// date ou heure
+time 
+
+
+
+// le texte à l’intérieur de la balise sera sous forme de code
+pre
+
+
+h1,h2,h3,h4,h5,h6
+  font-family: "Fira Sans"
+  font-weight: 900
+@include create-sizes($ess-parameters)
+
+@include create-weights($ess-parameters)
+
