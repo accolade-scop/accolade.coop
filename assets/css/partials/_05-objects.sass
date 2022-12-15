@@ -117,10 +117,12 @@ main
       background-position: left top
       background-repeat: no-repeat
     > section
-      > p > span
+      > h1 > span
         display: inline-block
         margin-top: 5px
         color: get('palettes.neutre.600',$acc-parameters)
+      > h2
+        font-weight: 300
       dl
         margin: 10px 0
         dt
@@ -140,15 +142,15 @@ main
     align-items: center
     padding: 60px 30%
     background-color: get('palettes.secondaire.900',$acc-parameters)
-    > section
+    p
       width: 100%
       max-width: 360px
-      p
-        text-align: center
-      form
-        width: 100%
-        button
-          float: right
+      text-align: center
+    form
+      width: 100%
+      max-width: 360px
+      button
+        float: right
 footer
   display: flex
   flex-flow: row wrap

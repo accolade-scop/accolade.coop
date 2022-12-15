@@ -109,6 +109,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .mini {
@@ -310,10 +311,13 @@ main article::before {
   background-position: left top;
   background-repeat: no-repeat;
 }
-main article > section > p > span {
+main article > section > h1 > span {
   display: inline-block;
   margin-top: 5px;
   color: #73757B;
+}
+main article > section > h2 {
+  font-weight: 300;
 }
 main article > section dl {
   margin: 10px 0;
@@ -338,17 +342,16 @@ main aside {
   padding: 60px 30%;
   background-color: #7a9a3d;
 }
-main aside > section {
+main aside p {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+main aside form {
   width: 100%;
   max-width: 360px;
 }
-main aside > section p {
-  text-align: center;
-}
-main aside > section form {
-  width: 100%;
-}
-main aside > section form button {
+main aside form button {
   float: right;
 }
 
@@ -369,6 +372,10 @@ footer a {
 }
 
 @media (max-width: 991px) {
+  body, html {
+    font-size: 12px;
+  }
+
   header > img {
     width: 80%;
   }
@@ -378,7 +385,7 @@ footer a {
   }
   main aside {
     gap: 0;
-    padding: 60px 10%;
+    padding: 15px 10%;
   }
 }
 
