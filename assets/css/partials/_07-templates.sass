@@ -1,24 +1,12 @@
+// TEMPLATES
+// MEDIA QUERIES
 +respond-inf(md)
   header
-    display: flex
-    flex-flow: row wrap
-    justify-content: flex-start
-    align-items: stretch
-    > *
-      &:nth-child(2)
-        flex: 1 1 100%
-        margin: 0 auto
-        > img
-          display: block
-          width: 80%
-          height: auto
-          margin: 0 auto
-        > p
-          text-align: center
-          color: get('palettes.neutre.700',$acc-parameters)
-          padding: 20px 0
-      &:nth-child(1), &:nth-child(3)
-        display: none
+    > img
+      width: 80%
   main
-    > article
+    article
       padding: 40px 10%
+    aside
+      gap: 0
+      padding: 60px 10%

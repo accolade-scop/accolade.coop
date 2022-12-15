@@ -1,5 +1,4 @@
-/*  *************** RESET ********************* */
-
+// RESET
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,38 +16,24 @@ time, mark, audio, video
   padding: 0
   border: 0
   vertical-align: baseline
-
 // HTML5 display-role reset for older browsers
-
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section 
   display: block
-
-
-body 
+body
   line-height: 1.15
-
-
-ol, ul 
+ol, ul
   list-style: none
-
-
-blockquote, q 
+blockquote, q
   quotes: none
-
-
 blockquote:before, blockquote:after,
 q:before, q:after 
   content: ''
   content: none
-
-
-table 
+table
   border-collapse: collapse
   border-spacing: 0
-
-
-* 
+*
   -ms-scrollbar-face-color: get('palettes.neutre.300',$acc-parameters)
   -ms-scrollbar-arrow-color: get('palettes.neutre.300',$acc-parameters)
   -ms-scrollbar-track-color: get('palettes.neutre.300',$acc-parameters)
@@ -57,7 +42,6 @@ table
   -ms-scrollbar-3dlight-color: get('palettes.neutre.600',$acc-parameters)
   -ms-scrollbar-darkshadow-color: get('palettes.neutre.600',$acc-parameters)
   -ms-overflow-style: -ms-autohiding-scrollbar
-
   // la barre entière.
   &::-webkit-scrollbar 
     width: 8px
@@ -65,25 +49,15 @@ table
     border: 1px solid get('palettes.neutre.300',$acc-parameters)
     border-radius: $acc-base-radius
     -webkit-border-radius: $acc-base-radius
-
-
   // l'emplacement qui permet de déplacer la barre de défilement.
   &::-webkit-scrollbar-thumb 
     border-radius: $acc-base-radius
     -webkit-border-radius: $acc-base-radius
     background: rgba(178, 178, 178, 0.8)
-
-
   // la piste (la zone de progression) de la barre de défilement
   &::-webkit-scrollbar-track 
     background: get('palettes.neutre.300',$acc-parameters)
-
-
-
-*:focus 
+*:focus
   outline: none
-
-
-*, ::after, ::before 
+*, ::after, ::before
   box-sizing: border-box
-

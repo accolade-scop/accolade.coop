@@ -1,6 +1,5 @@
-/*  *************** OBJETS *************** */
+// OBJETS
 // BOUTONS
-
 button, input[type="button"]
   display: inline-flex
   flex-flow: row nowrap
@@ -45,9 +44,7 @@ button, input[type="button"]
   &.--small
     font-size: #{$acc-base-small} + 'rem'
     padding: .25rem .5rem
-
 // INPUT
-
 input
   box-sizing: border-box
   display: block
@@ -83,7 +80,6 @@ input
   &:invalid, &[invalid]
     border-color: get('palettes.etats.erreur',$acc-parameters)
 // LABEL
-
 label
   display: inline-block
   font-size: #{$acc-base-small} + 'rem'
@@ -93,71 +89,76 @@ label
   &.required
     &:after
       content: '*'
-
+// OBJETS HTML
 header
-  display: flex
-  flex-flow: row wrap
-  justify-content: flex-start
-  align-items: stretch
-  > *
-    &:nth-child(2)
-      flex: 1 1 60%
-      margin: 0 auto
-      > img
-        display: block
-        width: 80%
-        height: auto
-        margin: 0 auto
-      > p
-        text-align: center
-        color: get('palettes.neutre.700',$acc-parameters)
-        padding: 20px 0
-    &:nth-child(1), &:nth-child(3)
-      flex: 0 0 20%
-      > img
-        display: block
-        width: 100%
-        height: auto
-    &:nth-child(3)
-      transform: rotate(90deg)
+  width: 100%
+  padding-top: 40px
+  background-color: get('palettes.primaire.900',$acc-parameters)
+  background-image: white, url(../img/motif.png) left top no-repeat, url(../img/motif.png) right top no-repeat
+  img
+    display: block
+    width: 40%
+    height: auto
+    margin: 0 auto
 main
-  > article
+  flex: 1 1 auto
+  display: flex
+  flex-flow: column wrap
+  width: 100%
+  article
+    background-color: get('palettes.primaire.900',$acc-parameters)
+    padding: 40px 30% 20px 30%
     display: flex
-    flex-flow: row nowrap
-    justify-content: space-around
-    align-items: flex-start
-    gap: 30px
-    padding: 40px 30%
+    &::before
+      display: block
+      content: 's'
+      width: 100px
+      background-image: url(../img/motif.png)
+      background-position: left top
+      background-repeat: no-repeat
     > section
-      &:nth-child(1)
-        flex: 0 0 auto
-        > img
-          width: auto
-          height: 100%
-      &:nth-child(2)
-        ul
-          margin: 10px 0
-          li
-            margin-bottom: 10px
-            &:first-line
-              font-weight: 700
-              color: get('palettes.secondaire.900',$acc-parameters)
-  > aside
+      > p > span
+        display: inline-block
+        margin-top: 5px
+        color: get('palettes.neutre.600',$acc-parameters)
+      dl
+        margin: 10px 0
+        dt
+          margin-bottom: 10px
+          font-weight: 700
+          color: get('palettes.secondaire.900',$acc-parameters)
+          &:first-letter
+            font-family: 'Courier Prime', monospace
+            font-weight: 300
+            color: get('palettes.white',$acc-parameters)
+            padding-right: 10px
+  aside
+    flex: 1 1 auto
     display: flex
-    flex-flow: row wrap
-    justify-content: space-around
-    align-items: flex-start
-    gap: 30px
+    flex-flow: column wrap
+    justify-content: center
+    align-items: center
     padding: 60px 30%
     background-color: get('palettes.secondaire.900',$acc-parameters)
     > section
-      margin: 0 auto
-      flex: 1 1 255px
-      &:nth-child(1)
-        > p
-          margin-bottom: 1rem
-          + p
-            font-weight: 700
-      &:nth-child(2)
+      width: 100%
+      max-width: 360px
+      p
+        text-align: center
+      form
+        width: 100%
         button
           float: right
+footer
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  align-items: stretch
+  background-color: get('palettes.primaire.900',$acc-parameters)
+  color: get('palettes.secondaire.900',$acc-parameters)
+  width: 100%
+  padding: 10px 0
+  font-size: #{$acc-base-xxsmall} + "rem"
+  a
+    color: get('palettes.secondaire.900',$acc-parameters)
+    text-decoration: underline

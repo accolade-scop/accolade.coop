@@ -1,10 +1,3 @@
-/* *************** VARIABLES GENERIQUES ***********************  */
-/* ------------ COULEURS ET DES PALETTES ------------ */
-/* ------------ BREAKPOINTS ------------ */
-/* ------------ DEFINITION DES VARIABLES TYPOGRAPHIQUES ------------ */
-/* ****************** FONCTIONS *************** */
-/* ****************** MIXINS ************************** */
-/*  *************** RESET ********************* */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -86,7 +79,6 @@ table {
   box-sizing: border-box;
 }
 
-/*  *************** REBOOT ********************* */
 html, body {
   font-family: "Roboto", monospace;
   font-size: 16px;
@@ -94,7 +86,13 @@ html, body {
   line-height: 1.2;
   text-rendering: optimizeLegibility;
   color: #ffffff;
-  background-color: #1f241c;
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh;
 }
 html .material-icons, body .material-icons {
   font-display: swap;
@@ -177,7 +175,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
-/*  *************** OBJETS *************** */
 button, input[type=button] {
   display: inline-flex;
   flex-flow: row nowrap;
@@ -282,179 +279,106 @@ label.required:after {
 }
 
 header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: stretch;
-}
-header > *:nth-child(2) {
-  flex: 1 1 60%;
-  margin: 0 auto;
-}
-header > *:nth-child(2) > img {
-  display: block;
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-}
-header > *:nth-child(2) > p {
-  text-align: center;
-  color: #5F6167;
-  padding: 20px 0;
-}
-header > *:nth-child(1), header > *:nth-child(3) {
-  flex: 0 0 20%;
-}
-header > *:nth-child(1) > img, header > *:nth-child(3) > img {
-  display: block;
   width: 100%;
-  height: auto;
+  padding-top: 40px;
+  background-color: #1f241c;
+  background-image: white, url(../img/motif.png) left top no-repeat, url(../img/motif.png) right top no-repeat;
 }
-header > *:nth-child(3) {
-  transform: rotate(90deg);
+header img {
+  display: block;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
 }
 
-main > article {
+main {
+  flex: 1 1 auto;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 40px 30%;
+  flex-flow: column wrap;
+  width: 100%;
 }
-main > article > section:nth-child(1) {
-  flex: 0 0 auto;
+main article {
+  background-color: #1f241c;
+  padding: 40px 30% 20px 30%;
+  display: flex;
 }
-main > article > section:nth-child(1) > img {
-  width: auto;
-  height: 100%;
+main article::before {
+  display: block;
+  content: "s";
+  width: 100px;
+  background-image: url(../img/motif.png);
+  background-position: left top;
+  background-repeat: no-repeat;
 }
-main > article > section:nth-child(2) ul {
+main article > section > p > span {
+  display: inline-block;
+  margin-top: 5px;
+  color: #73757B;
+}
+main article > section dl {
   margin: 10px 0;
 }
-main > article > section:nth-child(2) ul li {
+main article > section dl dt {
   margin-bottom: 10px;
-}
-main > article > section:nth-child(2) ul li:first-line {
   font-weight: 700;
   color: #7a9a3d;
 }
-main > aside {
+main article > section dl dt:first-letter {
+  font-family: "Courier Prime", monospace;
+  font-weight: 300;
+  color: #ffffff;
+  padding-right: 10px;
+}
+main aside {
+  flex: 1 1 auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 30px;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
   padding: 60px 30%;
   background-color: #7a9a3d;
 }
-main > aside > section {
-  margin: 0 auto;
-  flex: 1 1 255px;
+main aside > section {
+  width: 100%;
+  max-width: 360px;
 }
-main > aside > section:nth-child(1) > p {
-  margin-bottom: 1rem;
+main aside > section p {
+  text-align: center;
 }
-main > aside > section:nth-child(1) > p + p {
-  font-weight: 700;
+main aside > section form {
+  width: 100%;
 }
-main > aside > section:nth-child(2) button {
+main aside > section form button {
   float: right;
 }
 
-/*  *************** COMPOSANTS CSS *************** */
-.dropdown {
-  display: inline-block;
-  position: relative;
-  outline: none;
-  margin: 10px;
-  /* mask to close menu by clicking on the button */
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #1f241c;
+  color: #7a9a3d;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 0.647rem;
 }
-.dropdown .dropdown-content {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  background-color: #f7f7f7;
-  width: 370px;
-  max-height: 400px;
-  overflow: hidden;
-  overflow-y: auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 100000;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.35s ease-out;
-}
-.dropdown .dropdown-content a {
-  color: black;
-  padding: 8px 10px;
-  display: block;
-  text-decoration: none;
-  transition: 0.35s ease-out;
-}
-.dropdown .dropdown-content a:hover {
-  background-color: #eaeaea;
-}
-.dropdown:focus .dropdown-content {
-  outline: none;
-  transform: translateY(20px);
-  visibility: visible;
-  opacity: 1;
-}
-.dropdown:focus .db2 {
-  display: inline-block;
-}
-.dropdown:focus .db2:focus .dropdown-content {
-  outline: none;
-  visibility: hidden;
-  opacity: 0;
-}
-.dropdown .db2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 10;
-  display: none;
-}
-
-.dropbtn {
-  padding: 12px 16px;
-  cursor: pointer;
-  transition: 0.35s ease-out;
+footer a {
+  color: #7a9a3d;
+  text-decoration: underline;
 }
 
 @media (max-width: 991px) {
-  header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-  }
-  header > *:nth-child(2) {
-    flex: 1 1 100%;
-    margin: 0 auto;
-  }
-  header > *:nth-child(2) > img {
-    display: block;
+  header > img {
     width: 80%;
-    height: auto;
-    margin: 0 auto;
-  }
-  header > *:nth-child(2) > p {
-    text-align: center;
-    color: #5F6167;
-    padding: 20px 0;
-  }
-  header > *:nth-child(1), header > *:nth-child(3) {
-    display: none;
   }
 
-  main > article {
+  main article {
     padding: 40px 10%;
+  }
+  main aside {
+    gap: 0;
+    padding: 60px 10%;
   }
 }
 
