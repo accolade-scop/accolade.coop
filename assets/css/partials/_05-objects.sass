@@ -134,6 +134,14 @@ main
         > img
           width: auto
           height: 100%
+      &:nth-child(2)
+        ul
+          margin: 10px 0
+          li
+            margin-bottom: 10px
+            &:first-line
+              font-weight: 700
+              color: get('palettes.secondaire.900',$acc-parameters)
   > aside
     display: flex
     flex-flow: row wrap
