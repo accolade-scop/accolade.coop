@@ -1,141 +1,155 @@
 /*  *************** OBJETS *************** */
-// GRILLES
-
-.ess-O-layout
-  display: grid
-  grid-gap: 1rem
-  margin: 0 $ess-base-margin-reserve
-  // background-color: #dddddd
-  &.--une
-    grid-template-columns: [gauche] 1fr [centre] 2fr [droite] 1fr
-    grid-auto-flow: dense
-    align-items: stretch
-  &.--nouveau
-    grid-template-columns: 1fr 1fr 1fr 1fr
-  &.--lu
-    grid-template-columns: 1fr 1fr 1fr
-    grid-auto-flow: dense
-  &.--rubrique
-    grid-template-columns: [content] 3fr [aside] 1fr
-    grid-auto-flow: dense
-  &.--article
-    grid-template-columns: [content] 3fr [aside] 1fr
-    grid-auto-flow: dense
 // BOUTONS
 
-.ess-O-btn
+button, input[type="button"]
   display: inline-flex
   flex-flow: row nowrap
   align-items: center
   font-family: 'Roboto'
-  font-size: #{$ess-base-normal} + 'rem'
-  color: get('palettes.white',$ess-parameters)
-  background-color: get('palettes.neutre.500',$ess-parameters)
-  border: 1px solid get('palettes.neutre.500',$ess-parameters)
-  border-radius: $ess-base-fontsize/5
+  font-weight: 700
+  font-size: #{$acc-base-normal} + 'rem'
+  color: get('palettes.neutre.50',$acc-parameters)
+  background-color: get('palettes.primaire.900',$acc-parameters)
+  border: 1px solid get('palettes.primaire.900',$acc-parameters)
+  border-radius: $acc-base-fontsize/5
   margin: .25rem
   padding: .5rem 1rem
   cursor: pointer
   text-decoration: none
+  box-shadow: 3px 3px 10px get('palettes.primaire.900',$acc-parameters)
+  transition: 200ms all ease
   &:not([disabled]), &:not(.disabled)
     &:hover, &.hovered
-      background-color: get('palettes.neutre.400',$ess-parameters)
-      border-color: get('palettes.neutre.400',$ess-parameters)
+      transform: scale(1.03)
+      box-shadow: 5px 5px 10px get('palettes.primaire.900',$acc-parameters)
     &:active, &.pressed
-      background-color: get('palettes.neutre.400',$ess-parameters)
-      border-color: get('palettes.neutre.500',$ess-parameters)
+      background-color: get('palettes.neutre.400',$acc-parameters)
+      border-color: get('palettes.neutre.500',$acc-parameters)
   &[disabled], &.disabled
     cursor: not-allowed
     opacity: 30%
   &.--group
     padding: .5rem
     > .material-icons:not(:only-child)
-      font-size: #{$ess-base-large} + 'rem'
+      font-size: #{$acc-base-large} + 'rem'
       margin: 0 0 0 .5rem
     &.-left
       flex-direction: row-reverse
       > .material-icons:not(:only-child)
         margin: 0 .5rem 0 0
     &.--small
-      font-size: #{$ess-base-xsmall} + 'rem'
+      font-size: #{$acc-base-xsmall} + 'rem'
       padding: .25rem
       > .material-icons:not(:only-child)
         margin: 0 0 0 .25rem
-  &.--primary
-    background-color: get('palettes.primaire.500',$ess-parameters)
-    border: 1px solid get('palettes.primaire.500',$ess-parameters)
-    &:not([disabled]), &:not(.disabled)
-      &:hover, &.hovered
-        background-color: get('palettes.primaire.300',$ess-parameters)
-        border-color: get('palettes.primaire.300',$ess-parameters)
-      &:active, &.pressed
-        background-color: get('palettes.primaire.300',$ess-parameters)
-        border-color: get('palettes.primaire.500',$ess-parameters)
-  &.--secondary
-    background-color: get('palettes.secondaire.500',$ess-parameters)
-    border: 1px solid get('palettes.secondaire.500',$ess-parameters)
-    &:not([disabled]), &:not(.disabled)
-      &:hover, &.hovered
-        background-color: get('palettes.secondaire.300',$ess-parameters)
-        border-color: get('palettes.secondaire.300',$ess-parameters)
-      &:active, &.pressed
-        background-color: get('palettes.secondaire.300',$ess-parameters)
-        border-color: get('palettes.secondaire.500',$ess-parameters)
-  &.--phantom
-    color: get('palettes.neutre.700',$ess-parameters)
-    background-color: get('palettes.white',$ess-parameters)
-    border: 1px solid get('palettes.neutre.300',$ess-parameters)
-    &:not([disabled]), &:not(.disabled)
-      &:hover, &.hovered
-        background-color: get('palettes.white',$ess-parameters)
-        border: 1px solid get('palettes.neutre.500',$ess-parameters)
-      &:active, &.pressed
-        color: get('palettes.white',$ess-parameters)
-        background-color: get('palettes.neutre.500',$ess-parameters)
-        border-color: get('palettes.neutre.500',$ess-parameters)
   &.--small
-    font-size: #{$ess-base-small} + 'rem'
+    font-size: #{$acc-base-small} + 'rem'
     padding: .25rem .5rem
 
 // INPUT
 
-input[type="text"]
+input
   box-sizing: border-box
   display: block
-  font-size: #{$ess-base-small} + 'rem'
+  font-size: #{$acc-base-small} + 'rem'
   height: 36px
   width: 100%
   padding: calc(14px / 2) calc((14px / 2) * 2)
   line-height: 1.42857143
-  color: get('palettes.neutre.800',$ess-parameters)
-  background-color: get('palettes.white',$ess-parameters)
+  color: get('palettes.neutre.800',$acc-parameters)
+  background-color: get('palettes.white',$acc-parameters)
   background-image: none
-  border: 1px solid get('palettes.primaire.500',$ess-parameters)
-  border-radius: $ess-base-radius
+  border: 1px solid get('palettes.neutre.100',$acc-parameters)
+  border-radius: $acc-base-radius
+  margin-bottom: 5px
   &::placeholder
-    color: get('palettes.neutre.500',$ess-parameters)
+    color: get('palettes.neutre.500',$acc-parameters)
   &:not([disabled]), &:not(.disabled)
     &:hover, &.hovered
-      background-color: get('palettes.primaire.100',$ess-parameters)
+      border-color: get('palettes.primaire.900',$acc-parameters)
     &:focus, &.focused
-      background-color: get('palettes.primaire.100',$ess-parameters)
+      border-color: get('palettes.primaire.900',$acc-parameters)
       outline: 0
   &[disabled], &.disabled
     cursor: not-allowed
-    background-color: get('palettes.primaire.50',$ess-parameters)
-    border-color: get('palettes.primaire.50',$ess-parameters)
-    color: get('palettes.neutre.300',$ess-parameters)
+    background-color: get('palettes.primaire.50',$acc-parameters)
+    border-color: get('palettes.primaire.50',$acc-parameters)
+    color: get('palettes.neutre.300',$acc-parameters)
     &:hover, &.hovered, &:focus, &.focused
       cursor: not-allowed
-      background-color: get('palettes.primaire.50',$ess-parameters)
-      border-color: get('palettes.primaire.50',$ess-parameters)
-      color: get('palettes.neutre.300',$ess-parameters)
-
-
+      background-color: get('palettes.primaire.50',$acc-parameters)
+      border-color: get('palettes.primaire.50',$acc-parameters)
+      color: get('palettes.neutre.300',$acc-parameters)
+  &:invalid, &[invalid]
+    border-color: get('palettes.etats.erreur',$acc-parameters)
 // LABEL
 
 label
   display: inline-block
-  font-size: #{$ess-base-small} + 'rem'
-  font-weight: 600
-  margin-bottom: 0.857rem
+  font-size: #{$acc-base-small} + 'rem'
+  font-weight: 700
+  color: get('palettes.primaire.900',$acc-parameters)
+  margin-bottom: 3px
+  &.required
+    &:after
+      content: '*'
+
+header
+  display: flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-items: stretch
+  > *
+    &:nth-child(2)
+      flex: 1 1 60%
+      margin: 0 auto
+      > img
+        display: block
+        width: 80%
+        height: auto
+        margin: 0 auto
+      > p
+        text-align: center
+        color: get('palettes.neutre.700',$acc-parameters)
+        padding: 20px 0
+    &:nth-child(1), &:nth-child(3)
+      flex: 0 0 20%
+      > img
+        display: block
+        width: 100%
+        height: auto
+    &:nth-child(3)
+      transform: rotate(90deg)
+main
+  > article
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-around
+    align-items: flex-start
+    gap: 30px
+    padding: 40px 30%
+    > section
+      &:nth-child(1)
+        flex: 0 0 auto
+        > img
+          width: auto
+          height: 100%
+  > aside
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
+    align-items: flex-start
+    gap: 30px
+    padding: 60px 30%
+    background-color: get('palettes.secondaire.900',$acc-parameters)
+    > section
+      margin: 0 auto
+      flex: 1 1 255px
+      &:nth-child(1)
+        > p
+          margin-bottom: 1rem
+          + p
+            font-weight: 700
+      &:nth-child(2)
+        button
+          float: right

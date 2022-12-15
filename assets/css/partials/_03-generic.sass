@@ -49,34 +49,34 @@ table
 
 
 * 
-  -ms-scrollbar-face-color: get('palettes.neutre.300',$ess-parameters)
-  -ms-scrollbar-arrow-color: get('palettes.neutre.300',$ess-parameters)
-  -ms-scrollbar-track-color: get('palettes.neutre.300',$ess-parameters)
-  -ms-scrollbar-shadow-color: get('palettes.neutre.600',$ess-parameters)
-  -ms-scrollbar-highlight-color: get('palettes.neutre.600',$ess-parameters)
-  -ms-scrollbar-3dlight-color: get('palettes.neutre.600',$ess-parameters)
-  -ms-scrollbar-darkshadow-color: get('palettes.neutre.600',$ess-parameters)
+  -ms-scrollbar-face-color: get('palettes.neutre.300',$acc-parameters)
+  -ms-scrollbar-arrow-color: get('palettes.neutre.300',$acc-parameters)
+  -ms-scrollbar-track-color: get('palettes.neutre.300',$acc-parameters)
+  -ms-scrollbar-shadow-color: get('palettes.neutre.600',$acc-parameters)
+  -ms-scrollbar-highlight-color: get('palettes.neutre.600',$acc-parameters)
+  -ms-scrollbar-3dlight-color: get('palettes.neutre.600',$acc-parameters)
+  -ms-scrollbar-darkshadow-color: get('palettes.neutre.600',$acc-parameters)
   -ms-overflow-style: -ms-autohiding-scrollbar
 
   // la barre entière.
   &::-webkit-scrollbar 
     width: 8px
     background: #eee
-    border: 1px solid get('palettes.neutre.300',$ess-parameters)
-    border-radius: $ess-base-radius
-    -webkit-border-radius: $ess-base-radius
+    border: 1px solid get('palettes.neutre.300',$acc-parameters)
+    border-radius: $acc-base-radius
+    -webkit-border-radius: $acc-base-radius
 
 
   // l'emplacement qui permet de déplacer la barre de défilement.
   &::-webkit-scrollbar-thumb 
-    border-radius: $ess-base-radius
-    -webkit-border-radius: $ess-base-radius
+    border-radius: $acc-base-radius
+    -webkit-border-radius: $acc-base-radius
     background: rgba(178, 178, 178, 0.8)
 
 
   // la piste (la zone de progression) de la barre de défilement
   &::-webkit-scrollbar-track 
-    background: get('palettes.neutre.300',$ess-parameters)
+    background: get('palettes.neutre.300',$acc-parameters)
 
 
 

@@ -1,12 +1,13 @@
 /*  *************** REBOOT ********************* */
 
 html, body
-  font-family: $ess-base-fontfamily
-  font-size: $ess-base-fontsize
-  font-weight: $ess-base-fontweight
-  line-height: $ess-base-lineheight
+  font-family: $acc-base-fontfamily
+  font-size: $acc-base-fontsize
+  font-weight: $acc-base-fontweight
+  line-height: $acc-base-lineheight
   text-rendering: optimizeLegibility
-  color: get('palettes.white', $ess-parameters)
+  color: get('palettes.white', $acc-parameters)
+  background-color: get('palettes.primaire.900', $acc-parameters)
   .material-icons
     font-display: swap
     line-height: 1.2
@@ -86,7 +87,7 @@ source
 // lien hypertexte grâce à l’attribut href.
 a
   text-decoration: none
-  color: get('palettes.primaire.500',$ess-parameters)
+  color: get('palettes.primaire.500',$acc-parameters)
 
 
 // retour à la ligne
@@ -144,9 +145,9 @@ pre
 
 
 h1,h2,h3,h4,h5,h6
-  font-family: "Fira Sans"
-  font-weight: 900
-@include create-sizes($ess-parameters)
+  font-weight: bold
+@include create-sizes($acc-parameters)
 
-@include create-weights($ess-parameters)
+@include create-weights($acc-parameters)
+
 
