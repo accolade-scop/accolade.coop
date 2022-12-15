@@ -1,0 +1,461 @@
+/* *************** VARIABLES GENERIQUES ***********************  */
+/* ------------ COULEURS ET DES PALETTES ------------ */
+/* ------------ BREAKPOINTS ------------ */
+/* ------------ DEFINITION DES VARIABLES TYPOGRAPHIQUES ------------ */
+/* ****************** FONCTIONS *************** */
+/* ****************** MIXINS ************************** */
+/*  *************** RESET ********************* */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1.15;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -ms-scrollbar-face-color: #DDE0E7;
+  -ms-scrollbar-arrow-color: #DDE0E7;
+  -ms-scrollbar-track-color: #DDE0E7;
+  -ms-scrollbar-shadow-color: #73757B;
+  -ms-scrollbar-highlight-color: #73757B;
+  -ms-scrollbar-3dlight-color: #73757B;
+  -ms-scrollbar-darkshadow-color: #73757B;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  background: #eee;
+  border: 1px solid #DDE0E7;
+  border-radius: 3.2px;
+  -webkit-border-radius: 3.2px;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 3.2px;
+  -webkit-border-radius: 3.2px;
+  background: rgba(178, 178, 178, 0.8);
+}
+*::-webkit-scrollbar-track {
+  background: #DDE0E7;
+}
+
+*:focus {
+  outline: none;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+/*  *************** REBOOT ********************* */
+html, body {
+  font-family: "Roboto", monospace;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  background-color: #1f241c;
+}
+html .material-icons, body .material-icons {
+  font-display: swap;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+.mini {
+  font-size: 0.5rem;
+}
+
+.xxsmall {
+  font-size: 0.647rem;
+}
+
+.xsmall {
+  font-size: 0.765rem;
+}
+
+.small {
+  font-size: 0.881rem;
+}
+
+.normal {
+  font-size: 1rem;
+}
+
+.large {
+  font-size: 1.118rem;
+}
+
+.xlarge {
+  font-size: 1.295rem;
+}
+
+.xxlarge {
+  font-size: 1.588rem;
+}
+
+.big {
+  font-size: 1.823rem;
+}
+
+.xbig {
+  font-size: 2.118rem;
+}
+
+.xxbig {
+  font-size: 2.47rem;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 900;
+}
+
+/*  *************** OBJETS *************** */
+button, input[type=button] {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 1rem;
+  color: #F7FAFF;
+  background-color: #1f241c;
+  border: 1px solid #1f241c;
+  border-radius: 3.2px;
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 3px 3px 10px #1f241c;
+  transition: 200ms all ease;
+}
+button:not([disabled]):hover, button:not([disabled]).hovered, button:not(.disabled):hover, button:not(.disabled).hovered, input[type=button]:not([disabled]):hover, input[type=button]:not([disabled]).hovered, input[type=button]:not(.disabled):hover, input[type=button]:not(.disabled).hovered {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 10px #1f241c;
+}
+button:not([disabled]):active, button:not([disabled]).pressed, button:not(.disabled):active, button:not(.disabled).pressed, input[type=button]:not([disabled]):active, input[type=button]:not([disabled]).pressed, input[type=button]:not(.disabled):active, input[type=button]:not(.disabled).pressed {
+  background-color: #BBBDC4;
+  border-color: #9C9EA4;
+}
+button[disabled], button.disabled, input[type=button][disabled], input[type=button].disabled {
+  cursor: not-allowed;
+  opacity: 30%;
+}
+button.--group, input[type=button].--group {
+  padding: 0.5rem;
+}
+button.--group > .material-icons:not(:only-child), input[type=button].--group > .material-icons:not(:only-child) {
+  font-size: 1.118rem;
+  margin: 0 0 0 0.5rem;
+}
+button.--group.-left, input[type=button].--group.-left {
+  flex-direction: row-reverse;
+}
+button.--group.-left > .material-icons:not(:only-child), input[type=button].--group.-left > .material-icons:not(:only-child) {
+  margin: 0 0.5rem 0 0;
+}
+button.--group.--small, input[type=button].--group.--small {
+  font-size: 0.765rem;
+  padding: 0.25rem;
+}
+button.--group.--small > .material-icons:not(:only-child), input[type=button].--group.--small > .material-icons:not(:only-child) {
+  margin: 0 0 0 0.25rem;
+}
+button.--small, input[type=button].--small {
+  font-size: 0.881rem;
+  padding: 0.25rem 0.5rem;
+}
+
+input {
+  box-sizing: border-box;
+  display: block;
+  font-size: 0.881rem;
+  height: 36px;
+  width: 100%;
+  padding: calc(14px / 2) calc((14px / 2) * 2);
+  line-height: 1.42857143;
+  color: #404248;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #F2F5FC;
+  border-radius: 3.2px;
+  margin-bottom: 5px;
+}
+input::placeholder {
+  color: #9C9EA4;
+}
+input:not([disabled]):hover, input:not([disabled]).hovered, input:not(.disabled):hover, input:not(.disabled).hovered {
+  border-color: #1f241c;
+}
+input:not([disabled]):focus, input:not([disabled]).focused, input:not(.disabled):focus, input:not(.disabled).focused {
+  border-color: #1f241c;
+  outline: 0;
+}
+input[disabled], input.disabled {
+  cursor: not-allowed;
+  color: #DDE0E7;
+}
+input[disabled]:hover, input[disabled].hovered, input[disabled]:focus, input[disabled].focused, input.disabled:hover, input.disabled.hovered, input.disabled:focus, input.disabled.focused {
+  cursor: not-allowed;
+  color: #DDE0E7;
+}
+input:invalid, input[invalid] {
+  border-color: #FF3333;
+}
+
+label {
+  display: inline-block;
+  font-size: 0.881rem;
+  font-weight: 700;
+  color: #1f241c;
+  margin-bottom: 3px;
+}
+label.required:after {
+  content: "*";
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+header > *:nth-child(2) {
+  flex: 1 1 60%;
+  margin: 0 auto;
+}
+header > *:nth-child(2) > img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+header > *:nth-child(2) > p {
+  text-align: center;
+  color: #5F6167;
+  padding: 20px 0;
+}
+header > *:nth-child(1), header > *:nth-child(3) {
+  flex: 0 0 20%;
+}
+header > *:nth-child(1) > img, header > *:nth-child(3) > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+header > *:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+main > article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 30%;
+}
+main > article > section:nth-child(1) {
+  flex: 0 0 auto;
+}
+main > article > section:nth-child(1) > img {
+  width: auto;
+  height: 100%;
+}
+main > article > section:nth-child(2) ul {
+  margin: 10px 0;
+}
+main > article > section:nth-child(2) ul li {
+  margin-bottom: 10px;
+}
+main > article > section:nth-child(2) ul li:first-line {
+  font-weight: 700;
+  color: #7a9a3d;
+}
+main > aside {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 60px 30%;
+  background-color: #7a9a3d;
+}
+main > aside > section {
+  margin: 0 auto;
+  flex: 1 1 255px;
+}
+main > aside > section:nth-child(1) > p {
+  margin-bottom: 1rem;
+}
+main > aside > section:nth-child(1) > p + p {
+  font-weight: 700;
+}
+main > aside > section:nth-child(2) button {
+  float: right;
+}
+
+/*  *************** COMPOSANTS CSS *************** */
+.dropdown {
+  display: inline-block;
+  position: relative;
+  outline: none;
+  margin: 10px;
+  /* mask to close menu by clicking on the button */
+}
+.dropdown .dropdown-content {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: #f7f7f7;
+  width: 370px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100000;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.35s ease-out;
+}
+.dropdown .dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  display: block;
+  text-decoration: none;
+  transition: 0.35s ease-out;
+}
+.dropdown .dropdown-content a:hover {
+  background-color: #eaeaea;
+}
+.dropdown:focus .dropdown-content {
+  outline: none;
+  transform: translateY(20px);
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown:focus .db2 {
+  display: inline-block;
+}
+.dropdown:focus .db2:focus .dropdown-content {
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+}
+.dropdown .db2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+
+.dropbtn {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.35s ease-out;
+}
+
+@media (max-width: 991px) {
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  header > *:nth-child(2) {
+    flex: 1 1 100%;
+    margin: 0 auto;
+  }
+  header > *:nth-child(2) > img {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  header > *:nth-child(2) > p {
+    text-align: center;
+    color: #5F6167;
+    padding: 20px 0;
+  }
+  header > *:nth-child(1), header > *:nth-child(3) {
+    display: none;
+  }
+
+  main > article {
+    padding: 40px 10%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
