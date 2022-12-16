@@ -282,8 +282,9 @@ label.required:after {
 header {
   width: 100%;
   padding-top: 40px;
-  background-color: #1f241c;
-  background-image: white, url(../img/motif.png) left top no-repeat, url(../img/motif.png) right top no-repeat;
+  background: url(../img/motif-g.svg) left top no-repeat, url(../img/motif-d.svg) right top no-repeat, linear-gradient(to right, #1f241c, #1f241c);
+  background-size: 200px, 200px;
+  background-attachment: fixed, fixed;
 }
 header img {
   display: block;
@@ -305,9 +306,9 @@ main article {
 }
 main article::before {
   display: block;
-  content: "s";
-  width: 100px;
-  background-image: url(../img/motif.png);
+  content: "";
+  width: 50px;
+  background-image: url(../img/accolade.svg);
   background-position: left top;
   background-repeat: no-repeat;
 }
@@ -342,10 +343,13 @@ main aside {
   padding: 60px 30%;
   background-color: #7a9a3d;
 }
-main aside p {
+main aside h1 {
   width: 100%;
   max-width: 360px;
   text-align: center;
+}
+main aside h1 > span {
+  font-weight: 300;
 }
 main aside form {
   width: 100%;
@@ -376,6 +380,10 @@ footer a {
     font-size: 12px;
   }
 
+  header {
+    background-image: none;
+    background-color: #1f241c;
+  }
   header > img {
     width: 80%;
   }

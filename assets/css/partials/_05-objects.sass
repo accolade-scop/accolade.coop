@@ -93,8 +93,9 @@ label
 header
   width: 100%
   padding-top: 40px
-  background-color: get('palettes.primaire.900',$acc-parameters)
-  background-image: white, url(../img/motif.png) left top no-repeat, url(../img/motif.png) right top no-repeat
+  background:  url(../img/motif-g.svg) left top no-repeat, url(../img/motif-d.svg) right top no-repeat, linear-gradient(to right, get('palettes.primaire.900',$acc-parameters), get('palettes.primaire.900',$acc-parameters))
+  background-size: 200px, 200px
+  background-attachment: fixed, fixed
   img
     display: block
     width: 40%
@@ -111,9 +112,9 @@ main
     display: flex
     &::before
       display: block
-      content: 's'
-      width: 100px
-      background-image: url(../img/motif.png)
+      content: ''
+      width: 50px
+      background-image: url(../img/accolade.svg)
       background-position: left top
       background-repeat: no-repeat
     > section
@@ -142,10 +143,12 @@ main
     align-items: center
     padding: 60px 30%
     background-color: get('palettes.secondaire.900',$acc-parameters)
-    p
+    h1
       width: 100%
       max-width: 360px
       text-align: center
+      > span
+        font-weight: 300
     form
       width: 100%
       max-width: 360px
