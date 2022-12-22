@@ -9,8 +9,8 @@ button, input[type="button"]
   font-size: #{$acc-base-normal} + 'rem'
   white-space: nowrap
   color: get('palettes.neutre.50',$acc-parameters)
-  background-color: get('palettes.primaire.900',$acc-parameters)
-  border: 1px solid get('palettes.primaire.900',$acc-parameters)
+  background-color: get('palettes.secondaire.900',$acc-parameters)
+  border: 1px solid get('palettes.secondaire.900',$acc-parameters)
   border-radius: $acc-base-fontsize/5
   padding: .5rem 1rem
   cursor: pointer
@@ -18,8 +18,7 @@ button, input[type="button"]
   transition: 200ms all ease
   &:not([disabled]), &:not(.disabled)
     &:hover, &.hovered
-      background-color: get('palettes.secondaire.900',$acc-parameters)
-      border: 1px solid get('palettes.secondaire.900',$acc-parameters)
+      border: 1px solid get('palettes.primaire.900',$acc-parameters)
     &:active, &.pressed
       background-color: get('palettes.neutre.400',$acc-parameters)
       border-color: get('palettes.neutre.500',$acc-parameters)
@@ -55,16 +54,16 @@ input
   color: get('palettes.neutre.800',$acc-parameters)
   background-color: get('palettes.white',$acc-parameters)
   background-image: none
-  border: 1px solid get('palettes.neutre.100',$acc-parameters)
+  border: 1px solid get('palettes.white',$acc-parameters)
   border-radius: $acc-base-radius
   margin-bottom: 5px
   &::placeholder
     color: get('palettes.neutre.500',$acc-parameters)
   &:not([disabled]), &:not(.disabled)
     &:hover, &.hovered
-      border-color: get('palettes.secondaire.900',$acc-parameters)
+      border-color: get('palettes.primaire.900',$acc-parameters)
     &:focus, &.focused
-      border-color: get('palettes.secondaire.900',$acc-parameters)
+      border-color: get('palettes.primaire.900',$acc-parameters)
       outline: 0
   &[disabled], &.disabled
     cursor: not-allowed
@@ -99,13 +98,26 @@ main
 h1
   font-size: 3.375rem
   line-height: .3em
+  font-weight: 700
 h2
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  align-items: center
   font-size: 2.25rem
+  padding: 0 30px
   margin-bottom: 2em
+  font-weight: 500
+  gap: 10px
+  > span:not(:last-child)::after
+    content: '\2022'
+    color:  get('palettes.secondaire.900',$acc-parameters)
+    display: inline-block
+    font-size: 2rem
+    margin-left: 10px
 h3
-  font-size: 1.5rem
-  font-weight: normal
-  color:  get('palettes.secondaire.900',$acc-parameters)
+  font-size: 1.8rem
+  font-weight: 300
 form
   display: flex
   flex-flow: row nowrap

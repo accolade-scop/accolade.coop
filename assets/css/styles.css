@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -181,8 +182,8 @@ button, input[type=button] {
   font-size: 1rem;
   white-space: nowrap;
   color: #F7FAFF;
-  background-color: #1f241c;
-  border: 1px solid #1f241c;
+  background-color: #7a9a3d;
+  border: 1px solid #7a9a3d;
   border-radius: 3.2px;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -190,8 +191,7 @@ button, input[type=button] {
   transition: 200ms all ease;
 }
 button:not([disabled]):hover, button:not([disabled]).hovered, button:not(.disabled):hover, button:not(.disabled).hovered, input[type=button]:not([disabled]):hover, input[type=button]:not([disabled]).hovered, input[type=button]:not(.disabled):hover, input[type=button]:not(.disabled).hovered {
-  background-color: #7a9a3d;
-  border: 1px solid #7a9a3d;
+  border: 1px solid #1f241c;
 }
 button:not([disabled]):active, button:not([disabled]).pressed, button:not(.disabled):active, button:not(.disabled).pressed, input[type=button]:not([disabled]):active, input[type=button]:not([disabled]).pressed, input[type=button]:not(.disabled):active, input[type=button]:not(.disabled).pressed {
   background-color: #BBBDC4;
@@ -237,7 +237,7 @@ input {
   color: #404248;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #F2F5FC;
+  border: 1px solid #ffffff;
   border-radius: 3.2px;
   margin-bottom: 5px;
 }
@@ -245,10 +245,10 @@ input::placeholder {
   color: #9C9EA4;
 }
 input:not([disabled]):hover, input:not([disabled]).hovered, input:not(.disabled):hover, input:not(.disabled).hovered {
-  border-color: #7a9a3d;
+  border-color: #1f241c;
 }
 input:not([disabled]):focus, input:not([disabled]).focused, input:not(.disabled):focus, input:not(.disabled).focused {
-  border-color: #7a9a3d;
+  border-color: #1f241c;
   outline: 0;
 }
 input[disabled], input.disabled {
@@ -286,17 +286,31 @@ main > div > strong > span:nth-child(1), main > div > strong > span:nth-child(2)
 h1 {
   font-size: 3.375rem;
   line-height: 0.3em;
+  font-weight: 700;
 }
 
 h2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   font-size: 2.25rem;
+  padding: 0 30px;
   margin-bottom: 2em;
+  font-weight: 500;
+  gap: 10px;
+}
+h2 > span:not(:last-child)::after {
+  content: "•";
+  color: #7a9a3d;
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 10px;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: #7a9a3d;
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 form {
@@ -325,6 +339,10 @@ form {
   h2 {
     font-size: 1rem;
     margin-bottom: 2em;
+  }
+  h2 > span:not(:last-child)::after {
+    font-size: 1rem;
+    margin-left: 5px;
   }
 
   h3 {
