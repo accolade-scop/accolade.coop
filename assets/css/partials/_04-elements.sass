@@ -7,10 +7,10 @@ html, body
   text-rendering: optimizeLegibility
   color: get('palettes.white', $acc-parameters)
   background-color: get('palettes.white', $acc-parameters)
-  display: flex
-  flex-flow: column nowrap
-  justify-content: stretch
-  align-items: flex-start
+  background-image: url("../img/fond-accolade.jpg")
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: cover
   width: 100%
   min-height: 100vh
   .material-icons
@@ -48,8 +48,6 @@ video
 source 
 // lien hypertexte grâce à l’attribut href.
 a
-  text-decoration: none
-  color: get('palettes.primaire.500',$acc-parameters)
 // retour à la ligne
 br
 // paragraphe

@@ -7,20 +7,19 @@ button, input[type="button"]
   font-family: 'Roboto'
   font-weight: 700
   font-size: #{$acc-base-normal} + 'rem'
+  white-space: nowrap
   color: get('palettes.neutre.50',$acc-parameters)
   background-color: get('palettes.primaire.900',$acc-parameters)
   border: 1px solid get('palettes.primaire.900',$acc-parameters)
   border-radius: $acc-base-fontsize/5
-  margin: .25rem
   padding: .5rem 1rem
   cursor: pointer
   text-decoration: none
-  box-shadow: 3px 3px 10px get('palettes.primaire.900',$acc-parameters)
   transition: 200ms all ease
   &:not([disabled]), &:not(.disabled)
     &:hover, &.hovered
-      transform: scale(1.03)
-      box-shadow: 5px 5px 10px get('palettes.primaire.900',$acc-parameters)
+      background-color: get('palettes.secondaire.900',$acc-parameters)
+      border: 1px solid get('palettes.secondaire.900',$acc-parameters)
     &:active, &.pressed
       background-color: get('palettes.neutre.400',$acc-parameters)
       border-color: get('palettes.neutre.500',$acc-parameters)
@@ -63,9 +62,9 @@ input
     color: get('palettes.neutre.500',$acc-parameters)
   &:not([disabled]), &:not(.disabled)
     &:hover, &.hovered
-      border-color: get('palettes.primaire.900',$acc-parameters)
+      border-color: get('palettes.secondaire.900',$acc-parameters)
     &:focus, &.focused
-      border-color: get('palettes.primaire.900',$acc-parameters)
+      border-color: get('palettes.secondaire.900',$acc-parameters)
       outline: 0
   &[disabled], &.disabled
     cursor: not-allowed
@@ -79,91 +78,36 @@ input
       color: get('palettes.neutre.300',$acc-parameters)
   &:invalid, &[invalid]
     border-color: get('palettes.etats.erreur',$acc-parameters)
-// LABEL
-label
-  display: inline-block
-  font-size: #{$acc-base-small} + 'rem'
-  font-weight: 700
-  color: get('palettes.primaire.900',$acc-parameters)
-  margin-bottom: 3px
-  &.required
-    &:after
-      content: '*'
 // OBJETS HTML
-header
-  width: 100%
-  padding-top: 40px
-  background:  url(../img/motif-g.svg) left top no-repeat, url(../img/motif-d.svg) right top no-repeat, linear-gradient(to right, get('palettes.primaire.900',$acc-parameters), get('palettes.primaire.900',$acc-parameters))
-  background-size: 10%, 10%
-  background-attachment: fixed, fixed
-  img
-    display: block
-    width: 40%
-    height: auto
-    margin: 0 auto
 main
-  flex: 1 1 auto
   display: flex
   flex-flow: column wrap
-  width: 100%
-  article
-    background-color: get('palettes.primaire.900',$acc-parameters)
-    padding: 40px 30% 20px 30%
-    display: flex
-    &::before
-      display: block
-      content: ''
-      width: 50px
-      background-image: url(../img/accolade.svg)
-      background-position: left top
-      background-repeat: no-repeat
-    > section
-      > h1 > span
-        display: inline-block
-        margin-top: 5px
-        color: get('palettes.neutre.600',$acc-parameters)
-      > h2
-        font-weight: 300
-      dl
-        margin: 10px 0
-        dt
-          margin-bottom: 10px
-          font-weight: 700
-          color: get('palettes.secondaire.900',$acc-parameters)
-          &:first-letter
-            font-family: 'Courier Prime', monospace
-            font-weight: 300
-            color: get('palettes.white',$acc-parameters)
-            padding-right: 10px
-  aside
-    flex: 1 1 auto
-    display: flex
-    flex-flow: column wrap
-    justify-content: center
-    align-items: center
-    padding: 60px 30%
-    background-color: get('palettes.secondaire.900',$acc-parameters)
-    h1
-      width: 100%
-      max-width: 360px
-      text-align: center
-      > span
-        font-weight: 300
-    form
-      width: 100%
-      max-width: 360px
-      button
-        float: right
-footer
-  display: flex
-  flex-flow: row wrap
   justify-content: center
-  align-items: stretch
-  background-color: get('palettes.primaire.900',$acc-parameters)
-  color: get('palettes.secondaire.900',$acc-parameters)
-  width: 100%
-  padding: 10px 0
-  font-size: #{$acc-base-xxsmall} + "rem"
-  a
-    color: get('palettes.secondaire.900',$acc-parameters)
-    text-decoration: underline
+  align-items: center
+  text-align: center
+  min-height: 100vh
+  > div
+    padding-bottom: 4em
+    font-size: 2rem
+    > strong
+      font-family: "Courier Prime", monospace
+      font-size: 2.5rem
+      > span
+        &:nth-child(1), &:nth-child(2)
+          color:  get('palettes.secondaire.900',$acc-parameters)
+
+h1
+  font-size: 3.375rem
+  line-height: .3em
+h2
+  font-size: 2.25rem
+  margin-bottom: 2em
+h3
+  font-size: 1.5rem
+  font-weight: normal
+form
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: flex-start
+  gap: 1rem
