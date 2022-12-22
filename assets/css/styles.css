@@ -87,11 +87,6 @@ html, body {
   line-height: 1.2;
   text-rendering: optimizeLegibility;
   color: #ffffff;
-  background-color: #ffffff;
-  background-image: url("../img/fond-accolade.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   width: 100%;
   min-height: 100vh;
 }
@@ -270,6 +265,11 @@ main {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+  background-color: #ffffff;
+  background-image: url("../img/fond-accolade.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 main > div {
   padding-bottom: 4em;
