@@ -273,11 +273,11 @@ main {
 }
 main > div {
   padding-bottom: 4em;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 main > div > strong {
   font-family: "Courier Prime", monospace;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 main > div > strong > span:nth-child(1), main > div > strong > span:nth-child(2) {
   color: #7a9a3d;
