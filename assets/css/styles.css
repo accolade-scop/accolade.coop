@@ -358,7 +358,7 @@ h2 > span:not(:last-child)::after {
 
 h3 {
   font-size: 1.8rem;
-  font-size-font-family: "Roboto-Thin";
+  font-family: "Roboto-Thin";
 }
 
 form {
