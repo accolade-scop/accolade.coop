@@ -329,7 +329,7 @@ main article > section dl dt {
     color: #7a9a3d;
 }
 main article > section dl dt:first-letter {
-    font-family: "Courier Prime", monospace;
+    font-family: "CourierPrime-Regular", monospace;
     font-weight: 300;
     color: #ffffff;
     padding-right: 10px;
