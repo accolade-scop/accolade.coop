@@ -324,11 +324,11 @@ form {
 @media (max-width: 991px) {
   main > div {
     padding-bottom: 4em;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   main > div > strong {
     font-family: "Courier Prime", monospace;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   h1 {
