@@ -237,7 +237,7 @@ input {
   font-size: 0.881rem;
   height: 36px;
   width: 100%;
-  padding: calc(14px / 2) calc((14px / 2) * 2);
+  padding: 7px 14px;
   line-height: 1.42857143;
   color: #404248;
   background-color: #ffffff;
@@ -356,7 +356,9 @@ main aside form {
   max-width: 360px;
 }
 main aside form button {
-  float: right;
+  display: block;
+  width: 100%;
+  margin: 0;
 }
 
 footer {
