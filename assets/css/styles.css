@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -80,17 +81,12 @@ table {
 }
 
 html, body {
-  font-family: "Roboto", monospace;
+  font-family: "Roboto-Regular", monospace, sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.2;
   text-rendering: optimizeLegibility;
   color: #ffffff;
-  background-color: #ffffff;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: stretch;
-  align-items: flex-start;
   width: 100%;
   min-height: 100vh;
 }
@@ -99,14 +95,58 @@ html .material-icons, body .material-icons {
   line-height: 1.2;
 }
 
-a {
-  text-decoration: none;
-}
-
 p {
   margin-bottom: 1.2em;
 }
 
+@font-face {
+  font-family: "Roboto-Black";
+  src: url("../fonts/Roboto-Black.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("../fonts/Roboto-Thin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CourierPrime-Bold";
+  src: url("../fonts/CourierPrime-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CourierPrime-Regular";
+  src: url("../fonts/CourierPrime-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-bottom: 1em;
@@ -180,23 +220,21 @@ button, input[type=button] {
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
-  font-family: "Roboto";
+  font-family: "Roboto-Black";
   font-weight: 700;
   font-size: 1rem;
-  color: #F7FAFF;
-  background-color: #1f241c;
-  border: 1px solid #1f241c;
+  white-space: nowrap;
+  color: #1f241c;
+  background-color: #7a9a3d;
+  border: 1px solid #7a9a3d;
   border-radius: 3.2px;
-  margin: 0.25rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 3px 3px 10px #1f241c;
   transition: 200ms all ease;
 }
 button:not([disabled]):hover, button:not([disabled]).hovered, button:not(.disabled):hover, button:not(.disabled).hovered, input[type=button]:not([disabled]):hover, input[type=button]:not([disabled]).hovered, input[type=button]:not(.disabled):hover, input[type=button]:not(.disabled).hovered {
-  transform: scale(1.03);
-  box-shadow: 5px 5px 10px #1f241c;
+  border: 1px solid #1f241c;
 }
 button:not([disabled]):active, button:not([disabled]).pressed, button:not(.disabled):active, button:not(.disabled).pressed, input[type=button]:not([disabled]):active, input[type=button]:not([disabled]).pressed, input[type=button]:not(.disabled):active, input[type=button]:not(.disabled).pressed {
   background-color: #BBBDC4;
@@ -237,12 +275,12 @@ input {
   font-size: 0.881rem;
   height: 36px;
   width: 100%;
-  padding: 7px 14px;
+  padding: calc(14px / 2) calc((14px / 2) * 2);
   line-height: 1.42857143;
   color: #404248;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #F2F5FC;
+  border: 1px solid #ffffff;
   border-radius: 3.2px;
   margin-bottom: 5px;
 }
@@ -268,134 +306,96 @@ input:invalid, input[invalid] {
   border-color: #FF3333;
 }
 
-label {
-  display: inline-block;
-  font-size: 0.881rem;
-  font-weight: 700;
-  color: #1f241c;
-  margin-bottom: 3px;
-}
-label.required:after {
-  content: "*";
-}
-
-header {
-  width: 100%;
-  padding-top: 40px;
-  background: url(../img/motif-g.svg) left top no-repeat, url(../img/motif-d.svg) right top no-repeat, linear-gradient(to right, #1f241c, #1f241c);
-  background-size: 10%, 10%;
-  background-attachment: fixed, fixed;
-}
-header img {
-  display: block;
-  width: 40%;
-  height: auto;
-  margin: 0 auto;
-}
-
 main {
-  flex: 1 1 auto;
-  display: flex;
-  flex-flow: column wrap;
-  width: 100%;
-}
-main article {
-  background-color: #1f241c;
-  padding: 40px 30% 20px 30%;
-  display: flex;
-}
-main article::before {
-  display: block;
-  content: "";
-  width: 50px;
-  background-image: url(../img/accolade.svg);
-  background-position: left top;
-  background-repeat: no-repeat;
-}
-main article > section > h1 > span {
-  display: inline-block;
-  margin-top: 5px;
-  color: #73757B;
-}
-main article > section > h2 {
-  font-weight: 300;
-}
-main article > section dl {
-  margin: 10px 0;
-}
-main article > section dl dt {
-  margin-bottom: 10px;
-  font-weight: 700;
-  color: #7a9a3d;
-}
-main article > section dl dt:first-letter {
-  font-family: "Courier Prime", monospace;
-  font-weight: 300;
-  color: #ffffff;
-  padding-right: 10px;
-}
-main aside {
-  flex: 1 1 auto;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  padding: 60px 30%;
-  background-color: #7a9a3d;
-}
-main aside h1 {
-  width: 100%;
-  max-width: 360px;
   text-align: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  background-image: url("../img/fond-accolade.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
-main aside h1 > span {
-  font-weight: 300;
+main > div {
+  padding-bottom: 4em;
+  font-size: 2.5rem;
 }
-main aside form {
-  width: 100%;
-  max-width: 360px;
+main > div > strong {
+  font-family: "CourierPrime-Bold", monospace;
+  font-size: 3rem;
 }
-main aside form button {
-  display: block;
-  width: 100%;
-  margin: 0;
+main > div > strong > span:nth-child(1), main > div > strong > span:nth-child(2) {
+  color: #7a9a3d;
 }
 
-footer {
+h1 {
+  font-size: 3.375rem;
+  line-height: 0.3em;
+  font-family: "Roboto-Black";
+}
+
+h2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: stretch;
-  background-color: #1f241c;
-  color: #7a9a3d;
-  width: 100%;
-  padding: 10px 0;
-  font-size: 0.647rem;
+  align-items: center;
+  font-size: 2.25rem;
+  padding: 0 30px;
+  margin-bottom: 2em;
+  font-family: "Roboto-Bold";
+  gap: 10px;
 }
-footer a {
+h2 > span:not(:last-child)::after {
+  content: "•";
   color: #7a9a3d;
-  text-decoration: underline;
+  display: inline-block;
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-family: "Roboto-Thin";
+}
+
+form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 @media (max-width: 991px) {
-  body, html {
-    font-size: 12px;
+  main > div {
+    padding-bottom: 4em;
+    font-size: 1.5rem;
+  }
+  main > div > strong {
+    font-family: "CourierPrime-Bold", monospace;
+    font-size: 2rem;
   }
 
-  header {
-    background-image: none;
-    background-color: #1f241c;
-  }
-  header > img {
-    width: 80%;
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
   }
 
-  main article {
-    padding: 40px 10%;
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 2em;
   }
-  main aside {
-    gap: 0;
-    padding: 15px 10%;
+  h2 > span:not(:last-child)::after {
+    font-size: 1rem;
+    margin-left: 5px;
+  }
+
+  h3 {
+    font-size: 0.821rem;
+    font-weight: normal;
   }
 }
 
