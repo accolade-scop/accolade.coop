@@ -275,7 +275,7 @@ input {
   font-size: 0.881rem;
   height: 36px;
   width: 100%;
-  padding: 7px 14px;
+  padding: calc(14px / 2) calc((14px / 2) * 2);
   line-height: 1.42857143;
   color: #404248;
   background-color: #ffffff;
