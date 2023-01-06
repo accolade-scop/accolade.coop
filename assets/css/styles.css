@@ -378,22 +378,19 @@ form {
     font-family: "CourierPrime-Bold", monospace;
     font-size: 2rem;
   }
-
-  h1 {
+  main h1 {
     font-size: 2rem;
     line-height: 1.2;
   }
-
-  h2 {
+  main h2 {
     font-size: 1rem;
     margin-bottom: 2em;
   }
-  h2 > span:not(:last-child)::after {
+  main h2 > span:not(:last-child)::after {
     font-size: 1rem;
     margin-left: 5px;
   }
-
-  h3 {
+  main h3 {
     font-size: 0.821rem;
     font-weight: normal;
   }
