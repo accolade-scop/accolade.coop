@@ -275,7 +275,7 @@ input {
   font-size: 0.881rem;
   height: 36px;
   width: 100%;
-  padding: calc(14px / 2) calc((14px / 2) * 2);
+  padding: 7px 14px;
   line-height: 1.42857143;
   color: #404248;
   background-color: #ffffff;
@@ -323,11 +323,11 @@ main > div {
   padding-bottom: 4em;
   font-size: 2.5rem;
 }
-main > div > strong {
+main > div strong {
   font-family: "CourierPrime-Bold", monospace;
   font-size: 3rem;
 }
-main > div > strong > span:nth-child(1), main > div > strong > span:nth-child(2) {
+main > div strong > span:nth-child(1), main > div strong > span:nth-child(2) {
   color: #7a9a3d;
 }
 
