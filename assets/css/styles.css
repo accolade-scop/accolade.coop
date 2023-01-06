@@ -372,10 +372,10 @@ form {
 @media (max-width: 991px) {
   main > div {
     padding-bottom: 4em;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   main > div strong {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   main h1 {
     font-size: 2rem;
