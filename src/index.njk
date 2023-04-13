@@ -1,0 +1,24 @@
+Bonjour
+
+<a href="/blog">BLOG</a>
+<ul>
+    {%- for post in collections.post -%}
+        <li>
+            <a href="{{ post.data.page.url }}">
+                {{ post.data.title }}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>
+
+VALEURS
+
+<ul>
+    {%- for post in collections.valeur -%}
+        <li>
+            <a href="{{ post.data.page.url }}">
+                {{ post.data.title }}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

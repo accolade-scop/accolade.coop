@@ -1,0 +1,11 @@
+
+BLOG
+<ul>
+    {%- for post in collections.post -%}
+        <li>
+            <a href="{{ post.data.page.url }}">
+                {{ post.data.title }}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>
