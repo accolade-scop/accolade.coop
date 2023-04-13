@@ -1,0 +1,12 @@
+
+VALEURS
+
+<ul>
+    {%- for post in collections.valeur -%}
+        <li>
+            <a href="{{ post.data.page.url }}">
+                {{ post.data.title }}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>

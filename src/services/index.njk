@@ -1,0 +1,12 @@
+
+SERVICES
+
+<ul>
+    {%- for post in collections.service -%}
+        <li>
+            <a href="{{ post.data.page.url }}">
+                {{ post.data.title }}
+            </a>
+        </li>
+    {%- endfor -%}
+</ul>
