@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
     });
 
     // copy assets
-    eleventyConfig.addPassthroughCopy("assets/");
+    eleventyConfig.addPassthroughCopy("src/assets/");
 
     return {
         dir: {

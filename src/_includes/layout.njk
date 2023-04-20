@@ -1,16 +1,69 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="fr">
+
 <head>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="La Scoop Accolade est spécialisé dans le développement de solutions numériques web et mobile">
+    <title>Scoop Accolade</title>
+    <link href="./assets/styles/styles.css" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-    <a href="/">Accueil</a>
+
+    <nav>
+
+        <div class="logo-accolade">
+
+            <img src="/assets/imgs/logo-accolade-element.svg">
+
+            <div>
+                <div>Ac<span class="vert">co</span>la<span class="vert">de</span></div>
+                <div>Vers le numérique eco-responsable</div>
+            </div>
+
+        </div>
+
+        <ol class="menu">
+
+            <li>
+                <a href="#" class="btn">Accueil</a>
+            </li>
+            <li>
+                <a href="#" class="btn">Valeurs</a>
+            </li>
+            <li>
+                <a href="#" class="btn">Services</a>
+            </li>
+            <li>
+                <a href="#" class="btn">Réalisations</a>
+            </li>
+            <li>
+                <a href="#" class="btn">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="btn">Contact</a>
+            </li>
+
+        </ol>
+
+    </nav>
+
 </header>
 
 <main>
     {{ content | safe }}
 </main>
+
+<footer>
+    <a href="#">Mentions légales</a>
+    <p>Scoop ACCOLADE (SARL à capital variable) - © Tous droits reservés - 2023</p>
+</footer>
 
 </body>
 </html>
