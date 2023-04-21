@@ -94,6 +94,13 @@ header
     align-items: center
     img
       height: 60px
+    .burger
+      display: none
+      position: relative
+      color: get('palettes.gray.200', $acc-parameters)
+      margin-right: 40px
+      font-size: $acc-fontsize-25
+
     ol
       display: flex
       flex-flow: row wrap
@@ -257,22 +264,31 @@ footer
 
 
 +respond-inf(sm)
-
+  section
+    padding: 0 10px
   h1.big-title
     font-size: $acc-fontsize-22
   header
-    height: auto
+    height: 60px
     .logo-accolade
-      margin-left: 30px
-      > *:nth-child(2)
+      margin-left: 20px
+      height: 100%
+      > img
+        height: 50px
+    nav
+      > ol
         display: none
+      .burger
+        display: block
   main
     .slogan
       height: 400px
       padding: 0 20px
+      .container
+        max-width: 500px
       h1
         font-size: $acc-fontsize-22
-        padding-top: 60px
+        padding-top: 35px
         margin-bottom: 30px
       p
         font-size: $acc-fontsize-16
