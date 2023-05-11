@@ -21,13 +21,12 @@
 
 
 h1.big-title
-  font-family: 'Roboto', sans-serif
+  font-family: roboto-light, sans-serif
   font-style: normal
   line-height: 1
-  font-weight: 300
   font-size: $acc-fontsize-40
   text-align: center
-  padding: 40px 0
+  padding: 80px 0
 
 
 .btn
@@ -36,7 +35,7 @@ h1.big-title
   justify-content: flex-start
   align-content: center
   gap: 10px
-  font-family: roboto-condensed, sans-serif
+  font-family: roboto-condensed-regular, sans-serif
   font-size: inherit
   font-weight: 300
   text-decoration: none
@@ -48,19 +47,26 @@ h1.big-title
     align-items: center
   > .material-icons
     font-size: 2em
-
   &:hover, &.active, &:active
     background-color: get('palettes.interface.bleu', $acc-parameters)
     color: white
-    font-weight: 700
+  &.--contact
+    color: get('palettes.interface.bleu', $acc-parameters)
+    border: 1px solid get('palettes.interface.bleu', $acc-parameters)
+    &:hover, &.active, &:active
+      background-color: get('palettes.interface.bleu', $acc-parameters)
+      color: white
 
 
 .savoir-plus
   text-align: right
   >.btn
     color: get('palettes.interface.bleu', $acc-parameters)
-    margin: 20px 0
+    background-color: transparent
+    > .material-icons
+      font-size: 3em
     &:hover, &.active, &:active
+      background-color: get('palettes.interface.bleu', $acc-parameters)
       color: white
 
 
@@ -72,7 +78,7 @@ section
 
 
 .container
-  max-width: 1280px
+  max-width: 1360px
   margin: 0 auto
 
 
@@ -110,6 +116,7 @@ header
 
 
 main
+
   .slogan
     position: relative
     display: flex
@@ -118,77 +125,120 @@ main
     align-items: center
     width: 100%
     height: 600px
-    background: url("/assets/imgs/slogan2.jpg")
-    background-repeat: no-repeat
-    background-size: cover
-    background-position: center
     color: white
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
     line-height: 1
     text-align: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    &.home
+      background: url("/assets/imgs/slogan-home.jpg")
+    &.valeurs
+      background: url("/assets/imgs/slogan-valeurs.jpg")
+    &.services
+      background: url("/assets/imgs/slogan-services.jpg")
+    &.realisations
+      background: url("/assets/imgs/slogan-realisations.jpg")
+    &.blog
+      background: url("/assets/imgs/slogan-blog.jpg")
     &:before
       position: absolute
       top: 0
       content: ''
       width: 100%
       height: 100%
-      background: linear-gradient(0deg, #f8f9fa 0%, #f8f9fa 10%, rgba(0, 212, 255, 0) 40%)
-    > .container
-      max-width: 800px
     h1
-      font-family: roboto-condensed, sans-serif
-      font-size: $acc-fontsize-40
-      font-weight: 700
-      padding-top: 87px
-      margin-bottom: 40px
+      font-family: roboto-condensed-black, sans-serif
+      font-size: $acc-fontsize-60
+      line-height: 1
+      padding-top: 130px
+      margin-bottom: 45px
     p
-      font-family: roboto, sans-serif
       font-size: $acc-fontsize-25
-      font-weight: 400
+
+
+  .amorce
+    position: relative
+    top: -100px
+
+    .blog
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: auto
+      gap: 20px
+      max-width: 1200px
+      margin: 0 auto 40px auto
+      > .card.--blog
+        h1
+          font-family: "roboto-bold", sans-serif
+          font-size: $acc-fontsize-18
+          flex: 1
+        .card.--identity
+          width: 100%
+          flex: 0
 
 
   .card
-    border-bottom: 1px solid get('palettes.gray.700', $acc-parameters)
     margin: auto
     &.--valeurs
-      position: relative
-      top: -150px
-      width: 90%
-      background-color: white
-      font-family: Roboto, sans-serif
-      font-size: $acc-fontsize-18
-      padding: 40px 50px 0 50px
-      > h2
-        font-family: Roboto, sans-serif
-        font-weight: 900
-        color: get('palettes.interface.vert', $acc-parameters)
+      font-family: roboto-regular, sans-serif
+      > h1
+        font-family: roboto-medium, sans-serif
         font-size: $acc-fontsize-40
+        margin-bottom: 2rem
+        text-align: center
+      > h2
+        font-family: roboto-light, sans-serif
+        font-size: $acc-fontsize-34
         line-height: 1
-        margin-bottom: 40px
-        > small
-          font-size: $acc-fontsize-34
-          font-weight: 400
-          color: get('palettes.gray.100', $acc-parameters)
+        margin-bottom: 2rem
+        text-align: center
       > p
-        margin-bottom: 1rem
-
+        font-size: $acc-fontsize-22
+        margin-bottom: 40px
+    &.--blog
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      background-color: get('palettes.gray.white', $acc-parameters)
+      border-bottom: 1px solid get('palettes.gray.500', $acc-parameters)
+      padding: 30px
+      height: 180px
+    &.--identity
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      column-gap: 20px
+      > figure
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        height: 45px
+        width: 45px
+        overflow: hidden
+        > img
+          object-fit: cover
+      > aside
+        font-family: roboto-light, sans-serif
+        font-size: $acc-fontsize-14
+        > div
+            color: get('palettes.interface.vert', $acc-parameters)
 
   .valeurs-list
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: auto
     gap: 20px
-    margin: 30px 0
+    margin-bottom: 40px
     > li
-      background-color: get('palettes.gray.900', $acc-parameters)
+      background-color: get('palettes.gray.white', $acc-parameters)
       border-bottom: 1px solid get('palettes.gray.500', $acc-parameters)
       padding: 30px
-      border: 1px solid transparent
-      cursor: pointer
-      transition: all .3s ease-in-out
-      &:hover
-        border-color: get('palettes.gray.600', $acc-parameters)
-        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12)
       > ul
         > li
           &:not(:first-child)
@@ -196,10 +246,11 @@ main
             margin-left: 40px
             list-style-type: circle
           &.title
-            font-family: roboto-condensed, sans-serif
+            font-family: roboto-condensed-regular, sans-serif
             text-transform: uppercase
-            font-size: $acc-fontsize-22
+            font-size: $acc-fontsize-25
             color: get('palettes.interface.vert', $acc-parameters)
+            margin-bottom: 1rem
             cursor: pointer
 
 
@@ -207,37 +258,40 @@ main
     display: grid
     grid-template-columns: 1fr 1fr
     grid-template-rows: auto
-    gap: 20px
-    margin: 40px auto
-    width: 90%
+    gap: 1px
+    background-color: get('palettes.gray.600', $acc-parameters)
+    margin-bottom: 40px
     > li
-      background-color: get('palettes.gray.800', $acc-parameters)
-      border-bottom: 1px solid get('palettes.gray.500', $acc-parameters)
-      padding: 30px
-      border: 1px solid transparent
-      cursor: pointer
-      font-size: $acc-fontsize-22
-      font-weight: 300
+      display: flex
+      flex-flow: column wrap
+      justify-content: center
+      align-items: center
+      background-color: get('palettes.gray.white', $acc-parameters)
+      font-family: roboto-light, sans-serif
+      font-size: $acc-fontsize-32
       line-height: 1
+      height: 280px
       text-align: center
-      transition: all .3s ease-in-out
-      &::first-line
-        font-weight: 900
       &:nth-child(1)
-        &:first-line
+        span:nth-child(1)
+          font-size: $acc-fontsize-36
+          text-transform: uppercase
           color: get('palettes.interface.vert', $acc-parameters)
       &:nth-child(2)
-        &:first-line
+        span:nth-child(1)
+          font-size: $acc-fontsize-36
+          text-transform: uppercase
           color: get('palettes.interface.rouge', $acc-parameters)
       &:nth-child(3)
-        &:first-line
+        span:nth-child(1)
+          font-size: $acc-fontsize-36
+          text-transform: uppercase
           color: get('palettes.interface.jaune', $acc-parameters)
       &:nth-child(4)
-        &:first-line
+        span:nth-child(1)
+          font-size: $acc-fontsize-36
+          text-transform: uppercase
           color: get('palettes.interface.bleu', $acc-parameters)
-      &:hover
-        border-color: get('palettes.gray.600', $acc-parameters)
-        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.12)
 
 
   .collection
@@ -247,7 +301,6 @@ main
     align-items: center
     gap: 20px
     margin: 40px 0
-
 
 footer
   display: flex
@@ -292,6 +345,7 @@ footer
         margin-bottom: 30px
       p
         font-size: $acc-fontsize-16
+
     .card
       &.--valeurs
         padding: 20px 30px 0 30px
@@ -304,6 +358,7 @@ footer
         .valeurs-list
           > li
             grid-column: span 2
+
     .services-list
       > li
         grid-column: span 2
