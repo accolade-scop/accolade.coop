@@ -148,24 +148,34 @@ main
     background-size: cover
     background-position: center
 
+    &:not(.home)
+      p
+        font-family: "roboto-thin", sans-serif
+        font-size: 2rem
+
     &.home
       background-image: url("/assets/imgs/slogan-home.jpg")
       h1::after
         display: none
+
     &.valeurs
       background-image: url("/assets/imgs/slogan-valeurs.jpg")
+
     &.services
       background-image: url("/assets/imgs/slogan-services.jpg")
+
     &.realisations
       background-image: url("/assets/imgs/slogan-realisations.jpg")
     &.blog
       background-image: url("/assets/imgs/slogan-blog.jpg")
+
     &:before
       position: absolute
       top: 0
       content: ''
       width: 100%
       height: 100%
+
     h1
       position: relative
       font-family: 'antonregular', sans-serif
@@ -191,7 +201,7 @@ main
 
   .amorce
     position: relative
-    top: -100px
+    margin-top: -100px
     .blog
       display: grid
       grid-template-columns: 1fr 1fr 1fr
@@ -199,6 +209,8 @@ main
       gap: 20px
       max-width: 1200px
       margin: 0 auto 40px auto
+      &.--mono
+        grid-template-columns: 1fr
       > .card.--blog
         h1
           font-family: "roboto-bold", sans-serif
@@ -228,6 +240,7 @@ main
       > p
         font-size: $acc-fontsize-22
         margin-bottom: 40px
+
 
     &.--detail-valeur
       display: flex
@@ -327,6 +340,7 @@ main
       > *
         flex: 1 1 50%
 
+
     &.--blog
       display: flex
       flex-flow: column nowrap
@@ -336,6 +350,7 @@ main
       border-bottom: 1px solid get('palettes.gray.500', $acc-parameters)
       padding: 30px
       height: 180px
+
 
     &.--identity
       display: flex
@@ -359,6 +374,7 @@ main
         font-size: $acc-fontsize-14
         > div
             color: get('palettes.interface.vert', $acc-parameters)
+
 
     &.--equipier
       display: flex
@@ -387,6 +403,84 @@ main
           font-family: roboto, sans-serif
           color: get('palettes.gray.400',$acc-parameters)
           display: block
+
+
+    &.--realisation
+      background-color: get('palettes.gray.white',$acc-parameters)
+      border: 1px solid get('palettes.gray.600',$acc-parameters)
+      padding: 0 20px 20px 20px
+      box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
+      margin: 40px 0
+      > h1
+        font-family: antonregular, sans-serif
+        text-align: right
+        padding: 15px 20px
+        margin: 0 -20px
+        font-size: $acc-fontsize-16
+        color: get('palettes.gray.white',$acc-parameters)
+        background-color: get('palettes.gray.400',$acc-parameters)
+        margin-bottom: 20
+        &.--projet
+          background-color: get('palettes.interface.bleu',$acc-parameters)
+        &.--produit
+          background-color: get('palettes.interface.vert',$acc-parameters)
+      > small
+        display: block
+        font-family: roboto-condensed-regular, sans-serif
+        font-size: $acc-fontsize-16
+        color: get('palettes.gray.300',$acc-parameters)
+        padding: 10px 0
+      > h3
+        font-family: roboto-condensed-black, sans-serif
+        font-size: $acc-fontsize-25
+
+
+    &.--article
+      display: flex
+      flex-flow: row wrap
+      justify-content: flex-start
+      align-items: flex-start
+      column-gap: 40px
+      border: 1px solid get('palettes.gray.700',$acc-parameters)
+      padding: 20px
+      margin-bottom: 40px
+      box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
+      > *
+        &:last-child
+          flex: 1
+          display: flex
+          flex-flow: column nowrap
+          justify-content: flex-start
+          align-items: flex-start
+          > *
+            flex: 0 0 auto
+          > h1
+            font-family: "roboto-bold", sans-serif
+            font-size: 1.125rem
+          > p
+            font-size: 1rem
+          > ul
+            display: flex
+            column-gap: 20px
+            margin-bottom: 20px
+            li
+              font-size: .750rem
+              color:  get('palettes.gray.400', $acc-parameters)
+        &:first-child
+          flex: 0 0 auto
+          > figure
+            display: flex
+            flex-flow: column wrap
+            justify-content: center
+            align-items: center
+            width: 220px
+            height: 220px
+            overflow: hidden
+            > img
+              object-fit: cover
+              height: 100%
+              width: 100%
+
 
   .valeurs-list
     display: grid
@@ -453,11 +547,48 @@ main
           color: get('palettes.interface.bleu', $acc-parameters)
 
 
+  .realisations-list
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto
+    gap: 20px
+
+
   .equipiers-list
     display: grid
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: auto
     gap: 20px
+
+
+  .article-list
+    h1
+      padding-bottom: 10px
+    &__tri
+      display: flex
+      flex-flow: row wrap
+      justify-content: center
+      align-items: flex-start
+      column-gap: 20px
+      margin-bottom: 20px
+      a
+        text-decoration: none
+        color:  get('palettes.interface.bleu', $acc-parameters)
+        &:hover, &:focus, &.active
+          text-decoration: underline
+    &__mots
+      display: flex
+      flex-flow: row wrap
+      justify-content: center
+      align-items: flex-start
+      column-gap: 20px
+      margin-bottom: 20px
+      a
+        font-size: $acc-fontsize-14
+        text-decoration: none
+        color:  get('palettes.gray.400', $acc-parameters)
+        &:hover, &:focus, &.active
+          text-decoration: underline
 
   .sous-menu
     width: 100%
