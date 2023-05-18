@@ -597,21 +597,13 @@ main
     justify-content: center
     align-items: center
     column-gap: 30px
-    background-color: get('palettes.gray.white', $acc-parameters)
-    border-bottom: 1px solid get('palettes.gray.600', $acc-parameters)
-    box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
+    background-color: get('palettes.gray.900', $acc-parameters)
     li
-      padding: 10px 0
-      font-family: roboto
+      margin: 40px 0
       a
-        display: inline-block
-        text-decoration: none
-        color: get('palettes.interface.bleu', $acc-parameters)
+        font-family: roboto, sans-serif
         text-transform: uppercase
         font-size: $acc-fontsize-14
-        &:hover, &:active
-          font-family: roboto-medium
-
 
   .collection
     display: flex
