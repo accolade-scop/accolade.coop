@@ -34,13 +34,22 @@
         <ol class="menu">
 
             <li>
-                <a href="/" class="btn">Accueil</a>
+                <a href="/"
+                class="btn {% if page.fileSlug === '' %}active{% endif %}">
+                    Accueil
+                </a>
             </li>
             <li>
-                <a href="/valeurs/" class="btn">Valeurs</a>
+                <a href="/valeurs"
+                   class="btn {% if page.fileSlug === 'valeurs' %}active{% endif %}">
+                    Valeurs
+                </a>
             </li>
             <li>
-                <a href="/services/" class="btn">Services</a>
+                <a href="/services"
+                   class="btn {% if page.fileSlug === 'services' %}active{% endif %}">
+                    Services
+                </a>
             </li>
             <li>
                 <a href="mailto:contact@accolade.coop" class="btn --contact">Contact</a>
@@ -49,12 +58,27 @@
         </ol>
 
         <div class="burger">
-            <span class="material-icons">menu</span>
+
+            <span class="material-icons"
+                  onclick="document.getElementById('smart-menu').classList.toggle('displayed')">
+                menu
+            </span>
+
         </div>
 
-        <nav class="smart-menu">
-            <a href="/valeurs/" class="btn">Valeurs</a>
-            <a href="/services/" class="btn">Services</a>
+        <nav id="smart-menu">
+            <a href="/"
+               class="btn {% if page.fileSlug === '' %}active{% endif %}">
+                Accueil
+            </a>
+            <a href="/valeurs"
+               class="btn {% if page.fileSlug === 'valeurs' %}active{% endif %}">
+                Valeurs
+            </a>
+            <a href="/services"
+               class="btn {% if page.fileSlug === 'services' %}active{% endif %}">
+                Services
+            </a>
             <a href="mailto:contact@accolade.coop" class="btn --contact">Contact</a>
         </nav>
 
