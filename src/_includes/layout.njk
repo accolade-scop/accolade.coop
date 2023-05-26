@@ -66,23 +66,23 @@
 
         </div>
 
-        <nav id="smart-menu">
-            <a href="/"
-               class="btn {% if page.fileSlug === '' %}active{% endif %}">
-                Accueil
-            </a>
-            <a href="/valeurs"
-               class="btn {% if page.fileSlug === 'valeurs' %}active{% endif %}">
-                Valeurs
-            </a>
-            <a href="/services"
-               class="btn {% if page.fileSlug === 'services' %}active{% endif %}">
-                Services
-            </a>
-            <a href="mailto:contact@accolade.coop" class="btn --contact">Contact</a>
-        </nav>
-
     </nav>
+
+    <div id="smart-menu">
+        <a href="/"
+           class=" {% if page.fileSlug === '' %}active{% endif %}">
+            Accueil
+        </a>
+        <a href="/valeurs"
+           class=" {% if page.fileSlug === 'valeurs' %}active{% endif %}">
+            Valeurs
+        </a>
+        <a href="/services"
+           class=" {% if page.fileSlug === 'services' %}active{% endif %}">
+            Services
+        </a>
+        <a href="mailto:contact@accolade.coop" class=" --contact">Contact</a>
+    </div>
 
 </header>
 
