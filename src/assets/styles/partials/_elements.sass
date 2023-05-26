@@ -73,7 +73,9 @@ h1.big-title
   >.btn
     color: get('palettes.interface.bleu', $acc-parameters)
     background-color: transparent
-    > .material-icons
+    padding: 0 .875rem
+    &::after
+      content: "\276F"
       font-size: 3em
     &:hover, &.active, &:active
       background-color: get('palettes.interface.bleu', $acc-parameters)
@@ -137,8 +139,13 @@ header
       display: none
       position: relative
       color: get('palettes.gray.200', $acc-parameters)
-      margin-right: 40px
       font-size: $acc-fontsize-25
+      cursor: pointer
+      &:hover, &:active
+        color: get('palettes.interface.bleu', $acc-parameters)
+      &::before
+        font-size: $acc-fontsize-18
+        content: '\2630'
     ol
       display: flex
       flex-flow: row wrap
@@ -723,22 +730,23 @@ footer
         display: block
   main
     .slogan
-      height: 180px
-
-      .container
-        max-width: 500px
-      h1
-        font-size: $acc-fontsize-32
-        padding: 35px 0 10px 0
-        &:after
-          bottom: 0
-      p
-        font-size: $acc-fontsize-16
       &:not(.home)
         height: 180px
+        h1
+          font-size: $acc-fontsize-32
+          padding: 35px 0 10px 0
+          &:after
+            bottom: 8px
+        p
+          font-size: $acc-fontsize-16
+      &.home
+        height: 180px
+        h1
+          font-size: $acc-fontsize-22
+          padding-top: 20px
+          padding-bottom: 10px
         p
           font-size: $acc-fontsize-18
-          padding-top: 20px
     .amorce
       top: 81px
 
