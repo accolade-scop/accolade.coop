@@ -180,21 +180,21 @@ main
         font-size: 2rem
 
     &.home
-      background-image: url("/assets/imgs/slogan-home.jpg")
+      background-image: url("/assets/imgs/slogan-home.webp")
       h1::after
         display: none
 
     &.valeurs
-      background-image: url("/assets/imgs/slogan-valeurs.jpg")
+      background-image: url("/assets/imgs/slogan-valeurs.webp")
       background-position: bottom
 
     &.services
-      background-image: url("/assets/imgs/slogan-services.jpg")
+      background-image: url("/assets/imgs/slogan-services.webp")
 
     &.realisations
-      background-image: url("/assets/imgs/slogan-realisations.jpg")
+      background-image: url("/assets/imgs/slogan-realisations.webp")
     &.blog
-      background-image: url("/assets/imgs/slogan-blog.jpg")
+      background-image: url("/assets/imgs/slogan-blog.webp")
 
     &:before
       position: absolute
@@ -334,22 +334,22 @@ main
         flex-direction: row-reverse
         background-position: top right 180px
       &.-developpement
-        background-image: url("/assets/imgs/service-developpement.jpg")
+        background-image: url("/assets/imgs/service-developpement.webp")
         article
           h1
             color: get('palettes.interface.vert', $acc-parameters)
       &.-formation
-        background-image: url("/assets/imgs/service-formation.jpg")
+        background-image: url("/assets/imgs/service-formation.webp")
         article
           h1
             color: get('palettes.interface.rouge', $acc-parameters)
       &.-audit
-        background-image: url("/assets/imgs/service-audit.jpg")
+        background-image: url("/assets/imgs/service-audit.webp")
         article
           h1
             color: get('palettes.interface.jaune', $acc-parameters)
       &.-laboratoire
-        background-image: url("/assets/imgs/service-laboratoire.jpg")
+        background-image: url("/assets/imgs/service-laboratoire.webp")
         article
           h1
             color: get('palettes.interface.bleu', $acc-parameters)
@@ -404,7 +404,8 @@ main
         font-family: roboto-light, sans-serif
         font-size: $acc-fontsize-14
         > div
-            color: get('palettes.interface.vert', $acc-parameters)
+          font-family: roboto-regular, sans-serif
+          color: get('palettes.interface.vert', $acc-parameters)
 
 
     &.--equipier
@@ -662,7 +663,7 @@ main
     flex-flow: row wrap
     justify-content: center
     align-items: center
-    gap: 20px
+    gap: 40px
     margin: 0 0  40px 0
 
 footer
