@@ -389,9 +389,11 @@ main
           width: 100%
           font-size: 36px
           text-align: center
-        p
-          font-size: 28px
-          text-align: center
+          + p
+            font-size: 28px
+            text-align: center
+            + p
+              font-size: $acc-fontsize-16
 
 
     &.--identity
@@ -773,7 +775,7 @@ footer
         &.--intro
           h2
             font-size: $acc-fontsize-14
-          p
+          p:nth-child(1)
             font-size: $acc-fontsize-12
       &.--valeurs
         padding: 20px 30px 0 30px
