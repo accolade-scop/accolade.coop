@@ -1,0 +1,29 @@
+{
+  "name": "accolade.coop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accolade-scop/accolade.coop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/accolade-scop/accolade.coop/issues"
+  },
+  "homepage": "https://github.com/accolade-scop/accolade.coop#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "eleventy-plugin-rev": "^1.1.1",
+    "eleventy-sass": "^2.2.1",
+    "slugify": "^1.6.6"
+  }
+}
