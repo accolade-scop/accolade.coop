@@ -4,7 +4,6 @@ const eleventySass = require("eleventy-sass");
 
 module.exports = function (eleventyConfig) {
 
-
     eleventyConfig.addPlugin(eleventySass);
 
     // replace default slug with better imp
@@ -35,7 +34,7 @@ module.exports = function (eleventyConfig) {
     });
 
     // copy assets
-    eleventyConfig.addPassthroughCopy("assets/");
+    eleventyConfig.addPassthroughCopy("src/assets/");
 
     return {
         dir: {

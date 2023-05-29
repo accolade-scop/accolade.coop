@@ -1,0 +1,117 @@
+// *************** VARIABLES GENERIQUES ***********************
+
+// ------------ COULEURS ET DES PALETTES ------------
+
+// Couleurs neutres
+$acc-colors-gray: ('white': #FFFFFF, '900': #f8f9fa, '800': #f1f3f5, '700': #e9ecef, '600': #dee2e6, '500': #ced4da, '400': #adb5bd, '300': #868e96, '200': #495057 ,'100': #343a40,'50': #212529,'black': #000000) !default
+// Couleurs primaires
+$acc-colors-lime: ('900': #f4fce3,'800': #e9fac8,'700': #d8f5a2,'600': #c0eb75,'500': #a9e34b,'400': #94d82d,'300': #82c91e,'200': #74b816,'100': #66a80f,'50': #5c940d) !default
+// Couleurs secondaires
+$acc-colors-yellow: ('900': #fff9db,'800': #fff3bf,'700': #ffec99,'600': #ffe066,'500': #ffd43b,'400': #fcc419,'300': #fab005,'200': #f59f00,'100': #f08c00,'50': #e67700) !default
+// Couleurs interface
+$acc-colors-interface: ('bleu': #009FB7,'vert': #7A9A3D,'rouge': #DB3A34,'jaune': #F6AE2D) !default
+// palettes couleurs
+$acc-colors-palettes: ('interface': $acc-colors-interface, 'gray': $acc-colors-gray, 'lime': $acc-colors-lime, 'yellow': $acc-colors-yellow) !default
+
+// ------------ DEFINITION DES VARIABLES DE BASE ET TYPOGRAPHIQUES ------------
+
+$acc-fontsize-8:  .500rem !default    //  16 px > 8px
+$acc-fontsize-10: .625rem !default    //  16 px > 10px
+$acc-fontsize-12: .750rem !default    //  16 px > 12px
+$acc-fontsize-14: .875rem !default    //  16 px > 14px
+$acc-fontsize-16: 1rem !default       //  16 px > 16px
+$acc-fontsize-18: 1.125rem !default   //  16 px > 18px
+$acc-fontsize-22: 1.375rem !default   //  16 px > 22px
+$acc-fontsize-25: 1.5625rem !default  //  16 px > 25px
+$acc-fontsize-29: 1.8125rem !default  //  16 px > 29px
+$acc-fontsize-32: 2rem !default       //  16 px > 32px
+$acc-fontsize-34: 2.125rem !default   //  16 px > 34px
+$acc-fontsize-36: 2.25rem !default    //  16 px > 36px
+$acc-fontsize-40: 2.5rem !default     //  16 px > 40px
+$acc-fontsize-60: 3.75rem !default    //  16 px > 60px
+
+$global-font-size: 100% !default
+
+@font-face
+  font-family: 'courier_primeregular'
+  src: url('../fonts/courierprime-regular-webfont.woff2') format('woff2'), url('../fonts/courierprime-regular-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: 400
+
+@font-face
+  font-family: 'antonregular'
+  src: url('../fonts/anton-regular-webfont.woff2') format('woff2'), url('../fonts/anton-regular-webfont.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'roboto-black'
+  font-display: swap
+  src: url('../fonts/roboto-black-webfont.woff2') format('woff2'), url('../fonts/roboto-black-webfont.woff') format('woff')
+  font-weight: 900
+  font-style: normal
+@font-face
+  font-family: 'roboto-bold'
+  font-display: swap
+  src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'), url('../fonts/roboto-bold-webfont.woff') format('woff')
+  font-weight: 700
+  font-style: normal
+  font-style: normal
+@font-face
+  font-family: 'roboto-light'
+  font-display: swap
+  src: url('../fonts/roboto-light-webfont.woff2') format('woff2'), url('../fonts/roboto-light-webfont.woff') format('woff')
+  font-weight: 300
+  font-style: normal
+@font-face
+  font-family: 'roboto-medium'
+  font-display: swap
+  src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'), url('../fonts/roboto-medium-webfont.woff') format('woff')
+  font-weight: 500
+  font-style: normal
+@font-face
+  font-family: 'roboto'
+  font-display: swap
+  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/roboto-regular-webfont.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+@font-face
+  font-family: 'roboto-thin'
+  font-display: swap
+  src: url('../fonts/roboto-thin-webfont.woff2') format('woff2'), url('../fonts/roboto-thin-webfont.woff') format('woff')
+  font-weight: 100
+  font-style: normal
+@font-face
+  font-family: 'roboto-condensed-black'
+  font-display: swap
+  src: url('../fonts/roboto-boldcondensed-webfont.woff2') format('woff2'), url('../fonts/roboto-boldcondensed-webfont.woff') format('woff')
+  font-weight: 700
+  font-style: normal
+@font-face
+  font-family: 'roboto-condensed-regular'
+  font-display: swap
+  src: url('../fonts/roboto-condensed-webfont.woff2') format('woff2'), url('../fonts/roboto-condensed-webfont.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+
+$acc-base-fontfamily: 'roboto-regular', sans-serif !default
+$acc-base-fontsize: $acc-fontsize-16 !default
+$acc-base-lineheight: 1.4 !default
+$acc-base-fontweight: 400 !default
+$acc-base-radius: .1875rem !default
+
+$acc-sizes: (acc-fontsize-8:('font-size': $acc-fontsize-8), acc-fontsize-10:('font-size': $acc-fontsize-10), acc-fontsize-12:('font-size': $acc-fontsize-12), acc-fontsize-14:('font-size': $acc-fontsize-14), acc-fontsize-16:('font-size': $acc-fontsize-16), acc-fontsize-18:('font-size': $acc-fontsize-18), acc-fontsize-22:('font-size': $acc-fontsize-22), acc-fontsize-25:('font-size': $acc-fontsize-25), acc-fontsize-29:('font-size': $acc-fontsize-29), acc-fontsize-34:('font-size': $acc-fontsize-34), acc-fontsize-40:('font-size': $acc-fontsize-40)) !default
+
+$acc-weights: (acc-fontweight-300:('font-weight': 300), acc-fontweight-400:('font-weight': 400), acc-fontweight-700:('font-weight': 700)) !default
+
+// ------------ BREAKPOINTS ------------
+
+// 576px  >>  Small tablets and large smartphones (landscape view)
+// 768px  >>  Small tablets (portrait view)
+// 992px  >>  Tablets and small desktops
+// 1200px >>  Large tablets and desktops
+// 1900px >>  ExtraLarge desktops
+
+$breakpoints: (xs: 576px, sm: 768px, md: 992px, lg: 1200px, xl: 1980px) !default
+
+$acc-parameters: (palettes: $acc-colors-palettes,sizes: $acc-sizes,weights: $acc-weights) !default

@@ -1,0 +1,144 @@
+// ****************** FONCTIONS ***************
+
+@function strip-unit($num)
+  @return $num / ($num * 0 + 1)
+
+@function -to-rem($value, $base: null)
+  @if type-of($value) != 'number'
+    @warn inspect($value) + ' was passed to rem-calc(), which is not a number.'
+    @return $value
+  @if unit($value) == 'em'
+    $value: strip-unit($value) * 1rem
+  @if unit($value) != 'rem'
+    $value: strip-unit($value) / strip-unit($base) * 1rem
+    @if $value == 0rem
+    $value: 0
+  @return $value
+
+
+@function rem-calc($values, $base: null)
+  $rem-values: ()
+  $count: length($values)
+  @if $base == null
+    $base: $global-font-size
+  @if unit($base) == '%'
+    $base: ($base / 100%) * 16px
+  @if unit($base) == 'rem'
+    $base: strip-unit($base) * 16px
+  @if $count == 1
+    @return -to-rem($values, $base)
+  @for $i from 1 through $count
+    $rem-values: append($rem-values, -to-rem(nth($values, $i), $base))
+  @return $rem-values
+
+
+@function deep-map-get($map, $keys...)
+  @if type-of($map) != 'map'
+    @error 'The argument $map: `#$map` is of incorrect type: `#type-of($map)`. Type of `Map` is required!'
+  @each $key in $keys
+    $map: map-get($map, $key)
+  @return $map
+
+
+@function deep-map-check($map, $keys...)
+  @if type-of($map) != 'map'
+    @error 'The argument $map: `#$map` is of incorrect type: `#type-of($map)`. Type of `Map` is required!'
+  @each $key in $keys
+    @if not map-has-key($map, $key)
+      @return false
+    $map: map-get($map, $key)
+  @return true
+
+
+@function str-explode($string, $delimiter: '')
+  @if type-of($string) != 'string'
+    @error 'The argument $string: `#$string` is of incorrect type: `#type-of($string)`. Type of `String` is required!'
+  @else if type-of($delimiter) != 'string'
+    @error 'The argument $string: `#$string` is of incorrect type: `#type-of($string)`. Type of `String` is required!'
+  $result: ()
+  $running: true
+  @if str-length($delimiter) == 0
+    @for $i from 1 through str-length($string)
+      $result: append($result, str-slice($string, $i, $i))
+    @return $result
+  @while $running
+    $index: str-index($string, $delimiter)
+    @if $index != null
+      $item: str-slice($string, 1, ($index - 1))
+      $result: append($result, unquote($item))
+      $string: str-slice($string, ($index + str-length($delimiter)))
+    @else
+      $running: false
+  @return append($result, unquote($string))
+
+
+@function get($key, $map: $parameters, $debug: false)
+  $keys: str-explode($key, '.')
+  @if not deep-map-check($map, $keys...)
+    @if $debug
+      @debug 'The argument $map: `#$map` doesn\'t has some of the $keys: `#$keys`!'
+    @return null
+  @return deep-map-get($map, $keys...)
+
+
+// ****************** MIXINS ************************** */
+
+
+//  RESPOND ABOVE : @include respond-sup(sm)
+@mixin respond-sup($breakpoint)
+  @if map-has-key($breakpoints, $breakpoint)
+    $breakpoint-value: map-get($breakpoints, $breakpoint)
+    @media (min-width: $breakpoint-value)
+      @content
+  @else
+    @warn 'Invalid breakpoint: #$breakpoint.'
+
+
+//  RESPOND BELOW :  @include respond-inf(sm)
+@mixin respond-inf($breakpoint)
+  @if map-has-key($breakpoints, $breakpoint)
+    $breakpoint-value: map-get($breakpoints, $breakpoint)
+    @media (max-width: ($breakpoint-value - 1))
+      @content
+  @else
+    @warn 'Invalid breakpoint: #$breakpoint.'
+
+
+//  RESPOND BETWEEN : @include respond-entre(sm, md)
+@mixin respond-entre($lower, $upper)
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper)
+    $lower-breakpoint: map-get($breakpoints, $lower)
+    $upper-breakpoint: map-get($breakpoints, $upper)
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1))
+      @content
+  @else
+    @if (map-has-key($breakpoints, $lower) == false)
+      @warn 'Your lower breakpoint was invalid: #$lower.'
+  @if (map-has-key($breakpoints, $upper) == false)
+    @warn 'Your upper breakpoint was invalid: #$upper.'
+
+
+// TYPOGRAPHIE : Générer font-face automatiquement
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal)
+  @font-face
+    font-family: quote($font-name)
+    src: url('../icons/' + $file-name + '.woff2') format('woff2')
+    font-weight: $weight
+    font-style: $style
+
+// TYPOGRAPHIE : Génération des class de tailles
+@mixin create-sizes($parameters)
+  @each $level, $properties in get('sizes', $acc-parameters)
+    .#{$level}
+      @each $key, $value in $properties
+        @if #{$key} == 'font-size'
+          #{$key}: $value
+        @else
+          #{$key}: $value
+
+// TYPOGRAPHIE : Génération des class de graisse
+@mixin create-weights($parameters)
+  @each $level, $properties in get('weights', $acc-parameters)
+    .#{$level}
+      @each $key, $value in $properties
+        #{$key}: $value

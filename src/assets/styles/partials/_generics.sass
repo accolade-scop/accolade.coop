@@ -1,0 +1,59 @@
+// ****************** GENERICS ***************
+
+body
+  position: relative
+  font-family: $acc-base-fontfamily
+  font-size: $acc-base-fontsize
+  font-weight: $acc-base-fontweight
+  line-height: $acc-base-lineheight
+  background-color: get('palettes.gray.900',$acc-parameters)
+  color: get('palettes.neutre.100', $acc-parameters)
+  margin: 0
+  padding: 0
+
+h1, h2, h3, h4, h5, h6
+  display: block
+  font-family: 'antonregular', sans-serif
+  line-height: normal
+  margin-bottom: 1rem
+p
+  display: block
+  margin-bottom: 1rem
++create-sizes(sizes)
+
++create-weights(weights)
+
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: inherit
+  display: inline-block
+  line-height: 1
+  text-transform: none
+  letter-spacing: normal
+  word-wrap: normal
+  white-space: nowrap
+  direction: ltr
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale
+  /* Support for IE. */
+  font-feature-settings: 'liga'
+
+  img
+    width: 100%
+    height: auto
+
+a, .link
+  display: inline-flex
+  flex-flow: row wrap
+  justify-content: flex-start
+  align-content: center
+  text-decoration: underline
+  text-decoration-color: get('palettes.interface.bleu', $acc-parameters)
+  &:hover, &:active, &.active
+    color: get('palettes.interface.bleu', $acc-parameters)
