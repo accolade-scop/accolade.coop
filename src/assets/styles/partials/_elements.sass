@@ -2,12 +2,15 @@
 
 strong
   font-family: roboto-medium, sans-serif
+
 em
   font-style: italic
+
 .sticky
   position: sticky
   top: 0
   z-index: 100
+
 .logo-accolade
   display: flex
   flex-flow: row nowrap
@@ -124,6 +127,7 @@ header
       padding: 10px
       animation: slide .3s ease-in forwards
 
+
   > nav
     width: 100%
     max-width: 1280px
@@ -152,7 +156,6 @@ header
       justify-content: space-between
       align-items: center
       gap: 5px
-
 
 main
   > .sticky
@@ -193,6 +196,7 @@ main
 
     &.realisations
       background-image: url("/assets/imgs/slogan-realisations.webp")
+
     &.blog
       background-image: url("/assets/imgs/slogan-blog.webp")
 
@@ -275,6 +279,7 @@ main
       scroll-margin-top: 90px
       margin: 0 60px 60px 0
       background-color: get('palettes.gray.white', $acc-parameters)
+      min-width: 360px
       &.--reverse
         flex-direction: row-reverse
       > *
@@ -708,6 +713,7 @@ footer
     display: none
   .container
     max-width: 800px
+    padding: 0
   .slogan:not(.home)
     height: 350px
     h1
@@ -761,13 +767,27 @@ footer
         p
           font-size: $acc-fontsize-16
       &.home
-        height: 180px
+        background-image: url("/assets/imgs/slogan-home-sm.webp")
+        height: 240px
         h1
           font-size: $acc-fontsize-22
           padding-top: 20px
           padding-bottom: 10px
         p
           font-size: $acc-fontsize-18
+
+      &.valeurs
+        background-image: url("/assets/imgs/slogan-valeurs-sm.webp")
+
+      &.services
+        background-image: url("/assets/imgs/slogan-services-sm.webp")
+
+      &.realisations
+        background-image: url("/assets/imgs/slogan-realisations-sm.webp")
+
+      &.blog
+        background-image: url("/assets/imgs/slogan-blog-sm.webp")
+
     .amorce
       top: 81px
       display: none
@@ -792,7 +812,8 @@ footer
         .valeurs-list
           > li
             grid-column: span 2
-
+      &.--detail-service
+        display: block
     .services-list
       > li
         grid-column: span 2
