@@ -12,8 +12,8 @@ em
   z-index: 100
 
 .accolade
+  font-family: courier_primeregular, sans-serif
   background: linear-gradient(to right, #343a40  0%, #343a40 24%, #7a9a3d 25%, #7a9a3d 49%, #343a40 50%, #343a40 74%, #7a9a3d 75%, #7a9a3d 100%)
-  font-family: courier_primeregular,sans-serif
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
 
@@ -100,6 +100,31 @@ section
   margin: 0 auto
 
 
+.mentions
+  background-color: white
+  padding: 40px
+  margin: 20px auto
+  .accolade
+    font-size: $acc-fontsize-32
+  h1
+    font-family: roboto-light, sans-serif
+    font-size: $acc-fontsize-34
+  h2
+    font-family: roboto-regular, sans-serif
+    font-size: $acc-fontsize-29
+  h3
+    font-family: roboto-condensed-black, sans-serif
+    font-size: $acc-fontsize-16
+    flex: 1 1 auto
+    &:after
+      content: ' : '
+      padding-right: 20px
+  section
+    display: flex
+    width: 100%
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: center
 header
   position: relative
   display: flex
@@ -747,7 +772,13 @@ footer
 +respond-inf(sm)
   section
     padding: 0 10px
-
+  .mentions
+    h2
+      font-size: $acc-fontsize-18
+    h3::after
+      display: none
+    section
+      display: block
   h1.big-title
     font-size: $acc-fontsize-22
 
