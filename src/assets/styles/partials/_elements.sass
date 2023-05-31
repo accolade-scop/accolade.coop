@@ -11,6 +11,12 @@ em
   top: 0
   z-index: 100
 
+.accolade
+  background: linear-gradient(to right, #343a40  0%, #343a40 24%, #7a9a3d 25%, #7a9a3d 49%, #343a40 50%, #343a40 74%, #7a9a3d 75%, #7a9a3d 100%)
+  font-family: courier_primeregular,sans-serif
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
 .logo-accolade
   display: flex
   flex-flow: row nowrap
@@ -87,16 +93,12 @@ h1.big-title
 
 section
   position: relative
-  &.negative
-    background-color: get('palettes.gray.900', $acc-parameters)
-  &.positive
-    background-color: get('palettes.gray.white', $acc-parameters)
-
 
 .container
   max-width: 1100px
   padding: 0 20px
   margin: 0 auto
+
 
 header
   position: relative
@@ -129,13 +131,13 @@ header
 
 
   > nav
-    width: 100%
-    max-width: 1280px
-    margin: auto
     display: flex
     flex-flow: row nowrap
     justify-content: space-between
     align-items: center
+    width: 100%
+    max-width: 1280px
+    margin: auto
     background-color: white
     img
       height: 60px
@@ -150,12 +152,13 @@ header
       &::before
         font-size: $acc-fontsize-18
         content: '\2630'
-    ol
+    .menu
       display: flex
       flex-flow: row wrap
       justify-content: space-between
       align-items: center
       gap: 5px
+
 
 main
   > .sticky
@@ -279,8 +282,8 @@ main
       scroll-margin-top: 90px
       margin: 0 60px 60px 0
       background-color: get('palettes.gray.white', $acc-parameters)
-      min-width: 360px
-      &.--reverse
+      min-width: 340px
+      &:nth-child(2n+1)
         flex-direction: row-reverse
       > *
         flex: 1
@@ -293,52 +296,64 @@ main
           font-family: roboto-light, sans-serif
           font-size: $acc-fontsize-40
           color: get('palettes.interface.vert', $acc-parameters)
-        h3
+        h2
           line-height: 1.4
-      figure
-        position: relative
-        overflow: hidden
+
+      .chiffres
+        display: flex
+        flex-flow: column nowrap
+        justify-content: center
+        align-items: center
+        font-family: roboto-black, sans-serif
+        font-size: $acc-fontsize-14
+        color:  get('palettes.gray.100', $acc-parameters)
+        padding: 40px
+        > *
+          margin-bottom: .5rem
+      &#responsable
         .chiffres
-          position: absolute
-          z-index: 2
-          top: 0
-          display: flex
-          flex-flow: column nowrap
-          justify-content: center
-          align-items: center
-          width: 100%
-          height: 100%
-          padding: 40px
-          background-color: rgba(255, 255, 255, 0.9)
-          color:  get('palettes.interface.vert', $acc-parameters)
-          font-family: roboto-medium, sans-serif
-          font-size: $acc-fontsize-18
-          opacity: 0
-          cursor: pointer
-          transition: opacity .2s ease-in-out
-          > *
-            margin-bottom: 1rem
-            text-align: center
-          &:hover
-            opacity: 1
-        img
-          object-fit: cover
-          height: 100%
-
-
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2)), url("/assets/imgs/valeur-responsable.webp")
+          background-position: center center
+          background-size: cover
+      &#solidaire
+        .chiffres
+          background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2)), url("/assets/imgs/valeur-solidarite.webp")
+          background-position: center center
+          background-size: cover
+      &#perenite
+        .chiffres
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2)), url("/assets/imgs/valeur-perenite.webp")
+          background-position: center center
+          background-size: cover
+      &#equite
+        .chiffres
+          background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2)), url("/assets/imgs/valeur-equite.webp")
+          background-position: center center
+          background-size: cover
+      &#bienetre
+        .chiffres
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2)), url("/assets/imgs/valeur-bienetre.webp")
+          background-position: center center
+          background-size: cover
+      &#democratie
+        .chiffres
+          background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, .2)), url("/assets/imgs/valeur-democratie.webp")
+          background-position: center center
+          background-size: cover
     &.--detail-service
       display: flex
       flex-flow: row wrap
       padding: 100px 0 0 0
       margin: 60px auto
       background-repeat: no-repeat
-      background-size: calc(100% - 180px) calc(100% - 180px)
-      background-position: top left 180px
+      background-size: 1000px 600px
+      background-position: top -100px left 100px
       scroll-margin-top: 90px
-      &.--reverse
+      &:nth-child(2n+1)
         flex-direction: row-reverse
-        background-position: top right 180px
+        background-position: top -100px right 100px
       &.-developpement
+        margin-top: 0
         background-image: url("/assets/imgs/service-developpement.webp")
         article
           h1
@@ -366,15 +381,17 @@ main
         box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
         h1
           font-family: roboto-light, sans-serif
-          font-size: $acc-fontsize-40
+          font-size: $acc-fontsize-32
           small
-            font-size: $acc-fontsize-34
             display: block
             color: get('palettes.gray.100', $acc-parameters)
-        h3
+        h2
           line-height: 1.4
       > *
-        flex: 1 1 50%
+        &:nth-child(1)
+          flex: 0 0 70%
+        &:nth-child(2)
+          flex: 0 0 30%
 
 
     &.--blog
@@ -431,7 +448,7 @@ main
 
     &.--equipier
       display: flex
-      flex-flow: column nowrap
+      flex-flow: column-reverse nowrap
       justify-content: flex-start
       align-items: center
       > figure
@@ -449,7 +466,7 @@ main
           width: 100%
           height: 100%
           object-fit: cover
-      > h3
+      > h2
         text-align: center
         small
           padding: 10px 0
@@ -542,31 +559,34 @@ main
     gap: 20px
     max-width: 1024px
     margin: 0 auto 40px
-    > li
+    a
+      display: flex
+      text-decoration: none
+      padding: 30px
+      height: 100%
       background-color: get('palettes.gray.white', $acc-parameters)
       border-bottom: 1px solid get('palettes.gray.500', $acc-parameters)
-      padding: 30px
-      a
-        text-decoration: none
-        &:hover
-          color: get('palettes.gray.black', $acc-parameters)
-          > ul
-            > li
-              &.title
-                font-family: roboto-condensed-black, sans-serif
+      &:hover
+        color: get('palettes.gray.black', $acc-parameters)
+        box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.12)
+        transition: all 100ms ease-in
         > ul
           > li
-            &:not(:first-child)
-              font-size: $acc-fontsize-14
-              margin-left: 40px
-              list-style-type: circle
             &.title
-              font-family: roboto-condensed-regular, sans-serif
-              text-transform: uppercase
-              font-size: $acc-fontsize-25
-              color: get('palettes.interface.vert', $acc-parameters)
-              margin-bottom: 1rem
-              cursor: pointer
+              font-family: roboto-condensed-black, sans-serif
+      > ul
+        > li
+          &:not(:first-child)
+            font-size: $acc-fontsize-14
+            margin-left: 40px
+            list-style-type: circle
+          &.title
+            font-family: roboto-condensed-regular, sans-serif
+            text-transform: uppercase
+            font-size: $acc-fontsize-25
+            color: get('palettes.interface.vert', $acc-parameters)
+            margin-bottom: 1rem
+            cursor: pointer
 
 
   .services-list
@@ -577,46 +597,37 @@ main
     background-color: get('palettes.gray.600', $acc-parameters)
     margin: 0 auto 40px
     max-width: 1024px
-    > li
-      background-color: get('palettes.gray.white', $acc-parameters)
-      font-family: roboto-light, sans-serif
-      font-size: $acc-fontsize-32
-      line-height: 1
+    > a
       display: flex
       flex-flow: column wrap
       justify-content: center
       align-items: center
       height: 280px
-      > a
-        display: block
-        text-align: center
-        text-decoration: none
-        &:hover
-          color: get('palettes.gray.100', $acc-parameters)
-          > span
-            font-family: roboto-bold, sans-serif
+      background-color: get('palettes.gray.white', $acc-parameters)
+      font-family: roboto-light, sans-serif
+      font-size: $acc-fontsize-29
+      line-height: 1
+      text-align: center
+      text-decoration: none
+      transition: all 100ms ease-in
+      &:hover
+        color: get('palettes.gray.100', $acc-parameters)
+        > span
+          font-family: roboto-bold, sans-serif
       &:nth-child(1)
-        > a
           span
-            font-size: $acc-fontsize-36
             text-transform: uppercase
             color: get('palettes.interface.vert', $acc-parameters)
       &:nth-child(2)
-        > a
           span
-            font-size: $acc-fontsize-36
             text-transform: uppercase
             color: get('palettes.interface.rouge', $acc-parameters)
       &:nth-child(3)
-        > a
           span
-            font-size: $acc-fontsize-36
             text-transform: uppercase
             color: get('palettes.interface.jaune', $acc-parameters)
       &:nth-child(4)
-        > a
           span
-            font-size: $acc-fontsize-36
             text-transform: uppercase
             color: get('palettes.interface.bleu', $acc-parameters)
 
@@ -719,20 +730,18 @@ footer
     h1
       padding-top: 40px
   h1.big-title
-    font-size: $acc-fontsize-25
+    font-size: $acc-fontsize-34
     padding: 40px 0
   main
 
     .card
-      &.--detail-valeur, &.--detail-valeur.--reverse
-        flex-direction: column
+      &.--detail-valeur
+        flex-direction: column !important
         margin: auto
-      &.--detail-service, &.--detail-service.--reverse
-        flex-direction: column
-        background-position: top
-        background-size: auto
-        padding: 275px 0 0 0
-        margin: 20px auto
+      &.--detail-service
+        display: block
+        background-image: none !important
+        padding: 0
 
 
 +respond-inf(sm)
@@ -751,7 +760,7 @@ footer
       > img
         height: 50px
     nav
-      > ol
+      > .menu
         display: none
       .burger
         display: block
@@ -810,13 +819,16 @@ footer
         p
           font-size: $acc-fontsize-14
         .valeurs-list
-          > li
+          > a
             grid-column: span 2
       &.--detail-service
         display: block
     .services-list
-      > li
+      > a
         grid-column: span 2
+        font-size: $acc-fontsize-25
+        > span
+          font-size: $acc-fontsize-25
     .equipiers-list
       > .card
         grid-column: span 3
