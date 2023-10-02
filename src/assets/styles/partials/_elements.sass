@@ -89,8 +89,18 @@ h1.big-title
     &:hover, &.active, &:active
       background-color: get('palettes.interface.bleu', $acc-parameters)
       color: white
-
-
+  &.--discreet
+    > .btn
+      font-size: .875rem
+      padding: 0
+      border-bottom: 1px solid transparent
+      &::after
+        content: "\279E"
+        font-size: 1.375em
+      &:hover, &.active, &:active
+        background-color: transparent
+        color: get('palettes.interface.bleu', $acc-parameters)
+        border-bottom: 1px solid get('palettes.interface.bleu', $acc-parameters)
 section
   position: relative
 
@@ -540,6 +550,7 @@ main
       padding: 20px
       margin-bottom: 40px
       box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
+      text-decoration: none
       > *
         &:last-child
           flex: 1
@@ -575,6 +586,8 @@ main
               object-fit: cover
               height: 100%
               width: 100%
+      &:hover
+        color: inherit
 
 
   .valeurs-list
