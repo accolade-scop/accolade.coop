@@ -92,12 +92,16 @@ h1.big-title
       background-color: get('palettes.interface.bleu', $acc-parameters)
       color: white
   &.--discreet
+    text-align: left
     > .btn
       font-size: .875rem
       padding: 0
       border-bottom: 1px solid transparent
+      margin-top: 40px
       &::after
-        content: "\279E"
+        display: none
+      &::before
+        content: "\1F814"
         font-size: 1.375em
       &:hover, &.active, &:active
         background-color: transparent
@@ -220,6 +224,8 @@ main
     background-repeat: no-repeat
     background-size: cover
     background-position: center
+    &.--small
+      height: 300px
     &:not(.home)
       p
         font-family: "roboto-thin", sans-serif
@@ -517,7 +523,6 @@ main
       box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
       width: 100%
       height: 100%
-      margin: 40px 0
       h1
         font-family: antonregular, sans-serif
         font-size: $acc-fontsize-32
@@ -525,8 +530,6 @@ main
         color: white
         margin: 0
         padding: 40px
-      .savoir-plus
-        margin: 20px
       section
         background-color: get('palettes.gray.900',$acc-parameters)
         display: flex
@@ -574,7 +577,8 @@ main
         &:hover
           > h1
             bottom: 0
-
+      &.--detail
+        margin: 40px 0
 
     &.--article
       display: flex
