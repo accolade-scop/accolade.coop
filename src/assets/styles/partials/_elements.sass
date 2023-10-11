@@ -225,7 +225,7 @@ main
     background-size: cover
     background-position: center
     &.--small
-      height: 300px
+      height: 350px
     &:not(.home)
       p
         font-family: "roboto-thin", sans-serif
@@ -286,12 +286,12 @@ main
         grid-template-columns: 1fr
       > .card.--blog
         h1
-          font-family: "roboto-bold", sans-serif
-          font-size: $acc-fontsize-18
+          font-family: "roboto-light", sans-serif
+          font-size: $acc-fontsize-25
           flex: 1
         .card.--identity
           width: 100%
-          flex: 0
+          flex: 1
 
 
   .card
@@ -443,7 +443,6 @@ main
       background-color: get('palettes.gray.white', $acc-parameters)
       border-bottom: 1px solid get('palettes.gray.500', $acc-parameters)
       padding: 30px
-      height: 180px
       box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
       &.--intro
         grid-column: span 3
@@ -460,7 +459,12 @@ main
             text-align: center
             + p
               font-size: $acc-fontsize-16
-
+      > section
+        width: 100%
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: flex-start
 
     &.--identity
       display: flex
@@ -480,6 +484,10 @@ main
         > img
           object-fit: cover
       > aside
+        display: flex
+        flex-flow: column wrap
+        justify-content: space-between
+        align-items: flex-start
         font-family: roboto-light, sans-serif
         font-size: $acc-fontsize-14
         > div
@@ -580,6 +588,7 @@ main
       &.--detail
         margin: 40px 0
 
+
     &.--article
       display: flex
       flex-flow: row wrap
@@ -589,9 +598,9 @@ main
       border: 1px solid get('palettes.gray.700',$acc-parameters)
       padding: 20px
       margin-bottom: 40px
-      box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
+      box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.12)
       text-decoration: none
-      > *
+      > section
         &:last-child
           flex: 1
           display: flex
@@ -601,8 +610,8 @@ main
           > *
             flex: 0 0 auto
           > h1
-            font-family: "roboto-bold", sans-serif
-            font-size: 1.125rem
+            font-family: "roboto-light", sans-serif
+            font-size: $acc-fontsize-25
           > p
             font-size: 1rem
           > ul
@@ -628,9 +637,7 @@ main
               width: 100%
       &:hover
         color: inherit
-
-    &.--detail-realisation
-
+        box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.12)
 
   .valeurs-list
     display: grid
