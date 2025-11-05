@@ -1,0 +1,34 @@
+<a href="/">Accueil</a>
+
+
+<img src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}" alt="{{ project.banner.description }}"/>
+<img src="/assets/imgs/{{ project.slug }}/{{ project.logo.src }}" alt="{{ project.logo.description }}"/>
+
+<h1> {{ project.name }}</h1>
+<h3>{{ project.client.name }}</h3>
+<div>{{ project.year }}</div>
+<ul>
+    {% for tag in project.tags %}
+        <li>{{ tag }}</li>
+    {% endfor %}
+</ul>
+
+
+{% if project.description.length > 0 %}
+    {% for paragraph in project.description %}
+        <p>{{ paragraph }}</p>
+    {% endfor %}
+{% endif %}
+
+{% if project.url %}
+    <a href="{{ project.url }}">{{ project.url }}</a>
+{% endif %}
+
+<section>
+    <h3>Les projets reliés</h3>
+    <ul>
+        {% for p in project | sortbyrelatedness(projects) %}
+            <li>{{ p.name }}</li>
+        {% endfor %}
+    </ul>
+</section>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/>
+    <meta name="description"
+          content="La Scop Accolade est spécialisé dans le développement de solutions numériques web et mobile">
+    <title>Scop Accolade</title>
+    <link rel="shortcut icon" href="/assets/imgs/logo-accolade-element.png">
+    <link rel="apple-touch-icon" href="/assets/imgs/logo-accolade-element.png">
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link href="/assets/styles/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <a href="/">
+            <img src="/assets/imgs/logo-accolade-element.svg" alt="logo Scoop ACCOLADE" height="60" width="60">
+        </a>
+        <a href="/" {% if page.fileSlug === '' %}active{% endif %}">Accueil</a>
+        <a href="/valeurs" {% if page.fileSlug === 'valeurs' %}active{% endif %}"> Valeurs</a>
+        <a href="/services" {% if page.fileSlug === 'services' %}active{% endif %}">Services</a>
+        <a href="mailto:contact@accolade.coop">Contact</a>
+
+    </nav>
+</header>
+
+<main>
+    {{ content | safe }}
+</main>
+
+<footer>
+    <a href="/mentions/">Mentions légales</a>
+    <p>Scop ACCOLADE (SARL à capital variable) - © Tous droits reservés - 2023</p>
+</footer>
+
+</body>
+</html>
