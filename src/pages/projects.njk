@@ -1,16 +1,21 @@
+
+<!-- logo -->
+
 <header style="background-image: url('../assets/imgs/projects-background.png')">
 
     <a href="#" title="Aller à la page d'accueil"></a>
 
-    <nav class="">
+    <nav class="open">
 
         <menu>
 
-            <li><a title="">Label menu lien 1</a></li>
-
-            <li><a title="">Label menu lien 2</a></li>
-
-            <li><a title="">Label menu lien 3</a></li>
+            {% for p in projects | slice(0,3) %}
+                <li>
+                    <a href="/projets/{{ p.slug }}.html">
+                        {{ p.name }}
+                    </a>
+                </li>
+            {% endfor %}
 
         </menu>
 
@@ -39,55 +44,65 @@
     <!-- SECTION GALERIE -->
     <section id="project-details">
 
-        <h2 class="with-line">La Fabrique des Gro<small>2025 - Refonte de l’identite graphique</small></h2>
+        <h2 class="with-line">{{ project.client.name }}<small>{{ project.year }} - {{ project.name }}</small></h2>
 
         <header>
-
-            <img alt=""  src="https://picsum.photos/810/512" width="810" height="512">
+            <!-- banner -->
+            <img alt="" src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}" alt="{{ project.banner.description }}" width="810" height="512">
 
             <aside>
 
                 <img alt="Création graphique" src="../assets/svgs/picto-creation-graphique.svg">
 
                 <ul class="tags-list">
-                    <li><a title="">Logo</a></li>
-                    <li><a title="">Charte graphique</a></li>
-                    <li><a title="">Affiche</a></li>
-                    <li><a title="">Carte de visite</a></li>
-                    <li><a title="">Rapport d’activité</a></li>
+                    {% for tag in project.tags %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
                 </ul>
 
                 <p>
-                    La Fabrique des GrÔ est une brasserie artisanale basée à Maxéville (Lorraine - 54320). C’est
-                    également un lieu culturel en plein essort où le public peut déguster de bonnes bières tout en
-                    assistant à des concerts.
-                    <br/>
-                    <br/>
-                    Désireux de moderniser son image et de développer sa communication, La Fabrique des GrÔ a fait
-                    appel à nous pour la refonte de son identité visuelle et un accompagnement dans la gestion de
-                    ces réseaux sociaux.
-                    <br/>
-                    <br/>
-                    Désireux de moderniser son image et de développer sa communication, La Fabrique des GrÔ a fait
-                    appel à nous pour la refonte de son identité visuelle et un accompagnement dans la gestion de
-                    ces réseaux sociaux.
+                    {% if project.description.length > 0 %}
+                        {% for paragraph in project.description %}
+                            {{ paragraph }}<br/>
+                        {% endfor %}
+                    {% endif %}
                 </p>
 
             </aside>
 
-            <button class="btn btn-page-nav" type="button">Voir le site</button>
+            <a class="btn btn-page-nav" href="{{ project.url }}" target="_blank">Voir le site</a>
 
         </header>
 
         <section class="gallery">
 
-            <img alt="" src="https://picsum.photos/248/157">
-            <img alt="" src="https://picsum.photos/248/157">
-            <img alt="" src="https://picsum.photos/248/157">
-            <img alt="" src="https://picsum.photos/248/157">
-            <img alt="" src="https://picsum.photos/784/495">
-            <img alt="" src="https://picsum.photos/248/157">
-            <img alt="" src="https://picsum.photos/495/517">
+            <figure>
+                <img alt="" src="https://picsum.photos/248/157">
+            </figure>
+
+            <figure>
+                <img alt="" src="https://picsum.photos/248/157">
+            </figure>
+
+            <figure>
+                <img alt="" src="https://picsum.photos/248/157">
+            </figure>
+
+            <figure>
+                <img alt="" src="https://picsum.photos/248/157">
+            </figure>
+
+            <figure>
+                <img alt="" src="https://picsum.photos/248/157">
+            </figure>
+
+            <figure>
+                <img alt="" src="https://picsum.photos/784/495">
+            </figure>
+
+            <figure>
+                <img alt="" src="https://picsum.photos/495/517">
+            </figure>
 
         </section>
 
@@ -183,8 +198,11 @@
 <img src="/assets/imgs/{{ project.slug }}/{{ project.logo.src }}" alt="{{ project.logo.description }}"/>
 
 <h1> {{ project.name }}</h1>
+
 <h3>{{ project.client.name }}</h3>
+
 <div>{{ project.year }}</div>
+
 <ul>
     {% for tag in project.tags %}
         <li>{{ tag }}</li>
@@ -206,6 +224,7 @@
     <h3>Les projets reliés</h3>
     <ul>
         {% for p in project | sortbyrelatedness(projects) %}
+            <li><img src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}" alt="{{ project.banner.description }}"/></li>
             <li>{{ p.name }}</li>
         {% endfor %}
     </ul>

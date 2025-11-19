@@ -2,15 +2,17 @@
 
     <a href="#" title="Aller à la page d'accueil"></a>
 
-    <nav class="">
+    <nav class="open">
 
         <menu>
 
-            <li><a title="">Label menu lien 1</a></li>
-
-            <li><a title="">Label menu lien 2</a></li>
-
-            <li><a title="">Label menu lien 3</a></li>
+            {% for p in projects | slice(0,3)%}
+                <li>
+                    <a href="/projets/{{ p.slug }}.html">
+                        {{p.name}}
+                    </a>
+                </li>
+            {% endfor %}
 
         </menu>
 
@@ -156,14 +158,3 @@
 
 </main>
 
-<div>
-    <ul>
-        {% for p in projects | slice(0,3)%}
-        <li>
-            <a href="/projets/{{ p.slug }}.html">
-                {{p.name}}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
-</div>

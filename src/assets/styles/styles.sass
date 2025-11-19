@@ -132,6 +132,7 @@ h1, h2, h3, h4, h5, h6
     display: block
     font-size: .5em
     color: var(--text-color-primary)
+    text-transform: uppercase
 
 
 h2
@@ -166,6 +167,7 @@ a
   border: none
   position: relative
   cursor: pointer
+  text-decoration: none
   transition: all 0.5s ease
   &-projects-nav
     display: flex
@@ -211,15 +213,17 @@ a
   align-items: center
   column-gap: 3px
   font-size: var(--fontSize-sm)
-  > li:not(:last-child)
+  color: var(--link-rest-color)
+  > li
     display: flex
     flex-flow: row wrap
     justify-content: space-between
     align-items: center
     column-gap: 3px
-    &::after
+    &:not(:last-child)::after
       display: block
       content: "•"
+      color: white
 
 
 #expertises
@@ -427,30 +431,31 @@ a
       > p
         flex: 1 1 auto
         margin-bottom: 20px
+        padding-right: 10px
         overflow: hidden
         overflow-y: auto
         scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
         scrollbar-width: thin
     > .btn
       position: absolute
-      bottom: 0
+      bottom: 15px
       right: 0
 
 
   .gallery
-    display: grid
-    grid-template-columns: repeat(5, 1fr)
-    grid-template-rows: repeat(4, minmax(188px, auto))
+    display: masonry
+    grid-template-columns: repeat(5, minmax(248px, 784px))
     gap: 20px
-    > img
-      aspect-ratio: 3 / 2
-      width: 100%
-      height: auto
-      border: solid 1px #B1D239
-      &:nth-last-child(1)
-        grid-column: 4 / span 2
-        aspect-ratio: 1
-      &:nth-last-child(2)
-        grid-column: 1 / span 3
-      &:nth-last-child(1), &:nth-last-child(2)
-        grid-row: 2 / span 3
+    //grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+    // //> img
+    //  aspect-ratio: 3 / 2
+    //  width: 100%
+    //  height: auto
+    //  border: solid 1px #B1D239
+    //  &:nth-last-child(1)
+    //    grid-column: 4 / span 2
+    //    aspect-ratio: 1
+    //  &:nth-last-child(2)
+    //    grid-column: 1 / span 3
+    //  &:nth-last-child(1), &:nth-last-child(2)
+    //    grid-row: 2 / span 3
