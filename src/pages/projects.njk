@@ -1,7 +1,7 @@
 
 <!-- logo -->
 
-<header style="background-image: url('../assets/imgs/projects-background.png')">
+<header style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.logo.src }}');">
 
     <a href="#" title="Aller à la page d'accueil"></a>
 
@@ -76,33 +76,12 @@
 
         <section class="gallery">
 
-            <figure>
-                <img alt="" src="https://picsum.photos/248/157">
-            </figure>
 
-            <figure>
-                <img alt="" src="https://picsum.photos/248/157">
-            </figure>
-
-            <figure>
-                <img alt="" src="https://picsum.photos/248/157">
-            </figure>
-
-            <figure>
-                <img alt="" src="https://picsum.photos/248/157">
-            </figure>
-
-            <figure>
-                <img alt="" src="https://picsum.photos/248/157">
-            </figure>
-
-            <figure>
-                <img alt="" src="https://picsum.photos/784/495">
-            </figure>
-
-            <figure>
-                <img alt="" src="https://picsum.photos/495/517">
-            </figure>
+            {% for image in project.images %}
+                <figure>
+                    <img alt="" src="/assets/imgs/{{ project.slug }}/{{ image.src }}">
+                </figure>
+            {% endfor %}
 
         </section>
 
@@ -116,45 +95,18 @@
 
         <nav class="slider__content">
 
-            <a>
+            {% for p in project | sortbyrelatedness(projects) %}
+                <a href="/projets/{{ p.slug }}.html">
 
-                <img alt="image test" height="190" src="../assets/imgs/projet-test.png" width="260"/>
+                <img src="/assets/imgs/{{ p.slug }}/{{ p.logo.src }}" alt="{{ p.banner.description }}" width="260" height="190"/>
 
-                Nom client
+                    {{ p.client.name }}
 
-                <em>Tag</em>
+                    <em>{{ p.name}}</em>
 
-            </a>
+                </a>
 
-            <a>
-
-                <img alt="image test" height="190" src="../assets/imgs/projet-test.png" width="260"/>
-
-                Nom client
-
-                <em>Tag</em>
-
-            </a>
-
-            <a>
-
-                <img alt="image test" height="190" src="../assets/imgs/projet-test.png" width="260"/>
-
-                Nom client
-
-                <em>Tag</em>
-
-            </a>
-
-            <a>
-
-                <img alt="image test" height="190" src="../assets/imgs/projet-test.png" width="260"/>
-
-                Nom client
-
-                <em>Tag</em>
-
-            </a>
+            {% endfor %}
 
         </nav>
 
@@ -187,45 +139,3 @@
     </section>
 
 </main>
-
-
-<p>-----------------------------------------------------------------------------------------------------</p>
-
-<a href="/">Accueil</a>
-
-
-<img src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}" alt="{{ project.banner.description }}"/>
-<img src="/assets/imgs/{{ project.slug }}/{{ project.logo.src }}" alt="{{ project.logo.description }}"/>
-
-<h1> {{ project.name }}</h1>
-
-<h3>{{ project.client.name }}</h3>
-
-<div>{{ project.year }}</div>
-
-<ul>
-    {% for tag in project.tags %}
-        <li>{{ tag }}</li>
-    {% endfor %}
-</ul>
-
-
-{% if project.description.length > 0 %}
-    {% for paragraph in project.description %}
-        <p>{{ paragraph }}</p>
-    {% endfor %}
-{% endif %}
-
-{% if project.url %}
-    <a href="{{ project.url }}">{{ project.url }}</a>
-{% endif %}
-
-<section>
-    <h3>Les projets reliés</h3>
-    <ul>
-        {% for p in project | sortbyrelatedness(projects) %}
-            <li><img src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}" alt="{{ project.banner.description }}"/></li>
-            <li>{{ p.name }}</li>
-        {% endfor %}
-    </ul>
-</section>

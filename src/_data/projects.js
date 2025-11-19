@@ -68,7 +68,7 @@ const projectsList = [
             "Développement d’un programme permettant de générer une carte OpenStreetMap depuis un fichier Excel contenant les points de distribution de la Châouette.",
         ],
         client: {
-            name: "La Châouette", description: "Brasserie de bières artisales",
+            name: "La Châouette", description: "Brasserie de bières artisanales",
         },
         url: "https://www.chaouette.fr/",
         tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
