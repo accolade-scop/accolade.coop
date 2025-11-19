@@ -19,29 +19,15 @@
 
 <body>
 
-<header>
-
-    <nav>
-
-        <a href="/">
-            <img src="/assets/imgs/logo-accolade-element.svg" alt="logo Scoop ACCOLADE" height="60" width="60">
-        </a>
-        <a href="/" {% if page.fileSlug === '' %}active{% endif %}">Accueil</a>
-        <a href="/valeurs" {% if page.fileSlug === 'valeurs' %}active{% endif %}"> Valeurs</a>
-        <a href="/services" {% if page.fileSlug === 'services' %}active{% endif %}">Services</a>
-        <a href="mailto:contact@accolade.coop">Contact</a>
-
-    </nav>
-</header>
-
-<main>
     {{ content | safe }}
-</main>
 
-<footer>
-    <a href="/mentions/">Mentions légales</a>
-    <p>Scop ACCOLADE (SARL à capital variable) - © Tous droits reservés - 2023</p>
-</footer>
+    <footer>
+
+        <img alt="Logo Accolade" height="27" src="../assets/svgs/logo-accolade.svg" width="200"/>
+
+        <span> <a>Mentions légales</a> - Scop ACCOLADE (SARL à capital variable) - © Tous droits reservés - 2025</span>
+
+    </footer>
 
 </body>
 </html>
