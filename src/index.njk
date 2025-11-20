@@ -86,45 +86,19 @@
 
         <nav class="slider__content">
 
-            <a>
+            {% for p in projects %}
 
-                <img alt="image test" height="190" src="./assets/imgs/projet-test.png" width="260"/>
+                <a href="/projets/{{ p.slug }}.html">
 
-                Nom client
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.logo.src }}" alt="{{ p.banner.description }}" width="260" height="190"/>
 
-                <em>Tag</em>
+                    {{ p.client.name }}
 
-            </a>
+                    <em>{{ p.name}}</em>
 
-            <a>
+                </a>
 
-                <img alt="image test" height="190" src="./assets/imgs/projet-test.png" width="260"/>
-
-                Nom client
-
-                <em>Tag</em>
-
-            </a>
-
-            <a>
-
-                <img alt="image test" height="190" src="./assets/imgs/projet-test.png" width="260"/>
-
-                Nom client
-
-                <em>Tag</em>
-
-            </a>
-
-            <a>
-
-                <img alt="image test" height="190" src="./assets/imgs/projet-test.png" width="260"/>
-
-                Nom client
-
-                <em>Tag</em>
-
-            </a>
+            {% endfor %}
 
         </nav>
 
