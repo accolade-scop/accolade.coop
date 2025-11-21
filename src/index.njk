@@ -2,19 +2,16 @@
 
     <a href="#" title="Aller à la page d'accueil"></a>
 
-    <nav class="open">
+    <nav class="">
 
         <menu>
+            <li><a>Accueil</a></li>
+            <li><a>L'agence</a></li>
+            <li><a>Nos service</a></li>
+            <li><a>Nos projets</a></li>
+            <li><a>contact</a></li>
 
-            {% for p in projects | slice(0,3)%}
-                <li>
-                    <a href="/projets/{{ p.slug }}.html">
-                        {{p.name}}
-                    </a>
-                </li>
-            {% endfor %}
-
-        </menu>
+                    </menu>
 
         <a title="Voir le menu">
             <img alt="Icone menu" height="40" src="./assets/svgs/picto-burger.svg" width="40"/>
@@ -87,14 +84,14 @@
         <nav class="slider__content">
 
             {% for p in projects %}
-
                 <a href="/projets/{{ p.slug }}.html">
 
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.logo.src }}" alt="{{ p.banner.description }}" width="260" height="190"/>
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
 
                     {{ p.client.name }}
 
-                    <em>{{ p.name}}</em>
+                    <em>{{ p.name }}</em>
 
                 </a>
 

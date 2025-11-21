@@ -42,11 +42,12 @@ body
 
     nav
       position: absolute
-      top: 0
+      top: 10px
       right: 0
       z-index: 2
       padding: 30px
       background-color: var(--body-backgroundColor-base)
+      overflow: hidden
       &:not(.open)
         display: inline-block
         > menu
@@ -57,8 +58,10 @@ body
 
 
     menu
+      font-family: var(--fontFamily-title)
       column-gap: 20px
-
+      text-transform: uppercase
+      transition: all 2s linear
     > span
       position: absolute
       bottom: 60px
@@ -128,6 +131,7 @@ body
 
 h1, h2, h3, h4, h5, h6
   font-family: var(--fontFamily-title)
+  text-transform: uppercase
   > small
     display: block
     font-size: .5em
@@ -160,22 +164,25 @@ a
 
 
 .btn
+  position: relative
+  display: inline-flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: center
   font-family: var(--fontFamily-title)
-  color: var(--color-black)
+  font-size: var(--fontSize-defaut)
   text-transform: uppercase
+  color: var(--color-black)
   padding: 7px 20px
   border: none
-  position: relative
   cursor: pointer
   text-decoration: none
   transition: all 0.5s ease
   &-projects-nav
-    display: flex
     flex-flow: column nowrap
     justify-content: flex-start
     align-items: flex-start
     background-color: var(--color-neutre-darker)
-    font-size: var(--fontSize-defaut)
     font-weight: 400
     width: 150px
     margin: 10px 0
@@ -188,8 +195,7 @@ a
       content: url("/assets/svgs/picto-button-next-off.svg")
       position: absolute
       right: 0
-      top: 50%
-      transform: translate(50%, -50%)
+      transform: translateX(50%)
     &:hover, &.selected
       background-color: var(--surface-backgroundColor-accent)
       &::after
@@ -200,7 +206,8 @@ a
       content: url("/assets/svgs/picto-groupe-pointe-off.svg")
       position: absolute
       right: -75px
-      top: 3px
+      top: 50%
+      transform: translateY(-50%)
     &:hover, .selected
       &::after
         content: url("/assets/svgs/picto-groupe-pointe-on.svg")
@@ -278,7 +285,7 @@ a
         content: ""
         width: 83px
         height: 24px
-        background-image: url("/assets/svgs/picto-groupe-pointe-deco.svg")
+        background-image: url("/assets/svgs/picto-groupe-pointe-off.svg")
         background-repeat: no-repeat
       &::before
         display: block
@@ -286,6 +293,9 @@ a
         width: 75px
         height: 75px
         background-repeat: no-repeat
+      &:hover, .active
+        &::after
+          background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
       &:nth-of-type(1)
         grid-area: carda
         &::before
@@ -333,7 +343,7 @@ a
   > .slider__content
     display: flex
     flex-flow: row nowrap
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
     gap: 30px
     overflow: hidden
@@ -343,7 +353,6 @@ a
     //background-size: contain
     //background-position: top right
     //padding: 60px 50px 50px 0
-
     > a
       display: flex
       flex-flow: column nowrap
@@ -359,7 +368,6 @@ a
         //max-width: 300px
         //height: auto
         object-fit: cover
-
       > em
         color: var(--color-neutre-medium)
         font-size: var(--fontSize-xs)
@@ -407,13 +415,14 @@ a
     display: flex
     flex-flow: row wrap
     justify-content: space-between
-    align-items: flex-start
+    align-items: stretch
     column-gap: 40px
     margin-bottom: 50px
     &::after
       content: ""
       display: block
-      min-height: 400px
+      min-height: 250px
+      max-height: 350px
       width: 1px
       background-color: var(--color-green)
     > img
@@ -425,9 +434,8 @@ a
       align-items: stretch
       row-gap: 20px
       background-color: var(--surface-backgroundColor-secondary)
-      width: 340px
-      height: 512px
-      padding: 40px
+      flex: 0 0 340px
+      padding: 40px 40px 70px 40px
       > img
         width: 75px
         height: 75px
@@ -436,6 +444,7 @@ a
       > p
         flex: 1 1 auto
         font-size: var(--fontSize-sm)
+        max-height: 370px
         margin-bottom: 20px
         padding-right: 10px
         overflow: hidden
