@@ -456,17 +456,47 @@ a
       bottom: 10px
       right: 0
 
-
-  .gallery
-    display: masonry
-    grid-template-columns: repeat(5, minmax(248px, 784px))
-    gap: 20px
-    > figure
-      > img
-        width: 100%
-        height: auto
-        object-fit: cover
-      //&:nth-last-child(1)
-      //  grid-column: span 2
-      //&:nth-last-child(2)
-      //  grid-column: span 3
+  .masonry-container
+    width: 100%
+    /* Définit le nombre de colonnes */
+    column-count: 3
+    /* Définit l'espacement entre les colonnes */
+    column-gap: 10px
+    /* Pour s'assurer que les images et autres médias ne dépassent pas */
+    break-inside: avoid
+    > *
+      /* Empêche les cartes d'être coupées entre deux colonnes */
+      break-inside: avoid
+      /* Assure une marge visuelle en bas de chaque carte */
+      margin-bottom: 5px
+      /* Optionnel : pour que les éléments remplissent leur colonne */
+      width: 100%
+      opacity: 0
+      filter: blur(5px)
+      transform: translateY(20px)
+      /* Applique l'animation à tous les éléments */
+      animation-name: fadeInBlur
+      animation-duration: 0.8s /* Durée de l'animation elle-même */
+      animation-fill-mode: forwards /* Maintient l'état final (visible/net) */
+      animation-timing-function: ease-out
+      &:nth-child(3n + 1)
+        animation-delay: 0.1s
+      &:nth-child(3n + 2)
+        animation-delay: 0.5s
+      &:nth-child(3n)
+        animation-delay: 0.9s
+      &:nth-child(5n + 4)
+        animation-delay: 0.3s
+      &:nth-child(5n + 5)
+        animation-delay: 0.7s
+    @keyframes fadeInBlur
+      0%
+        /* État initial : invisible, flou, légèrement décalé */
+        opacity: 0
+        filter: blur(5px)
+        transform: translateY(20px)
+      100%
+        /* État final : visible, net, à sa place */
+        opacity: 1
+        filter: blur(0)
+        transform: translateY(0)

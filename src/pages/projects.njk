@@ -69,13 +69,10 @@
 
         </header>
 
-        <section class="gallery">
-
+        <section class="masonry-container">
 
             {% for image in project.images %}
-                <figure>
                     <img alt="" src="/assets/imgs/{{ project.slug }}/{{ image.src }}" >
-                </figure>
             {% endfor %}
 
         </section>
