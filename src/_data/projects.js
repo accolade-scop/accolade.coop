@@ -54,7 +54,7 @@ const projectsList = [
     },
     {
         slug: "la-brass",
-        year: 2020-2025,
+        year: "Depuis 2020",
         name: "Création de l'identité graphique - Réalisation d'un site internet",
         description: [
             "La Fabrique des GrÔ est une brasserie artisanale base à Maxéville (Lorraine - 54320). C'est également un lieu culture en plein essort ou le public peut déguster de bonnes bières tout à assitant ç des concerts",
