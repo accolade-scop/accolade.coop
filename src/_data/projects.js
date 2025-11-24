@@ -27,6 +27,36 @@
 /** @type {Project[]} */
 const projectsList = [
     {
+        slug: "hobotruck",
+        year: 2024,
+        name: "Création de l'identité graphique",
+        description: [
+            "Hobo Truck est un food truck solidaire ayant plusieurs missions",
+            "- Distribuer des repas gratuits à celles et ceux qui en ont besoin",
+            "- Créer du lien social et lutter contre l'isolement",
+            "- Sensibiliser et mobiliser autour de la solidarité",
+            "",
+            "Nous avons imaginé un logo facilement déclinable (Hobo Truck / Hobo Café...) accompagnée d'une identité visuelle inspirée des \"Hobos signs\". ",
+        ],
+        client: {
+            name: "Hobo Truck", description: "Food Truck solidaire à Nancy (54000)",
+        },
+        url: "",
+        tags: ["Logo","Charte graphique", "Kakémono", "Habillage de véhicule", "Ecocups"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy banner"},
+        logo: {src: "accolade_graphisme-web_projets_graphisme_solidaire_hobo-truck_nancy.jpg", description: "Accolade graphisme web hobo truck nancy logo"},
+        images: [
+            {src: "accolade_graphisme-web_projets_graphisme_signaletique_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy chevalet"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_habillage-vehicule_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy habillage"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_hobo-cafe_nancy-min.png", description: "Accolade graphisme web hobo truck nancy logos"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck palettes couleurs"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo-clair_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy logo clair"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo-typo_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy typo"},
+            {src: "accolade_graphisme-web_projets_graphisme_kakemono_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy kakemono"},
+            {src: "accolade_graphisme-web_projets_graphisme_sac_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy sac"},
+        ]
+    },
+    {
         slug: "chaouette",
         year: 2020,
         name: "Création de l'identité graphique - Réalisation d'un site internet",
@@ -88,7 +118,7 @@ const projectsList = [
             "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
         ],
         client: {
-            name: "Archives Poincarré, Université de Lorraine, Institut universitaire de France", description: "",
+            name: "Epistemology of Theism", description: "",
         },
         url: "",
         tags: ["Graphisme", "Mise en page", "Print"],
@@ -109,7 +139,7 @@ const projectsList = [
             "Réalisation d'un thème graphique sur mesure sur le CMS OMEKA S",
         ],
         client: {
-            name: "Archives Poincarré, Université de Lausanne, Centre François Viète", description: "Universités & centres de recherche",
+            name: "Archives de Jules Bourgoin", description: "Universités & centres de recherche",
         },
         url: "https://www.studio-fuchsia.com/clients/omeka-jules-bourgoin",
         tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
@@ -121,36 +151,6 @@ const projectsList = [
             {src: "projet_3.jpg", description: "Accolade graphisme web jules-bourgoin 3"},
             {src: "projet_4.jpg", description: "Accolade graphisme web jules-bourgoin 4"},
             {src: "projet_5.jpg", description: "Accolade graphisme web jules-bourgoin 5"},
-        ]
-    },
-    {
-        slug: "hobotruck",
-        year: 2024,
-        name: "Création de l'identité graphique",
-        description: [
-            "Hobo Truck est un food truck solidaire ayant plusieurs missions",
-            "- Distribuer des repas gratuits à celles et ceux qui en ont besoin",
-            "- Créer du lien social et lutter contre l'isolement",
-            "- Sensibiliser et mobiliser autour de la solidarité",
-            "",
-            "Nous avons imaginé un logo facilement déclinable (Hobo Truck / Hobo Café...) accompagnée d'une identité visuelle inspirée des \"Hobos signs\". ",
-        ],
-        client: {
-            name: "Hobo Truck", description: "Food Truck solidaire à Nancy (54000)",
-        },
-        url: "",
-        tags: ["Logo","Charte graphique", "Kakémono", "Habillage de véhicule", "Ecocups"],
-        banner: {src: "accolade_graphisme-web_projets_graphisme_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy banner"},
-        logo: {src: "accolade_graphisme-web_projets_graphisme_solidaire_hobo-truck_nancy.jpg", description: "Accolade graphisme web hobo truck nancy logo"},
-        images: [
-            {src: "accolade_graphisme-web_projets_graphisme_signaletique_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy chevalet"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_habillage-vehicule_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy habillage"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_hobo-cafe_nancy-min.png", description: "Accolade graphisme web hobo truck nancy logos"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck palettes couleurs"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo-clair_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy logo clair"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo-typo_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy typo"},
-            {src: "accolade_graphisme-web_projets_graphisme_kakemono_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy kakemono"},
-            {src: "accolade_graphisme-web_projets_graphisme_sac_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy sac"},
         ]
     },
     {
