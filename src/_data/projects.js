@@ -27,6 +27,29 @@
 /** @type {Project[]} */
 const projectsList = [
     {
+        slug: "jules-bourgoin",
+        year: 2025,
+        name: "Réalisation d'un thème OMEKA S",
+        description: [
+            "Exploitation numérique et scientifique des archives de Jules BOURGOIN à partir de la numérisation d'une sélection du fonds de l'architecte et ornemaniste Jules Bourgoin (1838-1908) conservé à l'INHA",
+            "Réalisation d'un thème graphique sur mesure sur le CMS OMEKA S",
+        ],
+        client: {
+            name: "Archives Poincarré, Université de Lausanne, Centre François Viète", description: "Universités & centres de recherche",
+        },
+        url: "https://www.studio-fuchsia.com/clients/omeka-jules-bourgoin",
+        tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web jules-bourgoin banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web jules-bourgoin logo"},
+        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web jules-bourgoin 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web jules-bourgoin 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web jules-bourgoin 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web jules-bourgoin 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web jules-bourgoin 5"},
+        ]
+    },
+    {
         slug: "hobotruck",
         year: 2024,
         name: "Création de l'identité graphique",
@@ -42,7 +65,7 @@ const projectsList = [
             name: "Hobo Truck", description: "Food Truck solidaire à Nancy (54000)",
         },
         url: "",
-        tags: ["Logo & charte graphique", "Kakémono", "Habillage de véhicule", "Ecocups"],
+        tags: ["Logo","Charte graphique", "Kakémono", "Habillage de véhicule", "Ecocups"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_solidaire_hobo-truck_nancy.jpg", description: "Accolade graphisme web hobo truck nancy logo"},
         images: [
@@ -57,149 +80,293 @@ const projectsList = [
         ]
     },
     {
-        slug: "chaouette",
-        year: 2022,
-        name: "Refonte de l'identité graphique & Réalisation d'un site internet",
+        slug: "la-brass",
+        year: 2020-2025,
+        name: "Création de l'identité graphique - Réalisation d'un site internet",
         description: [
-            "Refonte du l’identité visuelle – Création d’un nouveau logo & d’une charte graphique complète.",
-            "Création des nouvelles étiquettes – A partir de la nouvelle charte graphique, réalisation d’une gamme d’étiquette en 33cl et 75cl.",
-            "Gestion de l’édition – Prise de contact avec l’imprimeur, sélection et proposition au client du papier & de la colle selon les contraintes données.",
-            "Création d’un site internet sous WordPress & WooCommerce – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages.",
-            "Développement d’un programme permettant de générer une carte OpenStreetMap depuis un fichier Excel contenant les points de distribution de la Châouette.",
+            "La Fabrique des GrÔ est une brasserie artisanale base à Maxéville (Lorraine - 54320). C'est également un lieu culture en plein essort ou le public peut déguster de bonnes bières tout à assitant ç des concerts",
+            "Désireux de moderniser son image et de développer sa communication, la Fabrique des GrÔ a fait appel à nous pour la refonte de son identité visuelle, le développement de son site internet et un accompagnement dans la gestion de ses réseaux sociaux.",
+        ],
+        client: {
+            name: "La Fabrique des GrÔ", description: "Brasserie de bières artisanales et salle de concert à Maxéville (54320)",
+        },
+        url: "https://www.lafabriquedesgros.fr/",
+        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web la fabrique des gro maxeville banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web la fabrique des gro maxeville  logo"},
+        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web la fabrique des gro maxeville 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web la fabrique des gro maxeville 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme la fabrique des gro maxeville 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme la fabrique des gro maxeville 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme la fabrique des gro maxeville 5"},
+        ]
+    },
+    {
+        slug: "colloque-numerique",
+        year: 2020,
+        name: "Création et mise en page de supports de communication",
+        description: [
+            "“Mondes virtuels” est un séminaire organisé par Alexis Anne-Braun, Alexandre Declos & Vincent Granata avec le soutien des Archives Poincarré, et de l’Institut universitaire de France.",
+            "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
+        ],
+        client: {
+            name: "Archives Poincarré & Institut universitaire de France", description: "Colloque sur le thème \"Objets, Oeuvres, Mondes virtuels\"",
+        },
+        url: "",
+        tags: ["Graphisme", "Print"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web colloque numerique banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web colloque numerique logo"},
+        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web colloque numerique 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web colloque numerique 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web colloque numerique 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web colloque numerique 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web colloque numerique 5"},
+        ]
+    },
+    {
+        slug: "chaouette",
+        year: 2020,
+        name: "Création de l'identité graphique - Réalisation d'un site internet",
+        description: [
+            "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale et traditionnelle.",
+            "Refonte du logo, création de l’univers graphique de la nouvelle identité (graphisme des étiquettes…) et conception du site internet.",
+            "Le « back-office » a été entièrement pensé pour permettre une utilisation plus intuitive pour le client.",
         ],
         client: {
             name: "La Châouette", description: "Brasserie de bières artisanales",
         },
         url: "https://www.chaouette.fr/",
-        tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
-        banner: {src: "", description: ""},
-        logo: {src: "chaouette-logo.jpg", description: "La Châouette"},
+        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web chaouette banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web chaouette logo"},
         images: [
-        ]
-    },
-    {
-        slug: "turn-head",
-        year: 2024,
-        name: "Création d'une identité graphique & Réalisation d'un site internet",
-        description: [
-            "Création d’un nom pour la société du client – Etude de l’état de l’art, phase d’inspiration, proposition de plusieurs noms avec leurs univers graphique correspondants.",
-            "Création de l’identité visuelle – phase d’inspiration, création et  propositions de plusieurs logotypes, établissement d’une charte graphique.",
-            "Création de carte de visite – format standard et carré proposés.",
-            "Création d’un site internet sous WordPress.",
-        ],
-        client: {
-            name: "Turn Head", description: "Fabrication de disque Vinyle",
-        },
-        url: "https://www.turn-head.fr/",
-        tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
-        banner: {src: "", description: ""},
-        logo: {src: "turn-head-logo.png", description: "Turn head"},
-        images: [
-        ]
-    },
-    {
-        slug: "cse-afpa",
-        year: 2022,
-        name: "Réalisation d'un site intranet",
-        description: [
-            "Création d’un site internet sous WordPress – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages.",
-            "Gestion de l’accès authentifié – Mise en place d’une page de connexion et gestion des comptes utilisateurs.",
-            "Mise en place d’une gestion des actualités du CSE – Séjours, Billetterie, Remboursement sur facture, Chèques ANCV – un modèle de saisie simplifié permet aux gestionnaires du site de créer les actualités.",
-            "Mise en place d’une intégration des salariés – depuis un fichier fourni par les RH, l’intégration permet de créer / modifier / supprimer les comptes utilisateurs et d’envoyer une procédure de connexion pour les nouveaux salariés.",
-        ],
-        client: {
-            name: "CSE Afpa Grand Est", description: "CSE de l'Apfa - Région Grand Est",
-        },
-        url: "https://www.csee-afpa-grandest.fr/",
-        tags: ["Site internet", "SEO"],
-        banner: {src: "", description: ""},
-        logo: {src: "cse-logo.svg", description: "CSE AFPA GRAND EST"},
-        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web chaouette 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web chaouette 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web chaouette 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web chaouette 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web chaouette 5"},
         ]
     },
     {
         slug: "georessources",
-        year: 2021 & 2022,
-        name: "Réalisation rapports d'activité 2021 & 2022",
+        year: 2022 & 2023,
+        name: "Création d'une charte graphique & mise en page de rapports d'activités",
         description: [
-            "Réalisation d’un modèle InDesign de rapport d’activité – plusieurs templates de pages, adaptation de la charte graphique existante avec la création de nouveaux éléments graphiques.",
-            "Mise en page des rapports d’activité 2021 & 2022 – adaptation des photographies sous Photoshop, création de graphiques sous Indesign depuis des modèles Powerpoint existants.",
+            "Laboratoire de recherche en géologie, GeoRessources couvre le champ des ressources géologiques, de leur exploration à leur exploitation, en passant par les étapes du traitement et de la valorisation, et de ses impacts sur la société et l’environnement.",
+            "Conception d’un modèle de rapport d’activité – graphisme et mise en page – et déclinaison de celui-ci sur deux années consécutives.",
         ],
         client: {
-            name: "Université de Lorraine - CNRS - GeoRessources", description: "Laboratoire de recherche en géologie",
+            name: "GeoRessources", description: "Laboratoire de recherche en géologie",
         },
         url: "",
-        tags: ["Édition", "Design graphique"],
-        banner: {src: "", description: "GEORESSOURCES"},
-        logo: {src: "", description: "GEORESSOURCES"},
+        tags: ["Charte graphique", "Graphisme", "Print"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web georessources banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web georessources logo"},
         images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web georessources 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web georessources 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web georessources 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web georessources 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web georessources 5"},
         ]
     },
     {
-        slug: "la-brass",
-        year: 2024,
-        name: "Refonte de l’identite graphique",
-        description: [
-            "La Fabrique des GrÔ est une brasserie artisanale basée à Maxéville (Lorraine - 54320). C’est également un lieu culturel en plein essort où le public peut déguster de bonnes bières tout en assistant à des concerts.",
-            "Désireux de moderniser son image et de développer sa communication, La Fabrique des GrÔ a fait appel à nous pour la refonte de son identité visuelle et un accompagnement dans la gestion de ces réseaux sociaux."
-        ],
-        client: {
-            name: "La Fabrique des GrÔ", description: "Brasserie artisanale / Bar et lieu de concerts à Maxéville (54320)",
-        },
-        url: "https://www.lafabriquedesgros.fr/",
-        tags: ["Logo & charte graphique", "Illustrations", "Étiquettes", "Cartons", "Sous-bocks", "Stickers", "Cavaliers de pompes", "Web"],
-        banner: {src: "la-brass-banner.png", description: "la brasserie des gros"},
-        logo: {src: "la-brass-logo.png", description: "la brasserie des gros"},
-        images: [
-            {src: "la-brass-image1.png", description: "la brasserie des gros 1"},
-            {src: "la-brass-image2.png", description: "la brasserie des gros 2"},
-            {src: "la-brass-image3.png", description: "la brasserie des gros 2"},
-            {src: "la-brass-image4.png", description: "la brasserie des gros 2"},
-            {src: "la-brass-image5.png", description: "la brasserie des gros 2"},
-        ]
-    },
-    {
-        slug: "b31",
-        year: 2021,
-        name: "Réalisation site internet & Développements de programmes",
-        description: [
-            "Création d’un site internet sous WordPress & WooCommerce – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages, création d’un fichier normalisé sous Excel et intégration automatisé sur le catalogue de produit, mise en place des livraisons via Colissimo & Chronopost, mise en place d’un kit bancaire & d’un règlement via Stripe.",
-            "Développement d’un programme permettant de générer des PDF prêts à l’impression pour la production des produits commercialisés sur le site de B31 – Analyse des commandes via l’API WooCommerce, mise au norme d’un fichier PDF normalisé, envoi automatisé des commandes à la chaine de production.",
-            "Développement d’un programme de génération de catalogues destinés à l’impression & à la consultation numérique – Analyse et récupération du catalogue via l’API WooCommerce, génération d’un fichier normalisé PDF intégrant les visuels et les informations des différents produits.",
-            "Développement d’un programme d’export des mouvements comptables – Récupération des informations de facturation via l’API WooCommerce, analyse des lignes de facturation et génération des mouvements comptables correspondants, génération d’un fichier CSV normalisé destiné à une intégration sur un logiciel de comptabilité",
-            "Accompagnement de l’expert comptable de B31 sur l’import comptable sur le logiciel CADOR – Paramétrage de l’import sur le logiciel, intégration des premiers fichiers générés, rédaction d’une procédure d’intégration.",
-        ],
-        client: {
-            name: "B31", description: "Vente de design automobile",
-        },
-        url: "https://www.b31.fr/",
-        tags: ["Site internet", "Développement", "SEO", "Web"],
-        banner: {src: "b31-logo.png", description: "B31"},
-        logo: {src: "b31-logo.png", description: "B31"},
-        images: [
-        ]
-    },
-    {
-        slug: "adeios",
+        slug: "liec",
         year: 2023,
-        name: "Réfonte identité graphique & Réalisation site internet",
+        name: "Création graphique & mise en page d'une frise chronologique",
         description: [
-            "Refonte du l’identité visuelle du cabinet ADEIOS – Création d’un nouveau logo & d’une charte graphique complète, adaptation des signatures de mails, création de visuels destinés à la communication sur les réseaux sociaux (LinkedIn, Youtube).",
-            "Réalisation du site internet – vitrine du cabinet créé avec WordPress, SEO",
-            "Mise en page des documents professionnels – contrats, executive summary, documents de formation, fiches produits.",
-            "Création de la papeterie – cartes de visible, papier entête, enveloppe personnalisée, carte de correspondance, tampon.",
-            "Réalisation et gestion de newsletter – création du modèle de mail, intégration des listes de diffusion et gestion de l’envoi via SendInBlue.",
+            "Le LIEC, Laboratoire Interdisciplinaire des Environnements Continentaux, est une UMR Université de Lorraine. En 2023, le laboratoire fête ses 10ans, l’occasion de revenir sur les étapes phares de cette décennie.",
+            "Création graphique et mise en page d’un “frise chronologique” mettant en avant les événements marquants, à l’aide de photographies, création d’icônes…",
         ],
         client: {
-            name: "ADEIOS", description: "Cabinet de conseils stratégiques",
+            name: "LIEC", description: "Laboratoire Interdisciplinaire des Environnements Continentaux",
         },
-        url: "https://adeios.fr/",
-        tags: ["Site internet", "SEO", "Identité graphique", "Image de marque", "Design graphique"],
-        banner: {src: "", description: "ADEIOS"},
-        logo: {src: "adeios-logo.png", description: "ADEIOS"},
+        url: "",
+        tags: ["Graphisme", "Print"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web liec banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web liec logo"},
         images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web liec 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web liec 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web liec 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web liec 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web liec 5"},
         ]
     },
+    {
+        slug: "espoir54",
+        year: 2024,
+        name: "Réalisation d'un site internet",
+        description: [
+            "Espoir 54 est une association proposant à toute personne en situation de souffrance psychique un lieu d'accueil et d'entraide avec des professionnels et des bénévoles, des services de réhabilitation psychosociale/professionnelle, des ateliers de création et de resocialisation (théâtre, musique, cuisine, club de marche, jardinage, etc...).",
+            "Réalisation d'un site internet présentant l'association, ses dispositifs et ses actions menées",
+        ],
+        client: {
+            name: "Espoir 54", description: "Accueil et accompagnement d'adultes handicapés ou de personnes agés",
+        },
+        url: "https://www.espoir54.org/",
+        tags: ["Graphisme", "Site internet"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web espoir54 banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web espoir54 logo"},
+        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web espoir54 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web espoir54 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web espoir54 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web espoir54 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web espoir54 5"},
+        ]
+    },
+    {
+        slug: "ekipea",
+        year: 2020-2025,
+        name: "Développement d'un ERP destiné au CSE",
+        description: [
+            "EKIPEA propose un service externalisé de back office pour gérer les activités sociales et culturelles des CSE, une soluton de comptabilité et une application mobile permettant au CSE de communiquer avec ses salariés, et aux salariés d'accéder aux ASC du CSE",
+            "Développement d'une API métier, d'un interface d'administration de l'ERP et de l'application mobile.",
+        ],
+        client: {
+            name: "EKIPEA", description: "Editeur de logiciels destinés aux CSE",
+        },
+        url: "",
+        tags: ["Développement", "ERP", "API", "Mobile"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web ekipea banner"},
+        logo: {src: "logo.jpg", description: "Accolade graphisme web ekipea logo"},
+        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web ekipea 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web ekipea 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web ekipea 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web ekipea 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web ekipea 5"},
+        ]
+    },
+    // {
+    //     slug: "mon-slug",
+    //     year: 2020,
+    //     name: "",
+    //     description: [
+    //         "",
+    //         "",
+    //     ],
+    //     client: {
+    //         name: "", description: "",
+    //     },
+    //     url: "",
+    //     tags: ["", ""],
+    //     banner: {src: "banner.jpg", description: "Accolade graphisme web banner"},
+    //     logo: {src: "logo.jpg", description: "Accolade graphisme web logo"},
+    //     images: [
+    //         {src: "projet_1.jpg", description: "Accolade graphisme web 1"},
+    //         {src: "projet_2.jpg", description: "Accolade graphisme web 2"},
+    //         {src: "projet_3.jpg", description: "Accolade graphisme web 3"},
+    //         {src: "projet_4.jpg", description: "Accolade graphisme web 4"},
+    //         {src: "projet_5.jpg", description: "Accolade graphisme web 5"},
+    //     ]
+    // },
+    // {
+    //     slug: "chaouette",
+    //     year: 2022,
+    //     name: "Refonte de l'identité graphique & Réalisation d'un site internet",
+    //     description: [
+    //         "Refonte du l’identité visuelle – Création d’un nouveau logo & d’une charte graphique complète.",
+    //         "Création des nouvelles étiquettes – A partir de la nouvelle charte graphique, réalisation d’une gamme d’étiquette en 33cl et 75cl.",
+    //         "Gestion de l’édition – Prise de contact avec l’imprimeur, sélection et proposition au client du papier & de la colle selon les contraintes données.",
+    //         "Création d’un site internet sous WordPress & WooCommerce – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages.",
+    //         "Développement d’un programme permettant de générer une carte OpenStreetMap depuis un fichier Excel contenant les points de distribution de la Châouette.",
+    //     ],
+    //     client: {
+    //         name: "La Châouette", description: "Brasserie de bières artisanales",
+    //     },
+    //     url: "https://www.chaouette.fr/",
+    //     tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
+    //     banner: {src: "", description: ""},
+    //     logo: {src: "chaouette-logo.jpg", description: "La Châouette"},
+    //     images: [
+    //     ]
+    // },
+    // {
+    //     slug: "turn-head",
+    //     year: 2024,
+    //     name: "Création d'une identité graphique & Réalisation d'un site internet",
+    //     description: [
+    //         "Création d’un nom pour la société du client – Etude de l’état de l’art, phase d’inspiration, proposition de plusieurs noms avec leurs univers graphique correspondants.",
+    //         "Création de l’identité visuelle – phase d’inspiration, création et  propositions de plusieurs logotypes, établissement d’une charte graphique.",
+    //         "Création de carte de visite – format standard et carré proposés.",
+    //         "Création d’un site internet sous WordPress.",
+    //     ],
+    //     client: {
+    //         name: "Turn Head", description: "Fabrication de disque Vinyle",
+    //     },
+    //     url: "https://www.turn-head.fr/",
+    //     tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
+    //     banner: {src: "", description: ""},
+    //     logo: {src: "turn-head-logo.png", description: "Turn head"},
+    //     images: [
+    //     ]
+    // },
+    // {
+    //     slug: "cse-afpa",
+    //     year: 2022,
+    //     name: "Réalisation d'un site intranet",
+    //     description: [
+    //         "Création d’un site internet sous WordPress – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages.",
+    //         "Gestion de l’accès authentifié – Mise en place d’une page de connexion et gestion des comptes utilisateurs.",
+    //         "Mise en place d’une gestion des actualités du CSE – Séjours, Billetterie, Remboursement sur facture, Chèques ANCV – un modèle de saisie simplifié permet aux gestionnaires du site de créer les actualités.",
+    //         "Mise en place d’une intégration des salariés – depuis un fichier fourni par les RH, l’intégration permet de créer / modifier / supprimer les comptes utilisateurs et d’envoyer une procédure de connexion pour les nouveaux salariés.",
+    //     ],
+    //     client: {
+    //         name: "CSE Afpa Grand Est", description: "CSE de l'Apfa - Région Grand Est",
+    //     },
+    //     url: "https://www.csee-afpa-grandest.fr/",
+    //     tags: ["Site internet", "SEO"],
+    //     banner: {src: "", description: ""},
+    //     logo: {src: "cse-logo.svg", description: "CSE AFPA GRAND EST"},
+    //     images: [
+    //     ]
+    // },
+    // {
+    //     slug: "b31",
+    //     year: 2021,
+    //     name: "Réalisation site internet & Développements de programmes",
+    //     description: [
+    //         "Création d’un site internet sous WordPress & WooCommerce – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages, création d’un fichier normalisé sous Excel et intégration automatisé sur le catalogue de produit, mise en place des livraisons via Colissimo & Chronopost, mise en place d’un kit bancaire & d’un règlement via Stripe.",
+    //         "Développement d’un programme permettant de générer des PDF prêts à l’impression pour la production des produits commercialisés sur le site de B31 – Analyse des commandes via l’API WooCommerce, mise au norme d’un fichier PDF normalisé, envoi automatisé des commandes à la chaine de production.",
+    //         "Développement d’un programme de génération de catalogues destinés à l’impression & à la consultation numérique – Analyse et récupération du catalogue via l’API WooCommerce, génération d’un fichier normalisé PDF intégrant les visuels et les informations des différents produits.",
+    //         "Développement d’un programme d’export des mouvements comptables – Récupération des informations de facturation via l’API WooCommerce, analyse des lignes de facturation et génération des mouvements comptables correspondants, génération d’un fichier CSV normalisé destiné à une intégration sur un logiciel de comptabilité",
+    //         "Accompagnement de l’expert comptable de B31 sur l’import comptable sur le logiciel CADOR – Paramétrage de l’import sur le logiciel, intégration des premiers fichiers générés, rédaction d’une procédure d’intégration.",
+    //     ],
+    //     client: {
+    //         name: "B31", description: "Vente de design automobile",
+    //     },
+    //     url: "https://www.b31.fr/",
+    //     tags: ["Site internet", "Développement", "SEO", "Web"],
+    //     banner: {src: "b31-logo.png", description: "B31"},
+    //     logo: {src: "b31-logo.png", description: "B31"},
+    //     images: [
+    //     ]
+    // },
+    // {
+    //     slug: "adeios",
+    //     year: 2023,
+    //     name: "Réfonte identité graphique & Réalisation site internet",
+    //     description: [
+    //         "Refonte du l’identité visuelle du cabinet ADEIOS – Création d’un nouveau logo & d’une charte graphique complète, adaptation des signatures de mails, création de visuels destinés à la communication sur les réseaux sociaux (LinkedIn, Youtube).",
+    //         "Réalisation du site internet – vitrine du cabinet créé avec WordPress, SEO",
+    //         "Mise en page des documents professionnels – contrats, executive summary, documents de formation, fiches produits.",
+    //         "Création de la papeterie – cartes de visible, papier entête, enveloppe personnalisée, carte de correspondance, tampon.",
+    //         "Réalisation et gestion de newsletter – création du modèle de mail, intégration des listes de diffusion et gestion de l’envoi via SendInBlue.",
+    //     ],
+    //     client: {
+    //         name: "ADEIOS", description: "Cabinet de conseils stratégiques",
+    //     },
+    //     url: "https://adeios.fr/",
+    //     tags: ["Site internet", "SEO", "Identité graphique", "Image de marque", "Design graphique"],
+    //     banner: {src: "", description: "ADEIOS"},
+    //     logo: {src: "adeios-logo.png", description: "ADEIOS"},
+    //     images: [
+    //     ]
+    // },
 
 ];
 
