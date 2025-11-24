@@ -25,9 +25,9 @@
 
         <h1><small>Navigation</small></h1>
 
-        <button class="btn btn-projects-nav" type="button">Projet<small>précédent</small></button>
+        <a class="btn btn-projects-nav" type="button">Projet<small>précédent </small></a>
 
-        <button class="btn btn-projects-nav" type="button">Projet<small>suivant</small></button>
+        <a class="btn btn-projects-nav" type="button">Projet<small>suivant</small></a>
 
     </aside>
 
@@ -47,7 +47,17 @@
 
             <aside>
 
-                <img alt="Création graphique" src="../assets/svgs/picto-creation-graphique.svg">
+                <section>
+                    {% if "Graphisme" in project.tags or "Logo" in project.tags %}
+                        <img alt="Création graphique" src="../assets/svgs/picto-creation-graphique.svg">
+                    {% endif %}
+                    {% if "Site internet" in project.tags %}
+                        <img alt="Site Internet" src="../assets/svgs/picto-creation-site.svg">
+                    {% endif %}
+                    {% if "Développement" in project.tags %}
+                        <img alt="Site Internet" src="../assets/svgs/picto-labo.svg">
+                    {% endif %}
+                </section>
 
                 <ul class="tags-list">
                     {% for tag in project.tags %}
@@ -65,7 +75,9 @@
 
             </aside>
 
-            <a class="btn btn-page-nav" href="{{ project.url }}" target="_blank">Voir le site</a>
+            {% if project.url %}
+                <a class="btn btn-page-nav" href="{{ project.url }}" target="_blank">Voir le site</a>
+            {% endif %}
 
         </header>
 
