@@ -27,6 +27,80 @@
 /** @type {Project[]} */
 const projectsList = [
     {
+        slug: "chaouette",
+        year: 2020,
+        name: "Création de l'identité graphique - Réalisation d'un site internet",
+        description: [
+            "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale et traditionnelle.",
+            "",
+            "Refonte du logo, création de l’univers graphique de la nouvelle identité (graphisme des étiquettes…) et conception du site internet.",
+            "",
+            "Le « back-office » a été entièrement pensé pour permettre une utilisation plus intuitive pour le client.",
+        ],
+        client: {
+            name: "La Châouette", description: "Brasserie de bières artisanales",
+        },
+        url: "https://www.chaouette.fr/",
+        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        banner: {src: "banner.jpg", description: "Accolade graphisme web chaouette banner"},
+        logo: {src: "slider.jpg", description: "Accolade graphisme web chaouette logo"},
+        images: [
+            {src: "projet_1.jpg", description: "Accolade graphisme web chaouette 1"},
+            {src: "projet_2.jpg", description: "Accolade graphisme web chaouette 2"},
+            {src: "projet_3.jpg", description: "Accolade graphisme web chaouette 3"},
+            {src: "projet_4.jpg", description: "Accolade graphisme web chaouette 4"},
+            {src: "projet_5.jpg", description: "Accolade graphisme web chaouette 5"},
+        ]
+    },
+    {
+        slug: "la-brass",
+        year: 2020-2025,
+        name: "Création de l'identité graphique - Réalisation d'un site internet",
+        description: [
+            "La Fabrique des GrÔ est une brasserie artisanale base à Maxéville (Lorraine - 54320). C'est également un lieu culture en plein essort ou le public peut déguster de bonnes bières tout à assitant ç des concerts",
+            "Désireux de moderniser son image et de développer sa communication, la Fabrique des GrÔ a fait appel à nous pour la refonte de son identité visuelle, le développement de son site internet et un accompagnement dans la gestion de ses réseaux sociaux.",
+        ],
+        client: {
+            name: "La Fabrique des GrÔ", description: "Brasserie de bières artisanales et salle de concert à Maxéville (54320)",
+        },
+        url: "https://www.lafabriquedesgros.fr/",
+        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro-brasserie_maxeville.png", description: "Accolade graphisme web la fabrique des gro maxeville banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_fabrique-des-gro_bieres_slider.jpg", description: "Accolade graphisme web la fabrique des gro maxeville  logo"},
+        images: [
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_site-internet_fabrique-des-gro_biere.png", description: "Accolade graphisme la fabrique des gro maxeville site internet"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere.jpg", description: "Accolade graphisme web la fabrique des gro maxeville gnon"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro_sweat.jpg", description: "Accolade graphisme la fabrique des gro maxeville sweat"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_landaise.jpg", description: "Accolade graphisme web la fabrique des gro maxeville landaise"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_maxeville.jpg", description: "Accolade graphisme la fabrique des gro maxeville maxeville"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro_sweat2.jpg", description: "Accolade graphisme la fabrique des gro maxeville sweat2"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_niasse.jpg", description: "Accolade graphisme la fabrique des gro maxeville niasse"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere-ipa.jpg", description: "Accolade graphisme la fabrique des gro maxeville ipa"},
+        ]
+    },
+    {
+        slug: "epistemology-of-theism",
+        year: 2019,
+        name: "Supports de communication pour un séminaire philosophique",
+        description: [
+            "“Inquiries Into Epistemology of Theism: A Seminar in Religious Epistemology” est un séminaire organisé par Roger Pouivet & Paul Clavier avec le soutien de l’université de Lorraine, des Archives Poincarré, et de l’Institut universitaire de France.",
+            "",
+            "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
+        ],
+        client: {
+            name: "Archives Poincarré, Université de Lorraine, Institut universitaire de France", description: "",
+        },
+        url: "",
+        tags: ["Graphisme", "Mise en page", "Print"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme.jpg", description: "Accolade graphisme web banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology_logo.jpg", description: "Accolade graphisme web logo"},
+        images: [
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme-2.jpg", description: "Accolade graphisme web programme"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_interieur.png", description: "Accolade graphisme web programme"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology.jpg", description: "Accolade graphisme web programme"},
+        ]
+    },
+    {
         slug: "jules-bourgoin",
         year: 2025,
         name: "Réalisation d'un thème OMEKA S",
@@ -80,32 +154,6 @@ const projectsList = [
         ]
     },
     {
-        slug: "la-brass",
-        year: 2020-2025,
-        name: "Création de l'identité graphique - Réalisation d'un site internet",
-        description: [
-            "La Fabrique des GrÔ est une brasserie artisanale base à Maxéville (Lorraine - 54320). C'est également un lieu culture en plein essort ou le public peut déguster de bonnes bières tout à assitant ç des concerts",
-            "Désireux de moderniser son image et de développer sa communication, la Fabrique des GrÔ a fait appel à nous pour la refonte de son identité visuelle, le développement de son site internet et un accompagnement dans la gestion de ses réseaux sociaux.",
-        ],
-        client: {
-            name: "La Fabrique des GrÔ", description: "Brasserie de bières artisanales et salle de concert à Maxéville (54320)",
-        },
-        url: "https://www.lafabriquedesgros.fr/",
-        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
-        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro-brasserie_maxeville.png", description: "Accolade graphisme web la fabrique des gro maxeville banner"},
-        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_fabrique-des-gro_biere.jpg", description: "Accolade graphisme web la fabrique des gro maxeville  logo"},
-        images: [
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_site-internet_fabrique-des-gro_biere.png", description: "Accolade graphisme la fabrique des gro maxeville site internet"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere.jpg", description: "Accolade graphisme web la fabrique des gro maxeville gnon"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro_sweat.jpg", description: "Accolade graphisme la fabrique des gro maxeville sweat"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_landaise.jpg", description: "Accolade graphisme web la fabrique des gro maxeville landaise"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_maxeville.jpg", description: "Accolade graphisme la fabrique des gro maxeville maxeville"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro_sweat2.jpg", description: "Accolade graphisme la fabrique des gro maxeville sweat2"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_niasse.jpg", description: "Accolade graphisme la fabrique des gro maxeville niasse"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere-ipa.jpg", description: "Accolade graphisme la fabrique des gro maxeville ipa"},
-        ]
-    },
-    {
         slug: "colloque-numerique",
         year: 2020,
         name: "Création et mise en page de supports de communication",
@@ -128,30 +176,7 @@ const projectsList = [
             {src: "projet_5.jpg", description: "Accolade graphisme web colloque numerique 5"},
         ]
     },
-    {
-        slug: "chaouette",
-        year: 2020,
-        name: "Création de l'identité graphique - Réalisation d'un site internet",
-        description: [
-            "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale et traditionnelle.",
-            "Refonte du logo, création de l’univers graphique de la nouvelle identité (graphisme des étiquettes…) et conception du site internet.",
-            "Le « back-office » a été entièrement pensé pour permettre une utilisation plus intuitive pour le client.",
-        ],
-        client: {
-            name: "La Châouette", description: "Brasserie de bières artisanales",
-        },
-        url: "https://www.chaouette.fr/",
-        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web chaouette banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web chaouette logo"},
-        images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web chaouette 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web chaouette 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web chaouette 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web chaouette 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web chaouette 5"},
-        ]
-    },
+
     {
         slug: "georessources",
         year: 2022 & 2023,
