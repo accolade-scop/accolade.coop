@@ -1,4 +1,4 @@
-<header style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.logo.src }}');">
+<header style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.banner.src }}');">
 
     <a href="#" title="Aller à la page d'accueil"></a>
 
@@ -42,8 +42,8 @@
 
         <header>
             <!-- banner -->
-            <img alt="" src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}"
-                 alt="{{ project.banner.description }}" width="810" height="512">
+            <img alt="" src="/assets/imgs/{{ project.slug }}/{{ project.logo.src }}"
+                 alt="{{ project.logo.description }}" width="810" height="512">
 
             <aside>
 
@@ -90,7 +90,7 @@
             {% for p in project | sortbyrelatedness(projects) %}
                 <a href="/projets/{{ p.slug }}.html">
 
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.logo.src }}" alt="{{ p.logo.description }}" width="248"
                          height="157"/>
 
                     {{ p.client.name }}

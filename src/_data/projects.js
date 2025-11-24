@@ -32,6 +32,7 @@ const projectsList = [
         name: "Création de l'identité graphique",
         description: [
             "Hobo Truck est un food truck solidaire ayant plusieurs missions",
+            "",
             "- Distribuer des repas gratuits à celles et ceux qui en ont besoin",
             "- Créer du lien social et lutter contre l'isolement",
             "- Sensibiliser et mobiliser autour de la solidarité",
