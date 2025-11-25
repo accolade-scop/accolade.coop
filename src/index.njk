@@ -1,12 +1,12 @@
 <header style="background-image: url('./assets/imgs/home-background.png')">
 
-    <a href="./index.html" title="Aller à la page d'accueil"></a>
+    <a href="./" title="Aller à la page d'accueil"></a>
 
     <nav class="open">
 
         <menu>
-            <li><a href="./index.html">Accueil</a></li>
-            <li><a href="/pages/contacts.html">contact</a></li>
+            <li><a href="./" title="retour à l'accueil">Accueil</a></li>
+            <li><a href="/pages/contacts.html" title="voir la page contacts">contact</a></li>
         </menu>
 
         <a title="Voir le menu">
@@ -80,7 +80,7 @@
         <nav class="slider__content">
 
             {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html">
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
 
                     <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
                          height="157"/>
@@ -118,7 +118,7 @@
         <h2>Vous avez un projet ?</h2>
 
         <h3>N’hesitez pas a nous
-            <button class="btn btn-page-nav" type="button">Contacter</button>
+            <a class="btn btn-page-nav" href="/pages/contacts.html">Contacter</a>
         </h3>
 
     </section>
