@@ -631,6 +631,24 @@ a
         max-width: 330px
         text-align: center
         padding: 20px
+      &.project
+        > aside
+          top: 100%
+          transform: translateY(50%)
+          bottom: 0
+          display: flex
+          flex-flow: row nowrap
+          justify-content: center
+          align-items: center
+          column-gap: 40px
+          background-color: transparent
+          max-width: none
+          padding: 0
+          h1
+            display: none
+          > .btn-projects-nav
+            width: 120px
+
     > main
       section
         padding: 0 20px
@@ -689,6 +707,15 @@ a
           padding-bottom: 20px
         >.slider__nav
           display: none
+      #project-details
+        > header
+          flex-direction: column
+          > img, &::after
+            display: none
+        .masonry-container
+          column-count: 1
+          > img
+            max-width: 300px
       #contact
         margin-right: 20px
         margin-left: 20px
