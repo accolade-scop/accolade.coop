@@ -634,7 +634,7 @@ a
     > main
       section
         padding: 0 20px
-        > h2
+        h2
           display: block
           text-align: center
           &.with-line::after
@@ -650,6 +650,34 @@ a
             display: none
           > a
             font-size: var(--fontSize-sm)
+            &::before
+              width: 50px
+              height: 50px
+              background-size: cover
+            &::after
+              display: none
+            > em
+
+              display: none
+            &:nth-child(4)
+              em
+                padding: 10px
+                &::before,&::after
+                  display: none
+      #expertises
+        h2
+          padding-right: 0
+        > nav
+          grid-template-columns: repeat(3, minmax(100px, 1fr))
+          grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
+          &::after, &::before
+            display: none
+          > a
+            font-size: var(--fontSize-sm)
+            &::before
+              width: 50px
+              height: 50px
+              background-size: cover
             &::after
               display: none
             > em
