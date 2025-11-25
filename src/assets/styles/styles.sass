@@ -12,9 +12,11 @@ body
   font-size: var(--body-fontSize-base)
   font-weight: var(--body-fontWeight-default)
   line-height: var(--body-lineHeight-default)
-  max-width: var(--body-width-default)
-  margin: 40px auto 20px auto
 
+  &.container
+    container: cadre inline-size
+    max-width: var(--body-width-default)
+    margin: 40px auto 20px auto
 
   > header
     position: relative
@@ -607,4 +609,11 @@ a
           &:first-child
             font-weight: var(--fontWeight-bold)
             color: var(--color-neutre-darker)
+
+
+/* ----- RESPONSIVITE ----- */
+
+@container cadre (width < 1000px)
+  p
+    color: red
 
