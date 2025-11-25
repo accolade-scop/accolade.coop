@@ -296,15 +296,15 @@ a
       &:hover, .active
         &::after
           background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
-      &:nth-of-type(1)
+      &:nth-of-type(3)
         grid-area: carda
         &::before
           background-image: url("/assets/svgs/picto-labo.svg")
-      &:nth-of-type(2)
+      &:nth-of-type(1)
         grid-area: cardb
         &::before
           background-image: url("/assets/svgs/picto-creation-site.svg")
-      &:nth-of-type(3)
+      &:nth-of-type(2)
         grid-area: cardc
         &::before
           background-image: url("/assets/svgs/picto-creation-graphique.svg")
@@ -354,13 +354,14 @@ a
       justify-content: flex-start
       align-items: flex-start
       flex: 0 0 250px
-      color: var(--text-color-accent)
-      row-gap: 10px
+      color: var(--text-color-primary)
+      row-gap: 0
       text-decoration: none
       > img
         background-color: var(--surface-backgroundColor-secondary)
         object-fit: cover
         aspect-ratio: 248 / 157
+        margin-bottom: 5px
       > em
         color: var(--color-neutre-medium)
         font-size: var(--fontSize-xs)
@@ -626,19 +627,18 @@ a
       > aside
         position: relative
         top: 50px
-        background-color: transparent
         margin: 0 auto
-        max-width: 310px
+        max-width: 330px
         text-align: center
-        padding: 5px
+        padding: 20px
     > main
       section
         padding: 0 20px
         h2
-          display: block
-          text-align: center
+          display: block !important
+          text-align: center !important
           &.with-line::after
-            display: none
+            display: none !important
 
       #expertises
         h2
@@ -646,10 +646,12 @@ a
         > nav
           grid-template-columns: repeat(3, minmax(100px, 1fr))
           grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
+          gap: 10px
           &::after, &::before
             display: none
           > a
-            font-size: var(--fontSize-sm)
+            font-size: var(--fontSize-xs)
+            padding: 15px 0px
             &::before
               width: 50px
               height: 50px
@@ -664,36 +666,27 @@ a
                 padding: 10px
                 &::before,&::after
                   display: none
-      #expertises
+      #infos-contact, #mentions
         h2
           padding-right: 0
         > nav
-          grid-template-columns: repeat(3, minmax(100px, 1fr))
-          grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
+          display: flex
+          flex-flow: column nowrap
           &::after, &::before
             display: none
           > a
             font-size: var(--fontSize-sm)
-            &::before
-              width: 50px
-              height: 50px
-              background-size: cover
-            &::after
-              display: none
-            > em
-
-              display: none
-            &:nth-child(4)
-              em
-                padding: 10px
-                &::before,&::after
-                  display: none
+            &:nth-child(2)
+              padding: 20px
       #projets
         > .slider__content
           flex-flow: row nowrap
           width: 100%
           overflow: hidden
-          overflow-x: visible
+          overflow-x: scroll
+          scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
+          scrollbar-width: thin
+          padding-bottom: 20px
         >.slider__nav
           display: none
       #contact
