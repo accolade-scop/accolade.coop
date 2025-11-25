@@ -11,10 +11,9 @@ export default async function(eleventyConfig) {
 
     eleventyConfig.addFilter('navSlug', function(projects, currentSlug, indexOperator) {
         const index = projects.findIndex(p => p.slug === currentSlug);
-        if (index === -1) return null;
-        const project = projects[index + indexOperator];
-        return project ? project : null;
-
+        if (index === 0 && indexOperator === -1) return projects[projects.length - 1]; // 1er projet + previous
+        if (index === (projects.length - 1) && indexOperator === 1) return projects[0]; // Dernier projet + next
+        return projects[index + indexOperator]; // Autres projets
     });
 
     eleventyConfig.addFilter('slice', (arr, start, end) => arr.slice(start, end));

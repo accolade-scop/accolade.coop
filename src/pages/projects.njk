@@ -102,7 +102,7 @@
             {% for p in project | sortbyrelatedness(projects) %}
                 <a href="/projets/{{ p.slug }}.html">
 
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.logo.src }}" alt="{{ p.logo.description }}" width="248"
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
                          height="157"/>
 
                     {{ p.client.name }}

@@ -27,17 +27,118 @@
 /** @type {Project[]} */
 const projectsList = [
     {
+        slug: "jules-bourgoin",
+        year: 2025,
+        name: "Réalisation d'un thème OMEKA S",
+        description: [
+            "Exploitation numérique et scientifique des archives de Jules Bourgoin à partir de la numérisation d'une sélection du fonds de l'architecte et ornemaniste Jules Bourgoin (1838-1908) conservé à l'INHA",
+            "",
+            "Réalisation d'un thème graphique sur mesure sur le CMS OMEKA S.",
+        ],
+        client: {
+            name: "Archives de Jules Bourgoin", description: "Universités & centres de recherche",
+        },
+        url: "https://www.studio-fuchsia.com/clients/omeka-jules-bourgoin",
+        tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin_site-internet_graphisme.png", description: "Accolade graphisme web jules-bourgoin banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin.jpg", description: "Accolade graphisme web jules-bourgoin logo"},
+        images: []
+    },
+    {
+        slug: "ific",
+        year: 2025,
+        name: "Réalisation d'un site internet",
+        description: [
+            "L’Institut Francilien d’Implantation Cochléaire est une structure de santé experte, qui a pour mission l’accompagnement à long terme et l’optimisation du parcours de soin des patients implantés cochléaires.",
+            "",
+            "Réalisation d'un site internet et d'un espace d'administration permettant de présenter la structure et gérer les services proposées.",
+            "",
+            "Le développement a été réalisé avec une priorité sur l'éco-responsabilité.",
+        ],
+        client: {
+            name: "IFIC", description: "Institut Francilien d'implantation cochléaire",
+        },
+        url: "https://implant-ific.org/",
+        tags: ["Développement", "Site internet", "Graphisme"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_ific-institut-francilien-implantation-cochleaire_site-internet.jpg", description: "Accolade graphisme web IFIC banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_ific-institut-francilien-implantation-cochleaire.jpg", description: "Accolade graphisme web logo"},
+        images: []
+    },
+    {
+        slug: "espoir54",
+        year: 2024,
+        name: "Site internet",
+        description: [
+            "Espoir 54 est une association proposant à toute personne en situation de souffrance psychique un lieu d'accueil et d'entraide avec des professionnels et des bénévoles, des services de réhabilitation psychosociale/professionnelle, des ateliers de création et de resocialisation (théâtre, musique, cuisine, club de marche, jardinage, etc...).",
+            "",
+            "Réalisation d'un site internet présentant l'association, ses dispositifs et les actions menées.",
+        ],
+        client: {
+            name: "Espoir 54", description: "Accueil et accompagnement d'adultes handicapés ou de personnes agés",
+        },
+        url: "https://www.espoir54.org/",
+        tags: ["Graphisme", "Site internet"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_espoir54-site-internet-wordpress.jpg", description: "Accolade graphisme web espoir54 banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_espoir54.jpg", description: "Accolade graphisme web espoir54 logo"},
+        images: []
+    },
+    {
+        slug: "epistemology-of-theism",
+        year: 2019,
+        name: "Supports de communication",
+        description: [
+            "“Inquiries Into Epistemology of Theism: A Seminar in Religious Epistemology” est un séminaire organisé par Roger Pouivet & Paul Clavier avec le soutien de l’université de Lorraine, des Archives Henri Poincaré, et de l’Institut universitaire de France.",
+            "",
+            "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
+        ],
+        client: {
+            name: "Epistemology of Theism", description: "",
+        },
+        url: "",
+        tags: ["Graphisme", "Mise en page", "Print"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme.jpg", description: "Accolade graphisme web banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology_logo.jpg", description: "Accolade graphisme web logo"},
+        images: [
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme-2.jpg", description: "Accolade graphisme web programme"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_interieur.png", description: "Accolade graphisme web programme"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology.jpg", description: "Accolade graphisme web programme"},
+        ]
+    },
+    {
+        slug: "georessources",
+        year: 2022 & 2023,
+        name: "Création d'une charte graphique & mise en page de rapports d'activités",
+        description: [
+            "Laboratoire de recherche en géologie, GeoRessources couvre le champ des ressources géologiques, de leur exploration à leur exploitation, en passant par les étapes du traitement et de la valorisation, et de ses impacts sur la société et l’environnement.",
+            "",
+            "Conception d’un modèle de rapport d’activité – graphisme et mise en page – et déclinaison de celui-ci sur deux années consécutives.",
+        ],
+        client: {
+            name: "GeoRessources", description: "Laboratoire de recherche en géologie",
+        },
+        url: "",
+        tags: ["Charte graphique", "Graphisme", "Print"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite-2021.jpg", description: "Accolade graphisme web georessources banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite.jpg", description: "Accolade graphisme web georessources logo"},
+        images: [
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite-1.jpg", description: "Accolade graphisme web georessources rapport activite"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite2.jpg", description: "Accolade graphisme web georessources rapport activite"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite3.jpg", description: "Accolade graphisme web georessources rapport activite"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite4.jpg", description: "Accolade graphisme web georessources rapport activite"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite5.jpg", description: "Accolade graphisme web georessources rapport activite"},
+        ]
+    },
+    {
         slug: "hobotruck",
         year: 2024,
         name: "Création de l'identité graphique",
         description: [
-            "Hobo Truck est un food truck solidaire ayant plusieurs missions",
+            "Hobo Truck est un food truck solidaire ayant plusieurs missions : ",
+            "• Distribuer des repas gratuits à celles et ceux qui en ont besoin",
+            "• Créer du lien social et lutter contre l'isolement",
+            "• Mobiliser autour de la solidarité",
             "",
-            "- Distribuer des repas gratuits à celles et ceux qui en ont besoin",
-            "- Créer du lien social et lutter contre l'isolement",
-            "- Sensibiliser et mobiliser autour de la solidarité",
-            "",
-            "Nous avons imaginé un logo facilement déclinable (Hobo Truck / Hobo Café...) accompagnée d'une identité visuelle inspirée des \"Hobos signs\". ",
+            "Nous avons imaginé un logo facilement déclinable (Hobo Truck / Hobo Café...) accompagné d'une identité visuelle inspirée des \"Hobos signs\". ",
         ],
         client: {
             name: "Hobo Truck", description: "Food Truck solidaire à Nancy (54000)",
@@ -60,9 +161,9 @@ const projectsList = [
     {
         slug: "chaouette",
         year: 2020,
-        name: "Création de l'identité graphique - Réalisation d'un site internet",
+        name: "Création de l'identité graphique & Réalisation d'un site internet",
         description: [
-            "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale et traditionnelle.",
+            "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale.",
             "",
             "Refonte du logo, création de l’univers graphique de la nouvelle identité (graphisme des étiquettes…) et conception du site internet.",
             "",
@@ -73,29 +174,27 @@ const projectsList = [
         },
         url: "https://www.chaouette.fr/",
         tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web chaouette banner"},
-        logo: {src: "slider.jpg", description: "Accolade graphisme web chaouette logo"},
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_chaouette_bieres-artisanales-bio-blonde.jpg", description: "Accolade graphisme web chaouette banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo__biere_chaouette_bieres-artisanales-bio-min.jpg", description: "Accolade graphisme web chaouette logo"},
         images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web chaouette 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web chaouette 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web chaouette 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web chaouette 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web chaouette 5"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_chaouette_bieres-artisanales-bio.jpg", description: "Accolade graphisme web chaouette etiquette"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_chaouette_bieres-artisanales-bio_site-internet.jpg", description: "Accolade graphisme web chaouette etiquette"},
         ]
     },
     {
         slug: "la-brass",
         year: "Depuis 2020",
-        name: "Création de l'identité graphique - Réalisation d'un site internet",
+        name: "Création de l'identité graphique & Réalisation d'un site internet",
         description: [
-            "La Fabrique des GrÔ est une brasserie artisanale base à Maxéville (Lorraine - 54320). C'est également un lieu culture en plein essort ou le public peut déguster de bonnes bières tout à assitant ç des concerts",
+            "La Fabrique des GrÔ est une brasserie artisanale basée à Maxéville (Lorraine - 54320). C'est également un lieu culturel en plein essort où le public peut déguster de bonnes bières tout à assitant à des concerts",
+            "",
             "Désireux de moderniser son image et de développer sa communication, la Fabrique des GrÔ a fait appel à nous pour la refonte de son identité visuelle, le développement de son site internet et un accompagnement dans la gestion de ses réseaux sociaux.",
         ],
         client: {
             name: "La Fabrique des GrÔ", description: "Brasserie de bières artisanales et salle de concert à Maxéville (54320)",
         },
         url: "https://www.lafabriquedesgros.fr/",
-        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print", "Développement"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro-brasserie_maxeville.png", description: "Accolade graphisme web la fabrique des gro maxeville banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_fabrique-des-gro_bieres_slider.jpg", description: "Accolade graphisme web la fabrique des gro maxeville  logo"},
         images: [
@@ -107,98 +206,6 @@ const projectsList = [
             {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro_sweat2.jpg", description: "Accolade graphisme la fabrique des gro maxeville sweat2"},
             {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere_niasse.jpg", description: "Accolade graphisme la fabrique des gro maxeville niasse"},
             {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_fabrique-des-gro_biere-ipa.jpg", description: "Accolade graphisme la fabrique des gro maxeville ipa"},
-        ]
-    },
-    {
-        slug: "epistemology-of-theism",
-        year: 2019,
-        name: "Supports de communication pour un séminaire philosophique",
-        description: [
-            "“Inquiries Into Epistemology of Theism: A Seminar in Religious Epistemology” est un séminaire organisé par Roger Pouivet & Paul Clavier avec le soutien de l’université de Lorraine, des Archives Poincarré, et de l’Institut universitaire de France.",
-            "",
-            "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
-        ],
-        client: {
-            name: "Epistemology of Theism", description: "",
-        },
-        url: "",
-        tags: ["Graphisme", "Mise en page", "Print"],
-        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme.jpg", description: "Accolade graphisme web banner"},
-        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology_logo.jpg", description: "Accolade graphisme web logo"},
-        images: [
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme-2.jpg", description: "Accolade graphisme web programme"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_interieur.png", description: "Accolade graphisme web programme"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology.jpg", description: "Accolade graphisme web programme"},
-        ]
-    },
-    {
-        slug: "jules-bourgoin",
-        year: 2025,
-        name: "Réalisation d'un thème OMEKA S",
-        description: [
-            "Exploitation numérique et scientifique des archives de Jules BOURGOIN à partir de la numérisation d'une sélection du fonds de l'architecte et ornemaniste Jules Bourgoin (1838-1908) conservé à l'INHA",
-            "Réalisation d'un thème graphique sur mesure sur le CMS OMEKA S",
-        ],
-        client: {
-            name: "Archives de Jules Bourgoin", description: "Universités & centres de recherche",
-        },
-        url: "https://www.studio-fuchsia.com/clients/omeka-jules-bourgoin",
-        tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web jules-bourgoin banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web jules-bourgoin logo"},
-        images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web jules-bourgoin 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web jules-bourgoin 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web jules-bourgoin 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web jules-bourgoin 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web jules-bourgoin 5"},
-        ]
-    },
-    {
-        slug: "colloque-numerique",
-        year: 2020,
-        name: "Création et mise en page de supports de communication",
-        description: [
-            "“Mondes virtuels” est un séminaire organisé par Alexis Anne-Braun, Alexandre Declos & Vincent Granata avec le soutien des Archives Poincarré, et de l’Institut universitaire de France.",
-            "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
-        ],
-        client: {
-            name: "Archives Poincarré & Institut universitaire de France", description: "Colloque sur le thème \"Objets, Oeuvres, Mondes virtuels\"",
-        },
-        url: "",
-        tags: ["Graphisme", "Print"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web colloque numerique banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web colloque numerique logo"},
-        images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web colloque numerique 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web colloque numerique 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web colloque numerique 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web colloque numerique 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web colloque numerique 5"},
-        ]
-    },
-
-    {
-        slug: "georessources",
-        year: 2022 & 2023,
-        name: "Création d'une charte graphique & mise en page de rapports d'activités",
-        description: [
-            "Laboratoire de recherche en géologie, GeoRessources couvre le champ des ressources géologiques, de leur exploration à leur exploitation, en passant par les étapes du traitement et de la valorisation, et de ses impacts sur la société et l’environnement.",
-            "Conception d’un modèle de rapport d’activité – graphisme et mise en page – et déclinaison de celui-ci sur deux années consécutives.",
-        ],
-        client: {
-            name: "GeoRessources", description: "Laboratoire de recherche en géologie",
-        },
-        url: "",
-        tags: ["Charte graphique", "Graphisme", "Print"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web georessources banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web georessources logo"},
-        images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web georessources 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web georessources 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web georessources 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web georessources 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web georessources 5"},
         ]
     },
     {
@@ -214,62 +221,54 @@ const projectsList = [
         },
         url: "",
         tags: ["Graphisme", "Print"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web liec banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web liec logo"},
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant-couverture.jpg", description: "Accolade graphisme web liec banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant.jpg", description: "Accolade graphisme web liec logo"},
         images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web liec 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web liec 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web liec 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web liec 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web liec 5"},
-        ]
-    },
-    {
-        slug: "espoir54",
-        year: 2024,
-        name: "Réalisation d'un site internet",
-        description: [
-            "Espoir 54 est une association proposant à toute personne en situation de souffrance psychique un lieu d'accueil et d'entraide avec des professionnels et des bénévoles, des services de réhabilitation psychosociale/professionnelle, des ateliers de création et de resocialisation (théâtre, musique, cuisine, club de marche, jardinage, etc...).",
-            "Réalisation d'un site internet présentant l'association, ses dispositifs et ses actions menées",
-        ],
-        client: {
-            name: "Espoir 54", description: "Accueil et accompagnement d'adultes handicapés ou de personnes agés",
-        },
-        url: "https://www.espoir54.org/",
-        tags: ["Graphisme", "Site internet"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web espoir54 banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web espoir54 logo"},
-        images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web espoir54 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web espoir54 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web espoir54 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web espoir54 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web espoir54 5"},
+            {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant-exterieur.jpg", description: "Accolade graphisme web liec 1"},
+            {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant-interieur.jpg", description: "Accolade graphisme web liec 2"},
         ]
     },
     {
         slug: "ekipea",
-        year: 2020-2025,
-        name: "Développement d'un ERP destiné au CSE",
+        year: "Depuis 2020",
+        name: "Développement d'un ERP destiné aux CSE",
         description: [
-            "EKIPEA propose un service externalisé de back office pour gérer les activités sociales et culturelles des CSE, une soluton de comptabilité et une application mobile permettant au CSE de communiquer avec ses salariés, et aux salariés d'accéder aux ASC du CSE",
-            "Développement d'une API métier, d'un interface d'administration de l'ERP et de l'application mobile.",
+            "EKIPEA propose un service externalisé de back office pour gérer les activités sociales et culturelles des CSE, une solution de comptabilité et une application mobile permettant au CSE de communiquer avec ses salariés, et aux salariés d'accéder aux ASC du CSE",
+            "",
+            "Développement d'un ERP : API métier (Symfony), Interface d'administration (Angular), application mobiles (Ionic).",
         ],
         client: {
             name: "EKIPEA", description: "Editeur de logiciels destinés aux CSE",
         },
         url: "",
         tags: ["Développement", "ERP", "API", "Mobile"],
-        banner: {src: "banner.jpg", description: "Accolade graphisme web ekipea banner"},
-        logo: {src: "logo.jpg", description: "Accolade graphisme web ekipea logo"},
-        images: [
-            {src: "projet_1.jpg", description: "Accolade graphisme web ekipea 1"},
-            {src: "projet_2.jpg", description: "Accolade graphisme web ekipea 2"},
-            {src: "projet_3.jpg", description: "Accolade graphisme web ekipea 3"},
-            {src: "projet_4.jpg", description: "Accolade graphisme web ekipea 4"},
-            {src: "projet_5.jpg", description: "Accolade graphisme web ekipea 5"},
-        ]
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse.jpg", description: "Accolade graphisme web ekipea banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse_logo.jpg", description: "Accolade graphisme web ekipea logo"},
+        images: []
     },
+    // {
+    //     slug: "colloque-numerique",
+    //     year: 2020,
+    //     name: "Création et mise en page de supports de communication",
+    //     description: [
+    //         "“Mondes virtuels” est un séminaire organisé par Alexis Anne-Braun, Alexandre Declos & Vincent Granata avec le soutien des Archives Poincarré, et de l’Institut universitaire de France.",
+    //         "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
+    //     ],
+    //     client: {
+    //         name: "Archives Poincarré & Institut universitaire de France", description: "Colloque sur le thème \"Objets, Oeuvres, Mondes virtuels\"",
+    //     },
+    //     url: "",
+    //     tags: ["Graphisme", "Print"],
+    //     banner: {src: "banner.jpg", description: "Accolade graphisme web colloque numerique banner"},
+    //     logo: {src: "logo.jpg", description: "Accolade graphisme web colloque numerique logo"},
+    //     images: [
+    //         {src: "projet_1.jpg", description: "Accolade graphisme web colloque numerique 1"},
+    //         {src: "projet_2.jpg", description: "Accolade graphisme web colloque numerique 2"},
+    //         {src: "projet_3.jpg", description: "Accolade graphisme web colloque numerique 3"},
+    //         {src: "projet_4.jpg", description: "Accolade graphisme web colloque numerique 4"},
+    //         {src: "projet_5.jpg", description: "Accolade graphisme web colloque numerique 5"},
+    //     ]
+    // },
     // {
     //     slug: "mon-slug",
     //     year: 2020,
@@ -291,27 +290,6 @@ const projectsList = [
     //         {src: "projet_3.jpg", description: "Accolade graphisme web 3"},
     //         {src: "projet_4.jpg", description: "Accolade graphisme web 4"},
     //         {src: "projet_5.jpg", description: "Accolade graphisme web 5"},
-    //     ]
-    // },
-    // {
-    //     slug: "chaouette",
-    //     year: 2022,
-    //     name: "Refonte de l'identité graphique & Réalisation d'un site internet",
-    //     description: [
-    //         "Refonte du l’identité visuelle – Création d’un nouveau logo & d’une charte graphique complète.",
-    //         "Création des nouvelles étiquettes – A partir de la nouvelle charte graphique, réalisation d’une gamme d’étiquette en 33cl et 75cl.",
-    //         "Gestion de l’édition – Prise de contact avec l’imprimeur, sélection et proposition au client du papier & de la colle selon les contraintes données.",
-    //         "Création d’un site internet sous WordPress & WooCommerce – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages.",
-    //         "Développement d’un programme permettant de générer une carte OpenStreetMap depuis un fichier Excel contenant les points de distribution de la Châouette.",
-    //     ],
-    //     client: {
-    //         name: "La Châouette", description: "Brasserie de bières artisanales",
-    //     },
-    //     url: "https://www.chaouette.fr/",
-    //     tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
-    //     banner: {src: "", description: ""},
-    //     logo: {src: "chaouette-logo.jpg", description: "La Châouette"},
-    //     images: [
     //     ]
     // },
     // {
