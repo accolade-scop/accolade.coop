@@ -86,8 +86,11 @@
 
                     {{ p.client.name }}
 
-                    <em>{{ p.name }}</em>
-
+                    <em>
+                         {% for tag in p.tags %}
+                             {{ tag }}{% if not loop.last %} •{% endif %}
+                         {% endfor %}
+                    </em>
                 </a>
 
             {% endfor %}
