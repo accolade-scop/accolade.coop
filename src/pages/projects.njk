@@ -20,10 +20,15 @@
     <aside>
 
         <h1><small>Navigation</small></h1>
+        {% set prec = projects | navSlug(project.slug, -1) %}
+        {% set next = projects | navSlug(project.slug, 1) %}
+        {% if prec %}
+            <a class="btn btn-projects-nav" href="/projets/{{ prec.slug }}.html" type="button">Projet<small>précédent </small></a>
+        {% endif %}
 
-        <a class="btn btn-projects-nav" type="button">Projet<small>précédent </small></a>
-
-        <a class="btn btn-projects-nav" type="button">Projet<small>suivant</small></a>
+        {% if next %}
+            <a class="btn btn-projects-nav" href="/projets/{{ next.slug }}.html" type="button">Projet<small>suivant</small></a>
+        {% endif %}
 
     </aside>
 

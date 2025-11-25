@@ -9,6 +9,14 @@ function countCommonElements(arr1, arr2) {
 
 export default async function(eleventyConfig) {
 
+    eleventyConfig.addFilter('navSlug', function(projects, currentSlug, indexOperator) {
+        const index = projects.findIndex(p => p.slug === currentSlug);
+        if (index === -1) return null;
+        const project = projects[index + indexOperator];
+        return project ? project : null;
+
+    });
+
     eleventyConfig.addFilter('slice', (arr, start, end) => arr.slice(start, end));
     /**
      * Trie une collection par similarité de tags par rapport à un item 'current'.
