@@ -42,7 +42,7 @@ body
 
     nav
       position: absolute
-      top: 10px
+      top: 0
       right: 0
       z-index: 2
       padding: 30px
@@ -60,6 +60,7 @@ body
     menu
       font-family: var(--fontFamily-title)
       column-gap: 20px
+      font-size: var(--fontSize-sm)
       text-transform: uppercase
       transition: all 2s linear
     > span
@@ -342,52 +343,41 @@ a
   position: relative
   > .slider__content
     display: flex
-    flex-flow: row nowrap
+    flex-flow: row wrap
     justify-content: flex-start
-    align-items: center
-    gap: 30px
+    align-items: flex-start
+    gap: 20px
     overflow: hidden
     margin-bottom: 20px
-    //background-image: url("/assets/svgs/picto-crochet-fermant-big.svg")
-    //background-repeat: no-repeat
-    //background-size: contain
-    //background-position: top right
-    //padding: 60px 50px 50px 0
     > a
       display: flex
       flex-flow: column nowrap
       justify-content: flex-start
       align-items: flex-start
-      flex: 0 0 300px
+      flex: 0 0 250px
       color: var(--text-color-accent)
-      row-gap: 5px
+      row-gap: 10px
       text-decoration: none
       > img
         background-color: var(--surface-backgroundColor-secondary)
-        //width: 100%
-        //max-width: 300px
-        //height: auto
         object-fit: cover
+        aspect-ratio: 248 / 157
       > em
         color: var(--color-neutre-medium)
         font-size: var(--fontSize-xs)
   > .slider__nav
-    // position: absolute
-    // bottom: 6px
     display: flex
     flex-flow: row wrap
     justify-content: space-around
     align-items: center
     column-gap: 20px
     width: 100%
-    //left: 50%
-    //transform: translateX(-50%)
     > *:first-child
       transform: rotate(180deg)
     > .separation
         display: block
         content: ""
-        flex: 1 1 auto
+        flex: 0 0 80%
         height: 1px
         background-color: var(--color-green)
 

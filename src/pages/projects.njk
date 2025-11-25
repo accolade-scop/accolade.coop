@@ -1,20 +1,16 @@
-<header style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.banner.src }}');">
+<header style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.logo.src }}');">
 
-    <a href="#" title="Aller à la page d'accueil"></a>
+    <a href="../index.html" title="Aller à la page d'accueil"></a>
 
     <nav class="open">
 
         <menu>
-            <li><a>Accueil</a></li>
-            <li><a>L'agence</a></li>
-            <li><a>Nos service</a></li>
-            <li><a>Nos projets</a></li>
-            <li><a>Contact</a></li>
-            <li><a><img alt="Icone fermer le menu" height="40" src="../assets/svgs/picto-close.svg" width="40"/></a></li>
+            <li><a href="./index.html">Accueil</a></li>
+            <li><a href="/pages/contacts.html">contact</a></li>
         </menu>
 
         <a title="Voir le menu">
-            <img alt="Icone ouvrir le menu" height="40" src="../assets/svgs/picto-burger.svg" width="40"/>
+            <img alt="Icone menu" height="40" src="./assets/svgs/picto-burger.svg" width="40"/>
         </a>
 
     </nav>
@@ -42,7 +38,7 @@
 
         <header>
             <!-- banner -->
-            <img alt="" src="/assets/imgs/{{ project.slug }}/{{ project.logo.src }}"
+            <img alt="" src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}"
                  alt="{{ project.logo.description }}" width="810" height="512">
 
             <aside>
@@ -95,7 +91,7 @@
     <!-- SECTION PROJETS -->
     <section id="projets">
 
-        <h2>Projets<small>similaires</small></h2>
+        <h2 class="with-line">Projets<small>similaires</small></h2>
 
         <nav class="slider__content">
 
@@ -116,17 +112,17 @@
         </nav>
 
         <div class="slider__nav">
-            <input
-                    alt="element précédent"
-                    id="btn-prec"
-                    src="../assets/svgs/picto-groupe-pointe-off.svg"
-                    type="image"/>
+{#            <input#}
+{#                    alt="element précédent"#}
+{#                    id="btn-prec"#}
+{#                    src="../assets/svgs/picto-groupe-pointe-off.svg"#}
+{#                    type="image"/>#}
             <div class="separation"></div>
-            <input
-                    alt="element suivant"
-                    id="btn-next"
-                    src="../assets/svgs/picto-groupe-pointe-off.svg"
-                    type="image"/>
+{#            <input#}
+{#                    alt="element suivant"#}
+{#                    id="btn-next"#}
+{#                    src="../assets/svgs/picto-groupe-pointe-off.svg"#}
+{#                    type="image"/>#}
         </div>
 
     </section>
