@@ -96,7 +96,7 @@ body
         line-height: 2.2
       p
         font-size: var(--fontSize-sm)
-        font-weight: 100
+        font-weight: 400
 
 
   > main
@@ -117,7 +117,7 @@ body
     align-items: center
     height: 149px
     padding: 36px 48px
-    font-size: var(--fontSize-xs)
+    font-size: var(--fontSize-defaut)
     &::before, &::after
       display: block
       position: absolute
@@ -400,7 +400,6 @@ a
 
 
 #project-details
-  width: 1320px
   margin-right: auto
   margin-left: auto
   header
@@ -463,6 +462,7 @@ a
     /* Pour s'assurer que les images et autres médias ne dépassent pas */
     break-inside: avoid
     > *
+      display: block
       /* Empêche les cartes d'être coupées entre deux colonnes */
       break-inside: avoid
       /* Assure une marge visuelle en bas de chaque carte */
@@ -585,7 +585,7 @@ a
       position: relative
       display: flex
       flex-flow: column nowrap
-      justify-content: center
+      justify-content: flex-start
       align-items: stretch
       background-color: var(--surface-backgroundColor-secondary)
       color: var(--color-white)
