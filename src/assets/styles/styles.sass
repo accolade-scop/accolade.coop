@@ -607,7 +607,7 @@ a
             color: var(--color-neutre-darker)
 
 
-@media (width < 1150px)
+@media (width < 1400px)
   body
     background-image: none
     margin: 0 5px 20px 5px
@@ -708,10 +708,16 @@ a
         >.slider__nav
           display: none
       #project-details
+        width: auto
         > header
           flex-direction: column
           > img, &::after
             display: none
+          > .btn
+            right: revert
+            bottom: 15px
+            left: 50%
+            transform: translateX(-50%)
         .masonry-container
           column-count: 1
           > img
