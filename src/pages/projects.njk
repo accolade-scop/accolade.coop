@@ -22,15 +22,14 @@
         {% set prec = projects | navSlug(project.slug, -1) %}
         {% set next = projects | navSlug(project.slug, 1) %}
 
-        {% if next %}
-            <a class="btn btn-projects-nav" href="/projets/{{ next.slug }}.html" type="button">Projet<small>suivant</small></a>
-        {% endif %}
 
         {% if prec %}
             <a class="btn btn-projects-nav --reverse" href="/projets/{{ prec.slug }}.html" type="button">Projet<small>precedent </small></a>
         {% endif %}
 
-
+        {% if next %}
+            <a class="btn btn-projects-nav" href="/projets/{{ next.slug }}.html" type="button">Projet<small>suivant</small></a>
+        {% endif %}
 
     </aside>
 
