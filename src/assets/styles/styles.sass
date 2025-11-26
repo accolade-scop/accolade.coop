@@ -165,11 +165,9 @@ h3
 .strong
   font-weight: var(--fontWeight-bold)!important
 
-a
+a, .link
   color: var(--link-rest-color)
-  cursor: pointer
   text-decoration: none
-
 
 .btn
   position: relative
@@ -208,6 +206,14 @@ a
       background-color: var(--surface-backgroundColor-accent)
       &::after
         content: url("/assets/svgs/picto-button-next-on.svg")
+    &.--reverse
+      align-items: flex-end
+      &::after
+        right: unset
+        left: 0
+        transform: rotate(-180deg) translateX(50%)
+
+
   &-page-nav
     background-color: var(--surface-backgroundColor-accent)
     &::after
@@ -263,7 +269,7 @@ a
       width: 1px
       height: 100%
       background-color: var(--color-green)
-    > a
+    > .link
       display: flex
       flex-flow: column nowrap
       justify-content: flex-start
@@ -293,9 +299,9 @@ a
         width: 75px
         height: 75px
         background-repeat: no-repeat
-      &:hover, .active
-        &::after
-          background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
+      //&:hover, .active
+      //  &::after
+      //    background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
       &:nth-of-type(3)
         grid-area: carda
         &::before
