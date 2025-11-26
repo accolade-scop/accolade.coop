@@ -870,25 +870,25 @@ a, .link {
   body > main #expertises > nav::after, body > main #expertises > nav::before {
     display: none;
   }
-  body > main #expertises > nav > a {
+  body > main #expertises > nav > .link {
     font-size: var(--fontSize-xs);
     padding: 15px 0px;
   }
-  body > main #expertises > nav > a::before {
+  body > main #expertises > nav > .link::before {
     width: 50px;
     height: 50px;
     background-size: cover;
   }
-  body > main #expertises > nav > a::after {
+  body > main #expertises > nav > .link::after {
     display: none;
   }
-  body > main #expertises > nav > a > em {
+  body > main #expertises > nav > .link > em {
     display: none;
   }
-  body > main #expertises > nav > a:nth-child(4) em {
+  body > main #expertises > nav > .link:nth-child(4) em {
     padding: 10px;
   }
-  body > main #expertises > nav > a:nth-child(4) em::before, body > main #expertises > nav > a:nth-child(4) em::after {
+  body > main #expertises > nav > .link:nth-child(4) em::before, body > main #expertises > nav > .link:nth-child(4) em::after {
     display: none;
   }
   body > main #infos-contact h2, body > main #mentions h2 {
@@ -943,6 +943,7 @@ a, .link {
   body > main #contact {
     margin-right: 20px;
     margin-left: 20px;
+    max-width: none;
   }
   body > main #contact h3 {
     flex-direction: column;
