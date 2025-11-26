@@ -126,7 +126,9 @@ body > header {
   background-size: cover;
   margin-bottom: 80px;
 }
-body > header > a {
+body > header > a:first-of-type {
+  color: transparent;
+  font-size: 0;
   display: block;
   width: 113px;
   height: 455px;
@@ -191,7 +193,7 @@ body > header > span > span {
   color: var(--color-white);
 }
 body > header aside {
-  max-width: 205px;
+  max-width: 300px;
   padding: 30px 30px 0 0;
   background-color: var(--body-backgroundColor-base);
 }
@@ -794,6 +796,11 @@ a, .link {
   color: var(--color-neutre-darker);
 }
 
+@media (width > 1400px) {
+  footer > div > *:not(:first-child)::before {
+    content: " - ";
+  }
+}
 @media (width < 1400px) {
   body {
     background-image: none;
@@ -808,7 +815,7 @@ a, .link {
   body > header > span {
     display: none;
   }
-  body > header > a {
+  body > header > a:first-of-type {
     width: 70px;
     height: 70px;
     background-color: transparent;
@@ -819,7 +826,7 @@ a, .link {
     position: relative;
     top: 50px;
     margin: 0 auto;
-    max-width: 330px;
+    max-width: 500px;
     text-align: center;
     padding: 20px;
   }
@@ -870,25 +877,25 @@ a, .link {
   body > main #expertises > nav::after, body > main #expertises > nav::before {
     display: none;
   }
-  body > main #expertises > nav > .link {
+  body > main #expertises > nav > a {
     font-size: var(--fontSize-xs);
     padding: 15px 0px;
   }
-  body > main #expertises > nav > .link::before {
+  body > main #expertises > nav > a::before {
     width: 50px;
     height: 50px;
     background-size: cover;
   }
-  body > main #expertises > nav > .link::after {
+  body > main #expertises > nav > a::after {
     display: none;
   }
-  body > main #expertises > nav > .link > em {
+  body > main #expertises > nav > a > em {
     display: none;
   }
-  body > main #expertises > nav > .link:nth-child(4) em {
+  body > main #expertises > nav > a:nth-child(4) em {
     padding: 10px;
   }
-  body > main #expertises > nav > .link:nth-child(4) em::before, body > main #expertises > nav > .link:nth-child(4) em::after {
+  body > main #expertises > nav > a:nth-child(4) em::before, body > main #expertises > nav > a:nth-child(4) em::after {
     display: none;
   }
   body > main #infos-contact h2, body > main #mentions h2 {
@@ -941,9 +948,10 @@ a, .link {
     column-count: 1;
   }
   body > main #contact {
-    margin-right: 20px;
-    margin-left: 20px;
-    max-width: none;
+    --marge: 20px;
+    max-width: calc(100vw - var(--marge) * 2);
+    margin-right: var(--marge);
+    margin-left: var(--marge);
   }
   body > main #contact h3 {
     flex-direction: column;
@@ -955,7 +963,7 @@ a, .link {
     margin-right: 20px;
     margin-left: 20px;
   }
-  body > footer > span {
+  body > footer > div {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -963,6 +971,11 @@ a, .link {
     text-align: center;
     max-width: 260px;
     font-size: var(--fontSize-xs);
+  }
+}
+@media (width < 600px) {
+  body > header > aside {
+    max-width: 90vw;
   }
 }
 
