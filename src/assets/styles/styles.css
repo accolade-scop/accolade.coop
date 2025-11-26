@@ -844,14 +844,15 @@ a {
   body > header.project > aside > .btn-projects-nav {
     width: 120px;
   }
-  body > main section {
+  body > main > section {
     padding: 0 20px;
   }
-  body > main section h2 {
+  body > main > section h2 {
     display: block !important;
     text-align: center !important;
+    padding-right: 0 !important;
   }
-  body > main section h2.with-line::after {
+  body > main > section h2.with-line::after {
     display: none !important;
   }
   body > main #expertises h2 {
@@ -929,11 +930,11 @@ a {
     left: 50%;
     transform: translateX(-50%);
   }
+  body > main #project-details > header > aside > section > img {
+    width: 50px;
+  }
   body > main #project-details .masonry-container {
     column-count: 1;
-  }
-  body > main #project-details .masonry-container > img {
-    max-width: 300px;
   }
   body > main #contact {
     margin-right: 20px;
@@ -956,6 +957,7 @@ a {
     align-items: center;
     text-align: center;
     max-width: 260px;
+    font-size: var(--fontSize-xs);
   }
 }
 

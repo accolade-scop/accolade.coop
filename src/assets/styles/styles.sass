@@ -654,11 +654,12 @@ a
             width: 120px
 
     > main
-      section
+      > section
         padding: 0 20px
         h2
           display: block !important
           text-align: center !important
+          padding-right: 0 !important
           &.with-line::after
             display: none !important
 
@@ -722,10 +723,14 @@ a
             bottom: 15px
             left: 50%
             transform: translateX(-50%)
+          > aside
+              > section
+                > img
+                  width: 50px
         .masonry-container
           column-count: 1
           > img
-            max-width: 300px
+            // max-width: 300px
       #contact
         margin-right: 20px
         margin-left: 20px
@@ -744,3 +749,4 @@ a
         align-items: center
         text-align: center
         max-width: 260px
+        font-size: var(--fontSize-xs)
