@@ -1,0 +1,9 @@
+{
+  "name": "{{project.name}}",
+  "permalink": "/projets/{{ project.slug }}.html",
+  "pagination": {
+    "data": "projects",
+    "size": 1,
+    "alias": "project"
+  }
+}

@@ -1,0 +1,146 @@
+<header  class="project" style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.logo.src }}');">
+
+    <a href="../index.html" title="Aller à la page d'accueil"></a>
+
+    <nav class="open">
+
+        <menu>
+            <li><a href="/pages/contact.html" title="voir la page contacts"><img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/></a></li>
+        </menu>
+
+        <a title="Voir le menu">
+            <img alt="Icone menu" height="40" src="/assets/svgs/picto-burger.svg" width="40"/>
+        </a>
+
+    </nav>
+
+    <span></span>
+
+    <aside>
+
+        <h1><small>Navigation</small></h1>
+        {% set prec = projects | navSlug(project.slug, -1) %}
+        {% set next = projects | navSlug(project.slug, 1) %}
+        {% if prec %}
+            <a class="btn btn-projects-nav" href="/projets/{{ prec.slug }}.html" type="button">Projet<small>précédent </small></a>
+        {% endif %}
+
+        {% if next %}
+            <a class="btn btn-projects-nav" href="/projets/{{ next.slug }}.html" type="button">Projet<small>suivant</small></a>
+        {% endif %}
+
+    </aside>
+
+</header>
+
+<main>
+
+    <!-- SECTION GALERIE -->
+    <section id="project-details">
+
+        <h2 class="with-line">{{ project.client.name }}<small>{{ project.year }} - {{ project.name }}</small></h2>
+
+        <header>
+            <!-- banner -->
+            <img alt="" src="/assets/imgs/{{ project.slug }}/{{ project.banner.src }}"
+                 alt="{{ project.logo.description }}" width="810" height="512">
+
+            <aside>
+
+                <section>
+                    {% if "Graphisme" in project.tags or "Logo" in project.tags %}
+                        <img alt="Création graphique" src="/assets/svgs/picto-creation-graphique.svg">
+                    {% endif %}
+                    {% if "Site internet" in project.tags %}
+                        <img alt="Site Internet" src="/assets/svgs/picto-creation-site.svg">
+                    {% endif %}
+                    {% if "Développement" in project.tags %}
+                        <img alt="Site Internet" src="/assets/svgs/picto-labo.svg">
+                    {% endif %}
+                </section>
+
+                <ul class="tags-list">
+                    {% for tag in project.tags %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+
+                <p>
+                    {% if project.description.length > 0 %}
+                        {% for paragraph in project.description %}
+                            {{ paragraph }}<br/>
+                        {% endfor %}
+                    {% endif %}
+                </p>
+
+            </aside>
+
+            {% if project.url %}
+                <a class="btn btn-page-nav" href="{{ project.url }}" target="_blank">Voir le site</a>
+            {% endif %}
+
+        </header>
+
+        <section class="masonry-container">
+
+            {% for image in project.images %}
+                    <img alt="" src="/assets/imgs/{{ project.slug }}/{{ image.src }}" >
+            {% endfor %}
+
+        </section>
+
+    </section>
+
+
+    <!-- SECTION PROJETS -->
+    <section id="projets">
+
+        <h2 class="with-line">Projets<small>similaires</small></h2>
+
+        <nav class="slider__content">
+
+            {% for p in project | sortbyrelatedness(projects) %}
+                <a href="/projets/{{ p.slug }}.html">
+
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
+
+                    {{ p.client.name }}
+
+                    <em>{{ p.name }}</em>
+
+                </a>
+
+            {% endfor %}
+
+        </nav>
+
+        <div class="slider__nav">
+{#            <input#}
+{#                    alt="element précédent"#}
+{#                    id="btn-prec"#}
+{#                    src="/assets/svgs/picto-groupe-pointe-off.svg"#}
+{#                    type="image"/>#}
+            <div class="separation"></div>
+{#            <input#}
+{#                    alt="element suivant"#}
+{#                    id="btn-next"#}
+{#                    src="/assets/svgs/picto-groupe-pointe-off.svg"#}
+{#                    type="image"/>#}
+        </div>
+
+    </section>
+
+
+    <!-- SECTION CONTACT -->
+    <section id="contact">
+
+        <h2>Vous avez un projet ?</h2>
+
+        <h3>N’hesitez pas a nous
+            <a class="btn btn-page-nav" href="/pages/contact.html">Contacter</a>
+        </h3>
+
+    </section>
+
+</main>

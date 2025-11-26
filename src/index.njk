@@ -1,184 +1,131 @@
-<section class="slogan home">
+<header style="background-image: url('/assets/imgs/home-background.png')">
 
-    <div class="container">
+    <a href="./" title="Aller à la page d'accueil"></a>
 
-        <h1>Accolade est une scop spécialisée dans le développement de solutions Web et Mobile</h1>
+    <nav class="open">
 
-        <p>Notre engagement : créer des solutions technologiques innovantes tout en tenant compte de l'impact
-            environnemental, social et éthique.</p>
+        <menu>
+            <li><a href="/pages/contact.html" title="voir la page contact"><img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/</a></li>
+        </menu>
 
-    </div>
+        <a title="Voir le menu">
+            <img alt="Icone menu" height="40" src="/assets/svgs/picto-burger.svg" width="40"/>
+        </a>
 
-</section>
+    </nav>
 
-<section class="amorce">
+    <span>Web <span>&</span> Graphisme </span>
 
-    <div class="container">
+    <aside>
 
-        <div class="blog">
+        <h1><small>C’est quoi ?</small></h1>
 
-            <div class="card --blog --intro">
+        <p>
+            Accolade est une SCOP nancéienne qui décode les usages, conçoit et crée.
+            <br/><br/>
+            Que ce soit pour penser votre identité graphique, créer votre site internet ou votre application mobile,
+            notre équipe vous conseille et vous accompagne de A à Z.
+        </p>
 
-                <h2>Et si l'on choisissait ensemble</h2>
+    </aside>
 
-                <p>la stabilité - le développement durable - l'éco-conception - l'engagement local l'accompagnement et
-                    l'analyse du cycle de vie de vos applicatifs ?</p>
+</header>
 
-                <p>En tant que coopérative, Accolade est fondée sur des principes d'équité, de solidarité et de
-                    coopération.
-                    Nous encourageons les projets locaux et soutenons les initiatives qui visent à améliorer la vie de
-                    ceux
-                    qui nous entourent et nous nous engageons à continuer à innover pour contribuer à un avenir plus
-                    durable
-                    et plus équitable pour tous.</p>
+<main>
 
-            </div>
+    <!-- SECTION EXPERTISE -->
+    <section id="expertises">
 
-        </div>
-        <!--
-                <div class="savoir-plus">
-                    <a href="/blog/" class="btn">
-                        <span>TOUS LES ARTICLES DU BLOG</span>
-                    </a>
-                </div>
-        -->
-    </div>
+        <h2 class="with-line">nos expertises<small>On fait quoi ?</small></h2>
 
-</section>
+        <nav>
 
-<section>
+            <a>
+                Creation de sites internet
+                <em>Refonte ou création de sites<br/> internet • Ergonomie • SEO</em>
+            </a>
 
-    <div class="container">
+            <a>
+                Creations graphiques
+                <em>Logo • Charte graphique • Affiche • Carte de visite • Rapport d’activité...</em>
+            </a>
 
-        <div class="card --valeurs">
+            <a>
+                Laboratoire numérique
+                <em>Refonte ou création de sites<br/> internet • Ergonomie • SEO</em>
+            </a>
 
-            <article class="valeurs-list">
+            <a>
+                Vers le numErique responsable
+                <em>L’éco-conception permet de délivrer des sites plus légers, plus performants et plus accessibles,
+                    sans pour autant renoncer à votre image de marque : nous ne croyons pas à l’antagonisme design /
+                    respect de
+                    l’environnement.
+                    Concrètement, il s’agit de se demander à chaque étape du projet (arborescence, wireframes, design,
+                    techno,
+                    hébergement) quel dispositif est le plus vertueux d’un point de vue environnemental.</em>
+            </a>
 
-                <a href="/valeurs#responsable">
-                    <ul>
-                        <li class="title">Responsable</li>
-                        <li>Partenaire green</li>
-                        <li>Transport en train</li>
-                        <li>Visio privilégiée</li>
-                        <li>Télétravail à volonté</li>
-                        <li>Réduction tarifaires pour les membres de l'ESS</li>
-                    </ul>
+
+
+        </nav>
+
+    </section>
+
+
+    <!-- SECTION PROJETS -->
+    <section id="projets">
+
+        <h2 class="with-line">nos projets<small>Etudes de cas</small></h2>
+
+        <nav class="slider__content">
+
+            {% for p in projects %}
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
+
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
+
+                    {{ p.client.name }}
+
+                    <em>
+                         {% for tag in p.tags %}
+                             {{ tag }}{% if not loop.last %} •{% endif %}
+                         {% endfor %}
+                    </em>
                 </a>
 
-                <a href="/valeurs#solidaire">
-                    <ul>
-                        <li class="title">Solidaire</li>
-                        <li>10% des bénéfices reversés aux associations</li>
-                        <li>Réduction tarifaires pour les membres de l'ESS</li>
-                    </ul>
-                </a>
+            {% endfor %}
 
-                <a href="/valeurs#perenite">
-                    <ul>
-                        <li class="title">Pérenité</li>
-                        <li>Pas de dividendes</li>
-                        <li>45% des bénéfices réinvesti dans la société</li>
-                        <li>45% reversés aux salariés</li>
-                    </ul>
-                </a>
+        </nav>
 
-                <a href="/valeurs#equite">
-                    <ul>
-                        <li class="title">Equitable</li>
-                        <li>Ratio de salaire : 1/2</li>
-                        <li>Salaire connu de tous</li>
-                    </ul>
-                </a>
-
-                <a href="/valeurs#bienetre">
-                    <ul>
-                        <li class="title">Bien-être au travail</li>
-                        <li>6 semaines de congés payés</li>
-                        <li>35h / semaine</li>
-                        <li>Abonnement transport en commun remboursé à 50%</li>
-                        <li>Mutuelle prise en charge à 100% par la société</li>
-                    </ul>
-                </a>
-
-                <a href="/valeurs#democratie">
-                    <ul>
-                        <li class="title">Démocratique</li>
-                        <li>Le PDG est élu et révocable</li>
-                        <li>Salaires décidés par les salariés</li>
-                        <li>Choix des projets par les salariés</li>
-                    </ul>
-                </a>
-
-            </article>
-
-            <div class="savoir-plus">
-                <a href="/valeurs/" class="btn">
-                    <span>TOUTES LES VALEURS ACCOLADE</span>
-                </a>
-            </div>
-
+        <div class="slider__nav">
+{#            <input#}
+{#                    alt="element précédent"#}
+{#                    id="btn-prec"#}
+{#                    src="assets/svgs/picto-groupe-pointe-off.svg"#}
+{#                    type="image"/>#}
+            <div class="separation"></div>
+{#            <input#}
+{#                    alt="element suivant"#}
+{#                    id="btn-next"#}
+{#                    src="assets/svgs/picto-groupe-pointe-off.svg"#}
+{#                    type="image"/>#}
         </div>
 
-    </div>
+    </section>
 
-</section>
 
-<section>
+    <!-- SECTION CONTACT -->
+    <section id="contact">
 
-    <div class="container">
+        <h2>Vous avez un projet ?</h2>
 
-        <h1 class="big-title">Démarquez-vous dans un monde numérique en constante évolution</h1>
+        <h3>N’hesitez pas a nous
+            <a class="btn btn-page-nav" href="/pages/contact.html">Contacter</a>
+        </h3>
 
-        <article class="services-list">
+    </section>
 
-            <a href="/services#DEVELOPPEMENT">
-                <span>Développements</span>
-                <div>Web & Mobile</div>
-            </a>
-
-            <a href="/services#formation">
-                <span>Formation</span>
-                <div>& Encadrement d'équipe</div>
-            </a>
-
-            <a href="/services#AUDIT">
-                <span>Conseils</span>
-                <div>& Audit</div>
-            </a>
-
-            <a href="/services#laboratoire">
-                <span>Laboratoire</span>
-                <div>& Projets interne</div>
-            </a>
-
-        </article>
-
-        <div class="savoir-plus">
-            <a href="/services/" class="btn">
-                <span>TOUS LES SERVICES ACCOLADE</span>
-            </a>
-        </div>
-
-    </div>
-
-</section>
-
-<section>
-
-    <h1 class="big-title">Ils nous font confiance</h1>
-
-    <div class="container">
-
-        <div class="collection">
-            <img src="/assets/imgs/logo-muance.webp" alt="logo MUANCE" width="177" height="47">
-            <img src="/assets/imgs/logo-gag.webp" alt="logo GAG" width="110" height="47">
-            <img src="/assets/imgs/logo-ific.webp" alt="logo IFIC" width="44" height="47">
-            <img src="/assets/imgs/logo-ess.webp" alt="logo ESS" width="65" height="47">
-            <img src="/assets/imgs/logo-up-kalidea.webp" alt="logo KALIDEA" width="165" height="47">
-            <img src="/assets/imgs/logo-grand-est.webp" alt="logo GRANS-EST" width="114" height="47">
-        </div>
-
-    </div>
-
-</section>
+</main>
 
