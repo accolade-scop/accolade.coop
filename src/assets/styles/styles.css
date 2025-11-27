@@ -126,7 +126,9 @@ body > header {
   background-size: cover;
   margin-bottom: 80px;
 }
-body > header > a {
+body > header > a:first-of-type {
+  color: transparent;
+  font-size: 0;
   display: block;
   width: 113px;
   height: 455px;
@@ -191,7 +193,7 @@ body > header > span > span {
   color: var(--color-white);
 }
 body > header aside {
-  max-width: 205px;
+  max-width: 300px;
   padding: 30px 30px 0 0;
   background-color: var(--body-backgroundColor-base);
 }
@@ -277,9 +279,8 @@ h3 {
   font-weight: var(--fontWeight-bold) !important;
 }
 
-a {
+a, .link {
   color: var(--link-rest-color);
-  cursor: pointer;
   text-decoration: none;
 }
 
@@ -325,6 +326,14 @@ a {
 }
 .btn-projects-nav:hover::after, .btn-projects-nav.selected::after {
   content: url("/assets/svgs/picto-button-next-on.svg");
+}
+.btn-projects-nav.--reverse {
+  align-items: flex-end;
+}
+.btn-projects-nav.--reverse::after {
+  right: unset;
+  left: 0;
+  transform: rotate(-180deg) translateX(50%);
 }
 .btn-page-nav {
   background-color: var(--surface-backgroundColor-accent);
@@ -389,7 +398,7 @@ a {
   height: 100%;
   background-color: var(--color-green);
 }
-#expertises > nav > a {
+#expertises > nav > .link {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -402,13 +411,13 @@ a {
   font-family: var(--fontFamily-title);
   text-align: center;
 }
-#expertises > nav > a em {
+#expertises > nav > .link em {
   font-family: var(--fontFamily-default);
   text-transform: none;
   color: var(--text-color-default);
   font-size: var(--fontSize-sm);
 }
-#expertises > nav > a::after {
+#expertises > nav > .link::after {
   display: block;
   content: "";
   width: 83px;
@@ -416,43 +425,40 @@ a {
   background-image: url("/assets/svgs/picto-groupe-pointe-off.svg");
   background-repeat: no-repeat;
 }
-#expertises > nav > a::before {
+#expertises > nav > .link::before {
   display: block;
   content: "";
   width: 75px;
   height: 75px;
   background-repeat: no-repeat;
 }
-#expertises > nav > a:hover::after, #expertises > nav > a .active::after {
-  background-image: url("/assets/svgs/picto-groupe-pointe-on.svg");
-}
-#expertises > nav > a:nth-of-type(3) {
+#expertises > nav > .link:nth-of-type(3) {
   grid-area: carda;
 }
-#expertises > nav > a:nth-of-type(3)::before {
+#expertises > nav > .link:nth-of-type(3)::before {
   background-image: url("/assets/svgs/picto-labo.svg");
 }
-#expertises > nav > a:nth-of-type(1) {
+#expertises > nav > .link:nth-of-type(1) {
   grid-area: cardb;
 }
-#expertises > nav > a:nth-of-type(1)::before {
+#expertises > nav > .link:nth-of-type(1)::before {
   background-image: url("/assets/svgs/picto-creation-site.svg");
 }
-#expertises > nav > a:nth-of-type(2) {
+#expertises > nav > .link:nth-of-type(2) {
   grid-area: cardc;
 }
-#expertises > nav > a:nth-of-type(2)::before {
+#expertises > nav > .link:nth-of-type(2)::before {
   background-image: url("/assets/svgs/picto-creation-graphique.svg");
 }
-#expertises > nav > a:nth-of-type(4) {
+#expertises > nav > .link:nth-of-type(4) {
   grid-area: cardd;
   row-gap: 10px;
   padding: 40px 20px;
 }
-#expertises > nav > a:nth-of-type(4)::after, #expertises > nav > a:nth-of-type(4)::before {
+#expertises > nav > .link:nth-of-type(4)::after, #expertises > nav > .link:nth-of-type(4)::before {
   display: none;
 }
-#expertises > nav > a:nth-of-type(4) em {
+#expertises > nav > .link:nth-of-type(4) em {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -460,7 +466,7 @@ a {
   align-items: center;
   padding: 10px 60px;
 }
-#expertises > nav > a:nth-of-type(4) em::before, #expertises > nav > a:nth-of-type(4) em::after {
+#expertises > nav > .link:nth-of-type(4) em::before, #expertises > nav > .link:nth-of-type(4) em::after {
   display: block;
   position: absolute;
   content: "";
@@ -468,12 +474,12 @@ a {
   height: 30px;
   background-repeat: no-repeat;
 }
-#expertises > nav > a:nth-of-type(4) em::before {
+#expertises > nav > .link:nth-of-type(4) em::before {
   top: 0;
   left: 0;
   background-image: url("/assets/svgs/picto-guillemet-ouvrante.svg");
 }
-#expertises > nav > a:nth-of-type(4) em::after {
+#expertises > nav > .link:nth-of-type(4) em::after {
   bottom: 0;
   right: 0;
   background-image: url("/assets/svgs/picto-guillemet-fermante.svg");
@@ -790,6 +796,11 @@ a {
   color: var(--color-neutre-darker);
 }
 
+@media (width > 1400px) {
+  footer > div > *:not(:first-child)::before {
+    content: " - ";
+  }
+}
 @media (width < 1400px) {
   body {
     background-image: none;
@@ -804,7 +815,7 @@ a {
   body > header > span {
     display: none;
   }
-  body > header > a {
+  body > header > a:first-of-type {
     width: 70px;
     height: 70px;
     background-color: transparent;
@@ -815,7 +826,7 @@ a {
     position: relative;
     top: 50px;
     margin: 0 auto;
-    max-width: 330px;
+    max-width: 500px;
     text-align: center;
     padding: 20px;
   }
@@ -866,25 +877,25 @@ a {
   body > main #expertises > nav::after, body > main #expertises > nav::before {
     display: none;
   }
-  body > main #expertises > nav > a {
+  body > main #expertises > nav > .link, body > main #expertises > nav a {
     font-size: var(--fontSize-xs);
     padding: 15px 0px;
   }
-  body > main #expertises > nav > a::before {
+  body > main #expertises > nav > .link::before, body > main #expertises > nav a::before {
     width: 50px;
     height: 50px;
     background-size: cover;
   }
-  body > main #expertises > nav > a::after {
+  body > main #expertises > nav > .link::after, body > main #expertises > nav a::after {
     display: none;
   }
-  body > main #expertises > nav > a > em {
+  body > main #expertises > nav > .link > em, body > main #expertises > nav a > em {
     display: none;
   }
-  body > main #expertises > nav > a:nth-child(4) em {
+  body > main #expertises > nav > .link:nth-child(4) em, body > main #expertises > nav a:nth-child(4) em {
     padding: 10px;
   }
-  body > main #expertises > nav > a:nth-child(4) em::before, body > main #expertises > nav > a:nth-child(4) em::after {
+  body > main #expertises > nav > .link:nth-child(4) em::before, body > main #expertises > nav > .link:nth-child(4) em::after, body > main #expertises > nav a:nth-child(4) em::before, body > main #expertises > nav a:nth-child(4) em::after {
     display: none;
   }
   body > main #infos-contact h2, body > main #mentions h2 {
@@ -937,8 +948,10 @@ a {
     column-count: 1;
   }
   body > main #contact {
-    margin-right: 20px;
-    margin-left: 20px;
+    --marge: 20px;
+    max-width: calc(100vw - var(--marge) * 2);
+    margin-right: var(--marge);
+    margin-left: var(--marge);
   }
   body > main #contact h3 {
     flex-direction: column;
@@ -950,7 +963,7 @@ a {
     margin-right: 20px;
     margin-left: 20px;
   }
-  body > footer > span {
+  body > footer > div {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -958,6 +971,11 @@ a {
     text-align: center;
     max-width: 260px;
     font-size: var(--fontSize-xs);
+  }
+}
+@media (width < 600px) {
+  body > header > aside {
+    max-width: 90vw;
   }
 }
 

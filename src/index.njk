@@ -1,17 +1,11 @@
-<header style="background-image: url('/assets/imgs/home-background.png')">
+<header style="background-image: url('/assets/imgs/home-background.png')" xmlns="http://www.w3.org/1999/html">
 
-    <a href="./" title="Aller à la page d'accueil"></a>
+    <a href="./" title="Aller à la page d'accueil">Accueil</a>
 
-    <nav class="open">
-
-        <menu>
-            <li><a href="/pages/contact.html" title="voir la page contact"><img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/</a></li>
-        </menu>
-
-        <a title="Voir le menu">
-            <img alt="Icone menu" height="40" src="/assets/svgs/picto-burger.svg" width="40"/>
+    <nav>
+        <a href="/pages/contact.html" title="voir la page contact">
+            <img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/>
         </a>
-
     </nav>
 
     <span>Web <span>&</span> Graphisme </span>
@@ -40,32 +34,31 @@
 
         <nav>
 
-            <a>
-                Creation de sites internet
+            <div class="link">
+                Création de sites internet
                 <em>Refonte ou création de sites<br/> internet • Ergonomie • SEO</em>
-            </a>
+            </div>
 
-            <a>
-                Creations graphiques
+            <div class="link">
+                Créations graphiques
                 <em>Logo • Charte graphique • Affiche • Carte de visite • Rapport d’activité...</em>
-            </a>
+            </div>
 
-            <a>
+            <div class="link">
                 Laboratoire numérique
-                <em>Refonte ou création de sites<br/> internet • Ergonomie • SEO</em>
-            </a>
+                <em>Développements spécifiques<br/> Veille technologique • Innovations</em>
+            </div>
 
-            <a>
-                Vers le numErique responsable
-                <em>L’éco-conception permet de délivrer des sites plus légers, plus performants et plus accessibles,
+            <div class="link">
+                Vers le numérique responsable
+                <em>
+                    L’éco-conception permet de délivrer des sites plus légers, plus performants et plus accessibles,
                     sans pour autant renoncer à votre image de marque : nous ne croyons pas à l’antagonisme design /
-                    respect de
-                    l’environnement.
-                    Concrètement, il s’agit de se demander à chaque étape du projet (arborescence, wireframes, design,
-                    techno,
-                    hébergement) quel dispositif est le plus vertueux d’un point de vue environnemental.</em>
-            </a>
-
+                    respect de l’environnement. Concrètement, il s’agit de se demander à chaque étape du projet
+                    (arborescence, wireframes, design, techno, hébergement) quel dispositif est le plus vertueux d’un
+                    point de vue environnemental.
+                </em>
+            </div>
 
 
         </nav>
@@ -89,9 +82,9 @@
                     {{ p.client.name }}
 
                     <em>
-                         {% for tag in p.tags %}
-                             {{ tag }}{% if not loop.last %} •{% endif %}
-                         {% endfor %}
+                        {% for tag in p.tags %}
+                            {{ tag }}{% if not loop.last %} •{% endif %}
+                        {% endfor %}
                     </em>
                 </a>
 
@@ -100,17 +93,17 @@
         </nav>
 
         <div class="slider__nav">
-{#            <input#}
-{#                    alt="element précédent"#}
-{#                    id="btn-prec"#}
-{#                    src="assets/svgs/picto-groupe-pointe-off.svg"#}
-{#                    type="image"/>#}
+            {#            <input #}
+            {#                    alt="element précédent" #}
+            {#                    id="btn-prec" #}
+            {#                    src="assets/svgs/picto-groupe-pointe-off.svg" #}
+            {#                    type="image"/> #}
             <div class="separation"></div>
-{#            <input#}
-{#                    alt="element suivant"#}
-{#                    id="btn-next"#}
-{#                    src="assets/svgs/picto-groupe-pointe-off.svg"#}
-{#                    type="image"/>#}
+            {#            <input #}
+            {#                    alt="element suivant" #}
+            {#                    id="btn-next" #}
+            {#                    src="assets/svgs/picto-groupe-pointe-off.svg" #}
+            {#                    type="image"/> #}
         </div>
 
     </section>

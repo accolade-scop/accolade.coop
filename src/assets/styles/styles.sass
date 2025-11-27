@@ -24,7 +24,9 @@ body
     background-size: cover
     margin-bottom: 80px
 
-    > a
+    > a:first-of-type
+      color: transparent
+      font-size: 0
       display: block
       width: 113px
       height: 455px
@@ -88,7 +90,7 @@ body
 
 
     aside
-      max-width: 205px
+      max-width: 300px
       padding: 30px 30px 0 0
       background-color: var(--body-backgroundColor-base)
       h1
@@ -165,11 +167,9 @@ h3
 .strong
   font-weight: var(--fontWeight-bold)!important
 
-a
+a, .link
   color: var(--link-rest-color)
-  cursor: pointer
   text-decoration: none
-
 
 .btn
   position: relative
@@ -208,6 +208,14 @@ a
       background-color: var(--surface-backgroundColor-accent)
       &::after
         content: url("/assets/svgs/picto-button-next-on.svg")
+    &.--reverse
+      align-items: flex-end
+      &::after
+        right: unset
+        left: 0
+        transform: rotate(-180deg) translateX(50%)
+
+
   &-page-nav
     background-color: var(--surface-backgroundColor-accent)
     &::after
@@ -263,7 +271,7 @@ a
       width: 1px
       height: 100%
       background-color: var(--color-green)
-    > a
+    > .link
       display: flex
       flex-flow: column nowrap
       justify-content: flex-start
@@ -293,9 +301,9 @@ a
         width: 75px
         height: 75px
         background-repeat: no-repeat
-      &:hover, .active
-        &::after
-          background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
+      //&:hover, .active
+      //  &::after
+      //    background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
       &:nth-of-type(3)
         grid-area: carda
         &::before
@@ -606,6 +614,9 @@ a
             font-weight: var(--fontWeight-bold)
             color: var(--color-neutre-darker)
 
+@media (width > 1400px)
+  footer > div > *:not(:first-child)::before
+    content: " - "
 
 @media (width < 1400px)
   body
@@ -618,7 +629,7 @@ a
     > header
       > span
         display: none
-      > a
+      > a:first-of-type
         width: 70px
         height: 70px
         background-color: transparent
@@ -628,7 +639,7 @@ a
         position: relative
         top: 50px
         margin: 0 auto
-        max-width: 330px
+        max-width: 500px
         text-align: center
         padding: 20px
       &.project
@@ -672,7 +683,7 @@ a
           gap: 10px
           &::after, &::before
             display: none
-          > a
+          > .link, a
             font-size: var(--fontSize-xs)
             padding: 15px 0px
             &::before
@@ -682,7 +693,6 @@ a
             &::after
               display: none
             > em
-
               display: none
             &:nth-child(4)
               em
@@ -732,8 +742,10 @@ a
           > img
             // max-width: 300px
       #contact
-        margin-right: 20px
-        margin-left: 20px
+        --marge: 20px
+        max-width: calc(100vw - var(--marge) * 2)
+        margin-right: var(--marge)
+        margin-left: var(--marge)
         h3
           flex-direction: column
           row-gap: 10px
@@ -742,7 +754,7 @@ a
       row-gap: 10px
       margin-right: 20px
       margin-left: 20px
-      > span
+      > div
         display: flex
         flex-flow: column wrap
         justify-content: center
@@ -750,3 +762,7 @@ a
         text-align: center
         max-width: 260px
         font-size: var(--fontSize-xs)
+
+@media (width < 600px)
+  body > header > aside
+    max-width: 90vw
