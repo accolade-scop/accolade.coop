@@ -38,7 +38,7 @@ const projectsList = [
         client: {
             name: "Archives de Jules Bourgoin", description: "Universités & centres de recherche",
         },
-        url: "https://www.studio-fuchsia.com/clients/omeka-jules-bourgoin",
+        url: "",
         tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin_site-internet_graphisme.png", description: "Accolade graphisme web jules-bourgoin banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin.jpg", description: "Accolade graphisme web jules-bourgoin logo"},
