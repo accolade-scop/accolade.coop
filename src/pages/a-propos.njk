@@ -1,0 +1,200 @@
+<header style="background-image: url('/assets/imgs/home-background.jpg')" class="container-heading">
+
+    <a href="../index.html" title="Aller à la page d'accueil"></a>
+
+    <nav class="open">
+
+        <menu>
+            <li><a href="../index.html" title="voir la page d'accueil">Accueil</a></li>
+            <li><a href="/pages/a-propos.html" title="voir la page a propos d'Accolade">Qui sommes-nous ?</a></li>
+            <li><a href="/pages/projects-all.html" title="voir la page contacts">Nos réalisations</a></li>
+            <li><a href="/pages/contact.html" title="voir la page contacts">Prendre contact</a></li>
+            <li><a title="Fermer le menu">
+                    <img alt="Icone close menu" height="40" src="/assets/svgs/picto-close.svg" width="40"/>
+                </a></li>
+        </menu>
+
+        <a title="Voir le menu">
+            <img alt="Icone menu" height="40" src="/assets/svgs/picto-burger.svg" width="40"/>
+        </a>
+
+    </nav>
+
+    <span>Web <span>&</span> Graphisme </span>
+
+    <aside>
+
+        <h1><small>C’est quoi ?</small></h1>
+
+        <p>
+            Accolade est une SCOP nancéienne qui décode les usages, conçoit et crée.
+            <br/><br/>
+            Que ce soit pour penser votre identité graphique, créer votre site internet ou votre application mobile,
+            notre équipe vous conseille et vous accompagne de A à Z.
+        </p>
+
+    </aside>
+
+</header>
+
+<main>
+
+    <!-- SECTION A PROPOS -->
+    <section id="laboratoire">
+
+        <h2>Et si on fonctionnait autrement ?<small>Des engagements forts</small></h2>
+
+        <p>En tant que coopérative, Accolade est fondée sur des principes d'équité, de solidarité et de coopération.
+            Nous encourageons les projets locaux et soutenons les initiatives qui visent à améliorer la vie de ceux qui
+            nous entourent et nous nous engageons à continuer à innover pour contribuer à un avenir plus durable et plus
+            équitable pour tous.</p>
+
+        <article>
+
+            <div>
+                <h3>Responsable</h3>
+                <p>Acteurs locaux privilégiés</p>
+                <p>Numérique responsable privilégié</p>
+            </div>
+
+            <div>
+                <h3>Solidaire</h3>
+                <p>10% des bénéfices reversés à des associations</p>
+                <p>Réduction tarificaire pour les membres de L’ESS - économie sociale et solidaire</p>
+            </div>
+
+            <div>
+                <h3>Perenne</h3>
+                <p>Aucun actionnaire, aucun dividende</p>
+                <p>50% des bénéfices réinvestis dans la société</p>
+                <p>50% des bénéfices reversés aux salariés</p>
+            </div>
+
+            <div>
+                <h3>Equitable</h3>
+                <p>Transparence totale sur les salaires</p>
+                <p>Différence entre le plus bas et le plus haut salaire - 2x maximum</p>
+            </div>
+
+            <div>
+                <h3>Democratique</h3>
+                <p>Gérant élu et révocable</p>
+                <p>Décisions soumises au vote des salariés</p>
+                <p>Salaires décidés par les salariés</p>
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- SECTION EQUIPE -->
+    <section id="laboratoire">
+
+        <h2>l’equipe<small>des profils varies</small></h2>
+
+        <p>Après plus de 10 ans à se côtoyer et à travailler ensemble sur différents projets tels que la conception de
+            logiciels, le développement de sites internet et l’élaboration d’identités graphiques, c’est en 2023 que les
+            développeurs et graphistes composant notre équipe ont décidé de s’associer pour créer Accolade.</p>
+
+        <p>Partageant des valeurs communes basées sur l’équité, le bien être au travail et la responsabilité des
+            entreprises, nous avons décidé d’adopter le format SCOP - Société Coopérative
+                & Participative - correspondant à notre vision du monde du travail.</p>
+
+        <p>Accolade est une nouvelle histoire qui débute, composée d’une équipe d’experts en développement et en
+            graphisme, qui se connaissent bien et qui adorent inventer ensemble.</p>
+
+        <article>
+
+            <div>
+                <h3>Jérôme</h3>
+                <p>Co-fondateur<br/>Intégrateur web</p>
+            </div>
+
+            <div>
+                <h3>Léa</h3>
+                <p>Graphiste et webdesigner</p>
+            </div>
+
+            <div>
+                <h3>Lou</h3>
+                <p>Graphiste et webdesigner</p>
+
+            </div>
+
+            <div>
+                <h3>Michael</h3>
+                <p>Co-fondateur<br/>Dev. full stack </p>
+            </div>
+
+            <div>
+                <h3>Xavier</h3>
+                <p>Gestionnaire projet et dev.</p>
+            </div>
+
+            <div>
+                <h3>Yannick</h3>
+                <p>Co-fondateur<br/>Dev. full stack senior</p>
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projets">
+
+        <h2>Nos solutions numériques<small>Etudes de cas</small></h2>
+
+        <nav class="slider__content">
+
+            {% for p in projects %}
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
+
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
+
+                    {{ p.client.name }}
+
+                    <em>
+                        {% for tag in p.tags %}
+                            {{ tag }}{% if not loop.last %} •{% endif %}
+                        {% endfor %}
+                    </em>
+                </a>
+
+            {% endfor %}
+
+        </nav>
+
+        <div class="slider__nav">
+
+            <input
+                    alt="element précédent"
+                    id="btn-prec"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+
+            <div class="separation"></div>
+
+            <input
+                    alt="element suivant"
+                    id="btn-next"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+        </div>
+
+    </section>
+
+
+    <!-- SECTION CONTACT -->
+    <section id="contact">
+
+        <h2>Vous avez un projet ?</h2>
+
+        <h3>N’hesitez pas a nous
+            <a class="btn btn-page-nav" href="/pages/contact.html" title="Prenez contact par email">Contacter</a>
+        </h3>
+
+    </section>
+</main>
+
