@@ -1,0 +1,66 @@
+<header style="background-image: url('./assets/imgs/home-background.png')">
+
+    <a href="../index.html" title="Aller à la page d'accueil"></a>
+
+    <nav class="open">
+
+         <menu>
+            <li><a href="/pages/contact.html" title="voir la page contacts"><img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/></a></li>
+        </menu>
+
+        <a title="Voir le menu">
+            <img alt="Icone menu" height="40" src="./assets/svgs/picto-burger.svg" width="40"/>
+        </a>
+
+    </nav>
+
+    <span>Web <span>&</span> Graphisme </span>
+
+    <aside>
+
+        <h1><small>C’est quoi ?</small></h1>
+
+        <p>
+            Accolade est une SCOP nancéienne qui décode les usages, conçoit et crée.
+            <br/><br/>
+            Que ce soit pour penser votre identité graphique, créer votre site internet ou votre application mobile,
+            notre équipe vous conseille et vous accompagne de A à Z.
+        </p>
+
+    </aside>
+
+</header>
+
+<main>
+
+    <!-- LISTE DES TAGS -->
+    <section id="tags">
+        <em>
+            {% set uniqueTags = projects | getUniqueTags(project) %}
+            {% for tag in uniqueTags %}
+                <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+                {% if not loop.last %} •{% endif %}
+            {% endfor %}
+        </em>
+    </section>
+
+    <!-- SECTION PROJECTS -->
+    <section id="projects">
+        {% for p in projects %}
+            <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}" class="project">
+
+                <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                     height="157"/>
+
+                {{ p.client.name }}
+
+                <em>
+                    {% for tag in p.tags %}
+                        {{ tag }}{% if not loop.last %} •{% endif %}
+                    {% endfor %}
+                </em>
+            </a>
+
+        {% endfor %}
+    </section>
+ </main>

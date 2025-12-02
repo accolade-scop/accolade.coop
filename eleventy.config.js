@@ -11,9 +11,21 @@ export default async function(eleventyConfig) {
 
     eleventyConfig.addFilter('navSlug', function(projects, currentSlug, indexOperator) {
         const index = projects.findIndex(p => p.slug === currentSlug);
-        if (index === 0 && indexOperator === -1) return projects[projects.length - 1]; // 1er projet + previous
-        if (index === (projects.length - 1) && indexOperator === 1) return projects[0]; // Dernier projet + next
-        return projects[index + indexOperator]; // Autres projets
+        if (index === 0 && indexOperator === -1) return projects[projects.length - 1].slug; // 1er projet + previous
+        if (index === (projects.length - 1) && indexOperator === 1) return projects[0].slug; // Dernier projet + next
+        return projects[index + indexOperator].slug; // Autres projets
+    });
+
+    eleventyConfig.addFilter('getUniqueTags', function(projects) {
+        // Récupération des tags
+        const allTags = projects.flatMap(item => item.tags || []);
+        // Suppression des doublons + tri alphébétique
+        const uniqueTags = [...new Set(allTags)].sort((a, b) => a.localeCompare(b, 'fr'));
+        return uniqueTags;
+    });
+
+    eleventyConfig.addPassthroughCopy({
+        "assets/js": "assets/js"
     });
 
     eleventyConfig.addFilter('slice', (arr, start, end) => arr.slice(start, end));
