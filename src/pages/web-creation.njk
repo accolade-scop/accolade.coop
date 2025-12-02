@@ -1,11 +1,14 @@
-<header style="background-image: url('/assets/imgs/home-background.png')">
+<header style="background-image: url('/assets/imgs/home-background.jpg')"  class="container-heading">
 
     <a href="../index.html" title="Aller à la page d'accueil"></a>
 
     <nav class="open">
 
         <menu>
-            <li><a href="/pages/contact.html" title="voir la page contacts"><img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/></a></li>
+            <li><a href="/pages/contact.html" title="voir la page contacts"><img alt="Aller à la page contact"
+                                                                                 height="60"
+                                                                                 src="/assets/svgs/button-contact.svg"
+                                                                                 width="60"/></a></li>
         </menu>
 
         <a title="Voir le menu">
@@ -18,14 +21,9 @@
 
     <aside>
 
-        <h1><small>C’est quoi ?</small></h1>
-
-        <p>
-            Accolade est une SCOP nancéienne qui décode les usages, conçoit et crée.
-            <br/><br/>
-            Que ce soit pour penser votre identité graphique, créer votre site internet ou votre application mobile,
-            notre équipe vous conseille et vous accompagne de A à Z.
-        </p>
+        <h1><small>Navigation</small></h1>
+        <a class="btn btn-projects-nav --reverse" href="/pages/laboratoire.html" title="Allez à la page Solutions numériques">Solutions<small>numerique</small></a>
+        <a class="btn btn-projects-nav" href="/pages/graphic-design.html" title="Allez à la page Créations graphiques">Creations<small>graphiques</small></a>
 
     </aside>
 
@@ -33,10 +31,115 @@
 
 <main>
 
-    <section>
+    <!-- SECTION CREATIONS SITES -->
+    <section id="creation-web">
 
-        <h2 class="with-line">Création de sites<small>Accolade</small></h2>
+        <h2 class="with-line">Création de sites<small>Accolade scop</small></h2>
 
+        <article>
+
+            <img src="" width="470" height="735" alt="Illustration"/>
+
+            <div>
+                <h3>Nos solutions de conception</h3>
+                <p>
+                    Notre objectif est de comprendre votre besoin et de vous proposer une solution adaptée et sur mesure
+                    qui correspond à votre projet.<br/><br/>
+                    Selon les fonctionnalités attendues, nous développons nos sites internet avec des outils standards
+                    et reconnus comme Wordpress & WooCommerce, spécialisés comme Omeka, ou avec notre CMS maison alliant
+                    performance, durabilité, sécurité et éco-responsabilité.
+                </p>
+            </div>
+
+            <div>
+                <h3>Referencement & SEO</h3>
+                <p>
+                    Le référencement naturel, dit SEO, inclut l’ensemble des outils et méthodes permettant d’augmenter
+                    votre visibilité sur internet.<br/><br/>
+                    Nous apportons un soin particulier à optimiser ce référencement lors de la réalisation de nos sites
+                    internet.
+                </p>
+            </div>
+
+            <div>
+                <h3>Accessibilite</h3>
+                <p>
+                    Parce qu’un site doit être accessible à chacun, nous veillons à respecter les normes d’accessibilité
+                    numérique dès la conception. Notre démarche garantit une navigation fluide, intuitive et inclusive
+                    pour tous les utilisateurs.
+                </p>
+            </div>
+
+            <div>
+                <h3>Hebergement, Maintenance & Abonnement</h3>
+                <p>
+                    Votre site vous appartient à 100% !
+                    Nous proposons des solutions d’hébergement pour votre site internet, avec gestion de votre nom de
+                    domaine, gestion de vos adresses emails, gestion des maintenances avec application des mises à jour
+                    de sécurité… mais vous avez toujours le choix de passer par un autre prestataire pour l’ensemble de
+                    ces services.<br/><br/>
+                    Nous garantissons également un export fonctionnel de votre site internet si vous souhaitez le
+                    déplacer vers une autre agence.
+                </p>
+            </div>
+
+        </article>
+
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projets">
+
+        <h2>Nos sites internet<small>Etudes de cas</small></h2>
+
+        <nav class="slider__content">
+
+            {% for p in projects %}
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
+
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
+
+                    {{ p.client.name }}
+
+                    <em>
+                        {% for tag in p.tags %}
+                            {{ tag }}{% if not loop.last %} •{% endif %}
+                        {% endfor %}
+                    </em>
+                </a>
+
+            {% endfor %}
+
+        </nav>
+
+        <div class="slider__nav">
+
+            <input
+                    alt="element précédent"
+                    id="btn-prec"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+
+            <div class="separation"></div>
+
+            <input
+                    alt="element suivant"
+                    id="btn-next"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+        </div>
+
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact">
+
+        <h2>Vous avez un projet ?</h2>
+
+        <h3>N’hesitez pas a nous
+            <a class="btn btn-page-nav" href="/pages/contact.html" title="Prenez contact par email">Contacter</a>
+        </h3>
 
     </section>
 

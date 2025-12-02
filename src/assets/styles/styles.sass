@@ -2,7 +2,7 @@
 @use "./params"
 
 body
-  background-image: url("/assets/svgs/texture-rayures.svg")
+  //background-image: url("/assets/svgs/texture-rayures.svg")
   background-repeat: repeat-y
   background-position: center top
   backdrop-filter: opacity(5%)
@@ -144,6 +144,7 @@ body
           > .btn-projects-nav
             width: 120px
 
+
   > main
     > section
       position: relative
@@ -162,7 +163,7 @@ body
     align-items: center
     height: 149px
     padding: 36px 48px
-    font-size: var(--fontSize-defaut)
+    font-size: var(--fontSize-xs)
     &.container-footer
       container-name: container-footer
       container-type: inline-size
@@ -197,6 +198,7 @@ body
         max-width: 260px
         font-size: var(--fontSize-xs)
 
+
 h1, h2, h3, h4, h5, h6
   font-family: var(--fontFamily-title)
   text-transform: uppercase
@@ -225,14 +227,31 @@ h2
 
 h3
   font-size: var(--fontSize-md)
+
 .strong
   font-weight: var(--fontWeight-bold)!important
 
 a, .link
   color: var(--link-rest-color)
   text-decoration: none
+  cursor: pointer
 
-
+ul.bulleted-list
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-start
+  align-items: stretch
+  font-family: var(--fontFamily-default)
+  font-size: var(--fontSize-sm)
+  font-style: italic
+  > li
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    column-gap: 1ch
+    &::before
+      content: "-"
 .btn
   position: relative
   display: inline-flex
@@ -312,11 +331,9 @@ a, .link
 
 
 #expertises
-  margin-bottom: 50px
   h2
     background-color: var(--body-backgroundColor-base)
     padding-right: 50px
-
   > nav
     display: grid
     grid-template-columns: 1fr repeat(3, minmax(300px, 300px)) 1fr
@@ -363,9 +380,9 @@ a, .link
         width: 75px
         height: 75px
         background-repeat: no-repeat
-      //&:hover, .active
-      //  &::after
-      //    background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
+      &:hover, .active
+        &::after
+          background-image: url("/assets/svgs/picto-groupe-pointe-on.svg")
       &:nth-of-type(3)
         grid-area: carda
         &::before
@@ -408,11 +425,82 @@ a, .link
             background-image: url("/assets/svgs/picto-guillemet-fermante.svg")
 
 
+#creation-web
+  > article
+    > div
+      &:nth-of-type(4)
+        h3
+          align-self: center
+        p
+          text-align: center
+          font-style: italic
+
+
+#laboratoire
+  > article
+    grid-template-areas: "linea carda cardb lineb" "linea picture cardc lineb" "linea cardd carde lineb"
+
+
+#creation-web, #graphic-design
+  > article
+    grid-template-areas: "linea picture carda lineb" "linea picture cardb lineb" "linea picture cardc lineb" "linea cardd cardd lineb"
+
+
+#creation-web, #graphic-design, #laboratoire
+  > article
+    display: grid
+    grid-template-columns: 1fr repeat(2, minmax(300px, 470px)) 1fr
+    column-gap: 40px
+    row-gap: 20px
+    &::before
+      grid-area: linea
+    &::after
+      grid-area: lineb
+    &::before, &::after
+      justify-self: center
+      display: block
+      content: ""
+      width: 1px
+      height: 100%
+      background-color: var(--color-green)
+    > img
+      grid-area: picture
+    > div
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      row-gap: 20px
+      background-color: var(--surface-backgroundColor-secondary)
+      padding: 40px
+      font-size: var(--fontSize-md)
+      font-family: var(--fontFamily-title)
+      h3
+        color: var(--text-color-primary)
+      p
+        font-family: var(--fontFamily-default)
+        text-transform: none
+        color: var(--text-color-default)
+        font-size: var(--fontSize-sm)
+      &:nth-of-type(1)
+        grid-area: carda
+      &:nth-of-type(2)
+        grid-area: cardb
+      &:nth-of-type(3)
+        grid-area: cardc
+      &:nth-of-type(4)
+        grid-area: cardd
+      &:nth-of-type(5)
+        grid-area: carde
+
+
+#expertises, #creation-web, #graphic-design, #laboratoire
+  margin-bottom: 100px
+
 #projets
-  position: relative
   > .slider__content
     display: flex
-    flex-flow: row wrap
+    flex-flow: row nowrap
     justify-content: flex-start
     align-items: flex-start
     gap: 20px
@@ -433,7 +521,7 @@ a, .link
         aspect-ratio: 248 / 157
         margin-bottom: 5px
       > em
-        color: var(--color-neutre-medium)
+        color: var(--color-neutre-light)
         font-size: var(--fontSize-xs)
   > .slider__nav
     display: flex
@@ -675,7 +763,6 @@ a, .link
           &:first-child
             font-weight: var(--fontWeight-bold)
             color: var(--color-neutre-darker)
-
 
 
 @media (width < 1400px)

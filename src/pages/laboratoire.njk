@@ -1,11 +1,14 @@
-<header style="background-image: url('/assets/imgs/home-background.png')">
+<header style="background-image: url('/assets/imgs/home-background.jpg')" class="container-heading">
 
     <a href="../index.html" title="Aller à la page d'accueil"></a>
 
     <nav class="open">
 
         <menu>
-            <li><a href="/pages/contact.html" title="voir la page contacts"><img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/></a></li>
+            <li><a href="/pages/contact.html" title="voir la page contacts"><img alt="Aller à la page contact"
+                                                                                 height="60"
+                                                                                 src="/assets/svgs/button-contact.svg"
+                                                                                 width="60"/></a></li>
         </menu>
 
         <a title="Voir le menu">
@@ -18,27 +21,132 @@
 
     <aside>
 
-        <h1><small>C’est quoi ?</small></h1>
-
-        <p>
-            Accolade est une SCOP nancéienne qui décode les usages, conçoit et crée.
-            <br/><br/>
-            Que ce soit pour penser votre identité graphique, créer votre site internet ou votre application mobile,
-            notre équipe vous conseille et vous accompagne de A à Z.
-        </p>
+        <h1><small>Navigation</small></h1>
+        <a class="btn btn-projects-nav --reverse" href="/pages/graphic-design.html" title="Allez à la page Créations graphiques">Creations<small>graphiques</small></a>
+        <a class="btn btn-projects-nav" href="/pages/web-creation.html" title="Allez à la page Sites internet">Sites<small>internet</small></a>
 
     </aside>
 
 </header>
 
 <main>
+    <!-- SECTION LABORATOIRE -->
+    <section id="laboratoire">
 
-    <section>
+        <h2 class="with-line">Laboratoire numérique<small>Accolade scop</small></h2>
 
-        <h2 class="with-line">Le laboratoire<small>Accolade</small></h2>
+        <article>
 
+            <div>
+                <h3>Architecture technique</h3>
+                <p>
+                    Nous concevons et mettons en place des architectures robustes, modulaires et évolutives, adaptées à
+                    des environnements complexes, avec un haut niveau de performance, de sécurité et de résilience.
+                </p>
+            </div>
+
+            <div>
+                <h3>Developpement responsable</h3>
+                <p>
+                    Nous développons des solutions numériques performantes, durables, rapides et sécurisées en
+                    privilégiant des technologies économes en ressources, limitant ainsi l’impact environnemental.
+                </p>
+            </div>
+
+            <img src="" width="470" height="311" alt="Illustration"/>
+
+            <div>
+                <h3>Projets citoyens</h3>
+                <p>
+                    Nous développons des outils numériques au service du bien commun en privilégiant un dialogue avec
+                    les acteurs locaux.<br/><br/>
+                    Ces projets visent à renforcer le lien social et soutenir les initiatives écologiques, culturelles
+                    ou solidaires dans les territoires.
+                </p>
+                <ul class="bulleted-list">
+                    <li>Les guinguettes de Nancy</li>
+                    <li>Repair Café</li>
+                    <li>Ou recycler</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Innovation Passionnee</h3>
+                <p>
+                    Curieux et passionnés, nous explorons en continu les technologies émergentes pour rester à la pointe
+                    du développement, permettant ainsi de proposer à nos clients des solutions pertinentes, performantes
+                    et pérennes.
+                </p>
+            </div>
+
+            <div>
+                <h3>Projet 100% sur mesure</h3>
+                <p>
+                    Nos solutions sont conçues en étroite collaboration avec nos clients pour comprendre et répondre
+                    précisément à leurs besoins.<br/><br/>
+                    Nous nous adaptons aux besoins et aux contraintes de nos clients pour proposer une gestion de projet
+                    adaptée et personnalisée.
+                </p>
+            </div>
+
+        </article>
 
     </section>
 
+    <!-- SECTION PROJETS -->
+    <section id="projets">
+
+        <h2>Nos solutions numériques<small>Etudes de cas</small></h2>
+
+        <nav class="slider__content">
+
+            {% for p in projects %}
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
+
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
+
+                    {{ p.client.name }}
+
+                    <em>
+                        {% for tag in p.tags %}
+                            {{ tag }}{% if not loop.last %} •{% endif %}
+                        {% endfor %}
+                    </em>
+                </a>
+
+            {% endfor %}
+
+        </nav>
+
+        <div class="slider__nav">
+
+            <input
+                    alt="element précédent"
+                    id="btn-prec"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+
+            <div class="separation"></div>
+
+            <input
+                    alt="element suivant"
+                    id="btn-next"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+        </div>
+
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact">
+
+        <h2>Vous avez un projet ?</h2>
+
+        <h3>N’hesitez pas a nous
+            <a class="btn btn-page-nav" href="/pages/contact.html" title="Prenez contact par email">Contacter</a>
+        </h3>
+
+    </section>
 </main>
 
