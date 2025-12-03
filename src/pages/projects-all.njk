@@ -1,4 +1,4 @@
-<header style="background-image: url('./assets/imgs/home-background.jpg')">
+<header style="background-image: url('/assets/imgs/home-background.jpg')" class="container-heading">
 
     <a href="../index.html" title="Aller à la page d'accueil"></a>
 
@@ -51,22 +51,45 @@
     </section>
 
     <!-- SECTION PROJECTS -->
-    <section id="projects">
-        {% for p in projects %}
-            <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}" class="project">
+    <section id="projets">
 
-                <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
-                     height="157"/>
+        <nav class="slider__content">
 
-                {{ p.client.name }}
+            {% for p in projects %}
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}"
+                   class="project">
 
-                <em>
-                    {% for tag in p.tags %}
-                        {{ tag }}{% if not loop.last %} •{% endif %}
-                    {% endfor %}
-                </em>
-            </a>
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
 
-        {% endfor %}
+                    {{ p.client.name }}
+
+                    <em>
+                        {% for tag in p.tags %}
+                            {{ tag }}{% if not loop.last %} •{% endif %}
+                        {% endfor %}
+                    </em>
+                </a>
+
+            {% endfor %}
+
+        </nav>
+        <div class="slider__nav">
+
+            <input
+                    alt="element précédent"
+                    id="btn-prec"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+
+            <div class="separation"></div>
+
+            <input
+                    alt="element suivant"
+                    id="btn-next"
+                    src="../assets/svgs/picto-groupe-pointe-on.svg"
+                    type="image"/>
+        </div>
     </section>
- </main>
+
+</main>

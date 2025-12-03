@@ -419,21 +419,26 @@ ul.bulleted-list
       h3
         color: var(--text-color-primary)
       p
-        text-align: center
         font-family: var(--fontFamily-default)
         text-transform: none
         color: var(--text-color-default)
-        > small
-          font-size: var(--fontSize-xs)
 
 
 #equipe
-  > div
-    align-items: flex-start
-  img
-    width: 160px
-    height: 96px
-    background-color: var(--surface-backgroundColor-primary)
+  > article
+    > div
+      align-items: stretch
+      > p
+        font-size: var(--fontSize-md)
+        text-align: left
+        > small
+          font-size: var(--fontSize-xs)
+          font-weight: var(--fontWeight-thin)
+    img
+      width: 160px
+      height: 96px
+      background-color: var(--surface-backgroundColor-primary)
+
 #expertises
   h2
     background-color: var(--body-backgroundColor-base)
