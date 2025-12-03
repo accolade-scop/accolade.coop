@@ -2,10 +2,9 @@
 @use "./params"
 
 body
-  //background-image: url("/assets/svgs/texture-rayures.svg")
+  background-image: url("/assets/imgs/body-background.jpg")
   background-repeat: repeat-y
-  background-position: center top
-  backdrop-filter: opacity(5%)
+  background-position: top center
   background-color: var(--body-backgroundColor-base)
   color: var(--body-color-base)
   font-family: var(--body-fontFamily-base), sans-serif
@@ -51,13 +50,22 @@ body
       top: 0
       right: 0
       z-index: 2
-      // padding: 30px
+      padding: 0 30px
       background-color: var(--body-backgroundColor-base)
       overflow: hidden
       &:not(.open)
         display: inline-block
         > menu
           display: none
+          width: 0
+          height: 0
+      a
+        display: flex
+        flex-flow: column nowrap
+        justify-content: flex-start
+        align-items: center
+        column-gap: 10px
+        font-size: var(--fontSize-xs)
       &.open
         > a
           display: none
@@ -66,10 +74,16 @@ body
       font-family: var(--fontFamily-title)
       font-size: var(--fontSize-xs)
       text-transform: uppercase
-      transition: all 2s linear
-      padding: 10px 20px
+      padding: 10px 0
+      overflow: hidden
+      height: 60px
+      width: 555px
+      transition: all 3s ease-in-out
       a
         display: flex
+        flex-flow: row wrap
+        justify-content: flex-start
+        align-items: center
 
 
     > span
@@ -236,6 +250,7 @@ a, .link
   text-decoration: none
   cursor: pointer
 
+
 ul.bulleted-list
   display: flex
   flex-flow: column nowrap
@@ -252,6 +267,7 @@ ul.bulleted-list
     column-gap: 1ch
     &::before
       content: "-"
+
 .btn
   position: relative
   display: inline-flex
@@ -330,6 +346,94 @@ ul.bulleted-list
       color: white
 
 
+.mosaic
+  > article
+    display: grid
+    grid-template-columns: 1fr repeat(2, minmax(300px, 470px)) 1fr
+    column-gap: 40px
+    row-gap: 20px
+    &::before
+      grid-area: linea
+    &::after
+      grid-area: lineb
+    &::before, &::after
+      justify-self: center
+      display: block
+      content: ""
+      width: 1px
+      height: 100%
+      background-color: var(--color-green)
+    > img
+      grid-area: picture
+    > div
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      row-gap: 20px
+      background-color: var(--surface-backgroundColor-secondary)
+      padding: 40px
+      font-size: var(--fontSize-md)
+      font-family: var(--fontFamily-title)
+      h3
+        color: var(--text-color-primary)
+      p
+        font-family: var(--fontFamily-default)
+        text-transform: none
+        color: var(--text-color-default)
+        font-size: var(--fontSize-sm)
+      &:nth-of-type(1)
+        grid-area: carda
+      &:nth-of-type(2)
+        grid-area: cardb
+      &:nth-of-type(3)
+        grid-area: cardc
+      &:nth-of-type(4)
+        grid-area: cardd
+      &:nth-of-type(5)
+        grid-area: carde
+
+
+#presentation, #equipe
+  h2, p
+    display: block
+    text-align: center
+    margin-bottom: 30px
+  > article
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: stretch
+    gap: 20px
+    > div
+      flex: 0 1 210px
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: center
+      row-gap: 20px
+      background-color: var(--surface-backgroundColor-secondary)
+      padding: 20px
+      font-family: var(--fontFamily-title)
+      font-size: var(--fontSize-sm)
+      h3
+        color: var(--text-color-primary)
+      p
+        text-align: center
+        font-family: var(--fontFamily-default)
+        text-transform: none
+        color: var(--text-color-default)
+        > small
+          font-size: var(--fontSize-xs)
+
+
+#equipe
+  > div
+    align-items: flex-start
+  img
+    width: 160px
+    height: 96px
+    background-color: var(--surface-backgroundColor-primary)
 #expertises
   h2
     background-color: var(--body-backgroundColor-base)
@@ -444,54 +548,6 @@ ul.bulleted-list
 #creation-web, #graphic-design
   > article
     grid-template-areas: "linea picture carda lineb" "linea picture cardb lineb" "linea picture cardc lineb" "linea cardd cardd lineb"
-
-
-#creation-web, #graphic-design, #laboratoire
-  > article
-    display: grid
-    grid-template-columns: 1fr repeat(2, minmax(300px, 470px)) 1fr
-    column-gap: 40px
-    row-gap: 20px
-    &::before
-      grid-area: linea
-    &::after
-      grid-area: lineb
-    &::before, &::after
-      justify-self: center
-      display: block
-      content: ""
-      width: 1px
-      height: 100%
-      background-color: var(--color-green)
-    > img
-      grid-area: picture
-    > div
-      display: flex
-      flex-flow: column nowrap
-      justify-content: flex-start
-      align-items: flex-start
-      row-gap: 20px
-      background-color: var(--surface-backgroundColor-secondary)
-      padding: 40px
-      font-size: var(--fontSize-md)
-      font-family: var(--fontFamily-title)
-      h3
-        color: var(--text-color-primary)
-      p
-        font-family: var(--fontFamily-default)
-        text-transform: none
-        color: var(--text-color-default)
-        font-size: var(--fontSize-sm)
-      &:nth-of-type(1)
-        grid-area: carda
-      &:nth-of-type(2)
-        grid-area: cardb
-      &:nth-of-type(3)
-        grid-area: cardc
-      &:nth-of-type(4)
-        grid-area: cardd
-      &:nth-of-type(5)
-        grid-area: carde
 
 
 #expertises, #creation-web, #graphic-design, #laboratoire
