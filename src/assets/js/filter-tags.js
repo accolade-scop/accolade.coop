@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const tags = document.querySelectorAll("#tags .tag");
-    const projects = document.querySelectorAll("#projets .project");
+    const tags = document.querySelectorAll("#tags .btn-tag");
+    const projects = document.querySelectorAll("#projects .project");
 
     tags.forEach(tag => {
         tag.style.cursor = "pointer";
@@ -17,5 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-
 });

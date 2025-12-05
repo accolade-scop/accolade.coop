@@ -42,54 +42,55 @@
     <!-- SECTION PRESENTATION -->
     <section id="presentation">
 
-        <h2>Et si on fonctionnait autrement ?<small>Des engagements forts</small></h2>
+        <h2 class="with-line">Et si on fonctionnait autrement ?<small>Des engagements forts</small></h2>
 
         <p>En tant que coopérative, Accolade est fondée sur des principes d'équité, de solidarité et de coopération.
             Nous encourageons les projets locaux et soutenons les initiatives qui visent à améliorer la vie de ceux qui
             nous entourent et nous nous engageons à continuer à innover pour contribuer à un avenir plus durable et plus
             équitable pour tous.</p>
 
-        <article>
+        <ul>
 
-            <div>
+            <li>
                 <h3>Responsable</h3>
                 <p>Acteurs locaux privilégiés<br/><br/>Numérique responsable privilégié</p>
-            </div>
+            </li>
 
-            <div>
+            <li>
                 <h3>Solidaire</h3>
                 <p>10% des bénéfices reversés à des associations<br/><br/>Réduction tarificaire pour les membres de
                     L’ESS - économie sociale et solidaire</p>
-            </div>
+            </li>
 
-            <div>
+            <li>
                 <h3>Perenne</h3>
                 <p>Aucun actionnaire, aucun dividende<br/><br/>50% des bénéfices réinvestis dans la société<br/><br/>50%
                     des bénéfices reversés aux salariés</p>
-            </div>
+            </li>
 
-            <div>
+            <li>
                 <h3>Equitable</h3>
                 <p>Transparence totale sur les salaires<br/><br/>Différence entre le plus bas et le plus haut salaire -
                     2x maximum</p>
-            </div>
+            </li>
 
-            <div>
+            <li>
                 <h3>Democratique</h3>
                 <p>Gérant élu et révocable<br/><br/>Décisions soumises au vote des salariés<br/><br/>Salaires décidés
                     par les salariés</p>
-            </div>
+            </li>
 
-        </article>
+        </ul>
 
     </section>
 
     <!-- SECTION EQUIPE -->
     <section id="equipe">
 
-        <h2>l’equipe<small>des profils varies</small></h2>
+        <h2 class="with-line">l’equipe<small>des profils varies</small></h2>
 
         <p>
+            <img src="/assets/imgs/equipe-accolade.jpg" width="680" height="383"/>
             Après plus de 10 ans à se côtoyer et à travailler ensemble sur différents projets tels que la conception de
             logiciels, le développement de sites internet et l’élaboration d’identités graphiques, c’est en 2023 que les
             développeurs et graphistes composant notre équipe ont décidé de s’associer pour créer Accolade.
@@ -100,91 +101,48 @@
             inventer ensemble.
         </p>
 
-        <article>
 
-            <div>
+        <ul>
+
+            <li>
+                <img src="/assets/svgs/picto-nounours.svg" width="170" height="100" alt="Photo de "/>
                 <h3>Jérôme</h3>
                 <p><small>Co-fondateur</small><br/>Intégrateur web</p>
-                <img src="" width="160" height="96" alt="Photo de "/>
-            </div>
 
-            <div>
+            </li>
+
+            <li>
                 <h3>Léa</h3>
                 <p>Graphiste et webdesigner</p>
-                <img src="" width="160" height="96" alt="Photo de "/>
-            </div>
+                <img src="/assets/svgs/picto-satan.svg" width="170" height="100" alt="Photo de "/>
+            </li>
 
-            <div>
+            <li>
                 <h3>Lou</h3>
                 <p>Graphiste et webdesigner</p>
-                <img src="" width="160" height="96" alt="Photo de "/>
+                <img src="/assets/svgs/picto-moustache.svg" width="170" height="100" alt="Photo de "/>
 
-            </div>
+            </li>
 
-            <div>
+            <li>
+                <img src="/assets/svgs/picto-fleur.svg" width="170" height="100" alt="Photo de "/>
                 <h3>Michael</h3>
                 <p><small>Co-fondateur</small><br/>Dev. <small>full stack</small></p>
-                <img src="" width="160" height="96" alt="Photo de "/>
-            </div>
+            </li>
 
-            <div>
+            <li>
                 <h3>Xavier</h3>
                 <p>Gestionnaire projet et dev.</p>
-                <img src="" width="160" height="96" alt="Photo de "/>
-            </div>
+                <img src="/assets/svgs/picto-licorne.svg" width="170" height="100" alt="Photo de "/>
+            </li>
 
-            <div>
+            <li>
+                <img src="/assets/svgs/picto-roi.svg" width="170" height="100" alt="Photo de "/>
                 <h3>Yannick</h3>
                 <p><small>Co-fondateur</small><br/>Dev. <small>full stack senior</small></p>
-                <img src="" width="160" height="96" alt="Photo de "/>
-            </div>
+            </li>
 
-        </article>
-
-    </section>
-
-    <!-- SECTION PROJETS -->
-    <section id="projets">
-
-        <h2>Nos solutions numériques<small>Etudes de cas</small></h2>
-
-        <nav class="slider__content">
-
-            {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
-
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
-                         height="157"/>
-
-                    {{ p.client.name }}
-
-                    <em>
-                        {% for tag in p.tags %}
-                            {{ tag }}{% if not loop.last %} •{% endif %}
-                        {% endfor %}
-                    </em>
-                </a>
-
-            {% endfor %}
-
-        </nav>
-
-        <div class="slider__nav">
-
-            <input
-                    alt="element précédent"
-                    id="btn-prec"
-                    src="../assets/svgs/picto-groupe-pointe-on.svg"
-                    type="image"/>
-
-            <div class="separation"></div>
-
-            <input
-                    alt="element suivant"
-                    id="btn-next"
-                    src="../assets/svgs/picto-groupe-pointe-on.svg"
-                    type="image"/>
-        </div>
+        </ul>
 
     </section>
 

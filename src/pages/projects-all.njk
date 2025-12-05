@@ -40,18 +40,18 @@
 <main>
 
     <!-- LISTE DES TAGS -->
-    <section id="tags">
-        <em>
-            {% set uniqueTags = projects | getUniqueTags(project) %}
-            {% for tag in uniqueTags %}
-                <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-                {% if not loop.last %} •{% endif %}
-            {% endfor %}
-        </em>
+    <section id="tags" class="tags-list">
+
+        {% set uniqueTags = projects | getUniqueTags(project) %}
+        {% for tag in uniqueTags %}
+            <a class="btn-tag" data-tag="{{ tag }}" title="Voir les projets {{ tag }}">{{ tag }}</a>
+            {#                {% if not loop.last %} •{% endif %} #}
+        {% endfor %}
+
     </section>
 
     <!-- SECTION PROJECTS -->
-    <section id="projets">
+    <section id="projects">
 
         <nav class="slider__content">
 
@@ -74,22 +74,22 @@
             {% endfor %}
 
         </nav>
-        <div class="slider__nav">
+        {#        <div class="slider__nav"> #}
 
-            <input
-                    alt="element précédent"
-                    id="btn-prec"
-                    src="../assets/svgs/picto-groupe-pointe-on.svg"
-                    type="image"/>
+        {#            <input #}
+        {#                    alt="element précédent" #}
+        {#                    id="btn-prec" #}
+        {#                    src="../assets/svgs/picto-groupe-pointe-on.svg" #}
+        {#                    type="image"/> #}
 
-            <div class="separation"></div>
+        {#            <div class="separation"></div> #}
 
-            <input
-                    alt="element suivant"
-                    id="btn-next"
-                    src="../assets/svgs/picto-groupe-pointe-on.svg"
-                    type="image"/>
-        </div>
+        {#            <input #}
+        {#                    alt="element suivant" #}
+        {#                    id="btn-next" #}
+        {#                    src="../assets/svgs/picto-groupe-pointe-on.svg" #}
+        {#                    type="image"/> #}
+        {#        </div> #}
     </section>
 
 </main>

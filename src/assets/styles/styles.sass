@@ -13,7 +13,7 @@ body
   line-height: var(--body-lineHeight-default)
   container: cadre inline-size
   max-width: var(--body-width-default)
-  margin: 40px auto 20px auto
+  margin: 40px auto var(--space-md) auto
 
 
   > header
@@ -37,20 +37,19 @@ body
       background-repeat: no-repeat
       background-position: top 30px left 30px
 
-
     nav, menu
       display: flex
       flex-flow: row wrap
       justify-content: flex-start
       align-items: center
-      column-gap: 20px
+      column-gap: var(--space-md)
 
     nav
       position: absolute
       top: 0
       right: 0
       z-index: 2
-      padding: 0 30px
+      padding: 10px 30px
       background-color: var(--body-backgroundColor-base)
       overflow: hidden
       &:not(.open)
@@ -74,7 +73,6 @@ body
       font-family: var(--fontFamily-title)
       font-size: var(--fontSize-xs)
       text-transform: uppercase
-      padding: 10px 0
       overflow: hidden
       height: 60px
       width: 555px
@@ -84,7 +82,6 @@ body
         flex-flow: row wrap
         justify-content: flex-start
         align-items: center
-
 
     > span
       position: absolute
@@ -106,10 +103,9 @@ body
       > span
         color: var(--color-white)
 
-
     aside
       max-width: 226px
-      padding: 30px 20px 0 0
+      padding: 30px var(--space-md) 0 0
       background-color: var(--body-backgroundColor-base)
       h1
         font-size: var(--fontSize-xl)
@@ -119,13 +115,15 @@ body
         font-size: var(--fontSize-sm)
         font-weight: 400
 
+
     // ----- responsivity
     @container heading (width < 1400px)
+      height: 180px
       > span
         display: none
       > a:first-of-type
         width: 70px
-        height: 70px
+        height: 180px
         background-color: transparent
         background-image: url("/assets/svgs/picto-pointe-green.svg")
         background-position: top 10px left 10px
@@ -135,7 +133,7 @@ body
         margin: 0 auto
         max-width: 500px
         text-align: center
-        padding: 20px
+        padding: var(--space-md)
       &.project
         min-height: 360px
         background-position: center center
@@ -149,7 +147,7 @@ body
           flex-flow: row nowrap
           justify-content: center
           align-items: center
-          column-gap: 40px
+          column-gap: var(--space-lg)
           background-color: transparent
           max-width: none
           padding: 0
@@ -268,6 +266,7 @@ ul.bulleted-list
     &::before
       content: "-"
 
+
 .btn
   position: relative
   display: inline-flex
@@ -278,7 +277,7 @@ ul.bulleted-list
   font-size: var(--fontSize-defaut)
   text-transform: uppercase
   color: var(--color-black)
-  padding: 7px 20px
+  padding: 7px var(--space-md)
   border: none
   cursor: pointer
   text-decoration: none
@@ -312,7 +311,6 @@ ul.bulleted-list
         left: 0
         transform: rotate(-180deg) translateX(50%)
 
-
   &-page-nav
     background-color: var(--surface-backgroundColor-accent)
     &::after
@@ -324,6 +322,22 @@ ul.bulleted-list
     &:hover, .selected
       &::after
         content: url("/assets/svgs/picto-groupe-pointe-on.svg")
+  &-tag
+    display: inline-flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: center
+    background-color: var(--color-neutre-darkest)
+    padding: var(--space-sm)
+    border: 1px solid var(--color-neutre-darker)
+    font-size: var(--fontSize-xs)
+    color: var(--color-white)
+    text-transform: uppercase
+    &:hover
+      border-color: var(--color-green)
+      color: var(--color-green)
+    &:focus, &.selected
+      border-color: var(--color-green)
 
 
 .tags-list
@@ -350,8 +364,8 @@ ul.bulleted-list
   > article
     display: grid
     grid-template-columns: 1fr repeat(2, minmax(300px, 470px)) 1fr
-    column-gap: 40px
-    row-gap: 20px
+    column-gap: var(--space-lg)
+    row-gap: var(--space-md)
     &::before
       grid-area: linea
     &::after
@@ -370,9 +384,9 @@ ul.bulleted-list
       flex-flow: column nowrap
       justify-content: flex-start
       align-items: flex-start
-      row-gap: 20px
+      row-gap: var(--space-md)
       background-color: var(--surface-backgroundColor-secondary)
-      padding: 40px
+      padding: var(--space-lg)
       font-size: var(--fontSize-md)
       font-family: var(--fontFamily-title)
       h3
@@ -394,26 +408,31 @@ ul.bulleted-list
         grid-area: carde
 
 
+#tags
+  &.tags-list
+    justify-content: space-between
+    > *
+      flex: 0 1 auto
+
+
 #presentation, #equipe
-  h2, p
-    display: block
-    text-align: center
-    margin-bottom: 30px
-  > article
+  p
+    margin-bottom: var(--space-lg)
+  > ul
     display: flex
     flex-flow: row wrap
-    justify-content: center
+    justify-content: space-around
     align-items: stretch
-    gap: 20px
-    > div
-      flex: 0 1 210px
+    gap: var(--space-lg) var(--space-md)
+    > li
+      flex: 1 1 10%
       display: flex
       flex-flow: column nowrap
       justify-content: flex-start
       align-items: center
-      row-gap: 20px
+      row-gap: var(--space-md)
       background-color: var(--surface-backgroundColor-secondary)
-      padding: 20px
+      padding: var(--space-md)
       font-family: var(--fontFamily-title)
       font-size: var(--fontSize-sm)
       h3
@@ -422,22 +441,36 @@ ul.bulleted-list
         font-family: var(--fontFamily-default)
         text-transform: none
         color: var(--text-color-default)
+        text-align: center
 
 
 #equipe
-  > article
-    > div
+  p
+    column-count: 2
+    column-width: 300px
+    column-gap: var(--space-lg)
+    img
+      display: block
+      max-width: 100%
+      height: auto
+      margin-bottom: var(--space-sm)
+  > ul
+    > li
+      flex: 0 1 210px
       align-items: stretch
+      > h3
+        color: var(--text-color-default)
       > p
-        font-size: var(--fontSize-md)
+        font-size: var(--fontSize-defaut)
         text-align: left
         > small
           font-size: var(--fontSize-xs)
           font-weight: var(--fontWeight-thin)
-    img
-      width: 160px
-      height: 96px
-      background-color: var(--surface-backgroundColor-primary)
+      > img
+        width: 100%
+        height: auto
+        // background-color: var(--surface-backgroundColor-primary)
+
 
 #expertises
   h2
@@ -447,7 +480,7 @@ ul.bulleted-list
     display: grid
     grid-template-columns: 1fr repeat(3, minmax(300px, 300px)) 1fr
     grid-template-areas: "linea carda cardb cardc lineb" "linea cardd cardd cardd lineb"
-    gap: 40px
+    gap: var(--space-lg)
     &::before
       grid-area: linea
     &::after
@@ -507,7 +540,7 @@ ul.bulleted-list
       &:nth-of-type(4)
         grid-area: cardd
         row-gap: 10px
-        padding: 40px 20px
+        padding: var(--space-lg)  var(--space-md)
         &::after, &::before
           display: none
         em
@@ -521,7 +554,7 @@ ul.bulleted-list
             display: block
             position: absolute
             content: ""
-            width: 40px
+            width: var(--space-lg)
             height: 30px
             background-repeat: no-repeat
           &::before
@@ -558,15 +591,15 @@ ul.bulleted-list
 #expertises, #creation-web, #graphic-design, #laboratoire
   margin-bottom: 100px
 
-#projets
+#projets, #projects
   > .slider__content
     display: flex
     flex-flow: row nowrap
     justify-content: flex-start
     align-items: flex-start
-    gap: 20px
+    gap: var(--space-md)
     overflow: hidden
-    margin-bottom: 20px
+    margin-bottom: var(--space-md)
     > a
       display: flex
       flex-flow: column nowrap
@@ -589,7 +622,7 @@ ul.bulleted-list
     flex-flow: row wrap
     justify-content: space-around
     align-items: center
-    column-gap: 20px
+    column-gap: var(--space-md)
     width: 100%
     > *:first-child
       transform: rotate(180deg)
@@ -599,6 +632,27 @@ ul.bulleted-list
         flex: 0 0 80%
         height: 1px
         background-color: var(--color-green)
+
+
+#projets
+  &.container-projets
+    container-type: inline-size
+    container-name: projets
+  @container projets (width < 1400px)
+    > .slider__content
+      flex-flow: row nowrap
+      width: 100%
+      overflow-x: visible
+      scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
+      scrollbar-width: thin
+      padding-bottom: var(--space-md)
+    >.slider__nav
+      display: none
+
+#projects
+  > .slider__content
+    flex-wrap: wrap
+
 
 
 #contact
@@ -615,7 +669,7 @@ ul.bulleted-list
   h3
     display: flex
     align-items: center
-    column-gap: 20px
+    column-gap: var(--space-md)
 
 
 #project-details
@@ -627,7 +681,7 @@ ul.bulleted-list
     flex-flow: row wrap
     justify-content: space-between
     align-items: stretch
-    column-gap: 40px
+    column-gap: var(--space-lg)
     margin-bottom: 50px
     &::after
       content: ""
@@ -643,10 +697,10 @@ ul.bulleted-list
       flex-flow: column nowrap
       justify-content: flex-start
       align-items: stretch
-      row-gap: 20px
+      row-gap: var(--space-md)
       background-color: var(--surface-backgroundColor-secondary)
       flex: 0 0 400px
-      padding: 40px 40px 70px 40px
+      padding: var(--space-lg)  var(--space-lg)  70px var(--space-lg)
       height: 512px
       > section
         display: flex
@@ -670,7 +724,7 @@ ul.bulleted-list
     > .btn
       position: absolute
       bottom: 10px
-      right: 20px
+      right: var(--space-md)
 
   .masonry-container
     width: 100%
@@ -736,7 +790,7 @@ ul.bulleted-list
   > nav
     display: grid
     grid-template-columns: minmax(50px, 150px) repeat(2, minmax(300px, 1fr)) minmax(50px, 150px)
-    gap: 40px
+    gap: var(--space-lg)
     &::before, &::after
       grid-column: span 1
       justify-self: center
@@ -791,7 +845,7 @@ ul.bulleted-list
   > nav
     display: grid
     grid-template-columns: minmax(50px, 150px) repeat(2, minmax(300px, 1fr)) minmax(50px, 150px)
-    gap: 40px
+    gap: var(--space-lg)
     &::before, &::after
       grid-column: span 1
       justify-self: center
@@ -812,7 +866,7 @@ ul.bulleted-list
       > h3
         text-align: center
         color: var(--text-color-primary)
-        margin-bottom: 20px
+        margin-bottom: var(--space-md)
       > p
         display: flex
         flex-flow: row wrap
@@ -829,7 +883,7 @@ ul.bulleted-list
 @media (width < 1400px)
   body
     background-image: none
-    margin: 0 5px 20px 5px
+    margin: 0 5px var(--space-md) 5px
     h2
       font-size: var(--fontSize-lg)
     h3
@@ -837,13 +891,14 @@ ul.bulleted-list
 
     > main
       > section
-        padding: 0 20px
+        padding: 0 var(--space-md)
         h2
           display: block !important
           text-align: center !important
           padding-right: 0 !important
           &.with-line::after
             display: none !important
+
 
       #expertises
         h2
@@ -856,7 +911,7 @@ ul.bulleted-list
             display: none
           > .link, a
             font-size: var(--fontSize-xs)
-            padding: 15px 0px
+            padding: 15px 0
             &::before
               width: 50px
               height: 50px
@@ -870,6 +925,7 @@ ul.bulleted-list
                 padding: 10px
                 &::before,&::after
                   display: none
+
       #infos-contact, #mentions
         h2
           padding-right: 0
@@ -881,18 +937,8 @@ ul.bulleted-list
           > a
             font-size: var(--fontSize-sm)
             &:nth-child(2)
-              padding: 20px
-      #projets
-        > .slider__content
-          flex-flow: row nowrap
-          width: 100%
-          overflow: hidden
-          overflow-x: scroll
-          scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
-          scrollbar-width: thin
-          padding-bottom: 20px
-        >.slider__nav
-          display: none
+              padding: var(--space-md)
+
       #project-details
         width: auto
         > header
@@ -910,10 +956,10 @@ ul.bulleted-list
                   width: 50px
         .masonry-container
           column-count: 1
-          > img
-            // max-width: 300px
+
+
       #contact
-        --marge: 20px
+        --marge: var(--space-md)
         max-width: calc(100vw - var(--marge) * 2)
         margin-right: var(--marge)
         margin-left: var(--marge)
@@ -921,7 +967,7 @@ ul.bulleted-list
           flex-direction: column
           row-gap: 10px
 
-@media (width < 600px)
+@media (width < 1400px)
   body
     > header
       > aside
@@ -929,5 +975,5 @@ ul.bulleted-list
     > footer
       flex-flow: column nowrap
       row-gap: 10px
-      margin-right: 20px
-      margin-left: 20px
+      margin-right: var(--space-md)
+      margin-left: var(--space-md)
