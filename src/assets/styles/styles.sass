@@ -22,7 +22,7 @@ body
     background-position: top left
     background-size: cover
     margin-bottom: 80px
-    &.container-heading
+    &.container
       container-type: inline-size
       container-name: heading
 
@@ -135,13 +135,11 @@ body
 
 
     // ----- responsivity
-    @container heading (width < 1400px)
-      height: 180px
+    @container heading (width < 1180px)
       > span
         display: none
       > a:first-of-type
         width: 70px
-        height: 180px
         background-color: transparent
         background-image: url("/assets/svgs/picto-pointe-green.svg")
         background-position: top 10px left 10px
@@ -487,10 +485,12 @@ ul.bulleted-list
       > img
         width: 100%
         height: auto
-        // background-color: var(--surface-backgroundColor-primary)
 
 
 #expertises
+  &.container
+    container-type: inline-size
+    container-name: expertises
   h2
     background-color: var(--body-backgroundColor-base)
     padding-right: 50px
@@ -583,6 +583,32 @@ ul.bulleted-list
             bottom: 0
             right: 0
             background-image: url("/assets/svgs/picto-guillemet-fermante.svg")
+  @container expertises (width < 900px)
+    h2
+      padding-right: 0
+    > nav
+      grid-template-columns: repeat(3, minmax(100px, 1fr))
+      grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
+      gap: 10px
+      &::after, &::before
+        display: none
+      > .link, a
+        font-size: var(--fontSize-xs)
+        padding: 15px 0
+        &::before
+          width: 50px
+          height: 50px
+          background-size: cover
+        &::after
+          display: none
+        > em
+          display: none
+        &:nth-child(4)
+          em
+            padding: 10px
+            &::before,&::after
+              display: none
+
 
 
 #creation-web
@@ -667,10 +693,10 @@ ul.bulleted-list
     >.slider__nav
       display: none
 
+
 #projects
   > .slider__content
     flex-wrap: wrap
-
 
 
 #contact
@@ -918,32 +944,6 @@ ul.bulleted-list
             display: none !important
 
 
-      #expertises
-        h2
-          padding-right: 0
-        > nav
-          grid-template-columns: repeat(3, minmax(100px, 1fr))
-          grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
-          gap: 10px
-          &::after, &::before
-            display: none
-          > .link, a
-            font-size: var(--fontSize-xs)
-            padding: 15px 0
-            &::before
-              width: 50px
-              height: 50px
-              background-size: cover
-            &::after
-              display: none
-            > em
-              display: none
-            &:nth-child(4)
-              em
-                padding: 10px
-                &::before,&::after
-                  display: none
-
       #infos-contact, #mentions
         h2
           padding-right: 0
@@ -975,7 +975,6 @@ ul.bulleted-list
         .masonry-container
           column-count: 1
 
-
       #contact
         --marge: var(--space-md)
         max-width: calc(100vw - var(--marge) * 2)
@@ -987,9 +986,6 @@ ul.bulleted-list
 
 @media (width < 1400px)
   body
-    > header
-      > aside
-        max-width: 90vw
     > footer
       flex-flow: column nowrap
       row-gap: 10px
