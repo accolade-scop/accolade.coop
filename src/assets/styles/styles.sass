@@ -37,51 +37,68 @@ body
       background-repeat: no-repeat
       background-position: top 30px left 30px
 
-    nav, menu
-      display: flex
-      flex-flow: row wrap
-      justify-content: flex-start
-      align-items: center
-      column-gap: var(--space-md)
 
     nav
+      position: fixed
+      top: 4%
+      right: 15%
+      z-index: 2
+      opacity: 1
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-end
+      align-items: center
+      column-gap: var(--space-md)
+      > a
+        background-color: var(--surface-backgroundColor-secondary)
+        font-size: var(--fontSize-xs)
+        padding: 10px
+      &:not(.open)
+        display: flex
+        > a
+          opacity: 1
+          transition: opacity .5s ease-in-out
+        > menu
+          top: -900px
+
+      &.open
+        > a
+          opacity: 0
+        > menu
+          top: 0
+
+
+    menu
       position: absolute
       top: 0
       right: 0
-      z-index: 2
-      padding: 10px 30px
-      background-color: var(--body-backgroundColor-base)
-      overflow: hidden
-      &:not(.open)
-        display: inline-block
-        > menu
-          display: none
-          width: 0
-          height: 0
-      a
-        display: flex
-        flex-flow: column nowrap
-        justify-content: flex-start
-        align-items: center
-        column-gap: 10px
-        font-size: var(--fontSize-xs)
-      &.open
-        > a
-          display: none
-
-    menu
+      z-index: 100
+      padding: 20px
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      align-items: stretch
+      column-gap: var(--space-md)
       font-family: var(--fontFamily-title)
       font-size: var(--fontSize-xs)
       text-transform: uppercase
-      overflow: hidden
-      height: 60px
-      width: 555px
-      transition: all 3s ease-in-out
-      a
-        display: flex
-        flex-flow: row wrap
-        justify-content: flex-start
-        align-items: center
+      background-color: var(--surface-backgroundColor-secondary)
+      transition: top .3s ease-in-out
+      text-align: center
+      > li
+
+        &:first-child
+          align-self: flex-end
+          > a
+            border: none
+        > a
+          display: block
+          padding: 10px 0
+          border-top: 1px solid var(--color-neutre-darker)
+          white-space: nowrap
+          &:hover, &:active
+            color: var(--color-white)
+
 
     > span
       position: absolute
@@ -102,6 +119,7 @@ body
         height: 90px
       > span
         color: var(--color-white)
+
 
     aside
       max-width: 226px
