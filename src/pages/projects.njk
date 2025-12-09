@@ -1,4 +1,4 @@
-<header  class="container project" style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.logo.src }}');">
+<header  class="project" style="background-image: url('/assets/imgs/{{ project.slug }}/{{ project.logo.src }}');">
 
     <a href="../index.html" title="Aller à la page d'accueil"></a>
 
@@ -38,12 +38,12 @@
 
 </header>
 
-<main>
+<main class="container">
 
     <!-- SECTION GALERIE -->
     <section id="project-details">
 
-        <h2 class="with-line">{{ project.client.name }}<small>{{ project.year }} - {{ project.name }}</small></h2>
+        <h2 class="">{{ project.client.name }}<small>{{ project.year }} - {{ project.name }}</small></h2>
 
         <header>
             <!-- banner -->
@@ -98,7 +98,7 @@
 
 
     <!-- SECTION PROJETS -->
-    <section id="projets" class="container-projets">
+    <section id="projets" class="container">
 
         <h2>Projets<small>similaires</small></h2>
 
