@@ -16,27 +16,36 @@ body
     container-type: inline-size
 
   > header
+    --menu-width: 120px
+    --menu-padding: 10px
+    --menu-backgroundColor: var(--surface-backgroundColor-primary)
+    --menu-picto-width: 30px
+    --menu-positionX: 20px
     position: relative
     background-repeat: no-repeat
     background-position: top left
     background-size: cover
     margin-bottom: 80px
+
     > a:first-of-type
+      --logo-height: 455px
+      --logo-width: 113px
       color: transparent
       font-size: 0
       display: block
-      width: 113px
-      height: 455px
-      background-color: var(--body-backgroundColor-base)
+      width: var(--logo-width)
+      height: var(--logo-height)
+      background-color: var(--menu-backgroundColor)
       background-image: url("/assets/svgs/logo-accolade-vertical.svg")
       background-repeat: no-repeat
       background-position: top 30px left 30px
 
 
     nav
+
       position: fixed
       top: 0
-      right: 15%
+      right: var(--menu-positionX)
       z-index: 2
       opacity: 1
       display: flex
@@ -46,12 +55,15 @@ body
       column-gap: var(--space-md)
 
       > a
-        background-color: var(--surface-backgroundColor-secondary)
+        background-color: var(--menu-backgroundColor)
         font-size: var(--fontSize-xs)
-        padding: 10px
-        width: 200px
+        padding: var(--menu-padding)
+        width: var(--menu-width)
         display: flex
         justify-content: center
+        > img
+          width: var(--menu-picto-width)
+          height: var(--menu-picto-width)
       &:not(.open)
         > menu
           top: -900px
@@ -65,7 +77,7 @@ body
       top: 0
       right: 0
       z-index: 100
-      padding: 20px
+      padding: var(--menu-padding)
       display: flex
       flex-flow: column nowrap
       justify-content: flex-start
@@ -74,16 +86,19 @@ body
       font-family: var(--fontFamily-title)
       font-size: var(--fontSize-xs)
       text-transform: uppercase
-      background-color: var(--surface-backgroundColor-secondary)
+      background-color: var(--menu-backgroundColor)
       transition: top .3s ease-in-out
       text-align: center
-      width: 200px
+      width: var(--menu-width)
       > li
 
         &:first-child
           > a
             border: none
             padding: 0
+            > img
+              width: var(--menu-picto-width)
+              height: var(--menu-picto-width)
         > a
           display: block
           padding: 10px 0
@@ -91,6 +106,7 @@ body
           white-space: nowrap
           &:hover, &:active
             color: var(--color-white)
+
 
 
     > span
@@ -623,14 +639,6 @@ ul.bulleted-list
     display: flex
     align-items: center
     column-gap: var(--space-md)
-  @container contact (width < 1000px)
-    --marge: var(--space-md)
-    max-width: calc(100vw - var(--marge) * 2)
-    margin-right: var(--marge)
-    margin-left: var(--marge)
-    h3
-      flex-direction: column
-      row-gap: 10px
 
 #project-details
   margin-right: auto

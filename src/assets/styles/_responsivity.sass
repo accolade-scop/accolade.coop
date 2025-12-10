@@ -1,3 +1,8 @@
+@container body (min-width: 1400px)
+  body
+    > header
+      nav
+        --menu-positionX: calc(((100dvw - 1400px) / 2) + 20px)
 @container body (max-width: 1400px)
   body
     h2
@@ -26,6 +31,7 @@
             display: none
           > .btn-projects-nav
             width: 120px
+
     > main
       padding: 0 20px
 
@@ -53,11 +59,11 @@
 @container body (max-width: 1180px)
   body
     > header
-      //height: 300px
       > span
         display: none
       > a:first-of-type
-        width: 70px
+        --logo-height: 100px
+        --logo-width: 70px
         background-color: transparent
         background-image: url("/assets/svgs/picto-pointe-green.svg")
         background-position: top 10px left 10px
@@ -124,6 +130,19 @@
           content: " - "
 @container body (max-width: 680px)
   body
+    > main
+
+      #contact
+        --marge: var(--space-md)
+        max-width: calc(100vw - var(--marge) * 2)
+        margin-right: var(--marge)
+        margin-left: var(--marge)
+        h2
+          font-size: var(--fontSize-md)
+          text-align: center
+        h3
+          flex-direction: column
+          row-gap: 10px
     > footer
       flex-flow: column nowrap
       row-gap: 10px
