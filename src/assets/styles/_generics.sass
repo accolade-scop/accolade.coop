@@ -68,6 +68,8 @@ body
         > menu
           top: -900px
       &.open
+        > a
+          display: none
         > menu
           top: 0
 
@@ -379,7 +381,7 @@ ul.bulleted-list
   &.tags-list
     justify-content: space-between
     > *
-      flex: 0 1 auto
+      flex: 1 1 auto
 
 
 #presentation, #equipe
@@ -410,7 +412,10 @@ ul.bulleted-list
         color: var(--text-color-default)
         text-align: center
 
-
+#presentation
+  > ul
+    > li
+      min-width: 250px
 #equipe
   p
     column-count: 2
@@ -422,6 +427,7 @@ ul.bulleted-list
       height: auto
       margin-bottom: var(--space-sm)
   > ul
+    justify-content: center
     > li
       flex: 0 1 210px
       align-items: stretch
@@ -600,34 +606,15 @@ ul.bulleted-list
       background-color: var(--color-green)
 
 
-#projets
-  &.container
-    container-type: inline-size
-    container-name: projets
-  @container projets (width < 1400px)
-    > .slider__content
-      flex-flow: row nowrap
-      width: 100%
-      overflow-x: visible
-      scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
-      scrollbar-width: thin
-      padding-bottom: var(--space-md)
-    >.slider__nav
-      display: none
-
-
-#projects
-  > .slider__content
-    flex-wrap: wrap
-
 
 #contact
+  --contact-padding: var(--space-md)
   display: flex
   flex-flow: column nowrap
   justify-content: center
   align-items: center
   background-color: var(--surface-backgroundColor-secondary)
-  padding: 30px
+  padding: var(--contact-padding)
   max-width: 980px
   &.container
     container-type: inline-size
