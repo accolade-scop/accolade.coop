@@ -2,7 +2,7 @@
   body
     > header
       nav
-        --menu-positionX: calc(((100dvw - 1400px) / 2) + 20px)
+        --menu-positionX: calc(((100dvw - 1400px) / 2) + var(--space-md) )
 
 @container body (max-width: 1400px)
   body
@@ -74,7 +74,7 @@
         --logo-width: 70px
         background-color: transparent
         background-image: url("/assets/svgs/picto-pointe-green.svg")
-        background-position: top 20px left 20px
+        background-position: top var(--space-md)  left var(--space-md)
       &.project
         > a:first-of-type
           --logo-height: 250px
@@ -84,11 +84,13 @@
         max-width: 500px
         text-align: center
         padding: var(--space-md)
+
     > main
+
       > section
         padding: 0 var(--space-md)
 
-      #infos-contact, #mentions
+      #infos-contact
         h2
           padding-right: 0
         > nav
@@ -101,18 +103,21 @@
             &:nth-child(2)
               padding: var(--space-md)
 
+
       #expertises
         > nav
           grid-template-columns: repeat(3, minmax(100px, 1fr))
           grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
-          gap: 10px
+          gap: var(--space-sm)
           &::after, &::before
             display: none
+
       #projets, #projects
         .slider__nav
           justify-content: center
           .separation
-            flex: 0 0 40px
+            flex: 0 0 var(--space-lg)
+
       .mosaic
         > article
           display: flex
@@ -121,6 +126,18 @@
           align-items: center
           > img
             display: none
+
+      #mentions
+        > section
+          grid-template-columns: repeat(auto-fit, minmax(380px,1fr))
+          gap: var(--space-sm)
+          &::after, &::before
+            display: none
+          > dl
+            width: auto
+            > dt
+              margin-bottom: var(--space-sm)
+              width: auto
 
 @container body (max-width: 800px)
   body
@@ -142,24 +159,19 @@
               display: none
             &:nth-child(4)
               em
-                padding: 10px
+                padding: var(--space-sm)
                 &::before,&::after
                   display: none
 
-@container body (min-width: 680px)
-  body
-    > footer
-      > div
-        > *:not(:first-child)::before
-          content: " - "
 @container body (max-width: 680px)
   body
     > header
       &.project
         > aside
           column-gap: var(--space-sm)
-    > main
 
+
+    > main
       #contact
         --marge: var(--space-md)
         --contact-padding: var(--space-md) var(--space-sm)
@@ -171,7 +183,9 @@
           text-align: center
         h3
           flex-direction: column
-          row-gap: 10px
+          row-gap: var(--space-sm)
+
+
       #equipe
         > ul
           row-gap: var(--space-md)
@@ -182,9 +196,20 @@
             img
               display: none
 
+
+      #mentions
+        > section
+          grid-template-columns: 1fr
+          > dl
+            > dd
+              flex-direction: column
+              row-gap: var(--space-xs)
+              text-align: left
+
+
     > footer
       flex-flow: column nowrap
-      row-gap: 10px
+      row-gap: var(--space-sm)
       margin-right: var(--space-md)
       margin-left: var(--space-md)
       > div
@@ -195,3 +220,10 @@
         text-align: center
         max-width: 260px
         font-size: var(--fontSize-xs)
+
+@container body (min-width: 680px)
+  body
+    > footer
+      > div
+        > *:not(:first-child)::before
+          content: " - "
