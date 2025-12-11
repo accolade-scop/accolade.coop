@@ -96,14 +96,13 @@
     </section>
 
     <!-- SECTION PROJETS -->
-    {% set id = "projets" %}
-    {% set title = "Projets" %}
-    {% set subtitle = "Similaires" %}
-
-    {% set items = project | sortbyrelatedness(projects, 10) %}
-    {% set timeout = 1500 %}
-
-    {% include "components/slider.njk" %}
+    {% from "components/slider.njk" import slider %}
+    {{ slider(
+        "projets",
+        "Projets",
+        "Similaires",
+        project | sortbyrelatedness(projects)
+    ) }}
 
     <!-- SECTION CONTACT -->
     <section id="contact">

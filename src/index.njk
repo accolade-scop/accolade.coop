@@ -85,13 +85,13 @@
 
 
     <!-- SECTION PROJETS -->
-    {% set id = "projets" %}
-    {% set title = "Nos projets" %}
-    {% set subtitle = "Études de cas" %}
-    {% set items = projects | selectattr("home", "equalto", true) %}
-    {% set timeout = 1500 %}
-
-    {% include "components/slider.njk" %}
+    {% from "components/slider.njk" import slider %}
+    {{ slider(
+        "projets",
+        "Projets",
+        "Similaires",
+        projects | selectattr("home", "equalto", true)
+    ) }}
 
 
     <!-- SECTION CONTACT -->

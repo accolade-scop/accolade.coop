@@ -6,11 +6,40 @@ document.addEventListener("DOMContentLoaded", () => {
         const timeout = 2000;
 
         const items = [...container.children];
-        console.log(items);
-        const itemWidth = items[0].getBoundingClientRect().width + parseInt(getComputedStyle(container).gap || 0);
+        let itemWidth = items[0].getBoundingClientRect().width + parseInt(getComputedStyle(container).gap || 0);
         let currentIndex = 0;
-        const maxIndex = items.length - 5;
-        const maxWidth = items.length * itemWidth;
+        let maxWidth = items.length * itemWidth;
+
+        // ******************************************************
+        // Cache les flèches si la taille des projets ne dépasse pas la largeur du slider
+        // ******************************************************
+        function updateSliderState() {
+            // recalcul des mesures
+            const newItemWidth = items[0].getBoundingClientRect().width + parseInt(getComputedStyle(container).gap || 0);
+            const newMaxWidth = items.length * newItemWidth;
+
+            itemWidth = newItemWidth;
+            maxWidth = newMaxWidth;
+
+            const nav = parent.querySelector(".slider__nav");
+            if (nav) {
+                maxWidth <= container.clientWidth ? nav.style.display = "none" : nav.style.display = "";
+            }
+        }
+
+        let resizeRunning = false;
+
+        window.addEventListener("resize", () => {
+            if (resizeRunning) return;
+            resizeRunning = true;
+
+            requestAnimationFrame(() => {
+                updateSliderState();
+                resizeRunning = false;
+            });
+        });
+
+
 
         // Navigation
         function goNext() {
