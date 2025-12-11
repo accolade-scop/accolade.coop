@@ -1,0 +1,27 @@
+<section id="{{ id }}" class="slider-component">
+    <h2>{{ title }}<small>{{ subtitle }}</small></h2>
+
+    <nav class="slider__content" data-slider>
+        {% for item in items %}
+            <a href="/projets/{{ item.slug }}.html" title="voir le detail du projet">
+                <img src="/assets/imgs/{{ item.slug }}/{{ item.banner.src }}" alt="{{ item.banner.description }}" width="248"
+                                         height="157"/>
+               {{ item.client.name }}
+
+               <em>
+                   {% for tag in item.tags %}
+                       {{ tag }}{% if not loop.last %} •{% endif %}
+                   {% endfor %}
+               </em>
+            </a>
+        {% endfor %}
+    </nav>
+
+    <div class="slider__nav" data-arrows>
+        <input alt="element précédent" class="btn-prev" type="image" src="/assets/svgs/picto-groupe-pointe-on.svg">
+        <div class="separation"></div>
+        <input alt="element suivant" class="btn-next" type="image" src="/assets/svgs/picto-groupe-pointe-on.svg">
+    </div>
+
+</section>
+<script src="/assets/js/slider.js"></script>

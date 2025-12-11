@@ -95,49 +95,15 @@
 
     </section>
 
-
     <!-- SECTION PROJETS -->
-    <section id="projets" class="container">
+    {% set id = "projets" %}
+    {% set title = "Projets" %}
+    {% set subtitle = "Similaires" %}
 
-        <h2>Projets<small>similaires</small></h2>
+    {% set items = project | sortbyrelatedness(projects, 10) %}
+    {% set timeout = 1500 %}
 
-        <nav class="slider__content">
-
-            {% for p in project | sortbyrelatedness(projects) %}
-                <a href="/projets/{{ p.slug }}.html">
-
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
-                         height="157"/>
-
-                    {{ p.client.name }}
-
-                    <em>{{ p.name }}</em>
-
-                </a>
-
-            {% endfor %}
-
-        </nav>
-
-        <div class="slider__nav">
-
-            <input
-                    alt="element précédent"
-                    id="btn-prec"
-                    src="../assets/svgs/picto-groupe-pointe-on.svg"
-                    type="image"/>
-
-            <div class="separation"></div>
-
-            <input
-                    alt="element suivant"
-                    id="btn-next"
-                    src="../assets/svgs/picto-groupe-pointe-on.svg"
-                    type="image"/>
-        </div>
-
-    </section>
-
+    {% include "components/slider.njk" %}
 
     <!-- SECTION CONTACT -->
     <section id="contact">

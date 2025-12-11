@@ -30,6 +30,7 @@ const projectsList = [
         slug: "jules-bourgoin",
         year: 2025,
         name: "Réalisation d'un thème OMEKA S",
+        home: true,
         description: [
             "Exploitation numérique et scientifique des archives de Jules Bourgoin à partir de la numérisation d'une sélection du fonds de l'architecte et ornemaniste Jules Bourgoin (1838-1908) conservé à l'INHA",
             "",
@@ -68,6 +69,7 @@ const projectsList = [
         slug: "espoir54",
         year: 2024,
         name: "Site internet",
+        home: true,
         description: [
             "Espoir 54 est une association proposant à toute personne en situation de souffrance psychique un lieu d'accueil et d'entraide avec des professionnels et des bénévoles, des services de réhabilitation psychosociale/professionnelle, des ateliers de création et de resocialisation (théâtre, musique, cuisine, club de marche, jardinage, etc...).",
             "",
@@ -86,6 +88,7 @@ const projectsList = [
         slug: "epistemology-of-theism",
         year: 2019,
         name: "Supports de communication",
+        home: true,
         description: [
             "“Inquiries Into Epistemology of Theism: A Seminar in Religious Epistemology” est un séminaire organisé par Roger Pouivet & Paul Clavier avec le soutien de l’université de Lorraine, des Archives Henri Poincaré, et de l’Institut universitaire de France.",
             "",
@@ -108,6 +111,7 @@ const projectsList = [
         slug: "georessources",
         year: 2022 & 2023,
         name: "Création d'une charte graphique & mise en page de rapports d'activités",
+        home: true,
         description: [
             "Laboratoire de recherche en géologie, GeoRessources couvre le champ des ressources géologiques, de leur exploration à leur exploitation, en passant par les étapes du traitement et de la valorisation, et de ses impacts sur la société et l’environnement.",
             "",
@@ -132,6 +136,7 @@ const projectsList = [
         slug: "hobotruck",
         year: 2024,
         name: "Création de l'identité graphique",
+        home: true,
         description: [
             "Hobo Truck est un food truck solidaire ayant plusieurs missions : ",
             "• Distribuer des repas gratuits à celles et ceux qui en ont besoin",
@@ -162,6 +167,7 @@ const projectsList = [
         slug: "chaouette",
         year: 2020,
         name: "Création de l'identité graphique & Réalisation d'un site internet",
+        home: true,
         description: [
             "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale.",
             "",
@@ -185,6 +191,7 @@ const projectsList = [
         slug: "la-brass",
         year: "Depuis 2020",
         name: "Création de l'identité graphique & Réalisation d'un site internet",
+        home: true,
         description: [
             "La Fabrique des GrÔ est une brasserie artisanale basée à Maxéville (Lorraine - 54320). C'est également un lieu culturel en plein essort où le public peut déguster de bonnes bières tout à assitant à des concerts",
             "",
@@ -212,6 +219,7 @@ const projectsList = [
         slug: "liec",
         year: 2023,
         name: "Création graphique & mise en page d'une frise chronologique",
+        home: true,
         description: [
             "Le LIEC, Laboratoire Interdisciplinaire des Environnements Continentaux, est une UMR Université de Lorraine. En 2023, le laboratoire fête ses 10ans, l’occasion de revenir sur les étapes phares de cette décennie.",
             "Création graphique et mise en page d’un “frise chronologique” mettant en avant les événements marquants, à l’aide de photographies, création d’icônes…",
@@ -232,6 +240,7 @@ const projectsList = [
         slug: "ekipea",
         year: "Depuis 2020",
         name: "Développement d'un ERP destiné aux CSE",
+        home: true,
         description: [
             "EKIPEA propose un service externalisé de back office pour gérer les activités sociales et culturelles des CSE, une solution de comptabilité et une application mobile permettant au CSE de communiquer avec ses salariés, et aux salariés d'accéder aux ASC du CSE",
             "",
