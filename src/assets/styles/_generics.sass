@@ -113,7 +113,7 @@ body
 
 
 
-    > span
+    > dl
       --svg-logo-width: 90px
       --svg-logo-height: var(--svg-logo-width)
       position: absolute
@@ -124,16 +124,25 @@ body
       justify-content: flex-start
       align-items: center
       column-gap: 30px
-      font-size: var(--space-xl)
+      font-size: var(--fontSize-2xl)
       height: var(--space-xl)
       font-family: var(--fontFamily-title)
-      color: var(--text-color-primary)
+      color: var(--text-color-default)
       &::after
-        content: url("/assets/svgs/picto-pointe-big-vertical.svg")
+        content: ""
+        background-image: url("/assets/svgs/picto-pointe-green.svg")
+        background-repeat: no-repeat
+        background-position: top center
+        background-size: cover
         width: var(--svg-logo-width)
         height: var(--svg-logo-height)
-      > span
-        color: var(--color-white)
+      > dt
+        text-align: right
+        small
+          display: block
+          font-size: var(--fontSize-lg)
+        span
+          color: var(--color-green)
 
 
     > aside
@@ -143,7 +152,6 @@ body
       h1
         font-size: var(--fontSize-xl)
         line-height: 2.2
-        text-align: center
       p
         font-size: var(--fontSize-sm)
         font-weight: var(--fontWeight-regular)
@@ -581,6 +589,11 @@ ul.bulleted-list
   margin-bottom: 100px
 
 #projets, #projects
+  background-image: url('/assets/svgs/picto-crochet-fermant-big.svg')
+  background-repeat: no-repeat
+  background-position: top  right
+  background-size: contain
+  padding-right: 70px
   > .slider__content
     display: flex
     flex-flow: row nowrap
@@ -613,20 +626,36 @@ ul.bulleted-list
     align-items: center
     column-gap: var(--space-md)
     width: 100%
-    > *:first-child
-      transform: rotate(180deg)
     > .separation
       display: block
       content: ""
-      flex: 0 0 80%
+      flex: 1 1 auto
       height: 1px
       background-color: var(--color-green)
+    > .btn-prev, .btn-next
+        all: unset
+        cursor: pointer
+        &::after
+          display: flex
+          flex-flow: column nowrap
+          justify-content: center
+          align-items: center
+          line-height: 1
+          content: url("/assets/svgs/picto-groupe-pointe-off.svg")
+          background: transparent
+        &:hover, .selected
+          &::after
+              content: url("/assets/svgs/picto-groupe-pointe-on.svg")
+    > .btn-prev
+      transform: rotate(180deg)
+
 
 #projects
   > .slider__content
     flex-wrap: wrap
   > .slider__nav
     display: none
+
 #contact
   --contact-padding: var(--space-md)
   display: flex

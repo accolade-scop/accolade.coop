@@ -12,6 +12,7 @@
       font-size: var(--fontSize-defaut)
     > main
       padding: 0 var(--space-md)
+
       #projets
         > .slider__content
           flex-flow: row nowrap
@@ -44,7 +45,7 @@
 @container body (max-width: 1180px)
   body
     > header
-      > span
+      > dl
         display: none
       > a:first-of-type
         --logo-height: 250px
@@ -85,6 +86,9 @@
 
       > section
         padding: 0 var(--space-md)
+        > h2
+          display: block
+          text-align: center
 
       #infos-contact
         h2
@@ -111,15 +115,13 @@
       #projets, #projects
         .slider__nav
           justify-content: center
-          .separation
-            flex: 0 0 var(--space-lg)
 
       .mosaic
         > article
           display: flex
           flex-flow: column nowrap
           justify-content: center
-          align-items: center
+          align-items: stretch
           > img
             display: none
 
@@ -138,6 +140,7 @@
 @container body (max-width: 800px)
   body
     > main
+
       #expertises
         h2
           padding-right: 0
@@ -158,6 +161,10 @@
                 padding: var(--space-sm)
                 &::before,&::after
                   display: none
+
+      #projets, #projects
+        background-image: none
+        padding-right: 0
 
 @container body (max-width: 680px)
   body

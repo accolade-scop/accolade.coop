@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-slider]").forEach(container => {
-        const parent = container.closest(".slider-component");
+        const parent = container.closest(".slider");
         const btnNext = parent.querySelector(".btn-next");
         const btnPrev = parent.querySelector(".btn-prev");
         const timeout = 2000;
@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 maxWidth <= container.clientWidth ? nav.style.display = "none" : nav.style.display = "";
             }
         }
+
+        updateSliderState();
 
         let resizeRunning = false;
 
