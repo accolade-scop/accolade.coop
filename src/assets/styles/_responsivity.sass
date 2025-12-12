@@ -10,6 +10,9 @@
       font-size: var(--fontSize-lg)
     h3
       font-size: var(--fontSize-defaut)
+    > header
+      > aside
+        padding-left: 30px
     > main
       padding: 0 var(--space-md)
 
@@ -63,23 +66,24 @@
       &.project
         background-position: center center
         > aside
-          position: absolute
-          top: revert
-          bottom: 0
-          left: 50%
-          transform: translate(-50%, 50%)
-          display: flex
-          flex-flow: row nowrap
-          justify-content: center
-          align-items: center
-          column-gap: var(--space-lg)
-          background-color: transparent
-          max-width: none
-          padding: 0
-          h1
-            display: none
-          > .btn-projects-nav
-            width: 165px
+          display: none
+          //position: absolute
+          //top: revert
+          //bottom: 0
+          //left: 50%
+          //transform: translate(-50%, 50%)
+          //display: flex
+          //flex-flow: row nowrap
+          //justify-content: center
+          //align-items: center
+          //column-gap: var(--space-lg)
+          //background-color: transparent
+          //max-width: none
+          //padding: 0
+          //h1
+          //  display: none
+          //> .btn-projects-nav
+          //  width: 165px
 
 
     > main
@@ -89,6 +93,7 @@
         > h2
           display: block
           text-align: center
+
 
       #infos-contact
         h2
@@ -112,9 +117,11 @@
           &::after, &::before
             display: none
 
+
       #projets, #projects
         .slider__nav
           justify-content: center
+
 
       .mosaic
         > article
@@ -124,6 +131,7 @@
           align-items: stretch
           > img
             display: none
+
 
       #mentions
         > section
@@ -136,6 +144,12 @@
             > dt
               margin-bottom: var(--space-sm)
               width: auto
+
+      #equipe
+        > article
+          flex-flow: column-reverse nowrap
+          > img
+            max-width: 100%
 
 @container body (max-width: 800px)
   body
@@ -193,7 +207,7 @@
         > ul
           row-gap: var(--space-md)
           > li
-            flex: 1 1 auto
+            flex: 1 1 50%
             p
               margin: 0
             img
