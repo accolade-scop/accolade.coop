@@ -10,35 +10,12 @@
       font-size: var(--fontSize-lg)
     h3
       font-size: var(--fontSize-defaut)
-    > header
-      &.project
-        background-position: center center
-        > aside
-          position: absolute
-          top: revert
-          bottom: 0
-          left: 50%
-          transform: translate(-50%, 50%)
-          display: flex
-          flex-flow: row nowrap
-          justify-content: center
-          align-items: center
-          column-gap: var(--space-lg)
-          background-color: transparent
-          max-width: none
-          padding: 0
-          h1
-            display: none
-          > .btn-projects-nav
-            width: 165px
-
     > main
       padding: 0 var(--space-md)
       #projets
         > .slider__content
           flex-flow: row nowrap
           width: 100%
-          overflow-x: visible
           scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
           scrollbar-width: thin
           padding-bottom: var(--space-md)
@@ -70,20 +47,39 @@
       > span
         display: none
       > a:first-of-type
-        --logo-height: 100px
+        --logo-height: 250px
         --logo-width: 70px
         background-color: transparent
         background-image: url("/assets/svgs/picto-pointe-green.svg")
         background-position: top var(--space-md)  left var(--space-md)
-      &.project
-        > a:first-of-type
-          --logo-height: 250px
       > aside
-        position: static
         margin: 0 auto
+        padding: var(--space-md)
         max-width: 500px
         text-align: center
-        padding: var(--space-md)
+        > p
+          text-align: center
+      &.project
+        background-position: center center
+        > aside
+          position: absolute
+          top: revert
+          bottom: 0
+          left: 50%
+          transform: translate(-50%, 50%)
+          display: flex
+          flex-flow: row nowrap
+          justify-content: center
+          align-items: center
+          column-gap: var(--space-lg)
+          background-color: transparent
+          max-width: none
+          padding: 0
+          h1
+            display: none
+          > .btn-projects-nav
+            width: 165px
+
 
     > main
 
@@ -194,7 +190,7 @@
             p
               margin: 0
             img
-              display: none
+              //display: none
 
 
       #mentions
@@ -206,6 +202,11 @@
               row-gap: var(--space-xs)
               text-align: left
 
+      #projets
+        > .slider__content
+          overflow-x: visible
+        > .slider__nav
+          display: none
 
     > footer
       flex-flow: column nowrap

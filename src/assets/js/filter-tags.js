@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
     const btnMenus = document.querySelectorAll(".btn-menu");
-    console.log(menu);
     btnMenus.forEach(btn => {
         btn.addEventListener("click", () => {
             menu.classList.toggle("open");

@@ -387,6 +387,7 @@ ul.bulleted-list > li::before {
   font-weight: 400;
   width: 90%;
   margin: var(--space-sm) auto;
+  color: var(--color-white);
 }
 .btn-projects-nav > small {
   display: block;
@@ -402,6 +403,7 @@ ul.bulleted-list > li::before {
 }
 .btn-projects-nav:hover, .btn-projects-nav.selected {
   background-color: var(--surface-backgroundColor-accent);
+  color: var(--color-black);
 }
 .btn-projects-nav:hover::after, .btn-projects-nav.selected::after {
   content: url("/assets/svgs/picto-button-next-on.svg");
@@ -586,8 +588,10 @@ ul.bulleted-list > li::before {
   justify-content: center;
 }
 #equipe > ul > li {
+  position: relative;
   flex: 0 1 210px;
   align-items: stretch;
+  row-gap: var(--space-lg);
 }
 #equipe > ul > li > h3 {
   color: var(--text-color-default);
@@ -595,13 +599,17 @@ ul.bulleted-list > li::before {
 #equipe > ul > li > p {
   font-size: var(--fontSize-defaut);
   text-align: left;
+  margin-bottom: 0;
 }
 #equipe > ul > li > p > small {
   font-size: var(--fontSize-xs);
   font-weight: var(--fontWeight-thin);
 }
 #equipe > ul > li > img {
-  width: 100%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
   height: auto;
 }
 
@@ -785,6 +793,13 @@ ul.bulleted-list > li::before {
   flex: 0 0 80%;
   height: 1px;
   background-color: var(--color-green);
+}
+
+#projects > .slider__content {
+  flex-wrap: wrap;
+}
+#projects > .slider__nav {
+  display: none;
 }
 
 #contact {
@@ -1060,37 +1075,12 @@ ul.bulleted-list > li::before {
   body h3 {
     font-size: var(--fontSize-defaut);
   }
-  body > header.project {
-    background-position: center center;
-  }
-  body > header.project > aside {
-    position: absolute;
-    top: revert;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    column-gap: var(--space-lg);
-    background-color: transparent;
-    max-width: none;
-    padding: 0;
-  }
-  body > header.project > aside h1 {
-    display: none;
-  }
-  body > header.project > aside > .btn-projects-nav {
-    width: 165px;
-  }
   body > main {
     padding: 0 var(--space-md);
   }
   body > main #projets > .slider__content {
     flex-flow: row nowrap;
     width: 100%;
-    overflow-x: visible;
     scrollbar-color: var(--color-green) var(--surface-backgroundColor-secondary);
     scrollbar-width: thin;
     padding-bottom: var(--space-md);
@@ -1124,21 +1114,44 @@ ul.bulleted-list > li::before {
     display: none;
   }
   body > header > a:first-of-type {
-    --logo-height: 100px;
+    --logo-height: 250px;
     --logo-width: 70px;
     background-color: transparent;
     background-image: url("/assets/svgs/picto-pointe-green.svg");
     background-position: top var(--space-md) left var(--space-md);
   }
-  body > header.project > a:first-of-type {
-    --logo-height: 250px;
-  }
   body > header > aside {
-    position: static;
     margin: 0 auto;
+    padding: var(--space-md);
     max-width: 500px;
     text-align: center;
-    padding: var(--space-md);
+  }
+  body > header > aside > p {
+    text-align: center;
+  }
+  body > header.project {
+    background-position: center center;
+  }
+  body > header.project > aside {
+    position: absolute;
+    top: revert;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: var(--space-lg);
+    background-color: transparent;
+    max-width: none;
+    padding: 0;
+  }
+  body > header.project > aside h1 {
+    display: none;
+  }
+  body > header.project > aside > .btn-projects-nav {
+    width: 165px;
   }
   body > main > section {
     padding: 0 var(--space-md);
@@ -1251,9 +1264,6 @@ ul.bulleted-list > li::before {
   body > main #equipe > ul > li p {
     margin: 0;
   }
-  body > main #equipe > ul > li img {
-    display: none;
-  }
   body > main #mentions > section {
     grid-template-columns: 1fr;
   }
@@ -1261,6 +1271,12 @@ ul.bulleted-list > li::before {
     flex-direction: column;
     row-gap: var(--space-xs);
     text-align: left;
+  }
+  body > main #projets > .slider__content {
+    overflow-x: visible;
+  }
+  body > main #projets > .slider__nav {
+    display: none;
   }
   body > footer {
     flex-flow: column nowrap;

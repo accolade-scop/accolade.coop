@@ -45,7 +45,6 @@ body
 
 
     nav
-
       position: fixed
       top: 0
       right: var(--menu-positionX)
@@ -264,6 +263,7 @@ ul.bulleted-list
     font-weight: 400
     width: 90%
     margin: var(--space-sm)  auto
+    color: var(--color-white)
     > small
       display: block
       font-weight: 100
@@ -276,6 +276,7 @@ ul.bulleted-list
       transform: translateX(50%)
     &:hover, &.selected
       background-color: var(--surface-backgroundColor-accent)
+      color: var(--color-black)
       &::after
         content: url("/assets/svgs/picto-button-next-on.svg")
     &.--reverse
@@ -312,6 +313,7 @@ ul.bulleted-list
       color: var(--color-green)
     &:focus, &.selected
       border-color: var(--color-green)
+
 
 .tags-list
   display: flex
@@ -428,6 +430,7 @@ ul.bulleted-list
     column-count: 2
     column-width: 300px
     column-gap: var(--space-lg)
+
     img
       display: block
       max-width: 100%
@@ -435,19 +438,26 @@ ul.bulleted-list
       margin-bottom: var(--space-sm)
   > ul
     justify-content: center
+
     > li
+      position: relative
       flex: 0 1 210px
       align-items: stretch
+      row-gap: var(--space-lg)
       > h3
         color: var(--text-color-default)
       > p
         font-size: var(--fontSize-defaut)
         text-align: left
+        margin-bottom: 0
         > small
           font-size: var(--fontSize-xs)
           font-weight: var(--fontWeight-thin)
       > img
-        width: 100%
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 60px
         height: auto
 
 
@@ -612,7 +622,11 @@ ul.bulleted-list
       height: 1px
       background-color: var(--color-green)
 
-
+#projects
+  > .slider__content
+    flex-wrap: wrap
+  > .slider__nav
+    display: none
 #contact
   --contact-padding: var(--space-md)
   display: flex
