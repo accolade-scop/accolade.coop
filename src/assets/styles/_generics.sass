@@ -401,14 +401,12 @@ ul.bulleted-list
 
 
 #presentation, #equipe
-  p
-    margin-bottom: var(--space-lg)
   > ul
     display: flex
     flex-flow: row wrap
     justify-content: space-around
     align-items: stretch
-    gap: var(--space-lg) var(--space-md)
+    gap: var(--space-md) var(--space-md)
     > li
       flex: 1 1 10%
       display: flex
@@ -427,31 +425,38 @@ ul.bulleted-list
         text-transform: none
         color: var(--text-color-default)
         text-align: center
+        margin-bottom: 0
 
 
 #presentation
+  > p
+    margin-bottom: var(--space-lg)
   > ul
     > li
       min-width: 250px
 
 
 #equipe
-  p
-    column-count: 2
-    column-width: 300px
-    column-gap: var(--space-lg)
-
+  article
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-end
+    row-gap: var(--space-lg)
+    margin-bottom: var(--space-lg)
+    > p
+      padding: 0 var(--space-md)
     img
       display: block
-      max-width: 100%
+      width: 100%
+      max-width: 680px
       height: auto
-      margin-bottom: var(--space-sm)
+
   > ul
-    justify-content: center
+    justify-content: flex-start
 
     > li
       position: relative
-      flex: 0 1 210px
       align-items: stretch
       row-gap: var(--space-lg)
       > h3

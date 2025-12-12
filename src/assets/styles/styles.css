@@ -550,15 +550,12 @@ ul.bulleted-list > li::before {
   flex: 1 1 auto;
 }
 
-#presentation p, #equipe p {
-  margin-bottom: var(--space-lg);
-}
 #presentation > ul, #equipe > ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: stretch;
-  gap: var(--space-lg) var(--space-md);
+  gap: var(--space-md) var(--space-md);
 }
 #presentation > ul > li, #equipe > ul > li {
   flex: 1 1 10%;
@@ -580,29 +577,38 @@ ul.bulleted-list > li::before {
   text-transform: none;
   color: var(--text-color-default);
   text-align: center;
+  margin-bottom: 0;
 }
 
+#presentation > p {
+  margin-bottom: var(--space-lg);
+}
 #presentation > ul > li {
   min-width: 250px;
 }
 
-#equipe p {
-  column-count: 2;
-  column-width: 300px;
-  column-gap: var(--space-lg);
+#equipe article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  row-gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
-#equipe p img {
+#equipe article > p {
+  padding: 0 var(--space-md);
+}
+#equipe article img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  max-width: 680px;
   height: auto;
-  margin-bottom: var(--space-sm);
 }
 #equipe > ul {
-  justify-content: center;
+  justify-content: flex-start;
 }
 #equipe > ul > li {
   position: relative;
-  flex: 0 1 210px;
   align-items: stretch;
   row-gap: var(--space-lg);
 }
@@ -1111,6 +1117,9 @@ ul.bulleted-list > li::before {
   body h3 {
     font-size: var(--fontSize-defaut);
   }
+  body > header > aside {
+    padding-left: 30px;
+  }
   body > main {
     padding: 0 var(--space-md);
   }
@@ -1169,25 +1178,7 @@ ul.bulleted-list > li::before {
     background-position: center center;
   }
   body > header.project > aside {
-    position: absolute;
-    top: revert;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    column-gap: var(--space-lg);
-    background-color: transparent;
-    max-width: none;
-    padding: 0;
-  }
-  body > header.project > aside h1 {
     display: none;
-  }
-  body > header.project > aside > .btn-projects-nav {
-    width: 165px;
   }
   body > main > section {
     padding: 0 var(--space-md);
@@ -1246,6 +1237,12 @@ ul.bulleted-list > li::before {
     margin-bottom: var(--space-sm);
     width: auto;
   }
+  body > main #equipe > article {
+    flex-flow: column-reverse nowrap;
+  }
+  body > main #equipe > article > img {
+    max-width: 100%;
+  }
 }
 @container body (max-width: 800px) {
   body > main #expertises h2 {
@@ -1300,7 +1297,7 @@ ul.bulleted-list > li::before {
     row-gap: var(--space-md);
   }
   body > main #equipe > ul > li {
-    flex: 1 1 auto;
+    flex: 1 1 50%;
   }
   body > main #equipe > ul > li p {
     margin: 0;
