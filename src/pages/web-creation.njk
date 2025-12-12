@@ -101,38 +101,13 @@
     </section>
 
     <!-- SECTION PROJETS -->
-    <section id="projets" class="container">
-
-        <h2>Nos sites internet<small>Etudes de cas</small></h2>
-
-        <nav class="slider__content">
-
-            {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
-
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
-                         height="157"/>
-
-                    {{ p.client.name }}
-
-                    <em>
-                        {% for tag in p.tags %}
-                            {{ tag }}{% if not loop.last %} •{% endif %}
-                        {% endfor %}
-                    </em>
-                </a>
-
-            {% endfor %}
-
-        </nav>
-
-        <div class="slider__nav" data-arrows>
-            <button alt="element précédent" class="btn-prev" type="button"></button>
-            <div class="separation"></div>
-            <button alt="element suivant" class="btn-next" type="button"></button>
-        </div>
-
-    </section>
+    {% from "components/slider.njk" import slider %}
+        {{ slider(
+            "projets",
+            "Nos sites internet",
+            "Etudes de cas",
+            projects | getProjectsCategorie("Développement")
+        ) }}
 
     <!-- SECTION CONTACT -->
     <section id="contact" class="container">

@@ -9,6 +9,12 @@ function countCommonElements(arr1, arr2) {
 
 export default async function(eleventyConfig) {
 
+    eleventyConfig.addFilter('getProjectsCategorie', function(projects, currentCategorie) {
+        return projects.filter(item =>
+            item.categories && item.categories.includes(currentCategorie)
+        );
+    });
+
     eleventyConfig.addFilter('navSlug', function(projects, currentSlug, indexOperator) {
         const index = projects.findIndex(p => p.slug === currentSlug);
         if (index === 0 && indexOperator === -1) return projects[projects.length - 1].slug; // 1er projet + previous
@@ -24,6 +30,14 @@ export default async function(eleventyConfig) {
         return uniqueTags;
     });
 
+    eleventyConfig.addFilter('getUniqueCategories', function(projects) {
+        // Récupération des tags
+        const allCategories = projects.flatMap(item => item.categories || []);
+        // Suppression des doublons + tri alphébétique
+        const uniqueCategories = [...new Set(allCategories)].sort((a, b) => a.localeCompare(b, 'fr'));
+        return uniqueCategories;
+    });
+
     eleventyConfig.addPassthroughCopy({
         "assets/js": "assets/js"
     });
@@ -36,7 +50,7 @@ export default async function(eleventyConfig) {
      * @param {Number} [limit=5] - Le nombre maximum d'items à retourner.
      * @param {String} [tagProperty='tags'] - Le nom de la propriété des tags.
      */
-    eleventyConfig.addFilter("sortbyrelatedness", function(current, collection, limit = 5, tagProperty = 'tags') {
+    eleventyConfig.addFilter("sortbyrelatedness", function(current, collection, limit = 5, categorieProperty = 'categories') {
 
         // S'assurer qu'on a les bonnes données
         if (!Array.isArray(collection) || !current ) {
@@ -44,11 +58,11 @@ export default async function(eleventyConfig) {
             return [];
         }
 
-        const currentTags = current[tagProperty];
+        const currentCategories = current[categorieProperty];
         const currentUrl = current.slug; // Pour s'assurer de ne pas s'inclure soi-même
 
         // S'il n'y a pas de tags sur la page actuelle, on ne peut rien faire.
-        if (!currentTags || currentTags.length === 0) {
+        if (!currentCategories || currentCategories.length === 0) {
             return [];
         }
 
@@ -60,10 +74,10 @@ export default async function(eleventyConfig) {
                 return { item: item, score: -1 }; // Score négatif pour l'exclure
             }
 
-            const itemTags = item[tagProperty];
+            const itemCategories = item[categorieProperty];
 
             // 2. Le score est le nombre de tags en commun AVEC 'current'
-            const score = countCommonElements(currentTags, itemTags);
+            const score = countCommonElements(currentCategories, itemCategories);
 
             return {
                 item: item,
@@ -74,7 +88,7 @@ export default async function(eleventyConfig) {
         // 3. Trier par score (décroissant)
         scoredCollection.sort((a, b) => b.score - a.score);
 
-        // 4. Filtrer les items sans tags communs (score 0) et soi-même (score -1)
+        // 4. Filtrer les items sans categories communes (score 0) et soi-même (score -1)
         const filteredAndSorted = scoredCollection.filter(scoredItem => scoredItem.score > 0);
 
         // 5. Retourner uniquement les items, dans la limite définie

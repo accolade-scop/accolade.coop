@@ -305,7 +305,7 @@ ul.bulleted-list
     &:hover, .selected
       &::after
         content: url("/assets/svgs/picto-groupe-pointe-on.svg")
-  &-tag
+  &-tag, &-categorie
     display: inline-flex
     flex-flow: row wrap
     justify-content: center
@@ -323,7 +323,7 @@ ul.bulleted-list
       border-color: var(--color-green)
 
 
-.tags-list
+.tags-list, .categories-list
   display: flex
   flex-flow: row wrap
   justify-content: flex-start
@@ -391,8 +391,10 @@ ul.bulleted-list
         grid-area: carde
 
 
-#tags
-  &.tags-list
+#tags, #categories
+  &.tags-list, &.categories-list
+    display: flex
+    flex-flow: row wrap
     justify-content: space-between
     > *
       flex: 1 1 auto

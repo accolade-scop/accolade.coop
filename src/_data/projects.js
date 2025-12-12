@@ -41,6 +41,7 @@ const projectsList = [
         },
         url: "https://www.studio-fuchsia.com/clients/omeka-jules-bourgoin",
         tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
+        categories: ["Omeka", "Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin_site-internet_graphisme.png", description: "Accolade graphisme web jules-bourgoin banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin.jpg", description: "Accolade graphisme web jules-bourgoin logo"},
         images: []
@@ -49,6 +50,7 @@ const projectsList = [
         slug: "ific",
         year: 2025,
         name: "Réalisation d'un site internet",
+        home: true,
         description: [
             "L’Institut Francilien d’Implantation Cochléaire est une structure de santé experte, qui a pour mission l’accompagnement à long terme et l’optimisation du parcours de soin des patients implantés cochléaires.",
             "",
@@ -61,6 +63,7 @@ const projectsList = [
         },
         url: "https://implant-ific.org/",
         tags: ["Développement", "Site internet", "Graphisme"],
+        categories: ["Graphisme", "Site internet", "Développement"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_ific-institut-francilien-implantation-cochleaire_site-internet.jpg", description: "Accolade graphisme web IFIC banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_ific-institut-francilien-implantation-cochleaire.jpg", description: "Accolade graphisme web logo"},
         images: []
@@ -80,6 +83,7 @@ const projectsList = [
         },
         url: "https://www.espoir54.org/",
         tags: ["Graphisme", "Site internet"],
+        categories: ["Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_espoir54-site-internet-wordpress.jpg", description: "Accolade graphisme web espoir54 banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_espoir54.jpg", description: "Accolade graphisme web espoir54 logo"},
         images: []
@@ -99,6 +103,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Graphisme", "Mise en page", "Print"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme.jpg", description: "Accolade graphisme web banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology_logo.jpg", description: "Accolade graphisme web logo"},
         images: [
@@ -122,6 +127,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Charte graphique", "Graphisme", "Print"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite-2021.jpg", description: "Accolade graphisme web georessources banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite.jpg", description: "Accolade graphisme web georessources logo"},
         images: [
@@ -150,6 +156,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Logo","Charte graphique", "Kakémono", "Habillage de véhicule", "Ecocups"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_solidaire_hobo-truck_nancy.jpg", description: "Accolade graphisme web hobo truck nancy logo"},
         images: [
@@ -180,6 +187,7 @@ const projectsList = [
         },
         url: "https://www.chaouette.fr/",
         tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        categories: ["Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_chaouette_bieres-artisanales-bio-blonde.jpg", description: "Accolade graphisme web chaouette banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo__biere_chaouette_bieres-artisanales-bio-min.jpg", description: "Accolade graphisme web chaouette logo"},
         images: [
@@ -202,6 +210,7 @@ const projectsList = [
         },
         url: "https://www.lafabriquedesgros.fr/",
         tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print", "Développement"],
+        categories: ["Graphisme", "Site internet", "Développement"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro-brasserie_maxeville.png", description: "Accolade graphisme web la fabrique des gro maxeville banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_fabrique-des-gro_bieres_slider.jpg", description: "Accolade graphisme web la fabrique des gro maxeville  logo"},
         images: [
@@ -229,6 +238,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Graphisme", "Print"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant-couverture.jpg", description: "Accolade graphisme web liec banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant.jpg", description: "Accolade graphisme web liec logo"},
         images: [
@@ -251,6 +261,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Développement", "ERP", "API", "Mobile"],
+        categories: ["Développement"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse.jpg", description: "Accolade graphisme web ekipea banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse_logo.jpg", description: "Accolade graphisme web ekipea logo"},
         images: []

@@ -49,16 +49,27 @@
 
 <main class="container">
 
-    <!-- LISTE DES TAGS -->
-    <section id="tags" class="tags-list">
+    <!-- LISTE DES CATEGORIES -->
+    <section id="categories" class="categories-list">
 
-        {% set uniqueTags = projects | getUniqueTags(project) %}
-        {% for tag in uniqueTags %}
-            <a class="btn-tag" data-tag="{{ tag }}" title="Voir les projets {{ tag }}">{{ tag }}</a>
+        {% set uniqueCategories = projects | getUniqueCategories(project) %}
+        {% for categorie in uniqueCategories %}
+            <a class="btn-categorie" data-categorie="{{ categorie }}" title="Voir les projets {{ categorie }}">{{ categorie }}</a>
             {#                {% if not loop.last %} •{% endif %} #}
         {% endfor %}
 
     </section>
+
+    <!-- LISTE DES TAGS -->
+    <!-- <section id="tags" class="tags-list"> -->
+
+        <!-- {% set uniqueTags = projects | getUniqueTags(project) %} -->
+        <!-- {% for tag in uniqueTags %} -->
+            <!-- <a class="btn-tag" data-tag="{{ tag }}" title="Voir les projets {{ tag }}">{{ tag }}</a> -->
+            <!-- {#                {% if not loop.last %} •{% endif %} #} -->
+        <!-- {% endfor %} -->
+
+    <!-- </section> -->
 
     <!-- SECTION PROJECTS -->
     <section id="projects">
@@ -66,7 +77,7 @@
         <nav class="slider__content">
 
             {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}"
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}"" data-categories="{{ p.categories }}"
                    class="project">
 
                     <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"

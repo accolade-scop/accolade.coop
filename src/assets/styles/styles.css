@@ -440,7 +440,7 @@ ul.bulleted-list > li::before {
 .btn-page-nav:hover::after, .btn-page-nav .selected::after {
   content: url("/assets/svgs/picto-groupe-pointe-on.svg");
 }
-.btn-tag {
+.btn-tag, .btn-categorie {
   display: inline-flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -452,15 +452,15 @@ ul.bulleted-list > li::before {
   color: var(--color-white);
   text-transform: uppercase;
 }
-.btn-tag:hover {
+.btn-tag:hover, .btn-categorie:hover {
   border-color: var(--color-green);
   color: var(--color-green);
 }
-.btn-tag:focus, .btn-tag.selected {
+.btn-tag:focus, .btn-tag.selected, .btn-categorie:focus, .btn-categorie.selected {
   border-color: var(--color-green);
 }
 
-.tags-list {
+.tags-list, .categories-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -469,14 +469,14 @@ ul.bulleted-list > li::before {
   font-size: var(--fontSize-sm);
   color: var(--link-rest-color);
 }
-.tags-list > li {
+.tags-list > li, .categories-list > li {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   column-gap: 3px;
 }
-.tags-list > li:not(:last-child)::after {
+.tags-list > li:not(:last-child)::after, .categories-list > li:not(:last-child)::after {
   display: block;
   content: "•";
   color: white;
@@ -541,10 +541,12 @@ ul.bulleted-list > li::before {
   grid-area: carde;
 }
 
-#tags.tags-list {
+#tags.tags-list, #tags.categories-list, #categories.tags-list, #categories.categories-list {
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
-#tags.tags-list > * {
+#tags.tags-list > *, #tags.categories-list > *, #categories.tags-list > *, #categories.categories-list > * {
   flex: 1 1 auto;
 }
 
