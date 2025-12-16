@@ -1131,7 +1131,7 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 1180px) {
-  body > header > dl {
+  body > header > section {
     display: none;
   }
   body > header > a:first-of-type {
