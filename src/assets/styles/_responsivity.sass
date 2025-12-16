@@ -1,3 +1,9 @@
+
+@container body (min-width: 1400px)
+  body
+    > nav
+      right: calc(((100dvw - 1400px) / 2))
+
 @container body (max-width: 1400px)
   body
     h2
@@ -9,7 +15,9 @@
         padding-left: 30px
     > main
       padding: 0 var(--space-md)
-
+      #projects
+        > .slider__content
+          justify-content: center
       #projets
         > .slider__content
           flex-flow: row nowrap
@@ -64,23 +72,6 @@
         background-position: center center
         > aside
           display: none
-          //position: absolute
-          //top: revert
-          //bottom: 0
-          //left: 50%
-          //transform: translate(-50%, 50%)
-          //display: flex
-          //flex-flow: row nowrap
-          //justify-content: center
-          //align-items: center
-          //column-gap: var(--space-lg)
-          //background-color: transparent
-          //max-width: none
-          //padding: 0
-          //h1
-          //  display: none
-          //> .btn-projects-nav
-          //  width: 165px
 
 
     > main
@@ -150,6 +141,15 @@
 
 @container body (max-width: 800px)
   body
+    > nav
+      flex-flow: column-reverse nowrap
+      .btn-menu
+        align-self: flex-end
+        width: 150px
+      menu
+        width: 150px
+        flex-direction: column
+
     > main
 
       #expertises
@@ -232,7 +232,6 @@
           overflow-x: visible
         > .slider__nav
           display: none
-
       #project-details
         header
           > aside

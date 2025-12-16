@@ -15,32 +15,44 @@ body
   &.wrapper
     container-name: body
     container-type: inline-size
-
-  > menu
-    --menu-width: 100%
+  > nav
+    --menu-btn-width: 60px
     --menu-link-paddingVert: var(--space-md)
     --menu-link-paddingHor: var(--space-sm)
     --menu-backgroundColor: var(--surface-backgroundColor-primary)
-    position: sticky
+    position: fixed
     top: 0
     right: 0
-    left: 0
     z-index: 1000
     display: flex
     flex-flow: row wrap
     justify-content: flex-end
     align-items: center
-    font-family: var(--fontFamily-title)
-    font-size: var(--fontSize-xs)
-    text-align: center
-    text-transform: uppercase
-    background-color: var(--menu-backgroundColor)
-    width: var(--menu-width)
-    max-width: var(--body-width-default)
-    margin: 0 auto
-    padding: 0 var(--space-sm)
-    > li
-      a
+    &.open
+      > menu
+        display: flex
+    > .btn-menu
+      width: var(--menu-btn-width)
+      height: var(--menu-btn-width)
+      background-color: var(--menu-backgroundColor)
+      background-image: url("/assets/svgs/picto-burger.svg")
+      background-repeat: no-repeat
+      background-position: center center
+    > menu
+      display: none
+      flex-flow: row wrap
+      justify-content: flex-end
+      align-items: center
+      background-color: var(--menu-backgroundColor)
+      font-family: var(--fontFamily-title)
+      font-size: var(--fontSize-xs)
+      text-align: center
+      text-transform: uppercase
+      width: var(--menu-width)
+      max-width: var(--body-width-default)
+      padding: 0 var(--space-sm)
+
+      > a
         display: block
         padding: var(--menu-link-paddingVert) var(--menu-link-paddingHor)
         white-space: nowrap

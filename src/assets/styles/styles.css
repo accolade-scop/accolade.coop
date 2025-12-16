@@ -130,36 +130,51 @@ body.wrapper {
   container-name: body;
   container-type: inline-size;
 }
-body > menu {
-  --menu-width: 100%;
+body > nav {
+  --menu-btn-width: 60px;
   --menu-link-paddingVert: var(--space-md);
   --menu-link-paddingHor: var(--space-sm);
   --menu-backgroundColor: var(--surface-backgroundColor-primary);
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
-  left: 0;
   z-index: 1000;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
+}
+body > nav.open > menu {
+  display: flex;
+}
+body > nav > .btn-menu {
+  width: var(--menu-btn-width);
+  height: var(--menu-btn-width);
+  background-color: var(--menu-backgroundColor);
+  background-image: url("/assets/svgs/picto-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+body > nav > menu {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--menu-backgroundColor);
   font-family: var(--fontFamily-title);
   font-size: var(--fontSize-xs);
   text-align: center;
   text-transform: uppercase;
-  background-color: var(--menu-backgroundColor);
   width: var(--menu-width);
   max-width: var(--body-width-default);
-  margin: 0 auto;
   padding: 0 var(--space-sm);
 }
-body > menu > li a {
+body > nav > menu > a {
   display: block;
   padding: var(--menu-link-paddingVert) var(--menu-link-paddingHor);
   white-space: nowrap;
 }
-body > menu > li a:hover, body > menu > li a:active {
+body > nav > menu > a:hover, body > nav > menu > a:active {
   color: var(--color-white);
 }
 body > header {
@@ -1083,6 +1098,11 @@ ul.bulleted-list > li::before {
   color: var(--color-neutre-darker);
 }
 
+@container body (min-width: 1400px) {
+  body > nav {
+    right: calc((100dvw - 1400px) / 2);
+  }
+}
 @container body (max-width: 1400px) {
   body h2 {
     font-size: var(--fontSize-lg);
@@ -1095,6 +1115,9 @@ ul.bulleted-list > li::before {
   }
   body > main {
     padding: 0 var(--space-md);
+  }
+  body > main #projects > .slider__content {
+    justify-content: center;
   }
   body > main #projets > .slider__content {
     flex-flow: row nowrap;
@@ -1221,6 +1244,17 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 800px) {
+  body > nav {
+    flex-flow: column-reverse nowrap;
+  }
+  body > nav .btn-menu {
+    align-self: flex-end;
+    width: 150px;
+  }
+  body > nav menu {
+    width: 150px;
+    flex-direction: column;
+  }
   body > main #expertises h2 {
     padding-right: 0;
   }

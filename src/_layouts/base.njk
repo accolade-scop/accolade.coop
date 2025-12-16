@@ -23,29 +23,32 @@
 
 <body class="wrapper">
 
-    <menu>
-        <li><a href="../index.html" title="voir la page d'accueil">Accueil</a></li>
-        <li><a href="/pages/a-propos.html" title="voir la page a propos d'Accolade">A propos</a></li>
-        <li><a href="/pages/graphic-design.html" title="voir nos créations graphiques">Graphisme</a></li>
-        <li><a href="/pages/web-creation.html" title="voir nos sites internet">Sites internet</a></li>
-        <li><a href="/pages/laboratoire.html" title="voir nos développements">Laboratoire</a></li>
-        <li><a href="/pages/projects-all.html" title="voir toutes nos réalisations">Réalisations</a></li>
-        <li><a href="/pages/contact.html" title="voir la page contacts">Contact</a></li>
+<nav id="menu">
+    <menu  class="">
+        <a href="../index.html" title="voir la page d'accueil">Accueil</a>
+        <a href="/pages/a-propos.html" title="voir la page a propos d'Accolade">A propos</a>
+        <a href="/pages/graphic-design.html" title="voir nos créations graphiques">Graphisme</a>
+        <a href="/pages/web-creation.html" title="voir nos sites internet">Sites internet</a>
+        <a href="/pages/laboratoire.html" title="voir nos développements">Laboratoire</a>
+        <a href="/pages/projects-all.html" title="voir toutes nos réalisations">Réalisations</a>
+        <a href="/pages/contact.html" title="voir la page contacts">Contact</a>
     </menu>
+    <span class="btn-menu"></span>
+</nav>
 
-    {{ content | safe }}
+{{ content | safe }}
 
-    <footer>
+<footer>
 
-        <img alt="Logo Accolade" height="27" src="/assets/svgs/logo-accolade.svg" width="200"/>
+    <img alt="Logo Accolade" height="27" src="/assets/svgs/logo-accolade.svg" width="200"/>
 
-        <div>
-            <a href="/pages/mentions-legales.html" title="Lire les mentions légales"> Mentions légales</a>
-            <span>&copy; ACCOLADE 2025</span>
-            <span>Tous droits reservés</span>
-        </div>
+    <div>
+        <a href="/pages/mentions-legales.html" title="Lire les mentions légales"> Mentions légales</a>
+        <span>&copy; ACCOLADE 2025</span>
+        <span>Tous droits reservés</span>
+    </div>
 
-    </footer>
+</footer>
 
 </body>
 </html>
