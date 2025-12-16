@@ -16,12 +16,39 @@ body
     container-name: body
     container-type: inline-size
 
-  > header
-    --menu-width: 120px
-    --menu-padding: var(--space-sm)
+  > menu
+    --menu-width: 100%
+    --menu-link-paddingVert: var(--space-md)
+    --menu-link-paddingHor: var(--space-sm)
     --menu-backgroundColor: var(--surface-backgroundColor-primary)
-    --menu-picto-width: 30px
-    --menu-positionX: var(--space-md)
+    position: sticky
+    top: 0
+    right: 0
+    left: 0
+    z-index: 1000
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-end
+    align-items: center
+    font-family: var(--fontFamily-title)
+    font-size: var(--fontSize-xs)
+    text-align: center
+    text-transform: uppercase
+    background-color: var(--menu-backgroundColor)
+    width: var(--menu-width)
+    max-width: var(--body-width-default)
+    margin: 0 auto
+    padding: 0 var(--space-sm)
+    > li
+      a
+        display: block
+        padding: var(--menu-link-paddingVert) var(--menu-link-paddingHor)
+        white-space: nowrap
+        &:hover, &:active
+          color: var(--color-white)
+
+
+  > header
     position: relative
     background-repeat: no-repeat
     background-position: top left
@@ -44,76 +71,7 @@ body
       background-position: top var(--logo-positionX) left var(--logo-positionY)
 
 
-    nav
-      position: fixed
-      top: 0
-      right: var(--menu-positionX)
-      z-index: 2
-      opacity: 1
-      display: flex
-      flex-flow: row nowrap
-      justify-content: flex-end
-      align-items: center
-      column-gap: var(--space-md)
-
-      > a
-        background-color: var(--menu-backgroundColor)
-        font-size: var(--fontSize-xs)
-        padding: var(--menu-padding)
-        width: var(--menu-width)
-        display: flex
-        justify-content: center
-        > img
-          width: var(--menu-picto-width)
-          height: var(--menu-picto-width)
-      &:not(.open)
-        > menu
-          top: -900px
-      &.open
-        > a
-          display: none
-        > menu
-          top: 0
-
-
-    menu
-      position: absolute
-      top: 0
-      right: 0
-      z-index: 100
-      padding: var(--menu-padding)
-      display: flex
-      flex-flow: column nowrap
-      justify-content: flex-start
-      align-items: stretch
-      column-gap: var(--space-md)
-      font-family: var(--fontFamily-title)
-      font-size: var(--fontSize-xs)
-      text-transform: uppercase
-      background-color: var(--menu-backgroundColor)
-      transition: top .3s ease-in-out
-      text-align: center
-      width: var(--menu-width)
-      > li
-
-        &:first-child
-          > a
-            border: none
-            padding: 0
-            > img
-              width: var(--menu-picto-width)
-              height: var(--menu-picto-width)
-        > a
-          display: block
-          padding: var(--space-sm) 0
-          border-top: 1px solid var(--color-neutre-darker)
-          white-space: nowrap
-          &:hover, &:active
-            color: var(--color-white)
-
-
-
-    > dl
+    > section
       --svg-logo-width: 90px
       --svg-logo-height: var(--svg-logo-width)
       position: absolute
@@ -136,7 +94,7 @@ body
         background-size: cover
         width: var(--svg-logo-width)
         height: var(--svg-logo-height)
-      > dt
+      > div
         text-align: right
         small
           display: block

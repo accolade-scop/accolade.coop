@@ -130,12 +130,39 @@ body.wrapper {
   container-name: body;
   container-type: inline-size;
 }
-body > header {
-  --menu-width: 120px;
-  --menu-padding: var(--space-sm);
+body > menu {
+  --menu-width: 100%;
+  --menu-link-paddingVert: var(--space-md);
+  --menu-link-paddingHor: var(--space-sm);
   --menu-backgroundColor: var(--surface-backgroundColor-primary);
-  --menu-picto-width: 30px;
-  --menu-positionX: var(--space-md);
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: var(--fontFamily-title);
+  font-size: var(--fontSize-xs);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--menu-backgroundColor);
+  width: var(--menu-width);
+  max-width: var(--body-width-default);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+body > menu > li a {
+  display: block;
+  padding: var(--menu-link-paddingVert) var(--menu-link-paddingHor);
+  white-space: nowrap;
+}
+body > menu > li a:hover, body > menu > li a:active {
+  color: var(--color-white);
+}
+body > header {
   position: relative;
   background-repeat: no-repeat;
   background-position: top left;
@@ -157,76 +184,7 @@ body > header > a:first-of-type {
   background-repeat: no-repeat;
   background-position: top var(--logo-positionX) left var(--logo-positionY);
 }
-body > header nav {
-  position: fixed;
-  top: 0;
-  right: var(--menu-positionX);
-  z-index: 2;
-  opacity: 1;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
-  column-gap: var(--space-md);
-}
-body > header nav > a {
-  background-color: var(--menu-backgroundColor);
-  font-size: var(--fontSize-xs);
-  padding: var(--menu-padding);
-  width: var(--menu-width);
-  display: flex;
-  justify-content: center;
-}
-body > header nav > a > img {
-  width: var(--menu-picto-width);
-  height: var(--menu-picto-width);
-}
-body > header nav:not(.open) > menu {
-  top: -900px;
-}
-body > header nav.open > a {
-  display: none;
-}
-body > header nav.open > menu {
-  top: 0;
-}
-body > header menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 100;
-  padding: var(--menu-padding);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  column-gap: var(--space-md);
-  font-family: var(--fontFamily-title);
-  font-size: var(--fontSize-xs);
-  text-transform: uppercase;
-  background-color: var(--menu-backgroundColor);
-  transition: top 0.3s ease-in-out;
-  text-align: center;
-  width: var(--menu-width);
-}
-body > header menu > li:first-child > a {
-  border: none;
-  padding: 0;
-}
-body > header menu > li:first-child > a > img {
-  width: var(--menu-picto-width);
-  height: var(--menu-picto-width);
-}
-body > header menu > li > a {
-  display: block;
-  padding: var(--space-sm) 0;
-  border-top: 1px solid var(--color-neutre-darker);
-  white-space: nowrap;
-}
-body > header menu > li > a:hover, body > header menu > li > a:active {
-  color: var(--color-white);
-}
-body > header > dl {
+body > header > section {
   --svg-logo-width: 90px;
   --svg-logo-height: var(--svg-logo-width);
   position: absolute;
@@ -242,7 +200,7 @@ body > header > dl {
   font-family: var(--fontFamily-title);
   color: var(--text-color-default);
 }
-body > header > dl::after {
+body > header > section::after {
   content: "";
   background-image: url("/assets/svgs/picto-pointe-green.svg");
   background-repeat: no-repeat;
@@ -251,14 +209,14 @@ body > header > dl::after {
   width: var(--svg-logo-width);
   height: var(--svg-logo-height);
 }
-body > header > dl > dt {
+body > header > section > div {
   text-align: right;
 }
-body > header > dl > dt small {
+body > header > section > div small {
   display: block;
   font-size: var(--fontSize-lg);
 }
-body > header > dl > dt span {
+body > header > section > div span {
   color: var(--color-green);
 }
 body > header > aside {
@@ -1122,11 +1080,6 @@ ul.bulleted-list > li::before {
   color: var(--color-neutre-darker);
 }
 
-@container body (min-width: 1400px) {
-  body > header nav {
-    --menu-positionX: calc(((100dvw - 1400px) / 2) + var(--space-md) );
-  }
-}
 @container body (max-width: 1400px) {
   body h2 {
     font-size: var(--fontSize-lg);
@@ -1295,6 +1248,14 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 680px) {
+  body > menu {
+    justify-content: center;
+    --menu-link-paddingVert: var(--space-sm);
+    --menu-link-paddingHor: var(--space-xs);
+  }
+  body > header > a:first-of-type {
+    --logo-height: 150px;
+  }
   body > header.project > aside {
     column-gap: var(--space-sm);
   }
