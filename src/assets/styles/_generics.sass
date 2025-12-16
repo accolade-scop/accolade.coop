@@ -31,6 +31,8 @@ body
     &.open
       > menu
         display: flex
+      > .btn-menu
+        background-image: url("/assets/svgs/picto-close.svg")
     > .btn-menu
       width: var(--menu-btn-width)
       height: var(--menu-btn-width)
@@ -38,6 +40,7 @@ body
       background-image: url("/assets/svgs/picto-burger.svg")
       background-repeat: no-repeat
       background-position: center center
+      background-size: contain
     > menu
       display: none
       flex-flow: row wrap

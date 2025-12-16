@@ -147,6 +147,9 @@ body > nav {
 body > nav.open > menu {
   display: flex;
 }
+body > nav.open > .btn-menu {
+  background-image: url("/assets/svgs/picto-close.svg");
+}
 body > nav > .btn-menu {
   width: var(--menu-btn-width);
   height: var(--menu-btn-width);
@@ -154,6 +157,7 @@ body > nav > .btn-menu {
   background-image: url("/assets/svgs/picto-burger.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
 }
 body > nav > menu {
   display: none;
@@ -1246,14 +1250,21 @@ ul.bulleted-list > li::before {
 @container body (max-width: 800px) {
   body > nav {
     flex-flow: column-reverse nowrap;
+    position: sticky;
+    background-color: var(--body-backgroundColor-base);
   }
   body > nav .btn-menu {
+    --menu-btn-width: 40px;
     align-self: flex-end;
-    width: 150px;
   }
   body > nav menu {
-    width: 150px;
+    width: 100%;
     flex-direction: column;
+  }
+  body > nav menu > a {
+    width: 100%;
+    --menu-link-paddingVert: var(--space-sm);
+    border-bottom: 1px solid var(--color-neutre-darker);
   }
   body > main #expertises h2 {
     padding-right: 0;

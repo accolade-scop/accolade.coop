@@ -143,12 +143,18 @@
   body
     > nav
       flex-flow: column-reverse nowrap
+      position: sticky
+      background-color: var(--body-backgroundColor-base)
       .btn-menu
+        --menu-btn-width: 40px
         align-self: flex-end
-        width: 150px
       menu
-        width: 150px
+        width: 100%
         flex-direction: column
+        > a
+          width: 100%
+          --menu-link-paddingVert: var(--space-sm)
+          border-bottom: 1px solid var(--color-neutre-darker)
 
     > main
 
