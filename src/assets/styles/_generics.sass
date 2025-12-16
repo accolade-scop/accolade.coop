@@ -360,8 +360,12 @@ ul.bulleted-list
       width: 1px
       height: 100%
       background-color: var(--color-green)
-    > img
+    > figure
       grid-area: picture
+      > img
+        width: 100%
+        height: 100%
+        object-fit: cover
     > div
       display: flex
       flex-flow: column nowrap
@@ -545,7 +549,7 @@ ul.bulleted-list
         grid-area: cardd
         row-gap: var(--space-sm)
         padding: var(--space-lg)  var(--space-md)
-        &::after, &::before
+        &::before
           display: none
         em
           position: relative
@@ -587,20 +591,32 @@ ul.bulleted-list
     grid-template-areas: "linea carda cardb lineb" "linea picture cardc lineb" "linea cardd carde lineb"
 
 
-#creation-web, #graphic-design
+#creation-web
   > article
     grid-template-areas: "linea picture carda lineb" "linea picture cardb lineb" "linea picture cardc lineb" "linea cardd cardd lineb"
+
+#graphic-design
+  > article
+    grid-template-areas: "linea picture carda lineb" "linea picture cardb lineb"
 
 
 #expertises, #creation-web, #graphic-design, #laboratoire
   margin-bottom: 100px
 
 #projets, #projects
-  background-image: url('/assets/svgs/picto-crochet-fermant-big.svg')
-  background-repeat: no-repeat
-  background-position: top  right
-  background-size: contain
-  padding-right: 70px
+  &::after
+    position: absolute
+    top: -15px
+    right: -80px
+    width: 160px
+    height: 400px
+    z-index: 1
+    content: ""
+    background-image: url('/assets/svgs/picto-crochet-fermant-big.svg')
+    background-repeat: no-repeat
+    background-position: top  right
+    background-size: contain
+
   > .slider__content
     display: flex
     flex-flow: row nowrap
@@ -627,12 +643,14 @@ ul.bulleted-list
         color: var(--color-neutre-light)
         font-size: var(--fontSize-xs)
   > .slider__nav
+    position: relative
     display: flex
     flex-flow: row wrap
     justify-content: space-around
     align-items: center
     column-gap: var(--space-md)
     width: 100%
+    z-index: 3
     > .separation
       display: block
       content: ""

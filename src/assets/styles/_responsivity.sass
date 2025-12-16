@@ -27,6 +27,9 @@
 @container body (max-width: 1330px)
   body
     > main
+      #projets, #projects
+        &::after
+          display: none
       #project-details
         width: auto
         header
@@ -129,7 +132,7 @@
           flex-flow: column nowrap
           justify-content: center
           align-items: stretch
-          > img
+          > figure
             display: none
 
 

@@ -502,8 +502,13 @@ ul.bulleted-list > li::before {
   height: 100%;
   background-color: var(--color-green);
 }
-.mosaic > article > img {
+.mosaic > article > figure {
   grid-area: picture;
+}
+.mosaic > article > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .mosaic > article > div {
   display: flex;
@@ -716,7 +721,7 @@ ul.bulleted-list > li::before {
   row-gap: var(--space-sm);
   padding: var(--space-lg) var(--space-md);
 }
-#expertises > nav > .link:nth-of-type(4)::after, #expertises > nav > .link:nth-of-type(4)::before {
+#expertises > nav > .link:nth-of-type(4)::before {
   display: none;
 }
 #expertises > nav > .link:nth-of-type(4) em {
@@ -758,20 +763,30 @@ ul.bulleted-list > li::before {
   grid-template-areas: "linea carda cardb lineb" "linea picture cardc lineb" "linea cardd carde lineb";
 }
 
-#creation-web > article, #graphic-design > article {
+#creation-web > article {
   grid-template-areas: "linea picture carda lineb" "linea picture cardb lineb" "linea picture cardc lineb" "linea cardd cardd lineb";
+}
+
+#graphic-design > article {
+  grid-template-areas: "linea picture carda lineb" "linea picture cardb lineb";
 }
 
 #expertises, #creation-web, #graphic-design, #laboratoire {
   margin-bottom: 100px;
 }
 
-#projets, #projects {
+#projets::after, #projects::after {
+  position: absolute;
+  top: -15px;
+  right: -80px;
+  width: 160px;
+  height: 400px;
+  z-index: 1;
+  content: "";
   background-image: url("/assets/svgs/picto-crochet-fermant-big.svg");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
-  padding-right: 70px;
 }
 #projets > .slider__content, #projects > .slider__content {
   display: flex;
@@ -803,12 +818,14 @@ ul.bulleted-list > li::before {
   font-size: var(--fontSize-xs);
 }
 #projets > .slider__nav, #projects > .slider__nav {
+  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
   column-gap: var(--space-md);
   width: 100%;
+  z-index: 3;
 }
 #projets > .slider__nav > .separation, #projects > .slider__nav > .separation {
   display: block;
@@ -1132,6 +1149,9 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 1330px) {
+  body > main #projets::after, body > main #projects::after {
+    display: none;
+  }
   body > main #project-details {
     width: auto;
   }
@@ -1220,7 +1240,7 @@ ul.bulleted-list > li::before {
     justify-content: center;
     align-items: stretch;
   }
-  body > main .mosaic > article > img {
+  body > main .mosaic > article > figure {
     display: none;
   }
   body > main #mentions > section {
