@@ -812,6 +812,9 @@ ul.bulleted-list > li::before {
   transform: rotate(180deg);
 }
 
+#projects::after {
+  display: none;
+}
 #projects > .slider__content {
   flex-wrap: wrap;
 }
