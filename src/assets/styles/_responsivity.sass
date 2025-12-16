@@ -215,8 +215,6 @@
             flex: 1 1 50%
             p
               margin: 0
-            img
-              //display: none
 
 
       #mentions
@@ -228,12 +226,20 @@
               row-gap: var(--space-xs)
               text-align: left
 
+
       #projets
         > .slider__content
           overflow-x: visible
         > .slider__nav
           display: none
 
+      #project-details
+        header
+          > aside
+            height: auto
+            > section
+              > img
+                max-width: 50px
 
     > footer
       flex-flow: column nowrap

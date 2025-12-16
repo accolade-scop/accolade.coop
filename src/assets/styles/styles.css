@@ -170,7 +170,7 @@ body > header {
   margin-bottom: var(--space-xl);
 }
 body > header > a:first-of-type {
-  --logo-height: 455px;
+  --logo-height: 475px;
   --logo-width: 113px;
   --logo-positionX: 30px;
   --logo-positionY: 30px;
@@ -1299,6 +1299,12 @@ ul.bulleted-list > li::before {
   }
   body > main #projets > .slider__nav {
     display: none;
+  }
+  body > main #project-details header > aside {
+    height: auto;
+  }
+  body > main #project-details header > aside > section > img {
+    max-width: 50px;
   }
   body > footer {
     flex-flow: column nowrap;
