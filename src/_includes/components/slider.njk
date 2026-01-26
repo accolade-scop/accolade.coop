@@ -1,0 +1,31 @@
+{% macro slider(id, title, subtitle, items) %}
+
+<section id="{{ id }}" class="slider">
+
+    <h2>{{ title }}<small>{{ subtitle }}</small></h2>
+
+    <nav class="slider__content" data-slider>
+        {% for item in items %}
+            <a href="/projets/{{ item.slug }}.html" title="voir le detail du projet">
+                <img src="/assets/imgs/{{ item.slug }}/{{ item.banner.src }}" alt="{{ item.banner.description }}" width="248"
+                                         height="157"/>
+               {{ item.client.name }}
+
+               <em>
+                   {% for tag in item.tags %}
+                       {{ tag }}{% if not loop.last %} •{% endif %}
+                   {% endfor %}
+               </em>
+            </a>
+        {% endfor %}
+    </nav>
+
+    <div class="slider__nav" data-arrows>
+        <button title="projet précédent" class="btn-prev" type="button"></button>
+        <div class="separation"></div>
+        <button title="projet suivant" class="btn-next" type="button"></button>
+    </div>
+
+</section>
+<script src="/assets/js/slider.js"></script>
+{% endmacro %}

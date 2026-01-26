@@ -1,14 +1,13 @@
-<header style="background-image: url('/assets/imgs/home-background.png')" xmlns="http://www.w3.org/1999/html">
+<header style="background-image: url('/assets/imgs/home-background.jpg')" xmlns="http://www.w3.org/1999/html">
 
     <a href="./" title="Aller à la page d'accueil">Accueil</a>
 
-    <nav>
-        <a href="/pages/contact.html" title="voir la page contact">
-            <img alt="Aller à la page contact" height="60" src="/assets/svgs/button-contact.svg" width="60"/>
-        </a>
-    </nav>
-
-    <span>Web <span>&</span> Graphisme </span>
+    <section>
+        <div>
+            Createurs engages
+            <small>Web <span>&</span> Graphisme</small>
+        </div>
+    </section>
 
     <aside>
 
@@ -30,35 +29,31 @@
     <!-- SECTION EXPERTISE -->
     <section id="expertises">
 
-        <h2 class="with-line">nos expertises<small>On fait quoi ?</small></h2>
+        <h2>nos expertises<small>On fait quoi ?</small></h2>
 
         <nav>
 
-            <div class="link">
+            <a class="link" href="/pages/web-creation.html" title="Aller à la page création de sites">
                 Création de sites internet
                 <em>Refonte ou création de sites<br/> internet • Ergonomie • SEO</em>
-            </div>
+            </a>
 
-            <div class="link">
+            <a class="link" href="/pages/graphic-design.html" title="Aller à la page créations graphiques">
                 Créations graphiques
                 <em>Logo • Charte graphique • Affiche • Carte de visite • Rapport d’activité...</em>
-            </div>
+            </a>
 
-            <div class="link">
+            <a class="link" href="/pages/laboratoire.html" title="Aller à la page laboratoire numérique">
                 Laboratoire numérique
                 <em>Développements spécifiques<br/> Veille technologique • Innovations</em>
-            </div>
+            </a>
 
-            <div class="link">
-                Vers le numérique responsable
+            <a class="link"  href="/pages/a-propos.html" title="Aller à la page qui sommes nous">
+                Une autre façon de penser !
                 <em>
-                    L’éco-conception permet de délivrer des sites plus légers, plus performants et plus accessibles,
-                    sans pour autant renoncer à votre image de marque : nous ne croyons pas à l’antagonisme design /
-                    respect de l’environnement. Concrètement, il s’agit de se demander à chaque étape du projet
-                    (arborescence, wireframes, design, techno, hébergement) quel dispositif est le plus vertueux d’un
-                    point de vue environnemental.
+                    En tant que coopérative, Accolade est fondée sur des principes d'équité, de solidarité et de coopération. Nous encourageons les projets locaux et soutenons les initiatives qui visent à améliorer la vie de ceux qui nous entourent et nous nous engageons à continuer à innover pour contribuer à un avenir plus durable et plus équitable pour tous.
                 </em>
-            </div>
+            </a>
 
 
         </nav>
@@ -67,46 +62,13 @@
 
 
     <!-- SECTION PROJETS -->
-    <section id="projets">
-
-        <h2 class="with-line">nos projets<small>Etudes de cas</small></h2>
-
-        <nav class="slider__content">
-
-            {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet">
-
-                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
-                         height="157"/>
-
-                    {{ p.client.name }}
-
-                    <em>
-                        {% for tag in p.tags %}
-                            {{ tag }}{% if not loop.last %} •{% endif %}
-                        {% endfor %}
-                    </em>
-                </a>
-
-            {% endfor %}
-
-        </nav>
-
-        <div class="slider__nav">
-            {#            <input #}
-            {#                    alt="element précédent" #}
-            {#                    id="btn-prec" #}
-            {#                    src="assets/svgs/picto-groupe-pointe-off.svg" #}
-            {#                    type="image"/> #}
-            <div class="separation"></div>
-            {#            <input #}
-            {#                    alt="element suivant" #}
-            {#                    id="btn-next" #}
-            {#                    src="assets/svgs/picto-groupe-pointe-off.svg" #}
-            {#                    type="image"/> #}
-        </div>
-
-    </section>
+    {% from "components/slider.njk" import slider %}
+    {{ slider(
+        "projets",
+        "Projets",
+        "Similaires",
+        projects | selectattr("home", "equalto", true)
+    ) }}
 
 
     <!-- SECTION CONTACT -->
@@ -115,7 +77,7 @@
         <h2>Vous avez un projet ?</h2>
 
         <h3>N’hesitez pas a nous
-            <a class="btn btn-page-nav" href="/pages/contact.html">Contacter</a>
+            <a class="btn btn-page-nav" href="/pages/contact.html" title="Prenez contact par email">Contacter</a>
         </h3>
 
     </section>

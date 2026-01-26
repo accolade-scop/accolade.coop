@@ -1,0 +1,89 @@
+<header style="background-image: url('/assets/imgs/realisations-background.jpg')">
+
+    <a href="../" title="Aller à la page d'accueil">Accueil</a>
+
+    <section>
+        <div>
+            Createurs engages
+            <small>Web <span>&</span> Graphisme</small>
+        </div>
+    </section>
+
+    <aside>
+
+        <h1><small>C’est quoi ?</small></h1>
+
+        <p>
+            Accolade est une SCOP nancéienne qui décode les usages, conçoit et crée.
+            <br/><br/>
+            Que ce soit pour penser votre identité graphique, créer votre site internet ou votre application mobile,
+            notre équipe vous conseille et vous accompagne de A à Z.
+        </p>
+
+    </aside>
+
+</header>
+
+<main class="container">
+
+    <!-- LISTE DES CATEGORIES -->
+    <section id="categories" class="categories-list">
+
+        {% set uniqueCategories = projects | getUniqueCategories(project) %}
+        {% for categorie in uniqueCategories %}
+            <a class="btn-categorie" data-categorie="{{ categorie }}" title="Voir les projets {{ categorie }}">{{ categorie }}</a>
+            {#                {% if not loop.last %} •{% endif %} #}
+        {% endfor %}
+
+    </section>
+
+    <!-- LISTE DES TAGS -->
+    <!-- <section id="tags" class="tags-list"> -->
+
+        <!-- {% set uniqueTags = projects | getUniqueTags(project) %} -->
+        <!-- {% for tag in uniqueTags %} -->
+            <!-- <a class="btn-tag" data-tag="{{ tag }}" title="Voir les projets {{ tag }}">{{ tag }}</a> -->
+            <!-- {#                {% if not loop.last %} •{% endif %} #} -->
+        <!-- {% endfor %} -->
+
+    <!-- </section> -->
+
+    <!-- SECTION PROJECTS -->
+    <section id="projects">
+
+        <nav class="slider__content">
+
+            {% for p in projects %}
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}"" data-categories="{{ p.categories }}"
+                   class="project">
+
+                    <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
+                         height="157"/>
+
+                    {{ p.client.name }}
+
+                    <em>
+                        {% for tag in p.tags %}
+                            {{ tag }}{% if not loop.last %} •{% endif %}
+                        {% endfor %}
+                    </em>
+                </a>
+
+            {% endfor %}
+
+        </nav>
+
+    </section>
+
+    <!-- SECTION CONTACT -->
+    <section id="contact">
+
+        <h2>Vous avez un projet ?</h2>
+
+        <h3>N’hesitez pas a nous
+            <a class="btn btn-page-nav" href="/pages/contact.html" title="Prenez contact par email">Contacter</a>
+        </h3>
+
+    </section>
+
+</main>

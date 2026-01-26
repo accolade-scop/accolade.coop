@@ -30,6 +30,7 @@ const projectsList = [
         slug: "jules-bourgoin",
         year: 2025,
         name: "Réalisation d'un thème OMEKA S",
+        home: true,
         description: [
             "Exploitation numérique et scientifique des archives de Jules Bourgoin à partir de la numérisation d'une sélection du fonds de l'architecte et ornemaniste Jules Bourgoin (1838-1908) conservé à l'INHA",
             "",
@@ -40,6 +41,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Omeka", "Charte graphique", "Graphisme", "Site internet"],
+        categories: ["Omeka", "Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin_site-internet_graphisme.png", description: "Accolade graphisme web jules-bourgoin banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_archives-henri-poincare-inha-msh-lorraine_jules-bourgoin.jpg", description: "Accolade graphisme web jules-bourgoin logo"},
         images: []
@@ -48,6 +50,7 @@ const projectsList = [
         slug: "ific",
         year: 2025,
         name: "Réalisation d'un site internet",
+        home: true,
         description: [
             "L’Institut Francilien d’Implantation Cochléaire est une structure de santé experte, qui a pour mission l’accompagnement à long terme et l’optimisation du parcours de soin des patients implantés cochléaires.",
             "",
@@ -60,6 +63,7 @@ const projectsList = [
         },
         url: "https://implant-ific.org/",
         tags: ["Développement", "Site internet", "Graphisme"],
+        categories: ["Graphisme", "Site internet", "Développement"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_ific-institut-francilien-implantation-cochleaire_site-internet.jpg", description: "Accolade graphisme web IFIC banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_ific-institut-francilien-implantation-cochleaire.jpg", description: "Accolade graphisme web logo"},
         images: []
@@ -68,6 +72,7 @@ const projectsList = [
         slug: "espoir54",
         year: 2024,
         name: "Site internet",
+        home: true,
         description: [
             "Espoir 54 est une association proposant à toute personne en situation de souffrance psychique un lieu d'accueil et d'entraide avec des professionnels et des bénévoles, des services de réhabilitation psychosociale/professionnelle, des ateliers de création et de resocialisation (théâtre, musique, cuisine, club de marche, jardinage, etc...).",
             "",
@@ -78,6 +83,7 @@ const projectsList = [
         },
         url: "https://www.espoir54.org/",
         tags: ["Graphisme", "Site internet"],
+        categories: ["Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_espoir54-site-internet-wordpress.jpg", description: "Accolade graphisme web espoir54 banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_espoir54.jpg", description: "Accolade graphisme web espoir54 logo"},
         images: []
@@ -86,6 +92,7 @@ const projectsList = [
         slug: "epistemology-of-theism",
         year: 2019,
         name: "Supports de communication",
+        home: true,
         description: [
             "“Inquiries Into Epistemology of Theism: A Seminar in Religious Epistemology” est un séminaire organisé par Roger Pouivet & Paul Clavier avec le soutien de l’université de Lorraine, des Archives Henri Poincaré, et de l’Institut universitaire de France.",
             "",
@@ -96,6 +103,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Graphisme", "Mise en page", "Print"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme.jpg", description: "Accolade graphisme web banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_livret_archives-henri-poincaré_université_lorraine_programme_epistemology_logo.jpg", description: "Accolade graphisme web logo"},
         images: [
@@ -108,6 +116,7 @@ const projectsList = [
         slug: "georessources",
         year: 2022 & 2023,
         name: "Création d'une charte graphique & mise en page de rapports d'activités",
+        home: true,
         description: [
             "Laboratoire de recherche en géologie, GeoRessources couvre le champ des ressources géologiques, de leur exploration à leur exploitation, en passant par les étapes du traitement et de la valorisation, et de ses impacts sur la société et l’environnement.",
             "",
@@ -118,6 +127,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Charte graphique", "Graphisme", "Print"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite-2021.jpg", description: "Accolade graphisme web georessources banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_georessources_mise-en-page-rapport-activite.jpg", description: "Accolade graphisme web georessources logo"},
         images: [
@@ -132,6 +142,7 @@ const projectsList = [
         slug: "hobotruck",
         year: 2024,
         name: "Création de l'identité graphique",
+        home: true,
         description: [
             "Hobo Truck est un food truck solidaire ayant plusieurs missions : ",
             "• Distribuer des repas gratuits à celles et ceux qui en ont besoin",
@@ -145,6 +156,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Logo","Charte graphique", "Kakémono", "Habillage de véhicule", "Ecocups"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_hobo-truck_nancy-min.png", description: "Accolade graphisme web hobo truck nancy banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_solidaire_hobo-truck_nancy.jpg", description: "Accolade graphisme web hobo truck nancy logo"},
         images: [
@@ -162,6 +174,7 @@ const projectsList = [
         slug: "chaouette",
         year: 2020,
         name: "Création de l'identité graphique & Réalisation d'un site internet",
+        home: true,
         description: [
             "Basée à Saizerais en Lorraine, La Châouette est une brasserie produisant de la bière biologique de fabrication artisanale.",
             "",
@@ -174,6 +187,7 @@ const projectsList = [
         },
         url: "https://www.chaouette.fr/",
         tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print"],
+        categories: ["Graphisme", "Site internet"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_biere_chaouette_bieres-artisanales-bio-blonde.jpg", description: "Accolade graphisme web chaouette banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo__biere_chaouette_bieres-artisanales-bio-min.jpg", description: "Accolade graphisme web chaouette logo"},
         images: [
@@ -185,6 +199,7 @@ const projectsList = [
         slug: "la-brass",
         year: "Depuis 2020",
         name: "Création de l'identité graphique & Réalisation d'un site internet",
+        home: true,
         description: [
             "La Fabrique des GrÔ est une brasserie artisanale basée à Maxéville (Lorraine - 54320). C'est également un lieu culturel en plein essort où le public peut déguster de bonnes bières tout à assitant à des concerts",
             "",
@@ -195,6 +210,7 @@ const projectsList = [
         },
         url: "https://www.lafabriquedesgros.fr/",
         tags: ["Logo", "Charte graphique", "Graphisme", "Site internet", "Print", "Développement"],
+        categories: ["Graphisme", "Site internet", "Développement"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_fabrique-des-gro-brasserie_maxeville.png", description: "Accolade graphisme web la fabrique des gro maxeville banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_fabrique-des-gro_bieres_slider.jpg", description: "Accolade graphisme web la fabrique des gro maxeville  logo"},
         images: [
@@ -212,6 +228,7 @@ const projectsList = [
         slug: "liec",
         year: 2023,
         name: "Création graphique & mise en page d'une frise chronologique",
+        home: true,
         description: [
             "Le LIEC, Laboratoire Interdisciplinaire des Environnements Continentaux, est une UMR Université de Lorraine. En 2023, le laboratoire fête ses 10ans, l’occasion de revenir sur les étapes phares de cette décennie.",
             "Création graphique et mise en page d’un “frise chronologique” mettant en avant les événements marquants, à l’aide de photographies, création d’icônes…",
@@ -221,6 +238,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Graphisme", "Print"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant-couverture.jpg", description: "Accolade graphisme web liec banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_liec_université_lorraine_depliant.jpg", description: "Accolade graphisme web liec logo"},
         images: [
@@ -232,6 +250,7 @@ const projectsList = [
         slug: "ekipea",
         year: "Depuis 2020",
         name: "Développement d'un ERP destiné aux CSE",
+        home: true,
         description: [
             "EKIPEA propose un service externalisé de back office pour gérer les activités sociales et culturelles des CSE, une solution de comptabilité et une application mobile permettant au CSE de communiquer avec ses salariés, et aux salariés d'accéder aux ASC du CSE",
             "",
@@ -242,6 +261,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Développement", "ERP", "API", "Mobile"],
+        categories: ["Développement"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse.jpg", description: "Accolade graphisme web ekipea banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse_logo.jpg", description: "Accolade graphisme web ekipea logo"},
         images: []

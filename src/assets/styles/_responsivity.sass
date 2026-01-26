@@ -1,0 +1,268 @@
+
+@container body (min-width: 1400px)
+  body
+    > nav
+      right: calc(((100dvw - 1400px) / 2))
+
+@container body (max-width: 1400px)
+  body
+    h2
+      font-size: var(--fontSize-lg)
+    h3
+      font-size: var(--fontSize-defaut)
+    > header
+      > aside
+        padding-left: 30px
+    > main
+      padding: 0 var(--space-md)
+      #projects
+        > .slider__content
+          justify-content: center
+      #projets
+        > .slider__content
+          flex-flow: row nowrap
+          width: 100%
+          scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
+          scrollbar-width: thin
+          padding-bottom: var(--space-md)
+
+@container body (max-width: 1330px)
+  body
+    > main
+      #projets, #projects
+        &::after
+          display: none
+      #project-details
+        width: auto
+        header
+          flex-direction: column
+          > img, &::after
+            display: none
+          > .btn
+            right: revert
+            bottom: 15px
+            left: 50%
+            transform: translateX(-50%)
+        > aside
+          > section
+            > img
+              width: 50px
+        .masonry-container
+          column-count: 1
+
+@container body (max-width: 1180px)
+  body
+    > header
+      > section
+        display: none
+      > a:first-of-type
+        --logo-height: 250px
+        --logo-width: 70px
+        background-color: transparent
+        background-image: url("/assets/svgs/picto-pointe-green.svg")
+        background-position: top var(--space-md)  left var(--space-md)
+      > aside
+        margin: 0 auto
+        padding: var(--space-md)
+        max-width: 500px
+        text-align: center
+        > p
+          text-align: center
+      &.project
+        background-position: center center
+        > aside
+          display: none
+
+
+    > main
+
+      > section
+        padding: 0 var(--space-md)
+        > h2
+          display: block
+          text-align: center
+
+
+      #infos-contact
+        h2
+          padding-right: 0
+        > nav
+          display: flex
+          flex-flow: column nowrap
+          &::after, &::before
+            display: none
+          > a
+            font-size: var(--fontSize-sm)
+            &:nth-child(2)
+              padding: var(--space-md)
+
+
+      #expertises
+        > nav
+          grid-template-columns: repeat(3, minmax(100px, 1fr))
+          grid-template-areas: "carda cardb cardc" "cardd cardd cardd"
+          gap: var(--space-sm)
+          &::after, &::before
+            display: none
+
+
+      #projets, #projects
+        .slider__nav
+          justify-content: center
+
+
+      .mosaic
+        > article
+          display: flex
+          flex-flow: column nowrap
+          justify-content: center
+          align-items: stretch
+          > figure
+            display: none
+
+
+      #mentions
+        > section
+          grid-template-columns: repeat(auto-fit, minmax(380px,1fr))
+          gap: var(--space-sm)
+          &::after, &::before
+            display: none
+          > dl
+            width: auto
+            > dt
+              margin-bottom: var(--space-sm)
+              width: auto
+
+      #equipe
+        > article
+          flex-flow: column-reverse nowrap
+          > img
+            max-width: 100%
+
+@container body (max-width: 800px)
+  body
+    > nav
+      flex-flow: column-reverse nowrap
+      position: sticky
+      background-color: var(--body-backgroundColor-base)
+      .btn-menu
+        --menu-btn-width: 40px
+        align-self: flex-end
+      menu
+        width: 100%
+        flex-direction: column
+        > a
+          width: 100%
+          --menu-link-paddingVert: var(--space-sm)
+          border-bottom: 1px solid var(--color-neutre-darker)
+
+    > main
+
+      #expertises
+        h2
+          padding-right: 0
+        > nav
+          > .link, a
+            font-size: var(--fontSize-xs)
+            padding: 15px 0
+            &::before
+              width: 50px
+              height: 50px
+              background-size: cover
+            &::after
+              display: none
+            > em
+              display: none
+            &:nth-child(4)
+              em
+                padding: var(--space-sm)
+                &::before,&::after
+                  display: none
+
+      #projets, #projects
+        background-image: none
+        padding-right: 0
+
+@container body (max-width: 680px)
+  body
+    > menu
+      justify-content: center
+      --menu-link-paddingVert: var(--space-sm)
+      --menu-link-paddingHor: var(--space-xs)
+
+
+    > header
+      > a:first-of-type
+        --logo-height: 150px
+      &.project
+        > aside
+          column-gap: var(--space-sm)
+
+
+    > main
+      #contact
+        --marge: var(--space-md)
+        --contact-padding: var(--space-md) var(--space-sm)
+        max-width: calc(100vw - var(--marge) * 2)
+        margin-right: var(--marge)
+        margin-left: var(--marge)
+        h2
+          font-size: var(--fontSize-md)
+          text-align: center
+        h3
+          flex-direction: column
+          row-gap: var(--space-sm)
+
+
+      #equipe
+        > ul
+          row-gap: var(--space-md)
+          > li
+            flex: 1 1 50%
+            p
+              margin: 0
+
+
+      #mentions
+        > section
+          grid-template-columns: 1fr
+          > dl
+            > dd
+              flex-direction: column
+              row-gap: var(--space-xs)
+              text-align: left
+
+
+      #projets
+        > .slider__content
+          overflow-x: visible
+        > .slider__nav
+          display: none
+      #project-details
+        header
+          > aside
+            height: auto
+            > section
+              > img
+                max-width: 50px
+
+    > footer
+      flex-flow: column nowrap
+      row-gap: var(--space-sm)
+      margin-right: var(--space-md)
+      margin-left: var(--space-md)
+      > div
+        display: flex
+        flex-flow: column wrap
+        justify-content: center
+        align-items: center
+        text-align: center
+        max-width: 260px
+        font-size: var(--fontSize-xs)
+
+@container body (min-width: 680px)
+  body
+    > footer
+      > div
+        > *:not(:first-child)::before
+          content: " - "

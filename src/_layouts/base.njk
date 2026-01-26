@@ -15,23 +15,40 @@
     <link rel="apple-touch-icon" href="/assets/imgs/logo-accolade-element.png">
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link href="/assets/styles/styles.css" rel="stylesheet">
+    <link rel="preload" fetchpriority="high" as="image" href="/assets/imgs/home-background.jpg" type="image/jpeg">
+    <!-- <script src="/assets/js/filter-tags.js"></script> -->
+    <script src="/assets/js/filter-categories.js"></script>
+    <script src="/assets/js/menu.js"></script>
 </head>
 
-<body>
+<body class="wrapper">
 
-    {{ content | safe }}
+<nav id="menu">
+    <menu  class="">
+        <a href="../index.html" title="voir la page d'accueil">Accueil</a>
+        <a href="/pages/a-propos.html" title="voir la page a propos d'Accolade">A propos</a>
+        <a href="/pages/graphic-design.html" title="voir nos créations graphiques">Graphisme</a>
+        <a href="/pages/web-creation.html" title="voir nos sites internet">Sites internet</a>
+        <a href="/pages/laboratoire.html" title="voir nos développements">Laboratoire</a>
+        <a href="/pages/projects-all.html" title="voir toutes nos réalisations">Réalisations</a>
+        <a href="/pages/contact.html" title="voir la page contacts">Contact</a>
+    </menu>
+    <span class="btn-menu"></span>
+</nav>
 
-    <footer>
+{{ content | safe }}
 
-        <img alt="Logo Accolade" height="27" src="/assets/svgs/logo-accolade.svg" width="200"/>
+<footer>
 
-        <div>
-            <a href="/pages/mentions-legales.html"> Mentions légales</a>
-            <span>&copy; ACCOLADE 2025</span>
-            <span>Tous droits reservés</span>
-        </div>
+    <img alt="Logo Accolade" height="27" src="/assets/svgs/logo-accolade.svg" width="200"/>
 
-    </footer>
+    <div>
+        <a href="/pages/mentions-legales.html" title="Lire les mentions légales"> Mentions légales</a>
+        <span>&copy; ACCOLADE 2025</span>
+        <span>Tous droits reservés</span>
+    </div>
+
+</footer>
 
 </body>
 </html>
