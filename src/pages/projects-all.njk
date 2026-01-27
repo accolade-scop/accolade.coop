@@ -1,10 +1,10 @@
 <header style="background-image: url('/assets/imgs/realisations-background.jpg')">
 
-    <a href="../" title="Aller à la page d'accueil">Accueil</a>
+    <a href="/index.html" title="Aller à la page d'accueil">Accueil</a>
 
     <section>
         <div>
-            Createurs engages
+            Créateurs engagés
             <small>Web <span>&</span> Graphisme</small>
         </div>
     </section>
@@ -54,7 +54,7 @@
         <nav class="slider__content">
 
             {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}"" data-categories="{{ p.categories }}"
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}" data-categories="{{ p.categories }}"
                    class="project">
 
                     <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"
@@ -80,7 +80,7 @@
 
         <h2>Vous avez un projet ?</h2>
 
-        <h3>N’hesitez pas a nous
+        <h3>N’hésitez pas à nous
             <a class="btn btn-page-nav" href="/pages/contact.html" title="Prenez contact par email">Contacter</a>
         </h3>
 
