@@ -31,7 +31,7 @@
 
         {% set uniqueCategories = projects | getUniqueCategories(project) %}
         {% for categorie in uniqueCategories %}
-            <a class="btn-categorie" data-categorie="{{ categorie }}" title="Voir les projets {{ categorie }}">{{ categorie }}</a>
+            <button class="btn-categorie" data-categorie="{{ categorie }}" title="Voir les projets {{ categorie }}">{{ categorie }}</button>
             {#                {% if not loop.last %} •{% endif %} #}
         {% endfor %}
 

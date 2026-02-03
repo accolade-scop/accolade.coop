@@ -435,6 +435,8 @@ ul.bulleted-list > li::before {
 }
 .btn-tag:focus, .btn-tag.selected, .btn-categorie:focus, .btn-categorie.selected {
   border-color: var(--color-green);
+  background-color: var(--color-green);
+  color: var(--color-black);
 }
 
 .tags-list, .categories-list {
