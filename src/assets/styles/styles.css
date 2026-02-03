@@ -115,6 +115,22 @@ html {
 }
 
 body {
+  --url-backgroundImage-index: url("/assets/imgs/home-background.jpg");
+  --url-backgroundImage-apropos: url("/assets/imgs/a-propos-background.jpg");
+  --url-backgroundImage-creationGraphique: url("/assets/imgs/creationGraphique-background.jpg");
+  --url-backgroundImage-webCreation: url("/assets/imgs/webCreation-background.jpg");
+  --url-backgroundImage-laboratoireNumerique: url("/assets/imgs/laboratoireNumerique-background.jpg");
+  --url-backgroundImage-realisations: url("/assets/imgs/realisations-background.jpg");
+  --url-backgroundImage-contact: url("/assets/imgs/home-background.jpg");
+  --url-backgroundImage-mentionsLegales: url("/assets/imgs/mentionsLegales-background.jpg");
+  --url-backgroundImage-index-smart: url("/assets/imgs/home-background-smart.jpg");
+  --url-backgroundImage-apropos-smart: url("/assets/imgs/a-propos-background-smart.jpg");
+  --url-backgroundImage-creationGraphique-smart: url("/assets/imgs/creationGraphique-background-smart.jpg");
+  --url-backgroundImage-webCreation-smart: url("/assets/imgs/webCreation-background-smart.jpg");
+  --url-backgroundImage-laboratoireNumerique-smart: url("/assets/imgs/laboratoireNumerique-background-smart.jpg");
+  --url-backgroundImage-realisations-smart: url("/assets/imgs/realisations-background-smart.jpg");
+  --url-backgroundImage-contact-smart: url("/assets/imgs/home-background-smart.jpg");
+  --url-backgroundImage-mentionsLegales-smart: url("/assets/imgs/mentionsLegales-background-smart.jpg");
   background-image: url("/assets/imgs/body-background.jpg");
   background-repeat: repeat-y;
   background-position: top center;
@@ -1372,6 +1388,18 @@ ul.bulleted-list > li::before {
 @container body (min-width: 680px) {
   body > footer > div > *:not(:first-child)::before {
     content: " - ";
+  }
+}
+@media (max-width: 680px) {
+  body {
+    --url-backgroundImage-index: var(--url-backgroundImage-index-smart);
+    --url-backgroundImage-apropos: var(--url-backgroundImage-apropos-smart);
+    --url-backgroundImage-creationGraphique: var(--url-backgroundImage-creationGraphique-smart);
+    --url-backgroundImage-webCreation: var(--url-backgroundImage-webCreation-smart);
+    --url-backgroundImage-laboratoireNumerique: var(--url-backgroundImage-laboratoireNumerique);
+    --url-backgroundImage-realisations: var(--url-backgroundImage-realisations-smart);
+    --url-backgroundImage-contact: var(--url-backgroundImage-contact-smart);
+    --url-backgroundImage-mentionsLegales: var(--url-backgroundImage-mentionsLegales-smart);
   }
 }
 
