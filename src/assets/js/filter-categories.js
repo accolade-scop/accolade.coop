@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const projectCategories = project.dataset.categories.split(/\s*,\s*/);
 
                 project.style.display = projectCategories.includes(selectedCategorie)
-                    ? "block"
+                    ? "flex"
                     : "none";
             });
         });
