@@ -280,6 +280,7 @@ const projectsList = [
         },
         url: "https://www.b31.fr/",
         tags: ["Site internet", "Développement"],
+        categories: ["Site internet"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_b31.png", description: "B31"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_b31-logo.jpg", description: "B31"},
         images: []
@@ -299,6 +300,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Logo", "Charte graphique", "Packaging produit", "Maquette Site internet"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_atelier-cbd-logo-packaging.png",  description: "Accolade graphisme web atelier cbd banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_atelier-cbd-logo.jpg", description: "Accolade graphisme web atelier cbd logo"},
         images: [{src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_atelier-cbd-site.png", description: "Accolade graphisme web atelier cbd 1"},]
@@ -310,13 +312,14 @@ const projectsList = [
         home: true,
         description: [
             "Démons & Merveilles est devenue un acteur incontournable du marché des produits culturels de seconde main.",
-            "Désireux de moderniser son image et de retravailler l’ergonomie générale de son site internet, Démons & Merveilles a fait appel à nous pour la refonte de son logo et le développement de son site internet.",
+            "Désireux de moderniser son image et de retravailler l’ergonomie générale de son site internet, Démons & Merveilles a fait appel à nous pour la refonte de son logo et l'adaptation de son site internet.",
         ],
         client: {
             name: "Démons & Merveilles", description: "Librairie en ligne d'objets culturels de seconde main",
         },
         url: "https://www.demons-et-merveilles.com/",
         tags: ["Logo", "Charte graphique", "Thème Prestashop"],
+        categories: ["Site internet", "Graphisme"],
         banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_demons-et-merveilles_site-internet.jpg",  description: "Accolade graphisme web demons et merveilles banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_demons-et-merveilles_site-2.jpg", description: "Accolade graphisme web demons et merveilles logo"},
         images: [
@@ -338,12 +341,14 @@ const projectsList = [
         },
         url: "",
         tags: ["Affiche", "Sous-bock", "T-shirt", "Visuels réseaux sociaux", "Communiqué de presse"],
-        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_-reseaux-sociauxgrostival2026.jpg",  description: "Accolade GrÔ’stival graphisme banner"},
-        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_affiche_grostival.jpg", description: "Accolade GrÔ’stival graphisme logo"},
+        categories: ["Graphisme"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_affiche_grostival.jpg",  description: "Accolade GrÔ’stival graphisme banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_-reseaux-sociauxgrostival2026-logo.jpg", description: "Accolade GrÔ’stival graphisme logo"},
         images: [
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_reseaux-sociaux_grostival2026.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 1"},
-            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_sous-bockgrostival.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 2"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_-reseaux-sociauxgrostival2026.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 1"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_reseaux-sociaux_grostival2025.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 1"},
             {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_sous-bockgrostival2026.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 3"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_sous-bockgrostival.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 2"},
         ]
     },
     {
@@ -361,6 +366,7 @@ const projectsList = [
         },
         url: "https://icarrelage.fr/",
         tags: ["Graphisme", "Développement", "Site internet"],
+        categories: ["Site internet", "Développement"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_icarrelage1.jpg",  description: "Accolade graphisme web Icarrelage banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_icarrelage.jpg", description: "Accolade graphisme web Icarrelage logo"},
         images: []
@@ -379,6 +385,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Logo", " Charte graphique", "Kakémonos", "Habillage de véhicule", "Modèle  PowerPoint", "Cartes de visites", "Site internet"],
+        categories: ["Site internet", "Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-7.png",  description: "Accolade graphisme web Saint-Camille banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_institution-st-camille.jpg", description: "Accolade graphisme web Saint-Camille logo"},
         images: [
@@ -404,6 +411,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Mise en page", "Graphisme"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_livret_mise-en-page_demain-sera-choral.png",  description: "Accolade graphisme web banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_graphisme_demain-sera-choral.jpg", description: "Accolade graphisme web logo"},
         images: [
@@ -414,7 +422,7 @@ const projectsList = [
         ]
     },
     {
-        slug: "maison-sante-domgermain ",
+        slug: "maison-sante-domgermain",
         year: 2025,
         name: "Création d’une affiche et d’un flyer",
         home: true,
@@ -427,6 +435,7 @@ const projectsList = [
         },
         url: "",
         tags: ["Affiche", "Illustration", "Flyer"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_affiche_maison-de-sante_domgermain.png",  description: "Accolade graphisme maison sante Domgermain banner"},
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_sante_psychologie_maison-de-sante-domgermain.jpg", description: "Accolade graphisme maison sante Domgermain logo"},
         images: []
@@ -445,8 +454,9 @@ const projectsList = [
         },
         url: "",
         tags: ["Maquette site internet", "Intégration"],
+        categories: ["Graphisme"],
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_maquette_site-internet_ensem-alumni.png",  description: "Accolade graphisme web Ensem Alumni banner"},
-        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_site-internet_ensem-alumni.jpg", description: "Accolade graphisme web Ensem Alumni logo"},
+        logo: {src: "accolade_graphisme-web_nancy-lorraine_ensem-alumni_graphisme-site-internet.jpg", description: "Accolade graphisme web Ensem Alumni logo"},
         images: []
     },
     // {
@@ -463,6 +473,7 @@ const projectsList = [
     //     },
     //     url: "",
     //     tags: [" ", " ", " ", " "],
+    //     categories: [""],
     //     banner: {src: " ",  description: "  banner"},
     //     logo: {src: " ", description: "  logo"},
     //     images: [
