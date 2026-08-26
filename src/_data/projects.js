@@ -266,135 +266,220 @@ const projectsList = [
         logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_logiciel_graphisme_developpement_ekipea_cse_logo.jpg", description: "Accolade graphisme web ekipea logo"},
         images: []
     },
+    {
+        slug: "b31",
+        year: 2021,
+        name: "Création de site internet e-commerce et développement",
+        home: true,
+        description: [
+            "La société B31 est spécialisée dans la conception et l'impression d'affiches et de goodies de voitures.",
+            "Ce projet vise à créer un site internet e-commerce personnalisé, permettant aux clients de personnaliser leurs affiches et goodies et d’envoyer directement les fichiers d’impression vers les imprimantes grand format de la société Graphik 224 et des autres partenaires.",
+        ],
+        client: {
+            name: "B31", description: "Vente de design automobile",
+        },
+        url: "https://www.b31.fr/",
+        tags: ["Site internet", "Développement"],
+        categories: ["Site internet"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_b31.png", description: "B31"},
+        logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_b31-logo.jpg", description: "B31"},
+        images: []
+    },
+    {
+        slug: "cbd",
+        year: 2025,
+        name: "Création de l’identité graphique et maquettage site internet",
+        home: true,
+        description: [
+            "L’atelier CBD est une boutique en ligne qui propose des produits en ligne.",
+            "Cette entreprise a fait appel à nous pour la création d’un logo facilement déclinable accompagné d’une identité visuelle permettant de s’adapter aux différents produits.",
+            "Nous avons également été chargé du maquettage du site e-commerce de leur boutique en ligne.",
+        ],
+        client: {
+            name: "L’atelier CBD", description: "Boutique en ligne",
+        },
+        url: "",
+        tags: ["Logo", "Charte graphique", "Packaging produit", "Maquette Site internet"],
+        categories: ["Graphisme"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_atelier-cbd-logo-packaging.png",  description: "Accolade graphisme web atelier cbd banner"},
+        logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_atelier-cbd-logo.jpg", description: "Accolade graphisme web atelier cbd logo"},
+        images: [{src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_atelier-cbd-site.png", description: "Accolade graphisme web atelier cbd 1"},]
+    },
+    {
+        slug: "demons-et-merveilles",
+        year: 2025,
+        name: "Création de l’identité graphique et développement d’un thème prestashop",
+        home: true,
+        description: [
+            "Démons & Merveilles est devenue un acteur incontournable du marché des produits culturels de seconde main.",
+            "Désireux de moderniser son image et de retravailler l’ergonomie générale de son site internet, Démons & Merveilles a fait appel à nous pour la refonte de son logo et l'adaptation de son site internet.",
+        ],
+        client: {
+            name: "Démons & Merveilles", description: "Librairie en ligne d'objets culturels de seconde main",
+        },
+        url: "https://www.demons-et-merveilles.com/",
+        tags: ["Logo", "Charte graphique", "Thème Prestashop"],
+        categories: ["Site internet", "Graphisme"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_demons-et-merveilles_site-internet.jpg",  description: "Accolade graphisme web demons et merveilles banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_demons-et-merveilles_site-2.jpg", description: "Accolade graphisme web demons et merveilles logo"},
+        images: [
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_demons-et-merveilles_site-3.jpg", description: "Accolade graphisme web demons et merveilles 1"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_site-internet_demons-et-merveilles_site-4.jpg", description: "Accolade graphisme web demons et merveilles 2"},
+        ]
+    },
+    {
+        slug: "grostival",
+        year: 2021,
+        name: "Communication du GrÔ’stival",
+        home: true,
+        description: [
+            "Situé à Maxéville, le GrÔstival est un festival musical en soutien au don d’organes.",
+            "Nous les accompagnons maintenant depuis plusieurs années pour la création de leurs visuels et un accompagnement en communication.",
+        ],
+        client: {
+            name: "GrÔ’stival", description: "Festival musical",
+        },
+        url: "",
+        tags: ["Affiche", "Sous-bock", "T-shirt", "Visuels réseaux sociaux", "Communiqué de presse"],
+        categories: ["Graphisme"],
+        banner: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_affiche_grostival.jpg",  description: "Accolade GrÔ’stival graphisme banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_-reseaux-sociauxgrostival2026-logo.jpg", description: "Accolade GrÔ’stival graphisme logo"},
+        images: [
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_-reseaux-sociauxgrostival2026.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 1"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_reseaux-sociaux_grostival2025.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 1"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_sous-bockgrostival2026.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 3"},
+            {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_web_sous-bockgrostival.jpg", description: "Accolade GrÔ’stival graphisme réseaux sociaux 2"},
+        ]
+    },
+    {
+        slug: "icarrelage",
+        year: 2025,
+        name: "Création du catalogue en ligne",
+        home: true,
+        description: [
+            "International Négociation Carrelage ( In Carrelage ou INC ) est une entreprise d’import-export de carrelage située dans la région lorraine de la France.",
+            "Réalisation d’un site internet et d’un espace d’administration permettant de présenter le catalogue de cette société.",
+            "Le développement a été réalisé avec une priorité sur l’éco-responsabilité"
+        ],
+        client: {
+            name: "Icarrelage", description: "Spécialiste du carrelage sur Internet pour professionnels et particuliers.",
+        },
+        url: "https://icarrelage.fr/",
+        tags: ["Graphisme", "Développement", "Site internet"],
+        categories: ["Site internet", "Développement"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_icarrelage1.jpg",  description: "Accolade graphisme web Icarrelage banner"},
+        logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_site-internet_icarrelage.jpg", description: "Accolade graphisme web Icarrelage logo"},
+        images: []
+    },
+    {
+        slug: "saint-camille",
+        year: 2025,
+        name: "Création de l’identité graphique",
+        home: true,
+        description: [
+            "L'objectif de l'Institution Saint-Camille est d’accueillir, éduquer et former des enfants, adolescents et jeunes adultes présentant des déficiences ou des difficultés d'insertion sociale, scolaire et/ou professionnelle reconnues en vue de leur intégration dans la société.",
+            "Nous avons imaginé un logo facilement déclinable selon les dispositifs accompagné d’une identité visuelle moderne et institutionnelle.",
+        ],
+        client: {
+            name: "Institution Saint Camille", description: "Hébergement médicalisé pour enfants handicapés",
+        },
+        url: "",
+        tags: ["Logo", " Charte graphique", "Kakémonos", "Habillage de véhicule", "Modèle  PowerPoint", "Cartes de visites", "Site internet"],
+        categories: ["Site internet", "Graphisme"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-7.png",  description: "Accolade graphisme web Saint-Camille banner"},
+        logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_institution-st-camille.jpg", description: "Accolade graphisme web Saint-Camille logo"},
+        images: [
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-1.png", description: "Accolade graphisme web Saint-Camille 1"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-2.png", description: "Accolade graphisme web Saint-Camille 2"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-3.png", description: "Accolade graphisme web Saint-Camille 3"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-4.png", description: "Accolade graphisme web Saint-Camille 4"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-5.png", description: "Accolade graphisme web Saint-Camille 5"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-6.png", description: "Accolade graphisme web Saint-Camille 6"},
+        ]
+    },
+    {
+        slug: "demain-sera-choral",
+        year: 2026,
+        name: "Création d’un livret et d’une série de 9 cartes postales",
+        home: true,
+        description: [
+            "À l’invitation de Pierre-Édouard Bour, 4 séances de 3 heures d’ateliers d’écriture dans le cadre de Philosofictions, une action de médiation portée par le laboratoire Archives Henri-Poincaré, Philosophie & Recherches en Sciences et Technologies.",
+            "Nous avons travaillé sur la restitution de ces ateliers d’écriture en imaginant un livret gratuit et une série de 9 cartes postales.",
+        ],
+        client: {
+            name: "Demain sera choral", description: "Ateliers d’écriture",
+        },
+        url: "",
+        tags: ["Mise en page", "Graphisme"],
+        categories: ["Graphisme"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_livret_mise-en-page_demain-sera-choral.png",  description: "Accolade graphisme web banner"},
+        logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_graphisme_demain-sera-choral.jpg", description: "Accolade graphisme web logo"},
+        images: [
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_livret_mise-en-page_demain-sera-choral_cartes-postales.png", description: "Accolade graphisme cartes postales Demain sera choral 1"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_livret_mise-en-page_demain-sera-choral_cartes-postales2.png", description: "Accolade graphisme cartes postales Demain sera choral 2"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_livret_mise-en-page_demain-sera-choral_cartes-postales3.png", description: "Accolade graphisme cartes postales Demain sera choral 3"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_livret_mise-en-page_demain-sera-choral_cartes-postales4.png", description: "Accolade graphisme cartes postales Demain sera choral 4"}
+        ]
+    },
+    {
+        slug: "maison-sante-domgermain",
+        year: 2025,
+        name: "Création d’une affiche et d’un flyer",
+        home: true,
+        description: [
+            "La maison de santé de Domgermain souhaité mettre en place une campagne de sensibilisation « Votre état de santé affecte-t-il votre enfant »",
+            "Elle a fait appel à nous pour produire des affiches et flyer illustrés.",
+        ],
+        client: {
+            name: "Maison de santé Domgermain", description: "Maison de santé de Domgermain",
+        },
+        url: "",
+        tags: ["Affiche", "Illustration", "Flyer"],
+        categories: ["Graphisme"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_affiche_maison-de-sante_domgermain.png",  description: "Accolade graphisme maison sante Domgermain banner"},
+        logo: {src: "accolade_graphisme-web_nancy_lorraine_projets_graphisme_charte-graphique_logo_etiquette_sante_psychologie_maison-de-sante-domgermain.jpg", description: "Accolade graphisme maison sante Domgermain logo"},
+        images: []
+    },
+    {
+        slug: "ensem-alumni",
+        year: 2025,
+        name: "Création graphique de la refonte du site internet",
+        home: true,
+        description: [
+            "L’association des anciens élèves de l’Ensem a fait appel à nous pour repenser graphiquement leur site internet.",
+            "Nous avons repensé le site actuel et fourni les maquette html / css pour le développement du site internet.",
+        ],
+        client: {
+            name: "Ensem Alumni", description: "association des anciens élèves ENSEM Alumni",
+        },
+        url: "",
+        tags: ["Maquette site internet", "Intégration"],
+        categories: ["Graphisme"],
+        banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_maquette_site-internet_ensem-alumni.png",  description: "Accolade graphisme web Ensem Alumni banner"},
+        logo: {src: "accolade_graphisme-web_nancy-lorraine_ensem-alumni_graphisme-site-internet.jpg", description: "Accolade graphisme web Ensem Alumni logo"},
+        images: []
+    },
     // {
-    //     slug: "colloque-numerique",
-    //     year: 2020,
-    //     name: "Création et mise en page de supports de communication",
+    //     slug: " ",
+    //     year: 1000,
+    //     name: " ",
+    //     home: true,
     //     description: [
-    //         "“Mondes virtuels” est un séminaire organisé par Alexis Anne-Braun, Alexandre Declos & Vincent Granata avec le soutien des Archives Poincarré, et de l’Institut universitaire de France.",
-    //         "Création du graphisme et de la mise en page de différents supports de communication (affiche & programme) pour un séminaire philosophique.",
+    //         " ",
+    //         " ",
     //     ],
     //     client: {
-    //         name: "Archives Poincarré & Institut universitaire de France", description: "Colloque sur le thème \"Objets, Oeuvres, Mondes virtuels\"",
+    //         name: " ", description: " ",
     //     },
     //     url: "",
-    //     tags: ["Graphisme", "Print"],
-    //     banner: {src: "banner.jpg", description: "Accolade graphisme web colloque numerique banner"},
-    //     logo: {src: "logo.jpg", description: "Accolade graphisme web colloque numerique logo"},
+    //     tags: [" ", " ", " ", " "],
+    //     categories: [""],
+    //     banner: {src: " ",  description: "  banner"},
+    //     logo: {src: " ", description: "  logo"},
     //     images: [
-    //         {src: "projet_1.jpg", description: "Accolade graphisme web colloque numerique 1"},
-    //         {src: "projet_2.jpg", description: "Accolade graphisme web colloque numerique 2"},
-    //         {src: "projet_3.jpg", description: "Accolade graphisme web colloque numerique 3"},
-    //         {src: "projet_4.jpg", description: "Accolade graphisme web colloque numerique 4"},
-    //         {src: "projet_5.jpg", description: "Accolade graphisme web colloque numerique 5"},
+    //         {src: " ", description: " "}
     //     ]
     // },
-    // {
-    //     slug: "mon-slug",
-    //     year: 2020,
-    //     name: "",
-    //     description: [
-    //         "",
-    //         "",
-    //     ],
-    //     client: {
-    //         name: "", description: "",
-    //     },
-    //     url: "",
-    //     tags: ["", ""],
-    //     banner: {src: "banner.jpg", description: "Accolade graphisme web banner"},
-    //     logo: {src: "logo.jpg", description: "Accolade graphisme web logo"},
-    //     images: [
-    //         {src: "projet_1.jpg", description: "Accolade graphisme web 1"},
-    //         {src: "projet_2.jpg", description: "Accolade graphisme web 2"},
-    //         {src: "projet_3.jpg", description: "Accolade graphisme web 3"},
-    //         {src: "projet_4.jpg", description: "Accolade graphisme web 4"},
-    //         {src: "projet_5.jpg", description: "Accolade graphisme web 5"},
-    //     ]
-    // },
-    // {
-    //     slug: "turn-head",
-    //     year: 2024,
-    //     name: "Création d'une identité graphique & Réalisation d'un site internet",
-    //     description: [
-    //         "Création d’un nom pour la société du client – Etude de l’état de l’art, phase d’inspiration, proposition de plusieurs noms avec leurs univers graphique correspondants.",
-    //         "Création de l’identité visuelle – phase d’inspiration, création et  propositions de plusieurs logotypes, établissement d’une charte graphique.",
-    //         "Création de carte de visite – format standard et carré proposés.",
-    //         "Création d’un site internet sous WordPress.",
-    //     ],
-    //     client: {
-    //         name: "Turn Head", description: "Fabrication de disque Vinyle",
-    //     },
-    //     url: "https://www.turn-head.fr/",
-    //     tags: ["Identité graphique", "Logo", "Image de marque", "Site internet", "SEO"],
-    //     banner: {src: "", description: ""},
-    //     logo: {src: "turn-head-logo.png", description: "Turn head"},
-    //     images: [
-    //     ]
-    // },
-    // {
-    //     slug: "cse-afpa",
-    //     year: 2022,
-    //     name: "Réalisation d'un site intranet",
-    //     description: [
-    //         "Création d’un site internet sous WordPress – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages.",
-    //         "Gestion de l’accès authentifié – Mise en place d’une page de connexion et gestion des comptes utilisateurs.",
-    //         "Mise en place d’une gestion des actualités du CSE – Séjours, Billetterie, Remboursement sur facture, Chèques ANCV – un modèle de saisie simplifié permet aux gestionnaires du site de créer les actualités.",
-    //         "Mise en place d’une intégration des salariés – depuis un fichier fourni par les RH, l’intégration permet de créer / modifier / supprimer les comptes utilisateurs et d’envoyer une procédure de connexion pour les nouveaux salariés.",
-    //     ],
-    //     client: {
-    //         name: "CSE Afpa Grand Est", description: "CSE de l'Apfa - Région Grand Est",
-    //     },
-    //     url: "https://www.csee-afpa-grandest.fr/",
-    //     tags: ["Site internet", "SEO"],
-    //     banner: {src: "", description: ""},
-    //     logo: {src: "cse-logo.svg", description: "CSE AFPA GRAND EST"},
-    //     images: [
-    //     ]
-    // },
-    // {
-    //     slug: "b31",
-    //     year: 2021,
-    //     name: "Réalisation site internet & Développements de programmes",
-    //     description: [
-    //         "Création d’un site internet sous WordPress & WooCommerce – Construction de l’architecture du site, mise en place de la charte graphique, création de l’ensemble des pages, création d’un fichier normalisé sous Excel et intégration automatisé sur le catalogue de produit, mise en place des livraisons via Colissimo & Chronopost, mise en place d’un kit bancaire & d’un règlement via Stripe.",
-    //         "Développement d’un programme permettant de générer des PDF prêts à l’impression pour la production des produits commercialisés sur le site de B31 – Analyse des commandes via l’API WooCommerce, mise au norme d’un fichier PDF normalisé, envoi automatisé des commandes à la chaine de production.",
-    //         "Développement d’un programme de génération de catalogues destinés à l’impression & à la consultation numérique – Analyse et récupération du catalogue via l’API WooCommerce, génération d’un fichier normalisé PDF intégrant les visuels et les informations des différents produits.",
-    //         "Développement d’un programme d’export des mouvements comptables – Récupération des informations de facturation via l’API WooCommerce, analyse des lignes de facturation et génération des mouvements comptables correspondants, génération d’un fichier CSV normalisé destiné à une intégration sur un logiciel de comptabilité",
-    //         "Accompagnement de l’expert comptable de B31 sur l’import comptable sur le logiciel CADOR – Paramétrage de l’import sur le logiciel, intégration des premiers fichiers générés, rédaction d’une procédure d’intégration.",
-    //     ],
-    //     client: {
-    //         name: "B31", description: "Vente de design automobile",
-    //     },
-    //     url: "https://www.b31.fr/",
-    //     tags: ["Site internet", "Développement", "SEO", "Web"],
-    //     banner: {src: "b31-logo.png", description: "B31"},
-    //     logo: {src: "b31-logo.png", description: "B31"},
-    //     images: [
-    //     ]
-    // },
-    // {
-    //     slug: "adeios",
-    //     year: 2023,
-    //     name: "Réfonte identité graphique & Réalisation site internet",
-    //     description: [
-    //         "Refonte du l’identité visuelle du cabinet ADEIOS – Création d’un nouveau logo & d’une charte graphique complète, adaptation des signatures de mails, création de visuels destinés à la communication sur les réseaux sociaux (LinkedIn, Youtube).",
-    //         "Réalisation du site internet – vitrine du cabinet créé avec WordPress, SEO",
-    //         "Mise en page des documents professionnels – contrats, executive summary, documents de formation, fiches produits.",
-    //         "Création de la papeterie – cartes de visible, papier entête, enveloppe personnalisée, carte de correspondance, tampon.",
-    //         "Réalisation et gestion de newsletter – création du modèle de mail, intégration des listes de diffusion et gestion de l’envoi via SendInBlue.",
-    //     ],
-    //     client: {
-    //         name: "ADEIOS", description: "Cabinet de conseils stratégiques",
-    //     },
-    //     url: "https://adeios.fr/",
-    //     tags: ["Site internet", "SEO", "Identité graphique", "Image de marque", "Design graphique"],
-    //     banner: {src: "", description: "ADEIOS"},
-    //     logo: {src: "adeios-logo.png", description: "ADEIOS"},
-    //     images: [
-    //     ]
-    // },
-
 ];
 
 export default projectsList;
