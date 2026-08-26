@@ -38,6 +38,7 @@ body
     --menu-link-paddingVert: var(--space-md)
     --menu-link-paddingHor: var(--space-sm)
     --menu-backgroundColor: var(--surface-backgroundColor-primary)
+    margin: 15px var(--space-md)
     position: fixed
     top: 0
     right: 0
@@ -83,63 +84,75 @@ body
 
   > header
     position: relative
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    row-gap: 12px
+    background-image: url("/assets/images/header-bg.jpg")
     background-repeat: no-repeat
-    background-position: top left
+    background-position: center left
     background-size: cover
     margin-bottom: var(--space-xl)
+    padding: var(--space-md) var(--space-md) 0 var(--space-md)
 
     > a:first-of-type
-      --logo-height: 475px
-      --logo-width: 113px
-      --logo-positionX: 30px
-      --logo-positionY: 30px
+      --logo-height: 55px
+      --logo-width: 475px
+      --logo-positionX: 0
+      --logo-positionY: 0
       color: transparent
       font-size: 0
       display: block
       width: var(--logo-width)
       height: var(--logo-height)
       background-color: var(--menu-backgroundColor)
-      background-image: url("/assets/svgs/logo-accolade-vertical.svg")
+      background-image: url("/assets/svgs/logo-accolade.svg")
       background-repeat: no-repeat
-      background-position: top var(--logo-positionX) left var(--logo-positionY)
+      //background-position: top var(--logo-positionX) left var(--logo-positionY)
+      background-size: contain
 
 
     > section
       --svg-logo-width: 90px
       --svg-logo-height: var(--svg-logo-width)
-      position: absolute
-      bottom: 60px
-      right: 30px
-      display: flex
-      flex-flow: row wrap
-      justify-content: flex-start
-      align-items: center
-      column-gap: 30px
+      //position: absolute
+      //bottom: 60px
+      //right: 30px
+      display: inline-block
+      //flex-flow: row wrap
+      //justify-content: flex-start
+      //align-items: center
+      //column-gap: 30px
       font-size: var(--fontSize-2xl)
-      height: var(--space-xl)
+      // height: var(--space-xl)
       font-family: var(--fontFamily-title)
       color: var(--text-color-default)
-      &::after
-        content: ""
-        background-image: url("/assets/svgs/picto-pointe-green.svg")
-        background-repeat: no-repeat
-        background-position: top center
-        background-size: cover
-        width: var(--svg-logo-width)
-        height: var(--svg-logo-height)
+      //&::after
+      //  content: ""
+      //  background-image: url("/assets/svgs/picto-pointe-green.svg")
+      //  background-repeat: no-repeat
+      //  background-position: top center
+      //  background-size: cover
+      //  width: var(--svg-logo-width)
+      //  height: var(--svg-logo-height)
       > div
+        padding-left: 210px
+        font-size: var(--fontSize-md)
         text-align: right
         small
           display: block
-          font-size: var(--fontSize-lg)
+          font-size: var(--fontSize-sm)
         span
           color: var(--color-green)
 
 
     > aside
-      max-width: 226px
-      padding: 30px var(--space-md) 0 0
+      align-self: flex-end
+      max-width: 420px
+      padding: var(--space-md)
       background-color: var(--body-backgroundColor-base)
+      margin-right: -30px
       h1
         font-size: var(--fontSize-xl)
         line-height: 2.2

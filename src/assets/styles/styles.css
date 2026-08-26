@@ -151,6 +151,7 @@ body > nav {
   --menu-link-paddingVert: var(--space-md);
   --menu-link-paddingHor: var(--space-sm);
   --menu-backgroundColor: var(--surface-backgroundColor-primary);
+  margin: 15px var(--space-md);
   position: fixed;
   top: 0;
   right: 0;
@@ -199,65 +200,59 @@ body > nav > menu > a:hover, body > nav > menu > a:active {
 }
 body > header {
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 12px;
+  background-image: url("/assets/images/header-bg.jpg");
   background-repeat: no-repeat;
-  background-position: top left;
+  background-position: center left;
   background-size: cover;
   margin-bottom: var(--space-xl);
+  padding: var(--space-md) var(--space-md) 0 var(--space-md);
 }
 body > header > a:first-of-type {
-  --logo-height: 475px;
-  --logo-width: 113px;
-  --logo-positionX: 30px;
-  --logo-positionY: 30px;
+  --logo-height: 55px;
+  --logo-width: 475px;
+  --logo-positionX: 0;
+  --logo-positionY: 0;
   color: transparent;
   font-size: 0;
   display: block;
   width: var(--logo-width);
   height: var(--logo-height);
   background-color: var(--menu-backgroundColor);
-  background-image: url("/assets/svgs/logo-accolade-vertical.svg");
+  background-image: url("/assets/svgs/logo-accolade.svg");
   background-repeat: no-repeat;
-  background-position: top var(--logo-positionX) left var(--logo-positionY);
+  background-size: contain;
 }
 body > header > section {
   --svg-logo-width: 90px;
   --svg-logo-height: var(--svg-logo-width);
-  position: absolute;
-  bottom: 60px;
-  right: 30px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 30px;
+  display: inline-block;
   font-size: var(--fontSize-2xl);
-  height: var(--space-xl);
   font-family: var(--fontFamily-title);
   color: var(--text-color-default);
 }
-body > header > section::after {
-  content: "";
-  background-image: url("/assets/svgs/picto-pointe-green.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  width: var(--svg-logo-width);
-  height: var(--svg-logo-height);
-}
 body > header > section > div {
+  padding-left: 210px;
+  font-size: var(--fontSize-md);
   text-align: right;
 }
 body > header > section > div small {
   display: block;
-  font-size: var(--fontSize-lg);
+  font-size: var(--fontSize-sm);
 }
 body > header > section > div span {
   color: var(--color-green);
 }
 body > header > aside {
-  max-width: 226px;
-  padding: 30px var(--space-md) 0 0;
+  align-self: flex-end;
+  max-width: 420px;
+  padding: var(--space-md);
   background-color: var(--body-backgroundColor-base);
+  margin-right: -30px;
 }
 body > header > aside h1 {
   font-size: var(--fontSize-xl);
@@ -1132,9 +1127,6 @@ ul.bulleted-list > li::before {
   body h3 {
     font-size: var(--fontSize-defaut);
   }
-  body > header > aside {
-    padding-left: 30px;
-  }
   body > main {
     padding: 0 var(--space-md);
   }
@@ -1176,30 +1168,12 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 1180px) {
-  body > header > section {
-    display: none;
-  }
   body > header > a:first-of-type {
-    --logo-height: 250px;
-    --logo-width: 70px;
-    background-color: transparent;
-    background-image: url("/assets/svgs/picto-pointe-green.svg");
-    background-position: top var(--space-md) left var(--space-md);
+    --logo-height: 38px;
+    --logo-width: 300px;
   }
-  body > header > aside {
-    margin: 0 auto;
-    padding: var(--space-md);
-    max-width: 500px;
-    text-align: center;
-  }
-  body > header > aside > p {
-    text-align: center;
-  }
-  body > header.project {
-    background-position: center center;
-  }
-  body > header.project > aside {
-    display: none;
+  body > header > section > div {
+    padding-left: 68px;
   }
   body > main > section {
     padding: 0 var(--space-md);
@@ -1266,24 +1240,6 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 800px) {
-  body > nav {
-    flex-flow: column-reverse nowrap;
-    position: sticky;
-    background-color: var(--body-backgroundColor-base);
-  }
-  body > nav .btn-menu {
-    --menu-btn-width: 40px;
-    align-self: flex-end;
-  }
-  body > nav menu {
-    width: 100%;
-    flex-direction: column;
-  }
-  body > nav menu > a {
-    width: 100%;
-    --menu-link-paddingVert: var(--space-sm);
-    border-bottom: 1px solid var(--color-neutre-darker);
-  }
   body > main #expertises h2 {
     padding-right: 0;
   }
@@ -1324,16 +1280,40 @@ ul.bulleted-list > li::before {
     --url-backgroundImage-contact: var(--url-backgroundImage-contact-smart);
     --url-backgroundImage-mentionsLegales: var(--url-backgroundImage-mentionsLegales-smart);
   }
-  body > menu {
+  body > header > a:first-of-type {
+    --logo-height: 26px;
+    --logo-width: 190px;
+  }
+  body > header > section > div {
+    font-size: var(--fontSize-sm);
+    padding-left: 28px;
+  }
+  body > header > aside {
+    align-self: center;
+    max-width: 100%;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  body > nav {
+    flex-flow: column-reverse nowrap;
+    background-color: var(--body-backgroundColor-base);
+    border-radius: 5px;
+  }
+  body > nav .btn-menu {
+    --menu-btn-width: 40px;
+    align-self: flex-end;
+  }
+  body > nav > menu {
+    width: 300px;
+    flex-direction: column;
     justify-content: center;
     --menu-link-paddingVert: var(--space-sm);
     --menu-link-paddingHor: var(--space-xs);
   }
-  body > header > a:first-of-type {
-    --logo-height: 150px;
-  }
-  body > header.project > aside {
-    column-gap: var(--space-sm);
+  body > nav > menu > a {
+    width: 100%;
+    --menu-link-paddingVert: var(--space-sm);
+    border-bottom: 1px solid var(--color-neutre-darker);
   }
   body > main #contact {
     --marge: var(--space-md);
