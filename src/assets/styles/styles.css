@@ -207,10 +207,25 @@ body > header {
   row-gap: 12px;
   background-image: url("/assets/images/header-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: center;
   background-size: cover;
   margin-bottom: var(--space-xl);
   padding: var(--space-md) var(--space-md) 0 var(--space-md);
+}
+body > header.--width-nav {
+  height: 63dvh;
+}
+body > header.--width-nav > aside {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--space-md);
+  padding: var(--space-xs) var(--space-md);
+  margin: 0 -30px;
+}
+body > header.--width-nav > aside .btn-projects-nav {
+  padding: 7px var(--space-lg);
 }
 body > header > a:first-of-type {
   --logo-height: 55px;
@@ -246,6 +261,9 @@ body > header > section > div small {
 }
 body > header > section > div span {
   color: var(--color-green);
+}
+body > header > .space {
+  flex: 1 1 auto;
 }
 body > header > aside {
   align-self: flex-end;

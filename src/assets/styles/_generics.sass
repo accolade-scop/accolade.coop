@@ -91,11 +91,22 @@ body
     row-gap: 12px
     background-image: url("/assets/images/header-bg.jpg")
     background-repeat: no-repeat
-    background-position: center left
+    background-position: center
     background-size: cover
     margin-bottom: var(--space-xl)
     padding: var(--space-md) var(--space-md) 0 var(--space-md)
-
+    &.--width-nav
+      height: 63dvh
+      > aside
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: center
+        column-gap: var(--space-md)
+        padding: var(--space-xs) var(--space-md)
+        margin: 0 -30px
+        .btn-projects-nav
+          padding: 7px var(--space-lg)
     > a:first-of-type
       --logo-height: 55px
       --logo-width: 475px
@@ -146,7 +157,8 @@ body
         span
           color: var(--color-green)
 
-
+    > .space
+      flex: 1 1 auto
     > aside
       align-self: flex-end
       max-width: 420px
