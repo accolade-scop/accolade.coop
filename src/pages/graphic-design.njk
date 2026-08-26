@@ -1,6 +1,6 @@
-<header style="background-image: url('/assets/imgs/creationGraphique-background.jpg')" class="project">
+<header style="background-image: var(--url-backgroundImage-creationGraphique)" class="project">
 
-    <a href="../" title="Aller à la page d'accueil">Accueil</a>
+    <a href="/index.html" title="Aller à la page d'accueil">Accueil</a>
 
     <section>
         <div>
@@ -12,7 +12,7 @@
     <aside>
 
         <h1><small>Navigation</small></h1>
-        <a class="btn btn-projects-nav --reverse" href="/pages/web-creation" title="Allez à la page Sites internet">Sites<small>internet</small></a>
+        <a class="btn btn-projects-nav --reverse" href="/pages/web-creation.html" title="Allez à la page Sites internet">Sites<small>internet</small></a>
         <a class="btn btn-projects-nav" href="/pages/laboratoire.html" title="Solutions numériques">Laboratoire<small>numerique</small></a>
 
     </aside>
@@ -65,7 +65,7 @@
     {{ slider(
         "projets",
         "Nos créations graphiques",
-        "Etudes de cas",
+        "Études de cas",
         projects | getProjectsCategorie("Graphisme")
     ) }}
 

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const projectTags = project.dataset.tags.split(/\s*,\s*/);
 
                 project.style.display = projectTags.includes(selectedTag)
-                    ? "block"
+                    ? "flex"
                     : "none";
             });
         });

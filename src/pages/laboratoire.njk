@@ -1,6 +1,6 @@
-<header style="background-image: url('/assets/imgs/laboratoireNumerique-background.jpg')" class="project">
+<header style="background-image: var(--url-backgroundImage-laboratoireNumerique)" class="project">
 
-    <a href="../" title="Aller à la page d'accueil">Accueil</a>
+    <a href="/index.html" title="Aller à la page d'accueil">Accueil</a>
 
     <section>
         <div>
@@ -92,7 +92,7 @@
     {{ slider(
         "projets",
         "Nos solutions numériques",
-        "Etudes de cas",
+        "Études de cas",
         projects | getProjectsCategorie("Développement")
     ) }}
 
