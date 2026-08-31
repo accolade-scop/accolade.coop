@@ -1,4 +1,4 @@
-<header style="background-image: var(--url-backgroundImage-webCreation)"  class="project --width-nav">
+<header style="background-image: var(--url-backgroundImage-webCreation)" class="project --width-nav">
 
     <a href="/index.html" title="Aller à la page d'accueil">Accueil</a>
 
@@ -9,20 +9,13 @@
         </div>
     </section>
     <div class="space"></div>
-    <aside>
-
-        <h1><small>Navigation</small></h1>
-        <a class="btn btn-projects-nav --reverse" href="/pages/laboratoire.html" title="Allez à la page Solutions numériques">Laboratoire<small>numerique</small></a>
-        <a class="btn btn-projects-nav" href="/pages/graphic-design.html" title="Allez à la page Créations graphiques">Creations<small>graphiques</small></a>
-
-    </aside>
 
 </header>
 
 <main class="container">
 
     <!-- SECTION CREATIONS SITES -->
-    <section id="creation-web"  class="mosaic">
+    <section id="creation-web" class="mosaic">
 
         <h2 class="">Création de sites<small>Accolade scop</small></h2>
 
@@ -30,7 +23,7 @@
 
             <figure>
 
-                <img src="/assets/imgs/creation-site.jpg"  alt="Illustration creation de sites web"/>
+                <img src="/assets/imgs/creation-site.jpg" alt="Illustration creation de sites web"/>
 
             </figure>
 
@@ -83,12 +76,31 @@
 
     <!-- SECTION PROJETS -->
     {% from "components/slider.njk" import slider %}
-        {{ slider(
-            "projets",
-            "Nos sites internet",
-            "Études de cas",
-            projects | getProjectsCategorie("Graphisme")
-        ) }}
+    {{ slider(
+        "projets",
+        "Nos sites internet",
+        "Études de cas",
+        projects | getProjectsCategorie("Graphisme")
+    ) }}
+
+
+    <section id="pager">
+
+        <h1><small>Navigation</small></h1>
+
+        <ul>
+            <li>
+                <a class="btn btn-projects-nav --reverse" href="/pages/laboratoire.html"
+                   title="Allez à la page Solutions numériques">Laboratoire<small>numerique</small></a>
+
+            </li>
+            <li>
+                <a class="btn btn-projects-nav" href="/pages/graphic-design.html"
+                   title="Allez à la page Créations graphiques">Creations<small>graphiques</small></a>
+            </li>
+        </ul>
+
+    </section>
 
     <!-- SECTION CONTACT -->
     <section id="contact" class="container">

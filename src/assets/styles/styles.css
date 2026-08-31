@@ -280,6 +280,44 @@ body > header > aside p {
   font-size: var(--fontSize-sm);
   font-weight: var(--fontWeight-regular);
 }
+body > main #pager {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  margin-right: -30px;
+}
+body > main #pager > .btn-page-nav {
+  padding: 7px var(--space-lg);
+}
+body > main #pager h1 {
+  display: none;
+  font-size: var(--fontSize-xl);
+  line-height: 2.2;
+}
+body > main #pager ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+body > main #pager ul li {
+  flex: 0 0 250px;
+  display: flex;
+  flex-flow: row wrap;
+}
+body > main #pager ul li p {
+  font-size: var(--fontSize-sm);
+  font-weight: var(--fontWeight-regular);
+}
 body > main > section {
   position: relative;
   margin: 0 auto var(--space-xl) auto;
@@ -1258,6 +1296,9 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 800px) {
+  body > header.--width-nav {
+    height: 35dvh;
+  }
   body > main #expertises h2 {
     padding-right: 0;
   }
