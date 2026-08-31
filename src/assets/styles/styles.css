@@ -211,9 +211,13 @@ body > header {
   background-size: cover;
   margin-bottom: var(--space-xl);
   padding: var(--space-md) var(--space-md) 0 var(--space-md);
+  height: 63dvh;
+}
+body > header .spacer {
+  flex: 1 1 auto;
 }
 body > header.--width-nav {
-  height: 63dvh;
+  height: 35dvh;
 }
 body > header.--width-nav > aside {
   display: flex;
@@ -1296,7 +1300,7 @@ ul.bulleted-list > li::before {
   }
 }
 @container body (max-width: 800px) {
-  body > header.--width-nav {
+  body > header {
     height: 35dvh;
   }
   body > main #expertises h2 {
