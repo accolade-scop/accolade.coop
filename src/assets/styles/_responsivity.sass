@@ -12,7 +12,7 @@
       font-size: var(--fontSize-defaut)
     > header
       > aside
-        padding-left: 30px
+        //padding-left: 30px
     > main
       padding: 0 var(--space-md)
       #projects
@@ -24,7 +24,7 @@
           width: 100%
           scrollbar-color:  var(--color-green) var(--surface-backgroundColor-secondary)
           scrollbar-width: thin
-          padding-bottom: var(--space-md)
+          //padding-bottom: var(--space-md)
 
 @container body (max-width: 1330px)
   body
@@ -52,27 +52,14 @@
 
 @container body (max-width: 1180px)
   body
-    > header
-      > section
-        display: none
-      > a:first-of-type
-        --logo-height: 250px
-        --logo-width: 70px
-        background-color: transparent
-        background-image: url("/assets/svgs/picto-pointe-green.svg")
-        background-position: top var(--space-md)  left var(--space-md)
-      > aside
-        margin: 0 auto
-        padding: var(--space-md)
-        max-width: 500px
-        text-align: center
-        > p
-          text-align: center
-      &.project
-        background-position: center center
-        > aside
-          display: none
 
+    > header
+      > a:first-of-type
+        --logo-height: 38px
+        --logo-width: 300px
+      > section
+        > div
+          padding-left: 68px
 
     > main
 
@@ -141,21 +128,8 @@
 
 @container body (max-width: 800px)
   body
-    > nav
-      flex-flow: column-reverse nowrap
-      position: sticky
-      background-color: var(--body-backgroundColor-base)
-      .btn-menu
-        --menu-btn-width: 40px
-        align-self: flex-end
-      menu
-        width: 100%
-        flex-direction: column
-        > a
-          width: 100%
-          --menu-link-paddingVert: var(--space-sm)
-          border-bottom: 1px solid var(--color-neutre-darker)
-
+    > header
+        height: 35dvh
     > main
 
       #expertises
@@ -185,18 +159,48 @@
 
 @container body (max-width: 680px)
   body
-    > menu
-      justify-content: center
-      --menu-link-paddingVert: var(--space-sm)
-      --menu-link-paddingHor: var(--space-xs)
 
+    --url-backgroundImage-index: var(--url-backgroundImage-index-smart)
+    --url-backgroundImage-apropos: var(--url-backgroundImage-apropos-smart)
+    --url-backgroundImage-creationGraphique:  var(--url-backgroundImage-creationGraphique-smart)
+    --url-backgroundImage-webCreation: var(--url-backgroundImage-webCreation-smart)
+    --url-backgroundImage-laboratoireNumerique: var(--url-backgroundImage-laboratoireNumerique)
+    --url-backgroundImage-realisations: var(--url-backgroundImage-realisations-smart)
+    --url-backgroundImage-contact:  var(--url-backgroundImage-contact-smart)
+    --url-backgroundImage-mentionsLegales: var(--url-backgroundImage-mentionsLegales-smart)
 
     > header
       > a:first-of-type
-        --logo-height: 150px
-      &.project
-        > aside
-          column-gap: var(--space-sm)
+        --logo-height: 26px
+        --logo-width: 190px
+      > section
+        > div
+          font-size: var(--fontSize-sm)
+          padding-left: 28px
+      > aside
+        align-self: center
+        max-width: 100%
+        margin-left: -30px
+        margin-right: -30px
+
+
+    > nav
+      flex-flow: column-reverse nowrap
+      background-color: var(--body-backgroundColor-base)
+      border-radius: 5px
+      .btn-menu
+        --menu-btn-width: 40px
+        align-self: flex-end
+      > menu
+        width: 300px
+        flex-direction: column
+        justify-content: center
+        --menu-link-paddingVert: var(--space-sm)
+        --menu-link-paddingHor: var(--space-xs)
+        > a
+          width: 100%
+          --menu-link-paddingVert: var(--space-sm)
+          border-bottom: 1px solid var(--color-neutre-darker)
 
 
     > main
@@ -238,6 +242,7 @@
           overflow-x: visible
         > .slider__nav
           display: none
+
       #project-details
         header
           > aside
@@ -245,6 +250,7 @@
             > section
               > img
                 max-width: 50px
+
 
     > footer
       flex-flow: column nowrap

@@ -1,6 +1,6 @@
-<header style="background-image: url('/assets/imgs/realisations-background.jpg')">
+<header class="--width-nav" style="background-image: var(--url-backgroundImage-realisations)">
 
-    <a href="../" title="Aller à la page d'accueil">Accueil</a>
+    <a href="/index.html" title="Aller à la page d'accueil">Accueil</a>
 
     <section>
         <div>
@@ -8,7 +8,7 @@
             <small>Web <span>&</span> Graphisme</small>
         </div>
     </section>
-
+    <div class="spacer"></div>
     <aside>
 
         <h1><small>C’est quoi ?</small></h1>
@@ -31,7 +31,7 @@
 
         {% set uniqueCategories = projects | getUniqueCategories(project) %}
         {% for categorie in uniqueCategories %}
-            <a class="btn-categorie" data-categorie="{{ categorie }}" title="Voir les projets {{ categorie }}">{{ categorie }}</a>
+            <button class="btn-categorie" data-categorie="{{ categorie }}" title="Voir les projets {{ categorie }}">{{ categorie }}</button>
             {#                {% if not loop.last %} •{% endif %} #}
         {% endfor %}
 
@@ -54,7 +54,7 @@
         <nav class="slider__content">
 
             {% for p in projects %}
-                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}"" data-categories="{{ p.categories }}"
+                <a href="/projets/{{ p.slug }}.html" title="voir le detail du projet" data-tags="{{ p.tags }}" data-categories="{{ p.categories }}"
                    class="project">
 
                     <img src="/assets/imgs/{{ p.slug }}/{{ p.banner.src }}" alt="{{ p.banner.description }}" width="248"

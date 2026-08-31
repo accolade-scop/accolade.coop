@@ -6,7 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const timeout = 2000;
 
         const items = [...container.children];
-        let itemWidth = items[0].getBoundingClientRect().width + parseInt(getComputedStyle(container).gap || 0);
+        if (items.length === 0) return;
+
+        const getGap = () => {
+            const gap = parseInt(getComputedStyle(container).gap);
+            return isNaN(gap) ? 0 : gap;
+        };
+
+        let itemWidth = items[0].getBoundingClientRect().width + getGap();
         let currentIndex = 0;
         let maxWidth = items.length * itemWidth;
 
@@ -15,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // ******************************************************
         function updateSliderState() {
             // recalcul des mesures
-            const newItemWidth = items[0].getBoundingClientRect().width + parseInt(getComputedStyle(container).gap || 0);
+            const newItemWidth = items[0].getBoundingClientRect().width + getGap();
             const newMaxWidth = items.length * newItemWidth;
 
             itemWidth = newItemWidth;
@@ -57,8 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (currentIndex > 0) {
                 currentIndex--;
             } else {
-                currentIndex = Math.round(container.clientWidth / itemWidth);
-                console.log(currentIndex);
+                currentIndex = Math.max(0, items.length - Math.floor(container.clientWidth / itemWidth));
             }
             container.scrollLeft = currentIndex * itemWidth;
         }

@@ -2,6 +2,24 @@ html
   background-color: var(--body-backgroundColor-base)
 
 body
+  --url-backgroundImage-index: url('/assets/imgs/home-background.jpg')
+  --url-backgroundImage-apropos: url('/assets/imgs/a-propos-background.jpg')
+  --url-backgroundImage-creationGraphique: url('/assets/imgs/creationGraphique-background.jpg')
+  --url-backgroundImage-webCreation: url('/assets/imgs/webCreation-background.jpg')
+  --url-backgroundImage-laboratoireNumerique: url('/assets/imgs/laboratoireNumerique-background.jpg')
+  --url-backgroundImage-realisations: url('/assets/imgs/realisations-background.jpg')
+  --url-backgroundImage-contact: url('/assets/imgs/home-background.jpg')
+  --url-backgroundImage-mentionsLegales: url('/assets/imgs/mentionsLegales-background.jpg')
+
+  --url-backgroundImage-index-smart: url('/assets/imgs/home-background-smart.jpg')
+  --url-backgroundImage-apropos-smart: url('/assets/imgs/a-propos-background-smart.jpg')
+  --url-backgroundImage-creationGraphique-smart: url('/assets/imgs/creationGraphique-background-smart.jpg')
+  --url-backgroundImage-webCreation-smart: url('/assets/imgs/webCreation-background-smart.jpg')
+  --url-backgroundImage-laboratoireNumerique-smart: url('/assets/imgs/laboratoireNumerique-background-smart.jpg')
+  --url-backgroundImage-realisations-smart: url('/assets/imgs/realisations-background-smart.jpg')
+  --url-backgroundImage-contact-smart: url('/assets/imgs/home-background-smart.jpg')
+  --url-backgroundImage-mentionsLegales-smart: url('/assets/imgs/mentionsLegales-background-smart.jpg')
+
   background-image: url("/assets/imgs/body-background.jpg")
   background-repeat: repeat-y
   background-position: top center
@@ -20,6 +38,7 @@ body
     --menu-link-paddingVert: var(--space-md)
     --menu-link-paddingHor: var(--space-sm)
     --menu-backgroundColor: var(--surface-backgroundColor-primary)
+    margin: 15px var(--space-md)
     position: fixed
     top: 0
     right: 0
@@ -65,63 +84,90 @@ body
 
   > header
     position: relative
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    row-gap: 12px
+    background-image: url("/assets/images/header-bg.jpg")
     background-repeat: no-repeat
-    background-position: top left
+    background-position: center
     background-size: cover
     margin-bottom: var(--space-xl)
-
+    padding: var(--space-md) var(--space-md) 0 var(--space-md)
+    height: 63dvh
+    .spacer
+      flex: 1 1 auto
+    &.--width-nav
+      height: 35dvh
+      > aside
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: center
+        column-gap: var(--space-md)
+        padding: var(--space-xs) var(--space-md)
+        margin: 0 -30px
+        .btn-projects-nav
+          padding: 7px var(--space-lg)
     > a:first-of-type
-      --logo-height: 475px
-      --logo-width: 113px
-      --logo-positionX: 30px
-      --logo-positionY: 30px
+      --logo-height: 55px
+      --logo-width: 475px
+      --logo-positionX: 0
+      --logo-positionY: 0
       color: transparent
       font-size: 0
       display: block
       width: var(--logo-width)
       height: var(--logo-height)
       background-color: var(--menu-backgroundColor)
-      background-image: url("/assets/svgs/logo-accolade-vertical.svg")
+      background-image: url("/assets/svgs/logo-accolade.svg")
       background-repeat: no-repeat
-      background-position: top var(--logo-positionX) left var(--logo-positionY)
+      //background-position: top var(--logo-positionX) left var(--logo-positionY)
+      background-size: contain
 
 
     > section
       --svg-logo-width: 90px
       --svg-logo-height: var(--svg-logo-width)
-      position: absolute
-      bottom: 60px
-      right: 30px
-      display: flex
-      flex-flow: row wrap
-      justify-content: flex-start
-      align-items: center
-      column-gap: 30px
+      //position: absolute
+      //bottom: 60px
+      //right: 30px
+      display: inline-block
+      //flex-flow: row wrap
+      //justify-content: flex-start
+      //align-items: center
+      //column-gap: 30px
       font-size: var(--fontSize-2xl)
-      height: var(--space-xl)
+      // height: var(--space-xl)
       font-family: var(--fontFamily-title)
       color: var(--text-color-default)
-      &::after
-        content: ""
-        background-image: url("/assets/svgs/picto-pointe-green.svg")
-        background-repeat: no-repeat
-        background-position: top center
-        background-size: cover
-        width: var(--svg-logo-width)
-        height: var(--svg-logo-height)
+      //&::after
+      //  content: ""
+      //  background-image: url("/assets/svgs/picto-pointe-green.svg")
+      //  background-repeat: no-repeat
+      //  background-position: top center
+      //  background-size: cover
+      //  width: var(--svg-logo-width)
+      //  height: var(--svg-logo-height)
       > div
+        padding-left: 210px
+        font-size: var(--fontSize-md)
         text-align: right
         small
           display: block
-          font-size: var(--fontSize-lg)
+          font-size: var(--fontSize-sm)
         span
           color: var(--color-green)
 
-
+    > .space
+      flex: 1 1 auto
     > aside
-      max-width: 226px
-      padding: 30px var(--space-md) 0 0
+      align-self: flex-end
+      max-width: 420px
+      padding: var(--space-md)
       background-color: var(--body-backgroundColor-base)
+      margin-right: -30px
       h1
         font-size: var(--fontSize-xl)
         line-height: 2.2
@@ -131,6 +177,39 @@ body
 
 
   > main
+    #pager
+      display: flex
+      flex-flow: column wrap
+      justify-content: center
+      align-items: center
+      row-gap: var(--space-md)
+      margin-bottom: var(--space-xl)
+      > .btn-page-nav
+        padding: 7px var(--space-lg)
+      padding: var(--space-md)
+      margin-right: -30px
+      h1
+        display: none
+        font-size: var(--fontSize-xl)
+        line-height: 2.2
+      ul
+        display: flex
+        flex-flow: row wrap
+        justify-content: center
+        align-items: stretch
+        column-gap: 30px
+        list-style: none
+        padding: 0
+        margin: 0
+        width: 100%
+        li
+          flex: 0 0 250px
+          display: flex
+          flex-flow: row wrap
+          p
+            font-size: var(--fontSize-sm)
+            font-weight: var(--fontWeight-regular)
+
     > section
       position: relative
       margin: 0 auto var(--space-xl)  auto
@@ -294,6 +373,8 @@ ul.bulleted-list
       color: var(--color-green)
     &:focus, &.selected
       border-color: var(--color-green)
+      background-color: var(--color-green)
+      color: var(--color-black)
 
 
 .tags-list, .categories-list
@@ -622,7 +703,8 @@ ul.bulleted-list
     justify-content: space-around
     align-items: center
     column-gap: var(--space-md)
-    width: 100%
+    width: 50%
+    margin: 0 auto
     z-index: 3
     > .separation
       display: block
