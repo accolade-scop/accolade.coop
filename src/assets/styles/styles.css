@@ -870,7 +870,8 @@ ul.bulleted-list > li::before {
   justify-content: space-around;
   align-items: center;
   column-gap: var(--space-md);
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
   z-index: 3;
 }
 #projets > .slider__nav > .separation, #projects > .slider__nav > .separation {
@@ -1194,7 +1195,6 @@ ul.bulleted-list > li::before {
     width: 100%;
     scrollbar-color: var(--color-green) var(--surface-backgroundColor-secondary);
     scrollbar-width: thin;
-    padding-bottom: var(--space-md);
   }
 }
 @container body (max-width: 1330px) {
