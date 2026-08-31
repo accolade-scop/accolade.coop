@@ -389,12 +389,12 @@ const projectsList = [
         banner: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-7.png",  description: "Accolade graphisme web Saint-Camille banner"},
         logo: {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_institution-st-camille.jpg", description: "Accolade graphisme web Saint-Camille logo"},
         images: [
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-1.png", description: "Accolade graphisme web Saint-Camille 1"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-2.png", description: "Accolade graphisme web Saint-Camille 2"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-3.png", description: "Accolade graphisme web Saint-Camille 3"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-4.png", description: "Accolade graphisme web Saint-Camille 4"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-5.png", description: "Accolade graphisme web Saint-Camille 5"},
-            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille-6.png", description: "Accolade graphisme web Saint-Camille 6"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille1.png", description: "Accolade graphisme web Saint-Camille 1"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille2.png", description: "Accolade graphisme web Saint-Camille 2"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille3.png", description: "Accolade graphisme web Saint-Camille 3"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille4.png", description: "Accolade graphisme web Saint-Camille 4"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille5.png", description: "Accolade graphisme web Saint-Camille 5"},
+            {src: "accolade_graphisme-web_projets_graphisme_charte-graphique_logo_st-camille6.png", description: "Accolade graphisme web Saint-Camille 6"},
         ]
     },
     {
